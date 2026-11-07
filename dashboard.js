@@ -798,7 +798,543 @@ function setupAuditModalEvents() {
   }
 }
 
+// ============================================================================
+// MENU SWITCHER & VIETNAMESE TEXTBOOK BENCHMARK (Vi-EduDiag-50) CONTROLLER
+// ============================================================================
+let vnAllDiagrams = [];
+let vnFilteredDiagrams = [];
+let vnSelectedSubject = "all";
+let vnSelectedTaxonomy = "all";
+let vnSearchQuery = "";
+let vnCurrentModalIndex = -1;
+let vnCurrentModalDiagram = null;
+let vnGraphMode = "graphviz"; // "graphviz" | "force"
+let vnNetwork = null;
+
+function setupTopMenuNavigation() {
+  const btnAi2d = document.getElementById("nav-menu-ai2d");
+  const btnVn = document.getElementById("nav-menu-vn");
+  const viewAi2d = document.getElementById("view-ai2d");
+  const viewVn = document.getElementById("view-vn");
+  const pillsAi2d = document.getElementById("header-ai2d-pills");
+  const pillsVn = document.getElementById("header-vn-pills");
+
+  const activeBtnClass =
+    "px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs cursor-pointer";
+  const inactiveBtnClass =
+    "px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-700 hover:bg-white/60 cursor-pointer";
+
+  const switchMenu = (menu) => {
+    if (menu === "vn") {
+      if (viewAi2d) viewAi2d.classList.add("hidden");
+      if (viewVn) viewVn.classList.remove("hidden");
+      if (pillsAi2d) pillsAi2d.classList.add("hidden");
+      if (pillsVn) {
+        pillsVn.classList.remove("hidden");
+        pillsVn.classList.add("flex");
+      }
+      if (btnVn) btnVn.className = activeBtnClass;
+      if (btnAi2d) btnAi2d.className = inactiveBtnClass;
+      if (window.location.hash !== "#sgk-vn") {
+        history.replaceState(null, "", "#sgk-vn");
+      }
+    } else {
+      if (viewVn) viewVn.classList.add("hidden");
+      if (viewAi2d) viewAi2d.classList.remove("hidden");
+      if (pillsVn) {
+        pillsVn.classList.add("hidden");
+        pillsVn.classList.remove("flex");
+      }
+      if (pillsAi2d) pillsAi2d.classList.remove("hidden");
+      if (btnAi2d) btnAi2d.className = activeBtnClass;
+      if (btnVn) btnVn.className = inactiveBtnClass;
+      if (window.location.hash === "#sgk-vn") {
+        history.replaceState(null, "", window.location.pathname);
+      }
+    }
+  };
+
+  if (btnAi2d) btnAi2d.addEventListener("click", () => switchMenu("ai2d"));
+  if (btnVn) btnVn.addEventListener("click", () => switchMenu("vn"));
+
+  if (window.location.hash === "#sgk-vn" || window.location.hash === "#vn") {
+    switchMenu("vn");
+  }
+}
+
+function initVnGallery() {
+  if (typeof VN_GALLERY_DATA === "undefined") {
+    console.warn("VN_GALLERY_DATA not found.");
+    return;
+  }
+
+  vnAllDiagrams = VN_GALLERY_DATA.diagrams || [];
+  vnFilteredDiagrams = [...vnAllDiagrams];
+
+  // Update summary stats
+  const totalEntities = vnAllDiagrams.reduce((acc, d) => acc + (d.key_entities ? d.key_entities.length : 0), 0);
+  const totalRelations = vnAllDiagrams.reduce(
+    (acc, d) => acc + (d.directional_relations ? d.directional_relations.length : 0),
+    0
+  );
+  const elEnt = document.getElementById("vn-stat-entities");
+  const elRel = document.getElementById("vn-stat-relations");
+  if (elEnt) elEnt.innerText = totalEntities;
+  if (elRel) elRel.innerText = totalRelations;
+
+  renderVnSubjectPills();
+  renderVnTaxonomyPills();
+  setupVnSearchAndEvents();
+  renderVnGalleryGrid();
+}
+
+function renderVnSubjectPills() {
+  const container = document.getElementById("vn-subject-pills-container");
+  if (!container) return;
+
+  const counts = { all: vnAllDiagrams.length };
+  vnAllDiagrams.forEach((d) => {
+    const k = d.subject_key || "other";
+    counts[k] = (counts[k] || 0) + 1;
+  });
+
+  const subjects = VN_GALLERY_DATA.subjects || {};
+  const orderedKeys = ["khtn6", "sinh7", "sinh8", "sinh9", "sinh10", "hoa10", "sinh11", "sinh12"];
+
+  let html = `
+    <button data-subj="all" class="vn-subj-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition cursor-pointer ${
+      vnSelectedSubject === "all"
+        ? "bg-rose-600 text-white border-rose-600 shadow-2xs"
+        : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
+    }">
+      <i class="fa-solid fa-layer-group mr-1.5"></i>Tất cả K6–K12 (${counts.all})
+    </button>
+  `;
+
+  orderedKeys.forEach((key) => {
+    const c = counts[key] || 0;
+    if (c === 0 || !subjects[key]) return;
+    const meta = subjects[key];
+    const isSel = vnSelectedSubject === key;
+    html += `
+      <button data-subj="${key}" class="vn-subj-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition cursor-pointer ${
+        isSel
+          ? "bg-rose-600 text-white border-rose-600 shadow-2xs"
+          : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
+      }">
+        <i class="fa-solid ${meta.icon || "fa-book"} mr-1.5"></i>${meta.vi} (${c})
+      </button>
+    `;
+  });
+
+  container.innerHTML = html;
+  container.querySelectorAll(".vn-subj-pill").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      vnSelectedSubject = btn.getAttribute("data-subj");
+      renderVnSubjectPills();
+      applyVnFilters();
+    });
+  });
+}
+
+function renderVnTaxonomyPills() {
+  const container = document.getElementById("vn-taxonomy-pills-container");
+  if (!container) return;
+
+  const counts = { all: vnAllDiagrams.length };
+  vnAllDiagrams.forEach((d) => {
+    const k = d.taxonomy_key || "system_process";
+    counts[k] = (counts[k] || 0) + 1;
+  });
+
+  const taxonomies = VN_GALLERY_DATA.taxonomies || {};
+  let html = `
+    <button data-tax="all" class="vn-tax-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition cursor-pointer ${
+      vnSelectedTaxonomy === "all"
+        ? "bg-indigo-600 text-white border-indigo-600 shadow-2xs"
+        : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
+    }">
+      <i class="fa-solid fa-border-all mr-1.5"></i>Tất cả Nhóm (${counts.all})
+    </button>
+  `;
+
+  Object.keys(taxonomies).forEach((key) => {
+    const c = counts[key] || 0;
+    if (c === 0) return;
+    const meta = taxonomies[key];
+    const isSel = vnSelectedTaxonomy === key;
+    html += `
+      <button data-tax="${key}" class="vn-tax-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition cursor-pointer ${
+        isSel
+          ? "bg-indigo-600 text-white border-indigo-600 shadow-2xs"
+          : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
+      }">
+        <i class="fa-solid ${meta.icon || "fa-shapes"} mr-1.5"></i>${meta.vi} (${c})
+      </button>
+    `;
+  });
+
+  container.innerHTML = html;
+  container.querySelectorAll(".vn-tax-pill").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      vnSelectedTaxonomy = btn.getAttribute("data-tax");
+      renderVnTaxonomyPills();
+      applyVnFilters();
+    });
+  });
+}
+
+function applyVnFilters() {
+  vnFilteredDiagrams = vnAllDiagrams.filter((d) => {
+    if (vnSelectedSubject !== "all" && d.subject_key !== vnSelectedSubject) return false;
+    if (vnSelectedTaxonomy !== "all" && d.taxonomy_key !== vnSelectedTaxonomy) return false;
+    if (vnSearchQuery) {
+      const q = vnSearchQuery;
+      const inId = d.id.toLowerCase().includes(q);
+      const inTitle = (d.title || "").toLowerCase().includes(q);
+      const inSubj = (d.subject || "").toLowerCase().includes(q);
+      const inLesson = (d.lesson || "").toLowerCase().includes(q);
+      const inEntities = (d.key_entities || []).some((e) => e.toLowerCase().includes(q));
+      const inCaption = (d.gt_caption_vi || "").toLowerCase().includes(q);
+      if (!inId && !inTitle && !inSubj && !inLesson && !inEntities && !inCaption) return false;
+    }
+    return true;
+  });
+
+  const counter = document.getElementById("vn-diagrams-counter");
+  if (counter) {
+    counter.innerText = `${vnFilteredDiagrams.length} / ${vnAllDiagrams.length} sơ đồ`;
+  }
+
+  renderVnGalleryGrid();
+}
+
+function renderVnGalleryGrid() {
+  const grid = document.getElementById("vn-gallery-grid");
+  const empty = document.getElementById("vn-gallery-empty");
+  if (!grid) return;
+
+  if (vnFilteredDiagrams.length === 0) {
+    grid.innerHTML = "";
+    if (empty) empty.classList.remove("hidden");
+    return;
+  }
+
+  if (empty) empty.classList.add("hidden");
+
+  grid.innerHTML = vnFilteredDiagrams
+    .map((d, idx) => {
+      const subjColor = COLOR_CLASSES[d.subject_color] || COLOR_CLASSES.indigo;
+      const taxColor = COLOR_CLASSES[d.taxonomy_color] || COLOR_CLASSES.slate;
+      const entCount = d.key_entities ? d.key_entities.length : 0;
+      const relCount = d.directional_relations ? d.directional_relations.length : 0;
+
+      return `
+        <div data-vn-index="${idx}" class="vn-diagram-card bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs card-zoom cursor-pointer group flex flex-col">
+          <!-- Thumbnail -->
+          <div class="relative w-full h-48 bg-white flex items-center justify-center overflow-hidden border-b border-slate-100 p-2">
+            <img src="${d.image_url}" alt="${d.id}" loading="lazy"
+                 class="max-w-full max-h-full object-contain group-hover:scale-105 transition duration-300 select-none" />
+            <span class="absolute top-2 left-2 badge ${subjColor} border text-[10px] shadow-2xs">
+              <i class="fa-solid ${d.subject_icon || "fa-book"} mr-1"></i>${d.subject}
+            </span>
+          </div>
+
+          <!-- Card Body -->
+          <div class="p-3.5 flex-1 flex flex-col justify-between space-y-2.5">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="font-extrabold text-xs text-indigo-700 font-mono">${d.id}</span>
+                <span class="text-[10px] text-slate-400 font-medium">${d.width}x${d.height}px</span>
+              </div>
+              <h4 class="text-xs font-bold text-slate-800 line-clamp-2 mt-1" title="${escapeXml(d.title)}">
+                ${escapeXml(d.title)}
+              </h4>
+              <p class="text-[11px] text-slate-500 line-clamp-1 mt-0.5" title="${escapeXml(d.lesson)}">
+                ${escapeXml(d.lesson)}
+              </p>
+            </div>
+
+            <div class="space-y-2 pt-1.5 border-t border-slate-100">
+              <div class="flex items-center justify-between text-[10px] text-slate-600">
+                <span class="flex items-center gap-1 font-semibold text-indigo-700" title="Số thực thể khoa học hạt nhân">
+                  <i class="fa-solid fa-tags"></i> ${entCount} thực thể
+                </span>
+                <span class="flex items-center gap-1 font-semibold text-rose-700" title="Số quan hệ tiến trình có hướng">
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i> ${relCount} quan hệ
+                </span>
+              </div>
+              <div>
+                <span class="badge ${taxColor} border text-[10px] w-full justify-center truncate">
+                  <i class="fa-solid ${d.taxonomy_icon || "fa-shapes"} mr-1"></i>${d.taxonomy_vi}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+
+  grid.querySelectorAll(".vn-diagram-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const idx = parseInt(card.getAttribute("data-vn-index"), 10);
+      openVnModal(idx);
+    });
+  });
+}
+
+function setupVnSearchAndEvents() {
+  const searchInput = document.getElementById("vn-search-input");
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      vnSearchQuery = e.target.value.trim().toLowerCase();
+      applyVnFilters();
+    });
+  }
+
+  const modal = document.getElementById("vn-diagram-modal");
+  const btnClose = document.getElementById("vn-modal-btn-close");
+  const btnPrev = document.getElementById("vn-modal-btn-prev");
+  const btnNext = document.getElementById("vn-modal-btn-next");
+  const tabG = document.getElementById("vn-tab-graphviz");
+  const tabF = document.getElementById("vn-tab-force");
+
+  if (btnClose) btnClose.addEventListener("click", closeVnModal);
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeVnModal();
+    });
+  }
+  if (btnPrev) {
+    btnPrev.addEventListener("click", () => {
+      if (vnCurrentModalIndex > 0) openVnModal(vnCurrentModalIndex - 1);
+    });
+  }
+  if (btnNext) {
+    btnNext.addEventListener("click", () => {
+      if (vnCurrentModalIndex < vnFilteredDiagrams.length - 1) openVnModal(vnCurrentModalIndex + 1);
+    });
+  }
+
+  const activateTab = (tab) => {
+    [tabG, tabF].forEach((t) => {
+      if (t) t.className = "px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900 cursor-pointer";
+    });
+    if (tab) tab.className = "px-2.5 py-1 rounded-md bg-white text-indigo-700 shadow-2xs font-semibold cursor-pointer";
+  };
+
+  if (tabG) {
+    tabG.addEventListener("click", () => {
+      vnGraphMode = "graphviz";
+      activateTab(tabG);
+      updateVnModalGraph();
+    });
+  }
+  if (tabF) {
+    tabF.addEventListener("click", () => {
+      vnGraphMode = "force";
+      activateTab(tabF);
+      updateVnModalGraph();
+    });
+  }
+
+  window.addEventListener("keydown", (e) => {
+    const visible = modal && !modal.classList.contains("hidden");
+    if (!visible) return;
+    if (e.key === "Escape") closeVnModal();
+    else if (e.key === "ArrowLeft" && vnCurrentModalIndex > 0) openVnModal(vnCurrentModalIndex - 1);
+    else if (e.key === "ArrowRight" && vnCurrentModalIndex < vnFilteredDiagrams.length - 1)
+      openVnModal(vnCurrentModalIndex + 1);
+  });
+}
+
+function openVnModal(index) {
+  if (index < 0 || index >= vnFilteredDiagrams.length) return;
+  vnCurrentModalIndex = index;
+  vnCurrentModalDiagram = vnFilteredDiagrams[index];
+  const d = vnCurrentModalDiagram;
+
+  const modal = document.getElementById("vn-diagram-modal");
+  if (!modal) return;
+
+  // Header badges
+  const subjBadge = document.getElementById("vn-modal-subject-badge");
+  const taxBadge = document.getElementById("vn-modal-taxonomy-badge");
+  const idEl = document.getElementById("vn-modal-id");
+  const titleEl = document.getElementById("vn-modal-title");
+  const dimEl = document.getElementById("vn-modal-dim");
+
+  if (subjBadge) {
+    const sc = COLOR_CLASSES[d.subject_color] || COLOR_CLASSES.indigo;
+    subjBadge.className = `badge ${sc} border text-xs`;
+    subjBadge.innerHTML = `<i class="fa-solid ${d.subject_icon || "fa-book"} mr-1.5"></i>${d.subject}`;
+  }
+  if (taxBadge) {
+    const tc = COLOR_CLASSES[d.taxonomy_color] || COLOR_CLASSES.emerald;
+    taxBadge.className = `badge ${tc} border text-xs`;
+    taxBadge.innerHTML = `<i class="fa-solid ${d.taxonomy_icon || "fa-shapes"} mr-1.5"></i>${d.taxonomy_vi}`;
+  }
+  if (idEl) idEl.innerText = d.id;
+  if (titleEl) titleEl.innerText = d.title;
+  if (dimEl) dimEl.innerText = `${d.width} x ${d.height} px (200 DPI)`;
+
+  // Prev/Next buttons
+  const btnPrev = document.getElementById("vn-modal-btn-prev");
+  const btnNext = document.getElementById("vn-modal-btn-next");
+  if (btnPrev) btnPrev.disabled = index === 0;
+  if (btnNext) btnNext.disabled = index === vnFilteredDiagrams.length - 1;
+
+  // Textbook Image & Metadata
+  const imgEl = document.getElementById("vn-modal-img");
+  if (imgEl) imgEl.src = d.image_url;
+  const seriesEl = document.getElementById("vn-modal-series");
+  const chapEl = document.getElementById("vn-modal-chapter");
+  const lessonEl = document.getElementById("vn-modal-lesson");
+  if (seriesEl) seriesEl.innerText = d.series || "";
+  if (chapEl) chapEl.innerText = d.chapter || "";
+  if (lessonEl) lessonEl.innerText = d.lesson || "";
+
+  // Key Entities
+  const entCountEl = document.getElementById("vn-modal-entities-count");
+  const entListEl = document.getElementById("vn-modal-entities-list");
+  const entities = d.key_entities || [];
+  if (entCountEl) entCountEl.innerText = `${entities.length} thực thể`;
+  if (entListEl) {
+    entListEl.innerHTML = entities
+      .map(
+        (e, i) => `
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-indigo-50 text-indigo-800 border border-indigo-200 text-[11px] font-semibold">
+          <span class="text-indigo-500 font-mono mr-1">#${i + 1}</span>${escapeXml(e)}
+        </span>
+      `
+      )
+      .join("");
+  }
+
+  // Directional Relations
+  const relCountEl = document.getElementById("vn-modal-relations-count");
+  const relListEl = document.getElementById("vn-modal-relations-list");
+  const relations = d.directional_relations || [];
+  if (relCountEl) relCountEl.innerText = `${relations.length} quan hệ`;
+  if (relListEl) {
+    if (relations.length === 0) {
+      relListEl.innerHTML = `<div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 italic">Sơ đồ giải phẫu / cấu trúc tĩnh (liên kết phân cấp từ chủ đề trung tâm đến từng bộ phận cấu tạo).</div>`;
+    } else {
+      relListEl.innerHTML = relations
+        .map(
+          (r) => `
+          <div class="p-2 bg-slate-50 border border-slate-200 rounded-lg text-[11px] flex flex-wrap items-center gap-1.5">
+            <span class="font-bold text-slate-800 bg-white px-2 py-0.5 rounded border border-slate-200">${escapeXml(
+              r.source
+            )}</span>
+            <span class="badge bg-rose-100 text-rose-800 border border-rose-200 text-[10px]">
+              <i class="fa-solid fa-arrow-right mr-1"></i>${escapeXml(r.relation)}
+            </span>
+            <span class="font-bold text-indigo-900 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">${escapeXml(
+              r.target
+            )}</span>
+          </div>
+        `
+        )
+        .join("");
+    }
+  }
+
+  // Graph Topology
+  const topo = d.scene_graph_topology || { nodes: [], edges: [] };
+  const nBadge = document.getElementById("vn-modal-node-count");
+  const eBadge = document.getElementById("vn-modal-edge-count");
+  if (nBadge) nBadge.innerText = `${topo.nodes.length} nodes`;
+  if (eBadge) eBadge.innerText = `${topo.edges.length} edges`;
+  updateVnModalGraph();
+
+  // Bilingual Ground-Truth Reference Captions
+  const gtViEl = document.getElementById("vn-modal-gt-vi");
+  const gtEnEl = document.getElementById("vn-modal-gt-en");
+  if (gtViEl) gtViEl.innerHTML = highlightVnEntities(d.gt_caption_vi || "", entities);
+  if (gtEnEl) gtEnEl.innerText = d.gt_caption_en || "";
+
+  modal.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+}
+
+function closeVnModal() {
+  const modal = document.getElementById("vn-diagram-modal");
+  if (modal) modal.classList.add("hidden");
+  document.body.style.overflow = "auto";
+  if (vnNetwork) {
+    vnNetwork.destroy();
+    vnNetwork = null;
+  }
+}
+
+function highlightVnEntities(text, entities = []) {
+  if (!text) return "";
+  let html = escapeXml(text);
+  const sorted = [...entities].filter((e) => e && e.length >= 2).sort((a, b) => b.length - a.length);
+  sorted.forEach((ent) => {
+    const esc = escapeXml(ent);
+    const pattern = esc.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const re = new RegExp(`(${pattern})`, "gi");
+    html = html.replace(
+      re,
+      `<span class="bg-indigo-100/80 text-indigo-900 font-semibold px-1 py-0.2 rounded border border-indigo-200">$1</span>`
+    );
+  });
+  return html;
+}
+
+function updateVnModalGraph() {
+  const d = vnCurrentModalDiagram;
+  if (!d) return;
+
+  const gContainer = document.getElementById("vn-graphviz-container");
+  const nContainer = document.getElementById("vn-network-container");
+
+  if (vnGraphMode === "graphviz" && d.graphviz_svg && d.graphviz_svg.trim().length > 0) {
+    if (gContainer) {
+      gContainer.classList.remove("hidden");
+      gContainer.innerHTML = d.graphviz_svg;
+      const svg = gContainer.querySelector("svg");
+      if (svg) {
+        svg.setAttribute("width", "100%");
+        svg.setAttribute("height", "100%");
+      }
+    }
+    if (nContainer) nContainer.classList.add("hidden");
+  } else {
+    if (gContainer) gContainer.classList.add("hidden");
+    if (nContainer) nContainer.classList.remove("hidden");
+    const topo = d.scene_graph_topology || { nodes: [], edges: [] };
+    const visData = {
+      nodes: new vis.DataSet(topo.nodes.map((n) => ({ ...n }))),
+      edges: new vis.DataSet(topo.edges.map((e) => ({ ...e }))),
+    };
+    const options = {
+      physics: {
+        solver: "forceAtlas2Based",
+        forceAtlas2Based: {
+          gravitationalConstant: -45,
+          centralGravity: 0.015,
+          springLength: 110,
+          springConstant: 0.08,
+        },
+        maxVelocity: 40,
+        stabilization: { iterations: 100 },
+      },
+      interaction: { hover: true, zoomView: true, dragView: true },
+      nodes: { borderWidth: 2, shadow: true, font: { size: 12, face: "Inter" } },
+      edges: { smooth: { type: "continuous" }, font: { size: 10, align: "top" } },
+    };
+    if (vnNetwork) vnNetwork.destroy();
+    vnNetwork = new vis.Network(nContainer, visData, options);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initGallery();
+  initVnGallery();
+  setupTopMenuNavigation();
   setupAuditModalEvents();
 });
