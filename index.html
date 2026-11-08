@@ -175,7 +175,7 @@
         </nav>
 
         <div class="flex items-center gap-2 text-xs">
-          <button id="btn-open-audit-modal" class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-semibold transition cursor-pointer shadow-2xs">
+          <button id="btn-open-audit-modal" onclick="document.getElementById('audit-modal').classList.remove('hidden')" class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-semibold transition cursor-pointer shadow-2xs">
             <i class="fa-solid fa-scale-balanced text-indigo-600"></i>
             <span>Kiểm toán Số liệu</span>
           </button>
@@ -376,19 +376,19 @@
 
       <!-- Sub-view Navigation Tabs inside SOTA View -->
       <div class="flex items-center gap-2 border-b border-slate-200 pb-3">
-        <button id="btn-sota-tab-table" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-indigo-600 text-white shadow-xs cursor-pointer">
+        <button id="btn-sota-tab-table" onclick="window.switchSubTab('table')" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-indigo-600 text-white shadow-xs cursor-pointer">
           <i class="fa-solid fa-table-list"></i>
           <span>1. Bảng Đối Sánh SOTA Văn Khảo (COLM 2024 Table 4)</span>
         </button>
-        <button id="btn-sota-tab-training" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
+        <button id="btn-sota-tab-training" onclick="window.switchSubTab('training')" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
           <i class="fa-solid fa-chart-line text-purple-600"></i>
           <span>2. Tiến Trình Huấn Luyện QLoRA (Loss &amp; Checkpoints)</span>
         </button>
-        <button id="btn-sota-tab-explorer" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
+        <button id="btn-sota-tab-explorer" onclick="window.switchSubTab('explorer')" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
           <i class="fa-solid fa-images text-emerald-600"></i>
           <span>3. Khám Phá Định Lượng 75 Sơ Đồ &amp; Scene Graph</span>
         </button>
-        <button id="btn-sota-tab-vqa" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
+        <button id="btn-sota-tab-vqa" onclick="window.switchSubTab('vqa')" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
           <i class="fa-solid fa-circle-question text-amber-600"></i>
           <span>4. Diagram VQA (N=491 Sơ Đồ, 1.492 Câu Hỏi)</span>
         </button>
@@ -1160,7 +1160,7 @@
             Sau <i class="fa-solid fa-chevron-right text-[10px]"></i>
           </button>
           <!-- Close button -->
-          <button id="modal-btn-close" class="w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-100 flex items-center justify-center">
+          <button id="modal-btn-close" onclick="document.getElementById('diagram-modal').classList.add('hidden')" class="w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-100 flex items-center justify-center">
             <i class="fa-solid fa-xmark text-sm"></i>
           </button>
         </div>
@@ -1424,7 +1424,7 @@
             <p class="text-xs text-slate-500">Minh bạch hóa 100% phương pháp luận, cơ sở dữ liệu và công thức tính điểm</p>
           </div>
         </div>
-        <button id="btn-close-audit-modal" class="text-slate-400 hover:text-slate-700 w-8 h-8 rounded-lg flex items-center justify-center hover:bg-slate-100 transition cursor-pointer">
+        <button id="btn-close-audit-modal" onclick="document.getElementById('audit-modal').classList.add('hidden')" class="text-slate-400 hover:text-slate-700 w-8 h-8 rounded-lg flex items-center justify-center hover:bg-slate-100 transition cursor-pointer">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
@@ -1648,7 +1648,7 @@
 
       <!-- Modal Footer -->
       <div class="px-6 py-3 border-t border-slate-200 bg-slate-50 flex justify-end">
-        <button id="btn-close-audit-modal-footer" class="px-4 py-1.5 rounded-lg bg-indigo-600 text-white font-semibold text-xs hover:bg-indigo-700 transition cursor-pointer">
+        <button id="btn-close-audit-modal-footer" onclick="document.getElementById('audit-modal').classList.add('hidden')" class="px-4 py-1.5 rounded-lg bg-indigo-600 text-white font-semibold text-xs hover:bg-indigo-700 transition cursor-pointer">
           Đã hiểu & Đóng
         </button>
       </div>
@@ -1679,7 +1679,7 @@
           <button id="vn-modal-btn-next" class="px-2.5 py-1 text-xs font-semibold bg-white border border-slate-200 rounded-lg text-slate-700 hover:bg-slate-100 flex items-center gap-1 cursor-pointer">
             Sau <i class="fa-solid fa-chevron-right text-[10px]"></i>
           </button>
-          <button id="vn-modal-btn-close" class="w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-100 flex items-center justify-center cursor-pointer">
+          <button id="vn-modal-btn-close" onclick="document.getElementById('vn-diagram-modal').classList.add('hidden')" class="w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-100 flex items-center justify-center cursor-pointer">
             <i class="fa-solid fa-xmark text-sm"></i>
           </button>
         </div>
@@ -1873,7 +1873,7 @@
           <span id="vqa-lightbox-id" class="badge bg-indigo-100 text-indigo-800 font-bold font-mono">#ai2d:--</span>
           <span id="vqa-lightbox-title" class="text-xs font-bold text-slate-800 truncate max-w-md">Ảnh sơ đồ gốc</span>
         </div>
-        <button id="vqa-lightbox-close" class="w-8 h-8 rounded-lg hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center transition">
+        <button id="vqa-lightbox-close" onclick="document.getElementById('vqa-lightbox-modal').classList.add('hidden')" class="w-8 h-8 rounded-lg hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center transition">
           <i class="fa-solid fa-xmark text-sm"></i>
         </button>
       </div>

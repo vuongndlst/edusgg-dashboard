@@ -1,3 +1,57 @@
+
+window.switchSubTab = function(tab) {
+  const btnTable = document.getElementById("btn-sota-tab-table");
+  const btnTraining = document.getElementById("btn-sota-tab-training");
+  const btnExplorer = document.getElementById("btn-sota-tab-explorer");
+  const btnVqa = document.getElementById("btn-sota-tab-vqa");
+
+  const secTable = document.getElementById("sota-sub-table");
+  const secTraining = document.getElementById("sota-sub-training");
+  const secExplorer = document.getElementById("sota-sub-explorer");
+  const secVqa = document.getElementById("sota-sub-vqa");
+
+  const activeClass = "px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-indigo-600 text-white shadow-xs cursor-pointer";
+  const inactiveClass = "px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer";
+
+  if (secTable) secTable.classList.add("hidden");
+  if (secTraining) secTraining.classList.add("hidden");
+  if (secExplorer) secExplorer.classList.add("hidden");
+  if (secVqa) secVqa.classList.add("hidden");
+
+  if (btnTable) btnTable.className = inactiveClass;
+  if (btnTraining) btnTraining.className = inactiveClass;
+  if (btnExplorer) btnExplorer.className = inactiveClass;
+  if (btnVqa) btnVqa.className = inactiveClass;
+
+  if (tab === "training") {
+    if (secTraining) secTraining.classList.remove("hidden");
+    if (btnTraining) btnTraining.className = activeClass;
+  } else if (tab === "explorer") {
+    if (secExplorer) secExplorer.classList.remove("hidden");
+    if (btnExplorer) btnExplorer.className = activeClass;
+  } else if (tab === "vqa") {
+    if (secVqa) secVqa.classList.remove("hidden");
+    if (btnVqa) btnVqa.className = activeClass;
+    if (typeof initVisualVqa === "function") initVisualVqa();
+  } else {
+    // Default to table
+    if (secTable) secTable.classList.remove("hidden");
+    if (btnTable) btnTable.className = activeClass;
+  }
+};
+
+
+function safeUpdateHash(hash) {
+  try {
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, "", hash);
+    }
+  } catch (e) {
+    // In file:// URLs, replaceState throws DOMException (null origin).
+    try { window.location.hash = hash; } catch (_) {}
+  }
+}
+
 // EduSGG Interactive Gallery & Diagram Modal Controller
 let allDiagrams = [];
 let filteredDiagrams = [];
@@ -558,6 +612,8 @@ function renderOverlay() {
 }
 
 function escapeXml(unsafe) {
+  if (unsafe === undefined || unsafe === null) return "";
+  if (typeof unsafe !== "string") unsafe = String(unsafe);
   return unsafe.replace(/[<>&'"]/g, function (c) {
     switch (c) {
       case "<": return "&lt;";
@@ -565,6 +621,7 @@ function escapeXml(unsafe) {
       case "&": return "&amp;";
       case "'": return "&apos;";
       case '"': return "&quot;";
+      default: return c;
     }
   });
 }
@@ -811,68 +868,6 @@ let vnCurrentModalDiagram = null;
 let vnGraphMode = "graphviz"; // "graphviz" | "force"
 let vnNetwork = null;
 
-function setupTopMenuNavigation() {
-  const btnAi2d = document.getElementById("nav-menu-ai2d");
-  const btnVn = document.getElementById("nav-menu-vn");
-  const btnSota = document.getElementById("nav-menu-sota");
-  const viewAi2d = document.getElementById("view-ai2d");
-  const viewVn = document.getElementById("view-vn");
-  const viewSota = document.getElementById("view-sota");
-  const pillsAi2d = document.getElementById("header-ai2d-pills");
-  const pillsVn = document.getElementById("header-vn-pills");
-  const pillsSota = document.getElementById("header-sota-pills");
-
-  const activeBtnClass =
-    "px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs cursor-pointer";
-  const inactiveBtnClass =
-    "px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-700 hover:bg-white/60 cursor-pointer";
-
-  const switchMenu = (menu) => {
-    // Hide all views first
-    if (viewAi2d) viewAi2d.classList.add("hidden");
-    if (viewVn) viewVn.classList.add("hidden");
-    if (viewSota) viewSota.classList.add("hidden");
-
-    // Hide all pills
-    if (pillsAi2d) pillsAi2d.classList.add("hidden");
-    if (pillsVn) { pillsVn.classList.add("hidden"); pillsVn.classList.remove("flex"); }
-    if (pillsSota) { pillsSota.classList.add("hidden"); pillsSota.classList.remove("flex"); }
-
-    // Reset button states
-    if (btnAi2d) btnAi2d.className = inactiveBtnClass;
-    if (btnVn) btnVn.className = inactiveBtnClass;
-    if (btnSota) btnSota.className = inactiveBtnClass;
-
-    if (menu === "vn") {
-      if (viewVn) viewVn.classList.remove("hidden");
-      if (pillsVn) { pillsVn.classList.remove("hidden"); pillsVn.classList.add("flex"); }
-      if (btnVn) btnVn.className = activeBtnClass;
-      if (window.location.hash !== "#sgk-vn") history.replaceState(null, "", "#sgk-vn");
-    } else if (menu === "sota") {
-      if (viewSota) viewSota.classList.remove("hidden");
-      if (pillsSota) { pillsSota.classList.remove("hidden"); pillsSota.classList.add("flex"); }
-      if (btnSota) btnSota.className = activeBtnClass;
-      if (window.location.hash !== "#sota-benchmark") history.replaceState(null, "", "#sota-benchmark");
-    } else {
-      if (viewAi2d) viewAi2d.classList.remove("hidden");
-      if (pillsAi2d) pillsAi2d.classList.remove("hidden");
-      if (btnAi2d) btnAi2d.className = activeBtnClass;
-      if (window.location.hash === "#sgk-vn" || window.location.hash === "#sota-benchmark") {
-        history.replaceState(null, "", window.location.pathname);
-      }
-    }
-  };
-
-  if (btnAi2d) btnAi2d.addEventListener("click", () => switchMenu("ai2d"));
-  if (btnVn) btnVn.addEventListener("click", () => switchMenu("vn"));
-  if (btnSota) btnSota.addEventListener("click", () => switchMenu("sota"));
-
-  if (window.location.hash === "#sgk-vn" || window.location.hash === "#vn") {
-    switchMenu("vn");
-  } else if (window.location.hash === "#sota" || window.location.hash === "#sota-benchmark") {
-    switchMenu("sota");
-  }
-}
 
 function initVnGallery() {
   if (typeof VN_GALLERY_DATA === "undefined") {
@@ -2122,8 +2117,10 @@ function goVqaPage(p) {
 
   // Scroll smoothly to top of cards grid
   const gridEl = document.getElementById("vqa-cards-grid");
-  if (gridEl) {
-    gridEl.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (gridEl && typeof gridEl.scrollIntoView === "function") {
+    try {
+      gridEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    } catch (_) {}
   }
 }
 
@@ -2159,12 +2156,12 @@ function openVqaLightbox(imgUrl, title, rawId) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  initGallery();
-  initVnGallery();
-  initSotaBenchmark();
-  initVisualVqa();
-  setupTopMenuNavigation();
-  setupAuditModalEvents();
+  try { initGallery(); } catch (e) { console.error("Error in initGallery:", e); }
+  try { initVnGallery(); } catch (e) { console.error("Error in initVnGallery:", e); }
+  try { initSotaBenchmark(); } catch (e) { console.error("Error in initSotaBenchmark:", e); }
+  try { initVisualVqa(); } catch (e) { console.error("Error in initVisualVqa:", e); }
+  try { setupTopMenuNavigation(); } catch (e) { console.error("Error in setupTopMenuNavigation:", e); }
+  try { setupAuditModalEvents(); } catch (e) { console.error("Error in setupAuditModalEvents:", e); }
 });
 
 
@@ -2208,7 +2205,7 @@ function setupTopMenuNavigation() {
       // Default to table sub-tab
       const btnTable = document.getElementById("btn-sota-tab-table");
       if (btnTable) btnTable.click();
-      history.replaceState(null, "", "#leaderboard");
+      safeUpdateHash("#leaderboard");
     } else if (menu === "vqa") {
       if (viewSota) viewSota.classList.remove("hidden");
       if (btnVqa) btnVqa.className = activeBtnClass;
@@ -2216,19 +2213,19 @@ function setupTopMenuNavigation() {
       const btnSubVqa = document.getElementById("btn-sota-tab-vqa");
       if (btnSubVqa) btnSubVqa.click();
       if (typeof initVisualVqa === "function") initVisualVqa();
-      history.replaceState(null, "", "#vqa-explorer");
+      safeUpdateHash("#vqa-explorer");
     } else if (menu === "caption") {
       if (viewAi2d) viewAi2d.classList.remove("hidden");
       if (btnCaption) btnCaption.className = activeBtnClass;
-      history.replaceState(null, "", "#caption-gallery");
+      safeUpdateHash("#caption-gallery");
     } else if (menu === "vn") {
       if (viewVn) viewVn.classList.remove("hidden");
       if (btnVn) btnVn.className = activeBtnClass;
-      history.replaceState(null, "", "#sgk-vn");
+      safeUpdateHash("#sgk-vn");
     } else if (menu === "pipeline") {
       if (viewPipeline) viewPipeline.classList.remove("hidden");
       if (btnPipeline) btnPipeline.className = activeBtnClass;
-      history.replaceState(null, "", "#pipeline");
+      safeUpdateHash("#pipeline");
     } else {
       // Default fallback: Leaderboard
       if (viewSota) viewSota.classList.remove("hidden");
