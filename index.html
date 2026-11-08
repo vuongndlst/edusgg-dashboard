@@ -585,6 +585,95 @@
           </div>
         </div>
 
+        <!-- ================= VISUAL DIAGRAM VQA EXPLORER ================= -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs space-y-5 mt-6">
+          <!-- Header Bar -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-images text-lg"></i>
+              </span>
+              <div>
+                <h3 class="text-sm md:text-base font-extrabold text-slate-900 flex items-center gap-2">
+                  Visual Diagram VQA Explorer (1.492 Câu Hỏi Trực Quan)
+                  <span class="badge bg-emerald-100 text-emerald-800 border border-emerald-300 text-[10px]">88.74% Accuracy</span>
+                </h3>
+                <p class="text-xs text-slate-500 mt-0.5">
+                  Khám phá trực quan 1.492 câu hỏi trắc nghiệm kèm ảnh sơ đồ gốc, câu hỏi, 4 lựa chọn, đáp án Ground Truth vs Dự đoán của mô hình EduSGG + Qwen2.5-VL, và ngữ cảnh Scene Graph.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 self-start md:self-auto">
+              <span id="vqa-count-badge" class="badge bg-indigo-50 text-indigo-700 border border-indigo-200 px-3 py-1 font-mono text-xs font-bold">
+                Hiển thị: 0 / 1.492 câu hỏi
+              </span>
+            </div>
+          </div>
+
+          <!-- Controls Bar: Search & Status Filter -->
+          <div class="space-y-3">
+            <div class="flex flex-col sm:flex-row gap-3">
+              <!-- Search box -->
+              <div class="relative flex-1">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <input
+                  type="text"
+                  id="vqa-search-input"
+                  placeholder="Tìm câu hỏi, nhãn đối tượng, ID sơ đồ (vd: 31, producer, plants, cell, energy)..."
+                  class="w-full pl-9 pr-8 py-2 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition"
+                />
+                <button id="vqa-search-clear" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 hidden text-xs">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+
+              <!-- Result Status Filter -->
+              <div class="flex items-center gap-2 shrink-0">
+                <span class="text-xs text-slate-500 font-medium shrink-0">Kết quả:</span>
+                <select id="vqa-filter-status" class="text-xs bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-700 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 cursor-pointer">
+                  <option value="all">Tất cả kết quả (1.492)</option>
+                  <option value="correct">✓ Dự đoán ĐÚNG (1.324 câu - 88.74%)</option>
+                  <option value="incorrect">✗ Dự đoán SAI (168 câu - 11.26%)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Question Type Filter Pills -->
+            <div class="flex flex-wrap items-center gap-1.5 pt-1">
+              <span class="text-xs text-slate-400 font-semibold mr-1 flex items-center gap-1">
+                <i class="fa-solid fa-filter text-[10px]"></i> Phân loại câu hỏi:
+              </span>
+              <div id="vqa-type-pills" class="flex flex-wrap gap-1.5">
+                <!-- Dynamically rendered pills -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Cards Grid -->
+          <div id="vqa-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 min-h-[360px]">
+            <!-- Dynamic VQA question cards rendered by JS -->
+          </div>
+
+          <!-- Pagination Bar -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-slate-100 text-xs text-slate-600">
+            <div id="vqa-pagination-info" class="font-mono text-slate-500 font-semibold">
+              Đang tải...
+            </div>
+            <div id="vqa-pagination-controls" class="flex items-center gap-1">
+              <!-- Pagination buttons -->
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-slate-500">Mỗi trang:</span>
+              <select id="vqa-per-page" class="bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1 text-xs font-semibold cursor-pointer">
+                <option value="12" selected>12 câu</option>
+                <option value="24">24 câu</option>
+                <option value="48">48 câu</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
       </section>
 
       <!-- ================= SOTA SUB-SECTION 4: DIAGRAM VQA EVALUATION ================= -->
@@ -724,6 +813,95 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+
+        <!-- ================= VISUAL DIAGRAM VQA EXPLORER ================= -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs space-y-5 mt-6">
+          <!-- Header Bar -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-images text-lg"></i>
+              </span>
+              <div>
+                <h3 class="text-sm md:text-base font-extrabold text-slate-900 flex items-center gap-2">
+                  Visual Diagram VQA Explorer (1.492 Câu Hỏi Trực Quan)
+                  <span class="badge bg-emerald-100 text-emerald-800 border border-emerald-300 text-[10px]">88.74% Accuracy</span>
+                </h3>
+                <p class="text-xs text-slate-500 mt-0.5">
+                  Khám phá trực quan 1.492 câu hỏi trắc nghiệm kèm ảnh sơ đồ gốc, câu hỏi, 4 lựa chọn, đáp án Ground Truth vs Dự đoán của mô hình EduSGG + Qwen2.5-VL, và ngữ cảnh Scene Graph.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 self-start md:self-auto">
+              <span id="vqa-count-badge" class="badge bg-indigo-50 text-indigo-700 border border-indigo-200 px-3 py-1 font-mono text-xs font-bold">
+                Hiển thị: 0 / 1.492 câu hỏi
+              </span>
+            </div>
+          </div>
+
+          <!-- Controls Bar: Search & Status Filter -->
+          <div class="space-y-3">
+            <div class="flex flex-col sm:flex-row gap-3">
+              <!-- Search box -->
+              <div class="relative flex-1">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <input
+                  type="text"
+                  id="vqa-search-input"
+                  placeholder="Tìm câu hỏi, nhãn đối tượng, ID sơ đồ (vd: 31, producer, plants, cell, energy)..."
+                  class="w-full pl-9 pr-8 py-2 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition"
+                />
+                <button id="vqa-search-clear" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 hidden text-xs">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+
+              <!-- Result Status Filter -->
+              <div class="flex items-center gap-2 shrink-0">
+                <span class="text-xs text-slate-500 font-medium shrink-0">Kết quả:</span>
+                <select id="vqa-filter-status" class="text-xs bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-700 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 cursor-pointer">
+                  <option value="all">Tất cả kết quả (1.492)</option>
+                  <option value="correct">✓ Dự đoán ĐÚNG (1.324 câu - 88.74%)</option>
+                  <option value="incorrect">✗ Dự đoán SAI (168 câu - 11.26%)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Question Type Filter Pills -->
+            <div class="flex flex-wrap items-center gap-1.5 pt-1">
+              <span class="text-xs text-slate-400 font-semibold mr-1 flex items-center gap-1">
+                <i class="fa-solid fa-filter text-[10px]"></i> Phân loại câu hỏi:
+              </span>
+              <div id="vqa-type-pills" class="flex flex-wrap gap-1.5">
+                <!-- Dynamically rendered pills -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Cards Grid -->
+          <div id="vqa-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 min-h-[360px]">
+            <!-- Dynamic VQA question cards rendered by JS -->
+          </div>
+
+          <!-- Pagination Bar -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-slate-100 text-xs text-slate-600">
+            <div id="vqa-pagination-info" class="font-mono text-slate-500 font-semibold">
+              Đang tải...
+            </div>
+            <div id="vqa-pagination-controls" class="flex items-center gap-1">
+              <!-- Pagination buttons -->
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-slate-500">Mỗi trang:</span>
+              <select id="vqa-per-page" class="bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1 text-xs font-semibold cursor-pointer">
+                <option value="12" selected>12 câu</option>
+                <option value="24">24 câu</option>
+                <option value="48">48 câu</option>
+              </select>
+            </div>
           </div>
         </div>
 
@@ -1458,6 +1636,26 @@
   <script src="gallery_data.js"></script>
   <script src="vn_gallery_data.js"></script>
   <script src="sota_benchmark_data.js"></script>
+  <script src="vqa_gallery_data.js"></script>
   <script src="dashboard.js"></script>
+
+  <!-- VQA Image Lightbox Modal -->
+  <div id="vqa-lightbox-modal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl border border-slate-200">
+      <div class="px-5 py-3 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <span id="vqa-lightbox-id" class="badge bg-indigo-100 text-indigo-800 font-bold font-mono">#ai2d:--</span>
+          <span id="vqa-lightbox-title" class="text-xs font-bold text-slate-800 truncate max-w-md">Ảnh sơ đồ gốc</span>
+        </div>
+        <button id="vqa-lightbox-close" class="w-8 h-8 rounded-lg hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center transition">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+      <div class="p-4 flex-1 flex items-center justify-center bg-slate-100 overflow-auto">
+        <img id="vqa-lightbox-img" src="" alt="Sơ đồ phóng to" class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-sm" />
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

@@ -1740,10 +1740,428 @@ function renderSotaGalleryGrid() {
     .join("");
 }
 
+
+/* ==========================================================================
+   VISUAL DIAGRAM VQA EXPLORER (N=1,492 Questions across 491 Diagrams)
+   ========================================================================== */
+
+let vqaAllQuestions = [];
+let vqaFilteredQuestions = [];
+let vqaCurrentPage = 1;
+let vqaPerPage = 12;
+let vqaActiveType = "all";
+let vqaActiveStatus = "all";
+let vqaSearchQuery = "";
+let vqaIsInitialized = false;
+
+function initVisualVqa() {
+  if (typeof VQA_GALLERY_DATA === "undefined" || !VQA_GALLERY_DATA.questions) {
+    console.warn("VQA_GALLERY_DATA not loaded yet.");
+    return;
+  }
+  if (vqaIsInitialized) return;
+  vqaIsInitialized = true;
+
+  vqaAllQuestions = VQA_GALLERY_DATA.questions || [];
+  vqaFilteredQuestions = [...vqaAllQuestions];
+
+  setupVqaControls();
+  renderVqaTypePills();
+  applyVqaFilters();
+  setupVqaLightbox();
+}
+
+function setupVqaControls() {
+  const searchInput = document.getElementById("vqa-search-input");
+  const searchClear = document.getElementById("vqa-search-clear");
+  const filterStatus = document.getElementById("vqa-filter-status");
+  const perPageSelect = document.getElementById("vqa-per-page");
+
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      vqaSearchQuery = e.target.value.trim().toLowerCase();
+      if (searchClear) {
+        searchClear.classList.toggle("hidden", vqaSearchQuery.length === 0);
+      }
+      vqaCurrentPage = 1;
+      applyVqaFilters();
+    });
+  }
+
+  if (searchClear) {
+    searchClear.addEventListener("click", () => {
+      if (searchInput) searchInput.value = "";
+      vqaSearchQuery = "";
+      searchClear.classList.add("hidden");
+      vqaCurrentPage = 1;
+      applyVqaFilters();
+    });
+  }
+
+  if (filterStatus) {
+    filterStatus.addEventListener("change", (e) => {
+      vqaActiveStatus = e.target.value;
+      vqaCurrentPage = 1;
+      applyVqaFilters();
+    });
+  }
+
+  if (perPageSelect) {
+    perPageSelect.addEventListener("change", (e) => {
+      vqaPerPage = parseInt(e.target.value, 10) || 12;
+      vqaCurrentPage = 1;
+      applyVqaFilters();
+    });
+  }
+}
+
+function renderVqaTypePills() {
+  const container = document.getElementById("vqa-type-pills");
+  if (!container) return;
+
+  const typeConfig = [
+    { key: "all", label: "Tất cả", icon: "fa-border-all", count: 1492 },
+    { key: "process_sequence", label: "Tiến trình", icon: "fa-arrow-right-arrow-left", count: 201 },
+    { key: "label_identification", label: "Nhãn", icon: "fa-tag", count: 149 },
+    { key: "structural_query", label: "Cấu trúc", icon: "fa-sitemap", count: 987 },
+    { key: "directional_flow", label: "Dòng chảy", icon: "fa-compass", count: 118 },
+    { key: "counting", label: "Đếm", icon: "fa-calculator", count: 37 }
+  ];
+
+  container.innerHTML = typeConfig
+    .map((t) => {
+      const isActive = vqaActiveType === t.key;
+      const btnClass = isActive
+        ? "px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-indigo-600 text-white shadow-2xs"
+        : "px-2.5 py-1 rounded-lg text-xs font-medium transition flex items-center gap-1.5 bg-slate-100 text-slate-600 hover:bg-slate-200";
+      return `
+        <button
+          onclick="selectVqaType('${t.key}')"
+          class="${btnClass}"
+        >
+          <i class="fa-solid ${t.icon} text-[10px]"></i>
+          <span>${t.label}</span>
+          <span class="text-[10px] opacity-80 font-mono">(${t.count})</span>
+        </button>
+      `;
+    })
+    .join("");
+}
+
+function selectVqaType(key) {
+  vqaActiveType = key;
+  vqaCurrentPage = 1;
+  renderVqaTypePills();
+  applyVqaFilters();
+}
+
+function applyVqaFilters() {
+  vqaFilteredQuestions = vqaAllQuestions.filter((q) => {
+    // 1. Question Type filter
+    if (vqaActiveType !== "all" && q.type !== vqaActiveType) {
+      return false;
+    }
+
+    // 2. Status filter
+    if (vqaActiveStatus === "correct" && !q.is_correct) {
+      return false;
+    }
+    if (vqaActiveStatus === "incorrect" && q.is_correct) {
+      return false;
+    }
+
+    // 3. Search query filter
+    if (vqaSearchQuery) {
+      const matchQ = q.question && q.question.toLowerCase().includes(vqaSearchQuery);
+      const matchRawId = q.raw_id && q.raw_id.toLowerCase().includes(vqaSearchQuery);
+      const matchDiagId = q.diagram_id && q.diagram_id.toLowerCase().includes(vqaSearchQuery);
+      const matchGraph = q.graph_summary && q.graph_summary.toLowerCase().includes(vqaSearchQuery);
+      const matchOptions = q.options && q.options.some((o) => o.text && o.text.toLowerCase().includes(vqaSearchQuery));
+      if (!matchQ && !matchRawId && !matchDiagId && !matchGraph && !matchOptions) {
+        return false;
+      }
+    }
+
+    return true;
+  });
+
+  // Update badge count
+  const badge = document.getElementById("vqa-count-badge");
+  if (badge) {
+    badge.textContent = `Hiển thị: ${vqaFilteredQuestions.length.toLocaleString()} / ${vqaAllQuestions.length.toLocaleString()} câu hỏi`;
+  }
+
+  renderVqaCards();
+  renderVqaPagination();
+}
+
+function renderVqaCards() {
+  const container = document.getElementById("vqa-cards-grid");
+  if (!container) return;
+
+  if (vqaFilteredQuestions.length === 0) {
+    container.innerHTML = `
+      <div class="col-span-full py-16 text-center text-slate-400">
+        <i class="fa-solid fa-magnifying-glass text-3xl mb-3 text-slate-300"></i>
+        <p class="text-sm font-semibold">Không tìm thấy câu hỏi VQA nào phù hợp bộ lọc.</p>
+        <p class="text-xs text-slate-400 mt-1">Hãy thử xóa bộ lọc tìm kiếm hoặc chọn danh mục khác.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const startIdx = (vqaCurrentPage - 1) * vqaPerPage;
+  const pageItems = vqaFilteredQuestions.slice(startIdx, startIdx + vqaPerPage);
+
+  container.innerHTML = pageItems
+    .map((q) => {
+      const statusBadge = q.is_correct
+        ? `<span class="badge bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold"><i class="fa-solid fa-check mr-1"></i>Đúng</span>`
+        : `<span class="badge bg-rose-100 text-rose-800 border border-rose-300 font-bold"><i class="fa-solid fa-xmark mr-1"></i>Sai</span>`;
+
+      const typeBadgeClass = q.type_badge || "bg-indigo-100 text-indigo-800 border-indigo-200";
+      const typeIcon = q.type_icon || "fa-circle-question";
+
+      // Render 4 options
+      const optionsHtml = (q.options || [])
+        .map((opt) => {
+          let rowClass = "p-2 rounded-lg border text-xs flex items-center justify-between gap-2 transition ";
+          let tagHtml = "";
+
+          if (opt.is_gt && opt.is_pred) {
+            // Correct prediction
+            rowClass += "bg-emerald-50 border-emerald-300 text-emerald-950 font-bold shadow-2xs";
+            tagHtml = `<span class="badge bg-emerald-600 text-white text-[9px] shrink-0"><i class="fa-solid fa-check mr-1"></i>GT & Dự đoán</span>`;
+          } else if (opt.is_gt && !opt.is_pred) {
+            // Ground truth (missed by model)
+            rowClass += "bg-amber-50 border-amber-300 text-amber-950 font-semibold";
+            tagHtml = `<span class="badge bg-amber-600 text-white text-[9px] shrink-0"><i class="fa-solid fa-star mr-1"></i>Đáp án đúng (GT)</span>`;
+          } else if (!opt.is_gt && opt.is_pred) {
+            // Model incorrectly picked this
+            rowClass += "bg-rose-50 border-rose-300 text-rose-950 font-medium";
+            tagHtml = `<span class="badge bg-rose-600 text-white text-[9px] shrink-0"><i class="fa-solid fa-xmark mr-1"></i>Mô hình chọn sai</span>`;
+          } else {
+            // Regular unselected option
+            rowClass += "bg-slate-50/70 border-slate-200 text-slate-700 hover:bg-slate-100";
+          }
+
+          return `
+            <div class="${rowClass}">
+              <div class="flex items-center gap-2 truncate">
+                <span class="w-5 h-5 rounded-md bg-white border border-slate-300 flex items-center justify-center font-bold font-mono text-[10px] shrink-0 text-slate-700">
+                  ${opt.letter}
+                </span>
+                <span class="truncate" title="${escapeXml(opt.text)}">${escapeXml(opt.text)}</span>
+              </div>
+              ${tagHtml}
+            </div>
+          `;
+        })
+        .join("");
+
+      return `
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs hover:shadow-md transition flex flex-col justify-between space-y-3.5">
+          <!-- Card Header & Diagram Thumbnail -->
+          <div class="space-y-3">
+            <div class="relative group rounded-xl overflow-hidden bg-slate-100 border border-slate-200 aspect-[16/10] flex items-center justify-center cursor-pointer" onclick="openVqaLightbox('${q.image_url}', '${escapeXml(q.diagram_title)}', '${q.raw_id}')">
+              <img
+                src="${q.image_url}"
+                alt="${escapeXml(q.diagram_title)}"
+                loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-105 transition duration-200"
+                onerror="this.onerror=null; this.src='https://placehold.co/400x250?text=S%C6%A1+%C4%90%E1%BB%93+AI2D+#' + '${q.raw_id}';"
+              />
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-2 text-white text-xs font-semibold">
+                <i class="fa-solid fa-magnifying-glass-plus text-base"></i> Phóng to sơ đồ
+              </div>
+              <span class="absolute top-2 left-2 badge bg-slate-900/80 text-white font-mono text-[10px] backdrop-blur-xs">
+                #${q.raw_id}
+              </span>
+            </div>
+
+            <!-- Tags Bar -->
+            <div class="flex items-center justify-between gap-1">
+              <span class="badge ${typeBadgeClass} text-[10px] font-semibold flex items-center gap-1">
+                <i class="fa-solid ${typeIcon} text-[9px]"></i> ${q.type_name_vi || q.type}
+              </span>
+              ${statusBadge}
+            </div>
+
+            <!-- Question Text -->
+            <div class="pt-0.5">
+              <div class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Câu hỏi:</div>
+              <h4 class="font-bold text-slate-900 text-xs mt-0.5 leading-snug line-clamp-2" title="${escapeXml(q.question)}">
+                ${escapeXml(q.question)}
+              </h4>
+            </div>
+
+            <!-- 4 Options -->
+            <div class="space-y-1.5 pt-1">
+              ${optionsHtml}
+            </div>
+          </div>
+
+          <!-- Scene Graph Collapsible & Card Footer -->
+          <div class="space-y-2 pt-2 border-t border-slate-100">
+            <details class="group text-[11px] bg-slate-50 rounded-xl border border-slate-200 p-2.5">
+              <summary class="cursor-pointer font-semibold text-slate-700 hover:text-indigo-600 flex items-center justify-between select-none">
+                <span class="flex items-center gap-1.5">
+                  <i class="fa-solid fa-network-wired text-indigo-500"></i> Ngữ cảnh EduSG Scene Graph
+                </span>
+                <i class="fa-solid fa-chevron-down text-slate-400 text-[10px] group-open:rotate-180 transition"></i>
+              </summary>
+              <div class="mt-2 pt-2 border-t border-slate-200 text-slate-600 leading-relaxed font-mono text-[10px] max-h-32 overflow-y-auto custom-scrollbar">
+                ${escapeXml(q.graph_summary)}
+              </div>
+            </details>
+
+            <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
+              <span title="Thời gian sinh suy luận"><i class="fa-regular fa-clock mr-1"></i>${q.latency_s ? q.latency_s + 's' : '0.34s'}</span>
+              <span class="text-indigo-600 font-bold">Qwen2.5-VL-7B + EduSG</span>
+            </div>
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+function renderVqaPagination() {
+  const infoEl = document.getElementById("vqa-pagination-info");
+  const controlsEl = document.getElementById("vqa-pagination-controls");
+  if (!controlsEl) return;
+
+  const totalItems = vqaFilteredQuestions.length;
+  const totalPages = Math.ceil(totalItems / vqaPerPage) || 1;
+
+  if (vqaCurrentPage > totalPages) vqaCurrentPage = totalPages;
+  if (vqaCurrentPage < 1) vqaCurrentPage = 1;
+
+  const startItem = totalItems === 0 ? 0 : (vqaCurrentPage - 1) * vqaPerPage + 1;
+  const endItem = Math.min(vqaCurrentPage * vqaPerPage, totalItems);
+
+  if (infoEl) {
+    infoEl.textContent = `Hiển thị ${startItem} - ${endItem} trên tổng số ${totalItems.toLocaleString()} câu hỏi (Trang ${vqaCurrentPage}/${totalPages})`;
+  }
+
+  let btnsHtml = "";
+
+  // First & Prev
+  btnsHtml += `
+    <button
+      onclick="goVqaPage(1)"
+      ${vqaCurrentPage === 1 ? "disabled" : ""}
+      class="px-2 py-1 rounded-lg border border-slate-200 text-xs font-semibold ${vqaCurrentPage === 1 ? "opacity-40 cursor-not-allowed bg-slate-50 text-slate-400" : "bg-white text-slate-700 hover:bg-slate-100"}"
+      title="Trang đầu"
+    >
+      <i class="fa-solid fa-angles-left"></i>
+    </button>
+    <button
+      onclick="goVqaPage(${vqaCurrentPage - 1})"
+      ${vqaCurrentPage === 1 ? "disabled" : ""}
+      class="px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-semibold ${vqaCurrentPage === 1 ? "opacity-40 cursor-not-allowed bg-slate-50 text-slate-400" : "bg-white text-slate-700 hover:bg-slate-100"}"
+    >
+      <i class="fa-solid fa-chevron-left mr-1"></i> Trước
+    </button>
+  `;
+
+  // Page Numbers (around current page)
+  const delta = 2;
+  const left = Math.max(1, vqaCurrentPage - delta);
+  const right = Math.min(totalPages, vqaCurrentPage + delta);
+
+  if (left > 1) {
+    btnsHtml += `<span class="px-1 text-slate-400 font-mono text-xs">...</span>`;
+  }
+
+  for (let i = left; i <= right; i++) {
+    const isCur = i === vqaCurrentPage;
+    btnsHtml += `
+      <button
+        onclick="goVqaPage(${i})"
+        class="w-7 h-7 rounded-lg text-xs font-bold font-mono transition ${isCur ? "bg-indigo-600 text-white shadow-2xs" : "bg-white border border-slate-200 text-slate-700 hover:bg-slate-100"}"
+      >
+        ${i}
+      </button>
+    `;
+  }
+
+  if (right < totalPages) {
+    btnsHtml += `<span class="px-1 text-slate-400 font-mono text-xs">...</span>`;
+  }
+
+  // Next & Last
+  btnsHtml += `
+    <button
+      onclick="goVqaPage(${vqaCurrentPage + 1})"
+      ${vqaCurrentPage === totalPages ? "disabled" : ""}
+      class="px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-semibold ${vqaCurrentPage === totalPages ? "opacity-40 cursor-not-allowed bg-slate-50 text-slate-400" : "bg-white text-slate-700 hover:bg-slate-100"}"
+    >
+      Sau <i class="fa-solid fa-chevron-right ml-1"></i>
+    </button>
+    <button
+      onclick="goVqaPage(${totalPages})"
+      ${vqaCurrentPage === totalPages ? "disabled" : ""}
+      class="px-2 py-1 rounded-lg border border-slate-200 text-xs font-semibold ${vqaCurrentPage === totalPages ? "opacity-40 cursor-not-allowed bg-slate-50 text-slate-400" : "bg-white text-slate-700 hover:bg-slate-100"}"
+      title="Trang cuối"
+    >
+      <i class="fa-solid fa-angles-right"></i>
+    </button>
+  `;
+
+  controlsEl.innerHTML = btnsHtml;
+}
+
+function goVqaPage(p) {
+  const totalPages = Math.ceil(vqaFilteredQuestions.length / vqaPerPage) || 1;
+  if (p < 1 || p > totalPages) return;
+  vqaCurrentPage = p;
+  renderVqaCards();
+  renderVqaPagination();
+
+  // Scroll smoothly to top of cards grid
+  const gridEl = document.getElementById("vqa-cards-grid");
+  if (gridEl) {
+    gridEl.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+function setupVqaLightbox() {
+  const modal = document.getElementById("vqa-lightbox-modal");
+  const closeBtn = document.getElementById("vqa-lightbox-close");
+  if (closeBtn && modal) {
+    closeBtn.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+      }
+    });
+  }
+}
+
+function openVqaLightbox(imgUrl, title, rawId) {
+  const modal = document.getElementById("vqa-lightbox-modal");
+  const img = document.getElementById("vqa-lightbox-img");
+  const titleEl = document.getElementById("vqa-lightbox-title");
+  const idEl = document.getElementById("vqa-lightbox-id");
+
+  if (!modal || !img) return;
+
+  img.src = imgUrl;
+  if (titleEl) titleEl.textContent = title || "Ảnh sơ đồ AI2D";
+  if (idEl) idEl.textContent = `#ai2d:${rawId}`;
+
+  modal.classList.remove("hidden");
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   initGallery();
   initVnGallery();
   initSotaBenchmark();
+  initVisualVqa();
   setupTopMenuNavigation();
   setupAuditModalEvents();
 });
