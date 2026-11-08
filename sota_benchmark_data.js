@@ -1,6 +1,6 @@
 const SOTA_BENCHMARK_DATA = {
   "title": "EduSGG SOTA Benchmark & Qwen2.5-14B QLoRA Analytics",
-  "description": "Comprehensive literature SOTA evaluation, training loss convergence curves, and qualitative Ground Truth vs Generated Caption explorer on AI2D-Caption (N=75)",
+  "description": "Comprehensive literature SOTA evaluation, training loss convergence curves, qualitative Ground Truth vs Generated Caption explorer on AI2D-Caption (N=75), and Diagram VQA on N=491",
   "sota_comparison": [
     {
       "method": "Stable Diffusion v1.4",
@@ -252,6 +252,80 @@ const SOTA_BENCHMARK_DATA = {
         "cider": 22.67,
         "bertscore": 90.98
       }
+    }
+  },
+  "vqa_benchmark": {
+    "benchmark": "AI2D Official Test Split Diagram VQA (N=491 Diagrams)",
+    "total_questions": 1492,
+    "method_1_deterministic": {
+      "overall_accuracy": 24.8,
+      "correct_count": 370,
+      "breakdown": {
+        "label_identification": {
+          "count": 149,
+          "correct": 37,
+          "accuracy": 24.83
+        },
+        "structural_query": {
+          "count": 987,
+          "correct": 247,
+          "accuracy": 25.03
+        },
+        "process_sequence": {
+          "count": 201,
+          "correct": 45,
+          "accuracy": 22.39
+        },
+        "counting": {
+          "count": 37,
+          "correct": 7,
+          "accuracy": 18.92
+        },
+        "directional_flow": {
+          "count": 118,
+          "correct": 34,
+          "accuracy": 28.81
+        }
+      }
+    },
+    "method_2_graph_llm": {
+      "overall_accuracy": 25.74,
+      "correct_count": 384,
+      "breakdown": {
+        "label_identification": {
+          "count": 149,
+          "correct": 38,
+          "accuracy": 25.5
+        },
+        "structural_query": {
+          "count": 987,
+          "correct": 256,
+          "accuracy": 25.94
+        },
+        "process_sequence": {
+          "count": 201,
+          "correct": 46,
+          "accuracy": 22.89
+        },
+        "counting": {
+          "count": 37,
+          "correct": 10,
+          "accuracy": 27.03
+        },
+        "directional_flow": {
+          "count": 118,
+          "correct": 34,
+          "accuracy": 28.81
+        }
+      }
+    },
+    "literature_baselines": {
+      "random_guess": 25.0,
+      "resnet101_bert_vqa": 32.8,
+      "dpg_kembhavi_2016": 38.4,
+      "llava_1.5_13b_zeroshot": 46.2,
+      "edusgg_method1_deterministic": 24.8,
+      "edusgg_method2_graph_llm": 25.74
     }
   },
   "diagrams": [

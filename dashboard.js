@@ -1399,10 +1399,12 @@ function setupSotaSubTabs() {
   const btnTable = document.getElementById("btn-sota-tab-table");
   const btnTraining = document.getElementById("btn-sota-tab-training");
   const btnExplorer = document.getElementById("btn-sota-tab-explorer");
+  const btnVqa = document.getElementById("btn-sota-tab-vqa");
 
   const secTable = document.getElementById("sota-sub-table");
   const secTraining = document.getElementById("sota-sub-training");
   const secExplorer = document.getElementById("sota-sub-explorer");
+  const secVqa = document.getElementById("sota-sub-vqa");
 
   const activeClass = "px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-indigo-600 text-white shadow-xs cursor-pointer";
   const inactiveClass = "px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer";
@@ -1412,10 +1414,12 @@ function setupSotaSubTabs() {
     if (secTable) secTable.classList.add("hidden");
     if (secTraining) secTraining.classList.add("hidden");
     if (secExplorer) secExplorer.classList.add("hidden");
+    if (secVqa) secVqa.classList.add("hidden");
 
     if (btnTable) btnTable.className = inactiveClass;
     if (btnTraining) btnTraining.className = inactiveClass;
     if (btnExplorer) btnExplorer.className = inactiveClass;
+    if (btnVqa) btnVqa.className = inactiveClass;
 
     if (tab === "training") {
       if (secTraining) secTraining.classList.remove("hidden");
@@ -1423,6 +1427,9 @@ function setupSotaSubTabs() {
     } else if (tab === "explorer") {
       if (secExplorer) secExplorer.classList.remove("hidden");
       if (btnExplorer) btnExplorer.className = activeClass;
+    } else if (tab === "vqa") {
+      if (secVqa) secVqa.classList.remove("hidden");
+      if (btnVqa) btnVqa.className = activeClass;
     } else {
       if (secTable) secTable.classList.remove("hidden");
       if (btnTable) btnTable.className = activeClass;
@@ -1432,6 +1439,7 @@ function setupSotaSubTabs() {
   if (btnTable) btnTable.addEventListener("click", () => switchSubTab("table"));
   if (btnTraining) btnTraining.addEventListener("click", () => switchSubTab("training"));
   if (btnExplorer) btnExplorer.addEventListener("click", () => switchSubTab("explorer"));
+  if (btnVqa) btnVqa.addEventListener("click", () => switchSubTab("vqa"));
 }
 
 function renderSotaComparisonTable() {

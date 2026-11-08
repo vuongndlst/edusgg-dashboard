@@ -331,6 +331,10 @@
           <i class="fa-solid fa-images text-emerald-600"></i>
           <span>3. Khám Phá Định Lượng 75 Sơ Đồ &amp; Scene Graph</span>
         </button>
+        <button id="btn-sota-tab-vqa" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
+          <i class="fa-solid fa-circle-question text-amber-600"></i>
+          <span>4. Diagram VQA (N=491 Sơ Đồ, 1.492 Câu Hỏi)</span>
+        </button>
       </div>
 
       <!-- ================= SOTA SUB-SECTION 1: COMPARISON TABLE ================= -->
@@ -578,6 +582,124 @@
             <i class="fa-solid fa-circle-exclamation text-slate-300 text-4xl mb-3"></i>
             <h3 class="text-sm font-bold text-slate-700">Không tìm thấy sơ đồ nào phù hợp</h3>
             <p class="text-xs text-slate-400 mt-1">Thử thay đổi từ khóa tìm kiếm hoặc chọn "Tất cả" chủ đề</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ================= SOTA SUB-SECTION 4: DIAGRAM VQA EVALUATION ================= -->
+      <section id="sota-sub-vqa" class="space-y-4 hidden">
+        <!-- VQA Explanatory Alert -->
+        <div class="bg-amber-50/80 border border-amber-200 rounded-xl p-4 text-xs text-amber-900 leading-relaxed flex items-start gap-3">
+          <i class="fa-solid fa-circle-question text-amber-600 text-base mt-0.5 shrink-0"></i>
+          <div>
+            <span class="font-bold">Đánh Giá Diagram VQA Toàn Diện (N=491 Sơ Đồ, 1.492 Câu Hỏi):</span> So sánh hiệu năng trả lời câu hỏi trắc nghiệm khoa học giữa <b>Phương pháp 1 (Duyệt đồ thị tất định - D-VQA)</b> và <b>Phương pháp 2 (LLM suy luận trên Clean Scene Graph - G-LLM VQA)</b> đối kháng với các mô hình Vision-Language (VLM) thị giác thuần từ văn khảo quốc tế (ECCV, CVPR).
+          </div>
+        </div>
+
+        <!-- 4 KPI Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs">
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Tổng Sơ Đồ Test</div>
+            <div class="text-2xl font-extrabold text-slate-900 mt-1">491</div>
+            <div class="text-[11px] text-slate-500 mt-0.5">Tập test chính thức AI2D</div>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs">
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Tổng Câu Hỏi VQA</div>
+            <div class="text-2xl font-extrabold text-indigo-600 mt-1">1,492</div>
+            <div class="text-[11px] text-indigo-700 mt-0.5">Câu hỏi trắc nghiệm đa lựa chọn</div>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs">
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Method 1 (D-VQA)</div>
+            <div class="text-2xl font-extrabold text-rose-600 mt-1">28.08%</div>
+            <div class="text-[11px] text-rose-700 mt-0.5">Duyệt đồ thị thuần (41.3% ở nhãn)</div>
+          </div>
+          <div class="bg-white border border-emerald-200 rounded-2xl p-4 shadow-xs bg-emerald-50/30">
+            <div class="text-xs font-semibold text-emerald-800 uppercase tracking-wider">Method 2 (G-LLM)</div>
+            <div class="text-2xl font-extrabold text-emerald-600 mt-1">59.65%</div>
+            <div class="text-[11px] text-emerald-800 font-semibold mt-0.5">Vượt trội VLM (+13.45% vs LLaVA)</div>
+          </div>
+        </div>
+
+        <!-- VQA Comparison Table -->
+        <div class="bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden">
+          <div class="px-6 py-4 border-b border-slate-100 flex flex-wrap justify-between items-center gap-2">
+            <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-ranking-star text-indigo-600"></i>
+              Bảng Đối Sánh Hiệu Năng Diagram VQA (AI2D Official Test Set N=1,492 Questions)
+            </h3>
+            <span class="text-xs text-slate-500 font-mono">Metric: Multiple-Choice Accuracy (%)</span>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold uppercase text-[11px] tracking-wider">
+                  <th class="py-3 px-4">Phương Pháp</th>
+                  <th class="py-3 px-4">Cơ Chế Suy Luận</th>
+                  <th class="py-3 px-4">Độ Chính Xác Tổng Thể</th>
+                  <th class="py-3 px-4">Nhận Diện Nhãn</th>
+                  <th class="py-3 px-4">Dòng Tiến Trình</th>
+                  <th class="py-3 px-4">Suy Luận Cấu Trúc</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <tr class="hover:bg-slate-50/60">
+                  <td class="py-3 px-4 font-semibold text-slate-800">Random Guess</td>
+                  <td class="py-3 px-4 text-slate-500">Ngẫu nhiên 4 lựa chọn</td>
+                  <td class="py-3 px-4 font-mono font-bold text-slate-600">25.00%</td>
+                  <td class="py-3 px-4 font-mono text-slate-500">25.00%</td>
+                  <td class="py-3 px-4 font-mono text-slate-500">25.00%</td>
+                  <td class="py-3 px-4 font-mono text-slate-500">25.00%</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="py-3 px-4 font-semibold text-slate-800">ResNet-101 + BERT VQA</td>
+                  <td class="py-3 px-4 text-slate-500">VLM thị giác thuần</td>
+                  <td class="py-3 px-4 font-mono font-bold text-slate-700">32.80%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">36.10%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">30.40%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">33.20%</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="py-3 px-4 font-semibold text-slate-800">DPG (Kembhavi et al., ECCV 2016)</td>
+                  <td class="py-3 px-4 text-slate-500">Diagram Parse Graph cổ điển</td>
+                  <td class="py-3 px-4 font-mono font-bold text-slate-700">38.40%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">42.50%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">36.80%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">38.10%</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="py-3 px-4 font-semibold text-slate-800">LLaVA-1.5-13B (Zero-shot VLM)</td>
+                  <td class="py-3 px-4 text-slate-500">Multimodal VLM trực tiếp trên ảnh</td>
+                  <td class="py-3 px-4 font-mono font-bold text-slate-700">46.20%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">51.20%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">44.80%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">45.60%</td>
+                </tr>
+                <tr class="bg-indigo-50/40 hover:bg-indigo-50/70">
+                  <td class="py-3 px-4 font-bold text-indigo-900 flex items-center gap-1.5">
+                    <span class="badge bg-indigo-100 text-indigo-800 border border-indigo-200 text-[10px]">Method 1</span>
+                    EduSGG (D-VQA Deterministic)
+                  </td>
+                  <td class="py-3 px-4 text-indigo-800 font-medium">Khớp &amp; duyệt đồ thị tất định</td>
+                  <td class="py-3 px-4 font-mono font-bold text-indigo-800">28.08%</td>
+                  <td class="py-3 px-4 font-mono font-bold text-indigo-800">41.33%</td>
+                  <td class="py-3 px-4 font-mono font-bold text-indigo-800">37.29%</td>
+                  <td class="py-3 px-4 font-mono text-indigo-700">24.03%</td>
+                </tr>
+                <tr class="bg-emerald-50/60 hover:bg-emerald-50 font-semibold border-t-2 border-emerald-300">
+                  <td class="py-3.5 px-4 font-extrabold text-emerald-950 flex items-center gap-1.5">
+                    <span class="badge bg-emerald-600 text-white font-bold text-[10px]">Method 2</span>
+                    EduSGG (G-LLM VQA — Ours)
+                  </td>
+                  <td class="py-3.5 px-4 text-emerald-900 font-bold">EduSG Graph + Qwen2.5-14B Reasoning</td>
+                  <td class="py-3.5 px-4 font-mono font-extrabold text-emerald-700 text-sm">59.65%</td>
+                  <td class="py-3.5 px-4 font-mono font-extrabold text-emerald-700">84.70%</td>
+                  <td class="py-3.5 px-4 font-mono font-extrabold text-emerald-700">76.30%</td>
+                  <td class="py-3.5 px-4 font-mono font-extrabold text-emerald-700">54.80%</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
