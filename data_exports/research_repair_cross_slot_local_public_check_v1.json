@@ -1,0 +1,8 @@
+{
+  "files_checked": 29,
+  "result_sha256": "1a7d3a6a15e869bc695845c4cef3e9fbc2a368dae32a1928f191c3271f2abb9f",
+  "scope": "Exact local source/result checks and text scan only; no native/model/image computation. Raw prereg/parent logs/weights/data not copied.",
+  "secret_or_private_path_matches": 0,
+  "source_hashes_matched": 16,
+  "status": "LOCAL_PUBLIC_HASH_PRIVACY_CHECK_PASSED"
+}

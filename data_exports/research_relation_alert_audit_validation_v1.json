@@ -1,0 +1,20 @@
+{
+  "errors": 0,
+  "failures": 0,
+  "gpu_seconds": 0,
+  "image_reads": 0,
+  "native_reads": 0,
+  "optimizer_steps": 0,
+  "peak_rss_bytes": 49041408,
+  "scope": "15synthetic access/journal/cache/matching/multiplicity/ambiguity/fullrecall fixtures; no native quality results.",
+  "sources": {
+    "configs/research_relation_alert_audit_v1.json": "c9444a5377b2874f00f18e54e0fb868d18d89368a89ed035402378389e53b290",
+    "scripts/validate_research_relation_alert_audit_remote_v1.sh": "c3f1fee3d6ea0ece19a2e9aca4c48de6f537dad097dba34247d44c7c7e1bf782",
+    "src/edusgg/research_relation_alert_audit_v1.py": "cb9a1ef9f0e1a10b08a785eab8101692ef510812020cc558de95f02bf45c76ad",
+    "tests/test_research_relation_alert_audit_v1.py": "fc366db124af1c8e4a67a79e378ffc6660277f2dcf4ec806420d82c213a95b0b"
+  },
+  "status": "PASSED",
+  "tests_run": 15,
+  "torch_imported": false,
+  "wall_seconds": 0.02026398479938507
+}

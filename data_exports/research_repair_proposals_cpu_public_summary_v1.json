@@ -1,0 +1,39 @@
+{
+  "format": "public-synthetic-proposals-registration-summary-v1",
+  "immutable_source_ref_count": 49,
+  "maximum_actions": 64,
+  "maximum_active_candidates": 1000,
+  "maximum_logical_edits": 2,
+  "new_native_pixel_prediction_model_optimizer_gpu_operations": 0,
+  "original_run_fingerprint": "cf96fb35a45ecb04d34d761088f855e0edd3982c08ba2b8638656b1fbcfaaa6e",
+  "original_server_preregister_sha256": "5be9beb93a18ba11526471b2890ba02dbd91ec259860c7d851c50b8b24d35a09",
+  "recipes": [
+    {
+      "factory": "fixture",
+      "kwargs": {},
+      "name": "five_operations"
+    },
+    {
+      "factory": "synergy_fixture",
+      "kwargs": {},
+      "name": "nonlocal_synergy"
+    },
+    {
+      "factory": "crowded_fixture",
+      "kwargs": {
+        "initial_occurrences": 200,
+        "pool_rows": 25000
+      },
+      "name": "maximum_declared_input"
+    }
+  ],
+  "scope": "Allowlisted public derived summary, not original preregistration bytes/runnable registration; original remains server-only.",
+  "source_hashes": {
+    "configs/research_repair_proposals_cpu_v1.json": "0f43847efa0087ff0349471356adebd621fa6fa674b8c8dc2b52abcbd88cfe2c",
+    "scripts/run_research_repair_proposals_cpu_remote_v1.sh": "5c8a930d4d26d8ec18c2d84a4f8da25b425e0fb712ac0f7a6ee25b1f71bd172f",
+    "scripts/validate_research_repair_proposals_remote_v1.sh": "eda4b906d9fa6bd4fdd55e6b346eff067d491459c305fff5a01032ffaa260aa6",
+    "src/edusgg/research_repair_proposal_fixtures_v1.py": "6475cdb2c8a3ac49e0f561a2211a22eedcd6953d571dd1b88a34258200952de3",
+    "src/edusgg/research_repair_proposals_v1.py": "67e59a7b1274acd45953996b0949ab9e0f505d79c73b7cafc6f053ddffc7979a",
+    "tests/test_research_repair_proposals_v1.py": "88646fe6521cc53e1b54e3b4767d527c98428ce75e941b194ebc82fb0be3329d"
+  }
+}

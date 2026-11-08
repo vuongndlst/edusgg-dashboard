@@ -1,0 +1,13 @@
+{
+  "bundle_sha256": "8389d25229b02555a2f9d6487f7cfe28773eda81238979510a237da5ce5017f9",
+  "shipped_receipt_files_verified": 18,
+  "text_secret_checks": 19,
+  "secret_matches": 0,
+  "completed_detector_seeds_at_snapshot": [
+    42
+  ],
+  "graph_registered": false,
+  "graph_quality_fits": 0,
+  "full_model_orchestration_tests": "pending detector exit",
+  "protected_gate_open": false
+}

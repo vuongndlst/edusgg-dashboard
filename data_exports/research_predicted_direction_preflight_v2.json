@@ -1,0 +1,124 @@
+{
+  "source_sha256": "dad8577a1a758e322147a519117c3dfb4a1757965501922a47f55b458fc5b7aa",
+  "main_source_sha256": "8c9e9d2beb13d93d84e2403ea7369c0303acb99d5d25a00f4ad199b94e08f3a5",
+  "train_images": 16,
+  "rows": [
+    {
+      "image_id": "ai2d:110",
+      "bytes": 5673,
+      "cpu_seconds": 0.00842558965086937,
+      "queries": 0,
+      "supported": 0
+    },
+    {
+      "image_id": "ai2d:2991",
+      "bytes": 24425,
+      "cpu_seconds": 0.004295365884900093,
+      "queries": 0,
+      "supported": 0
+    },
+    {
+      "image_id": "ai2d:2736",
+      "bytes": 13801,
+      "cpu_seconds": 0.007274802774190903,
+      "queries": 0,
+      "supported": 0
+    },
+    {
+      "image_id": "ai2d:2795",
+      "bytes": 27113,
+      "cpu_seconds": 0.20948663353919983,
+      "queries": 4,
+      "supported": 2
+    },
+    {
+      "image_id": "ai2d:4879",
+      "bytes": 13673,
+      "cpu_seconds": 0.020597243681550026,
+      "queries": 1,
+      "supported": 0
+    },
+    {
+      "image_id": "ai2d:3462",
+      "bytes": 19881,
+      "cpu_seconds": 0.011268848553299904,
+      "queries": 0,
+      "supported": 0
+    },
+    {
+      "image_id": "ai2d:894",
+      "bytes": 82793,
+      "cpu_seconds": 0.2401775885373354,
+      "queries": 18,
+      "supported": 8
+    },
+    {
+      "image_id": "ai2d:2787",
+      "bytes": 18857,
+      "cpu_seconds": 0.010456414893269539,
+      "queries": 1,
+      "supported": 0
+    },
+    {
+      "image_id": "ai2d:15",
+      "bytes": 101609,
+      "cpu_seconds": 0.13583317771553993,
+      "queries": 22,
+      "supported": 9
+    },
+    {
+      "image_id": "ai2d:4538",
+      "bytes": 4585,
+      "cpu_seconds": 0.0022735297679901123,
+      "queries": 0,
+      "supported": 0
+    },
+    {
+      "image_id": "ai2d:4445",
+      "bytes": 53033,
+      "cpu_seconds": 0.03804645873606205,
+      "queries": 1,
+      "supported": 0
+    },
+    {
+      "image_id": "ai2d:1207",
+      "bytes": 10281,
+      "cpu_seconds": 0.00415799580514431,
+      "queries": 0,
+      "supported": 0
+    },
+    {
+      "image_id": "ai2d:1569",
+      "bytes": 15721,
+      "cpu_seconds": 0.02479196898639202,
+      "queries": 4,
+      "supported": 4
+    },
+    {
+      "image_id": "ai2d:1643",
+      "bytes": 29417,
+      "cpu_seconds": 0.03191331960260868,
+      "queries": 6,
+      "supported": 0
+    },
+    {
+      "image_id": "ai2d:3899",
+      "bytes": 36457,
+      "cpu_seconds": 0.05158052779734135,
+      "queries": 8,
+      "supported": 0
+    },
+    {
+      "image_id": "ai2d:2536",
+      "bytes": 13801,
+      "cpu_seconds": 0.009991131722927094,
+      "queries": 0,
+      "supported": 0
+    }
+  ],
+  "estimated_total1512_cache_bytes_1_5_safety": 66781260.0,
+  "estimated_train_dev_cpu_seconds_1_5_safety": 77.81477737426758,
+  "model_fit": false,
+  "val_audit_test_records_read": 0,
+  "gpu_seconds": 0
+}

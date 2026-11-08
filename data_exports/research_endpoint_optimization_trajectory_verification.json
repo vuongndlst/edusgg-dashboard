@@ -1,0 +1,45 @@
+{
+  "checked_utc": "2026-11-01T18:50:38.257482+00:00",
+  "run_fingerprint": "9f0cf1f85bd43a50659f667fccbc63f2439440e968ab8d04e7b37ba16908426d",
+  "summary_sha256": "4a0f6c399bd950ade5e2d0cb60c0f107c3cd70fbaf8e9381c777f59d7e7bc3ee",
+  "primary_verification_sha256": "1a77cbca93b2c8448ec4e7fe310f70d870e59a3a7d79971258f6f14c076b105e",
+  "results": {
+    "unary_geometry": {
+      "optimizer_steps_replayed": 3072,
+      "checkpoint_metrics_matched": 10,
+      "short_anchor_exact": true,
+      "selected_checkpoint_exact": true,
+      "terminal_objective_exact": true,
+      "verification_cpu_seconds": 20.18425619415939,
+      "prior_receipt_failed_replay_cpu_seconds": 20.454576548188925,
+      "cumulative_cpu_seconds": 62.490565955638885
+    },
+    "joint_geometry": {
+      "optimizer_steps_replayed": 3072,
+      "checkpoint_metrics_matched": 10,
+      "short_anchor_exact": true,
+      "selected_checkpoint_exact": true,
+      "terminal_objective_exact": true,
+      "verification_cpu_seconds": 13.281782103702426,
+      "prior_receipt_failed_replay_cpu_seconds": 13.282782392576337,
+      "cumulative_cpu_seconds": 41.11729158833623
+    },
+    "joint_visual": {
+      "optimizer_steps_replayed": 3072,
+      "checkpoint_metrics_matched": 10,
+      "short_anchor_exact": true,
+      "selected_checkpoint_exact": true,
+      "terminal_objective_exact": true,
+      "verification_cpu_seconds": 13.07442718744278,
+      "prior_receipt_failed_replay_cpu_seconds": 13.415098840370774,
+      "cumulative_cpu_seconds": 40.78628256544471
+    }
+  },
+  "prior_receipt_failure_sha256": "242b9abbbc09d588787aa9336e6e450c5deba7b9b758dc6aec320a31691c7b31",
+  "gpu_seconds": 0,
+  "gpu_reserved_seconds": 3720,
+  "val_records_read": 0,
+  "test_records_read": 0,
+  "new_seed_or_candidate": false,
+  "script_sha256": "797d3cae970f7680ebc727cb5e88525f9c1b76a61a8369adc8c39b7e5a692059"
+}

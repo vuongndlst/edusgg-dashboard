@@ -1,0 +1,18 @@
+{
+  "errors": 0,
+  "failures": 0,
+  "native_pixel_prediction_model_optimizer_gpu_operations": 0,
+  "peak_rss_bytes": 57495552,
+  "scope": "24new synthetic constructor fixtures, no real graph/effectiveness test. Existing frozen kernel imported unchanged.",
+  "sources": {
+    "configs/research_repair_proposals_cpu_v1.json": "0f43847efa0087ff0349471356adebd621fa6fa674b8c8dc2b52abcbd88cfe2c",
+    "scripts/validate_research_repair_proposals_remote_v1.sh": "eda4b906d9fa6bd4fdd55e6b346eff067d491459c305fff5a01032ffaa260aa6",
+    "src/edusgg/research_repair_proposal_fixtures_v1.py": "6475cdb2c8a3ac49e0f561a2211a22eedcd6953d571dd1b88a34258200952de3",
+    "src/edusgg/research_repair_proposals_v1.py": "67e59a7b1274acd45953996b0949ab9e0f505d79c73b7cafc6f053ddffc7979a",
+    "tests/test_research_repair_proposals_v1.py": "88646fe6521cc53e1b54e3b4767d527c98428ce75e941b194ebc82fb0be3329d"
+  },
+  "status": "PASSED",
+  "tests_run": 24,
+  "torch_imported": false,
+  "wall_seconds": 0.23217653669416904
+}

@@ -1,0 +1,12 @@
+{
+  "integrity": "passed",
+  "manifest_files_verified": 31,
+  "text_files_secret_scanned": 22,
+  "images": 10,
+  "source_weak_associations": 277,
+  "source_weak_images": 75,
+  "candidate_entities": 4,
+  "candidate_relations": 0,
+  "gold_created": 0,
+  "offline_assets": "passed"
+}

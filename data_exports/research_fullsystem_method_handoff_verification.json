@@ -1,0 +1,37 @@
+{
+  "status": "method_protocol_handoff_verified",
+  "checked_utc": "2026-11-02T05:18:43.573182+00:00",
+  "before_state_sha256": "3aa6d5d840bc6547d54ffda6fc1901f1b3203b85089e83d9d74968bbdd88533e",
+  "after_state_sha256": "ad180ca85c3d4f021b44c1881645d02a3bc74796ebb25b8f2cea6274a9b778af",
+  "registered_science_unchanged": {
+    "research-fullsystem-resource-smoke-v1": "9c2965078d9961aff51398a5fd90770cc6fa184135e15f736e53f314096350c8",
+    "research-fullsystem-resume-cpu-proof-v2": "3db8642c055b23752f4bffb58e7b35a15a4285b67c9f270c3495be9a70863201"
+  },
+  "attempt_matches_summary_except_census": true,
+  "document_sha256": {
+    "docs/RESEARCH_EXECUTION_STATE.md": "0b837c31c5b9aa110e10f4ac7a4090a27eb72480877aafe7370329536ebeebcb",
+    "docs/research_fullsystem_resource_smoke_next.md": "958140adcae0cfeea0c758219f54d606e0309b9259cda0521910436048294368",
+    "docs/research_fullsystem_design_next.md": "f185c4052225e58b0ab368b994045c18f7c865e8497cb49ffb37070e9a5b71cd",
+    "docs/research_fullsystem_method_protocol_next.md": "6c68b9c574849a24926ce9019a09944512922b1aa1a706e07228e15965637016",
+    "docs/paper_comparison_2026_11_01.md": "287e3494509caa0cdc7bfd142f65d27fa2716551d486774af8ae22d91775a96b"
+  },
+  "gpu_reserved_seconds": 3780,
+  "conservative_census": {
+    "scope_version": "fullsystem-conservative-v1",
+    "category_bytes": {
+      "experiments": 1663833072,
+      "reports": 67688905,
+      "public_sources": 3076802
+    },
+    "file_count": 33241,
+    "logical_file_bytes": 1734598779,
+    "remaining_after40mib": 370941829,
+    "size_manifest_sha256": "9cd8bb3a78d847155927bb2ce5267405cf4bf1c3ffeaa82b4518e88e0dff919f",
+    "boundary": "All research-* experiments/checkpoints, research_*reports inclbundles/receipts, programme literaturefolder, and ALL public src/config/docs/tests/scripts inclpycache. Pre-existing frozen datasets/COCOweights/oldnonresearchcheckpoints excluded as not newprogramme outputs. Newmodel files must reside in registered research-*roots; no loopholeoutside scope."
+  },
+  "main_training_admitted": false,
+  "new_gpu_reserved": false,
+  "protected_or_audit_records_opened": 0,
+  "sealed_sources_verified": 42,
+  "sealed_checkpoints_verified": 6
+}

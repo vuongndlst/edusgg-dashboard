@@ -1,0 +1,16 @@
+{
+  "files": {
+    "docs/RESEARCH_EXECUTION_STATE.md": "52cb27e1754c89d98f43f02fab3d29869ece0ea6fb181ccc319875982cc6f1e8",
+    "docs/research_relation_alert_after_audit_next.md": "79efa0701c646d02c43cee9e2787d7d24ae34027127aa0e18f561f68a8ba8bf8",
+    "reports/research_relation_alert_audit_public_verification_v1.json": "2157fa456522b09ae0db7b6e4cdbd2ecec7cdda06fa684c7720de9623a7cc9e4",
+    "reports/research_relation_alert_audit_v1.md": "882acf27db504f2482a5bfc925a9247aac3724b9430f3366e2901e6efa6af2ac"
+  },
+  "gpu_reserved_seconds": 26910,
+  "logical_program_bytes": 1851028012,
+  "new_native_image_model_optimizer_gpu_operations": 0,
+  "public_summary_sha256": "e3383a497ed5f4cbd3dfbd8208e0f11f0d4277b03ed5a7983b75254775ed7ac9",
+  "remaining_after40mib": 254512596,
+  "result_sha256": "2e7039c775338e4e96c29fccc64249d37c2178d6058483ae34c0a2ae3fd32ea1",
+  "scope": "Operational handoff only. Original audit already completed; no native rerun or raw prereg export.",
+  "status": "COMPLETE_VERIFIED_ALERT_DIAGNOSIS_HANDOFF"
+}

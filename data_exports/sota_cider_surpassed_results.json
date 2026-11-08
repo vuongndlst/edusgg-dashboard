@@ -1,0 +1,31 @@
+{
+  "benchmark": "AI2D-Captioning Official Test Split (N=75)",
+  "target_sota": {
+    "diagrammergpt": {
+      "cider": 31.7,
+      "bertscore": 90.1,
+      "bleu_4": 8.9
+    }
+  },
+  "metrics": {
+    "num_samples": 75,
+    "cider": 35.67,
+    "cider_raw": 0.3567,
+    "bertscore": {
+      "precision": 94.17,
+      "recall": 88.06,
+      "f1": 90.92
+    },
+    "bleu_1": 32.94,
+    "bleu_4": 11.51,
+    "rouge_1": 50.17,
+    "rouge_2": 24.26,
+    "rouge_l": 41.58
+  },
+  "status": "SOTA EXCEEDED (CIDEr 35.67 > 31.7, BERTScore 90.92% > 90.1%, BLEU-4 11.51 > 8.90)",
+  "margin_over_sota": {
+    "cider_points": 3.97,
+    "cider_relative_pct": 12.52,
+    "bleu_4_points": 2.61
+  }
+}

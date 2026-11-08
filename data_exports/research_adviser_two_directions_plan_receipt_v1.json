@@ -1,0 +1,9 @@
+{
+  "status": "PLAN_DELIVERED",
+  "plan_sha256": "c775b632825ad47c8edc1aebd29f57baf1faa44eed8c017ea7d1b2f2d7f3904f",
+  "group_verification_sha256": "75f2cda06c19810262522adc857647671c468cc41d4017b2d7d167ab987fa937",
+  "registered_local_source_hashes_matched": 32,
+  "local_links_checked": 2,
+  "new_model_native_pixel_optimizer_gpu_operations": 0,
+  "scope": "Document/source/link consistency only, not scientific validation, systematic literature review or new training admission."
+}

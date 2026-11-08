@@ -1,0 +1,12 @@
+{
+  "status": "receipt_persistence_failed_after_numeric_verification",
+  "evidence": "Unified exec session14306, final chunkbb6455: all three trajectory_reproduced JSON records preceded FileNotFoundError in self-script SHA construction.",
+  "reason": "Script ran via SSH stdin before its on-server file was uploaded; final receipt construction could not hash that file. Scientific models, registered outputs and primary verification were unchanged.",
+  "verification_cpu_seconds": {
+    "unary_geometry": 20.454576548188925,
+    "joint_geometry": 13.282782392576337,
+    "joint_visual": 13.415098840370774
+  },
+  "numeric_assertions_passed": ["three3072steptrajectories", "thirtycheckpointmetrics", "shortanchors", "selectedweights", "terminalobjectives"],
+  "followup": "Repeat only the trajectory proof after script upload, count this consumed CPU toward the unchanged120second per-head cumulative ceiling; do not repeat the full test suite or alter scientific source."
+}

@@ -1,0 +1,89 @@
+{
+  "global_step": 450,
+  "total_steps": 720,
+  "best_val_loss": 0.652,
+  "epochs_completed": 2,
+  "history": [
+    {
+      "step": 50,
+      "epoch": 1,
+      "val_loss": 0.7997,
+      "is_best": true,
+      "lr": 0.00019979333640833947,
+      "elapsed_minutes": 38.3,
+      "timestamp": "2026-11-07 18:25:42"
+    },
+    {
+      "step": 100,
+      "epoch": 1,
+      "val_loss": 0.726,
+      "is_best": true,
+      "lr": 0.00019571068366759143,
+      "elapsed_minutes": 68.0,
+      "timestamp": "2026-11-07 18:55:26"
+    },
+    {
+      "step": 150,
+      "epoch": 1,
+      "val_loss": 0.683,
+      "is_best": true,
+      "lr": 0.00018660254037844388,
+      "elapsed_minutes": 106.3,
+      "timestamp": "2026-11-07 19:33:41"
+    },
+    {
+      "step": 200,
+      "epoch": 1,
+      "val_loss": 0.6647,
+      "is_best": true,
+      "lr": 0.0001729471487418621,
+      "elapsed_minutes": 136.2,
+      "timestamp": "2026-11-07 20:03:35"
+    },
+    {
+      "step": 250,
+      "epoch": 2,
+      "val_loss": 0.652,
+      "is_best": true,
+      "lr": 0.00015546151378774086,
+      "elapsed_minutes": 174.4,
+      "timestamp": "2026-11-07 20:41:53"
+    },
+    {
+      "step": 300,
+      "epoch": 2,
+      "val_loss": 0.6664,
+      "is_best": false,
+      "lr": 0.00013506375551927547,
+      "elapsed_minutes": 204.7,
+      "timestamp": "2026-11-07 21:12:07"
+    },
+    {
+      "step": 350,
+      "epoch": 2,
+      "val_loss": 0.6797,
+      "is_best": false,
+      "lr": 0.00011282490109308633,
+      "elapsed_minutes": 242.4,
+      "timestamp": "2026-11-07 21:49:51"
+    },
+    {
+      "step": 400,
+      "epoch": 2,
+      "val_loss": 0.675,
+      "is_best": false,
+      "lr": 8.991264828797319e-05,
+      "elapsed_minutes": 280.9,
+      "timestamp": "2026-11-07 22:28:16"
+    },
+    {
+      "step": 450,
+      "epoch": 2,
+      "val_loss": 0.6543,
+      "is_best": false,
+      "lr": 6.753005307953167e-05,
+      "elapsed_minutes": 320.2,
+      "timestamp": "2026-11-07 23:07:35"
+    }
+  ]
+}

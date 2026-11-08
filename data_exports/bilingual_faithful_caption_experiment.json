@@ -1,0 +1,226 @@
+[
+  {
+    "sample": "ai2d:116 (Earth Magnetic & Geographic Coordinates)",
+    "template": {
+      "method": "template_deterministic",
+      "vietnamese_evaluation": {
+        "image_id": "ai2d:116",
+        "total_facts": 7,
+        "verified_facts_count": 7,
+        "missing_facts_count": 0,
+        "fact_coverage_recall": 1.0,
+        "directional_faithfulness": 1.0,
+        "direction_errors": [],
+        "hallucinated_entities": [],
+        "factual_precision": 1.0,
+        "factual_f1": 1.0,
+        "verdict": "FAITHFUL"
+      },
+      "english_evaluation": {
+        "image_id": "ai2d:116",
+        "total_facts": 7,
+        "verified_facts_count": 7,
+        "missing_facts_count": 0,
+        "fact_coverage_recall": 1.0,
+        "directional_faithfulness": 1.0,
+        "direction_errors": [],
+        "hallucinated_entities": [],
+        "factual_precision": 1.0,
+        "factual_f1": 1.0,
+        "verdict": "FAITHFUL"
+      },
+      "average_factual_f1": 1.0
+    },
+    "qwen_plan": {
+      "method": "qwen_content_plan_anchored",
+      "vietnamese_evaluation": {
+        "image_id": "ai2d:116",
+        "total_facts": 7,
+        "verified_facts_count": 7,
+        "missing_facts_count": 0,
+        "fact_coverage_recall": 1.0,
+        "directional_faithfulness": 1.0,
+        "direction_errors": [],
+        "hallucinated_entities": [],
+        "factual_precision": 1.0,
+        "factual_f1": 1.0,
+        "verdict": "FAITHFUL"
+      },
+      "english_evaluation": {
+        "image_id": "ai2d:116",
+        "total_facts": 7,
+        "verified_facts_count": 7,
+        "missing_facts_count": 0,
+        "fact_coverage_recall": 1.0,
+        "directional_faithfulness": 1.0,
+        "direction_errors": [],
+        "hallucinated_entities": [],
+        "factual_precision": 1.0,
+        "factual_f1": 1.0,
+        "verdict": "FAITHFUL"
+      },
+      "average_factual_f1": 1.0
+    },
+    "qwen_naive": {
+      "method": "qwen_naive_ocr_baseline",
+      "vietnamese_evaluation": {
+        "image_id": "ai2d:116",
+        "total_facts": 7,
+        "verified_facts_count": 3,
+        "missing_facts_count": 4,
+        "fact_coverage_recall": 0.4286,
+        "directional_faithfulness": 1.0,
+        "direction_errors": [],
+        "hallucinated_entities": [],
+        "factual_precision": 1.0,
+        "factual_f1": 0.6,
+        "verdict": "UNFAITHFUL_OR_HALLUCINATED"
+      },
+      "english_evaluation": {
+        "image_id": "ai2d:116",
+        "total_facts": 7,
+        "verified_facts_count": 5,
+        "missing_facts_count": 2,
+        "fact_coverage_recall": 0.7143,
+        "directional_faithfulness": 1.0,
+        "direction_errors": [],
+        "hallucinated_entities": [],
+        "factual_precision": 1.0,
+        "factual_f1": 0.8333,
+        "verdict": "FAITHFUL"
+      },
+      "average_factual_f1": 0.7167
+    },
+    "captions": {
+      "template": {
+        "caption_vi": "Sơ đồ minh họa về chủ đề 'NORTH POLE' (Cực Bắc). Hình ảnh tập trung vào một cấu trúc thực thể trung tâm. Trên sơ đồ, các thành phần và vị trí được định danh bao gồm: TROPIC OF CANCER EQUATOR TROPIC OF CAPRICORN [TROPIC OF CANCER EQUATOR TROPIC OF CAPRICORN (đường xích đạo)], GEOGRAPHICAL MERIDIAN [kinh tuyến địa lý], MAGNETIC MERIDIAN [kinh tuyến từ trường], NORTH POLE [Cực Bắc], SOUTH POLE [Cực Nam].",
+        "caption_en": "The diagram illustrates the structure of 'NORTH POLE'. The visual composition focuses on a central anatomical structure. Key labeled components and structures include: TROPIC OF CANCER EQUATOR TROPIC OF CAPRICORN, GEOGRAPHICAL MERIDIAN, MAGNETIC MERIDIAN, NORTH POLE, SOUTH POLE.",
+        "method": "template_deterministic"
+      },
+      "qwen_plan": {
+        "caption_vi": "**  \nSơ đồ giáo dục song ngữ này mô tả cấu trúc không gian trung tâm của Bắc Cực (North Pole) dưới dạng một vùng không gian trung tâm được biểu thị bằng một khối (blobs_P4). Trong sơ đồ, các yếu tố địa lý và từ tính được thể hiện bằng các nhãn chú thích chỉ vào khối này. Chi tiết \"TROPIC OF CANCER EQUATOR TROPIC OF CAPRICORN\" là một phần của cấu trúc \"blobs_P4\", biểu thị các đường vĩ tuyến quan trọng ở vùng cực. Chi tiết \"GEOGRAPHICAL MERIDIAN\" cũng chỉ vào cấu trúc \"blobs_P4\", thể hiện đường kinh tuyến địa lý. Chi tiết \"MAGNETIC MERIDIAN\" chỉ vào cấu trúc \"blobs_P4\", biểu thị đường kinh tuyến từ tính. Chi tiết \"NORTH POLE\" chỉ vào cấu trúc \"blobs_P4\", xác định vị trí của Bắc Cực. Chi tiết \"SOUTH POLE\" chỉ vào cấu trúc \"blobs_P4\", xác định vị trí của Nam Cực. Tất cả các yếu tố này được mô tả một cách chính xác, không bổ sung thông tin ngoài danh sách sự thật nguyên tử đã cho.\n\n**",
+        "caption_en": "**  \nThis educational diagram presents a central structure labeled \"blobs_P4\" representing the core of the North Pole. The diagram includes annotations pointing to this structure. The \"TROPIC OF CANCER EQUATOR TROPIC OF CAPRICORN\" is a label pointing to the \"blobs_P4\" structure, indicating the",
+        "raw_output": "**[TIẾNG VIỆT]:**  \nSơ đồ giáo dục song ngữ này mô tả cấu trúc không gian trung tâm của Bắc Cực (North Pole) dưới dạng một vùng không gian trung tâm được biểu thị bằng một khối (blobs_P4). Trong sơ đồ, các yếu tố địa lý và từ tính được thể hiện bằng các nhãn chú thích chỉ vào khối này. Chi tiết \"TROPIC OF CANCER EQUATOR TROPIC OF CAPRICORN\" là một phần của cấu trúc \"blobs_P4\", biểu thị các đường vĩ tuyến quan trọng ở vùng cực. Chi tiết \"GEOGRAPHICAL MERIDIAN\" cũng chỉ vào cấu trúc \"blobs_P4\", thể hiện đường kinh tuyến địa lý. Chi tiết \"MAGNETIC MERIDIAN\" chỉ vào cấu trúc \"blobs_P4\", biểu thị đường kinh tuyến từ tính. Chi tiết \"NORTH POLE\" chỉ vào cấu trúc \"blobs_P4\", xác định vị trí của Bắc Cực. Chi tiết \"SOUTH POLE\" chỉ vào cấu trúc \"blobs_P4\", xác định vị trí của Nam Cực. Tất cả các yếu tố này được mô tả một cách chính xác, không bổ sung thông tin ngoài danh sách sự thật nguyên tử đã cho.\n\n**[ENGLISH]:**  \nThis educational diagram presents a central structure labeled \"blobs_P4\" representing the core of the North Pole. The diagram includes annotations pointing to this structure. The \"TROPIC OF CANCER EQUATOR TROPIC OF CAPRICORN\" is a label pointing to the \"blobs_P4\" structure, indicating the",
+        "method": "qwen_content_plan_anchored"
+      },
+      "qwen_naive": {
+        "caption_vi": "**  \nSơ đồ này minh họa mối liên hệ giữa các hệ thống địa lý và các yếu tố từ trường, đặc biệt là các đường kinh tuyến và các điểm cực. Trong đó, **đường kinh tuyến** (được gọi là **Magnetic Meridian** và **Geographical Meridian**) là những đường thẳng đứng song song với nhau, chạy từ cực Bắc đến cực Nam, biểu thị các hướng chính của Trái Đất. **Tropic of Cancer** và **Tropic of Capricorn** là hai đường ngang, nằm ở hai cực của các đường kinh tuyến, biểu thị các vĩ tuyến quan trọng. **Cực Bắc** và **Cực Nam** là hai điểm cực của Trái Đất, nằm ở hai cực của hệ thống kinh tuyến. Các đường kinh tuyến và các vĩ tuyến này tạo thành một hệ thống phân chia địa lý, giúp xác định vị trí của các điểm trên Trái Đất. Ngoài ra, **Magnetic Meridian** là đường kinh tuyến biểu thị hướng từ trường của Trái Đất, có thể thay đổi theo thời gian do sự biến đổi của từ trường. Sơ đồ này giúp hiểu rõ hơn về sự tương tác giữa các hệ thống địa lý và từ trường.\n\n**",
+        "caption_en": "**  \nThis diagram illustrates the relationship between the Earth's magnetic and geographical meridians, as well as the key geographical and magnetic points on the planet. The **geographical meridian** is a line that runs from the North Pole to the South Pole, representing the Earth's axis of rotation. The **m",
+        "raw_output": "**[TIẾNG VIỆT]:**  \nSơ đồ này minh họa mối liên hệ giữa các hệ thống địa lý và các yếu tố từ trường, đặc biệt là các đường kinh tuyến và các điểm cực. Trong đó, **đường kinh tuyến** (được gọi là **Magnetic Meridian** và **Geographical Meridian**) là những đường thẳng đứng song song với nhau, chạy từ cực Bắc đến cực Nam, biểu thị các hướng chính của Trái Đất. **Tropic of Cancer** và **Tropic of Capricorn** là hai đường ngang, nằm ở hai cực của các đường kinh tuyến, biểu thị các vĩ tuyến quan trọng. **Cực Bắc** và **Cực Nam** là hai điểm cực của Trái Đất, nằm ở hai cực của hệ thống kinh tuyến. Các đường kinh tuyến và các vĩ tuyến này tạo thành một hệ thống phân chia địa lý, giúp xác định vị trí của các điểm trên Trái Đất. Ngoài ra, **Magnetic Meridian** là đường kinh tuyến biểu thị hướng từ trường của Trái Đất, có thể thay đổi theo thời gian do sự biến đổi của từ trường. Sơ đồ này giúp hiểu rõ hơn về sự tương tác giữa các hệ thống địa lý và từ trường.\n\n**[ENGLISH]:**  \nThis diagram illustrates the relationship between the Earth's magnetic and geographical meridians, as well as the key geographical and magnetic points on the planet. The **geographical meridian** is a line that runs from the North Pole to the South Pole, representing the Earth's axis of rotation. The **m",
+        "method": "qwen_naive_ocr_baseline"
+      }
+    }
+  },
+  {
+    "sample": "ai2d:1166 (Animal Cell Cross-Section Anatomy)",
+    "template": {
+      "method": "template_deterministic",
+      "vietnamese_evaluation": {
+        "image_id": "ai2d:1166",
+        "total_facts": 15,
+        "verified_facts_count": 15,
+        "missing_facts_count": 0,
+        "fact_coverage_recall": 1.0,
+        "directional_faithfulness": 1.0,
+        "direction_errors": [],
+        "hallucinated_entities": [],
+        "factual_precision": 1.0,
+        "factual_f1": 1.0,
+        "verdict": "FAITHFUL"
+      },
+      "english_evaluation": {
+        "image_id": "ai2d:1166",
+        "total_facts": 15,
+        "verified_facts_count": 15,
+        "missing_facts_count": 0,
+        "fact_coverage_recall": 1.0,
+        "directional_faithfulness": 1.0,
+        "direction_errors": [],
+        "hallucinated_entities": [],
+        "factual_precision": 1.0,
+        "factual_f1": 1.0,
+        "verdict": "FAITHFUL"
+      },
+      "average_factual_f1": 1.0
+    },
+    "qwen_plan": {
+      "method": "qwen_content_plan_anchored",
+      "vietnamese_evaluation": {
+        "image_id": "ai2d:1166",
+        "total_facts": 15,
+        "verified_facts_count": 15,
+        "missing_facts_count": 0,
+        "fact_coverage_recall": 1.0,
+        "directional_faithfulness": 1.0,
+        "direction_errors": [],
+        "hallucinated_entities": [],
+        "factual_precision": 1.0,
+        "factual_f1": 1.0,
+        "verdict": "FAITHFUL"
+      },
+      "english_evaluation": {
+        "image_id": "ai2d:1166",
+        "total_facts": 15,
+        "verified_facts_count": 0,
+        "missing_facts_count": 15,
+        "fact_coverage_recall": 0.0,
+        "directional_faithfulness": 1.0,
+        "direction_errors": [],
+        "hallucinated_entities": [],
+        "factual_precision": 1.0,
+        "factual_f1": 0.0,
+        "verdict": "UNFAITHFUL_OR_HALLUCINATED"
+      },
+      "average_factual_f1": 0.5
+    },
+    "qwen_naive": {
+      "method": "qwen_naive_ocr_baseline",
+      "vietnamese_evaluation": {
+        "image_id": "ai2d:1166",
+        "total_facts": 15,
+        "verified_facts_count": 12,
+        "missing_facts_count": 3,
+        "fact_coverage_recall": 0.8,
+        "directional_faithfulness": 1.0,
+        "direction_errors": [],
+        "hallucinated_entities": [],
+        "factual_precision": 1.0,
+        "factual_f1": 0.8889,
+        "verdict": "FAITHFUL"
+      },
+      "english_evaluation": {
+        "image_id": "ai2d:1166",
+        "total_facts": 15,
+        "verified_facts_count": 0,
+        "missing_facts_count": 15,
+        "fact_coverage_recall": 0.0,
+        "directional_faithfulness": 1.0,
+        "direction_errors": [],
+        "hallucinated_entities": [],
+        "factual_precision": 1.0,
+        "factual_f1": 0.0,
+        "verdict": "UNFAITHFUL_OR_HALLUCINATED"
+      },
+      "average_factual_f1": 0.4445
+    },
+    "captions": {
+      "template": {
+        "caption_vi": "Sơ đồ minh họa về chủ đề 'Cell Membrane' (màng tế bào (màng sinh chất)). Hình ảnh tập trung vào một cấu trúc thực thể trung tâm. Trên sơ đồ, các thành phần và vị trí được định danh bao gồm: cytoplasm [tế bào chất], Golgi Body [bộ máy Golgi (thể Golgi)], Mitochondrion [ty thể], Vacuole [không bào], Ribosomes [ribosome], smooth ER [lưới nội chất trơn], Nuclear Membrane [màng nhân], Rough ER [lưới nội chất hạt], Cell Membrane [màng tế bào (màng sinh chất)], Nucleus [nhân tế bào], Nucleolus [hạch nhân], Lysosome [tiêu thể (lysosome)], Centrosome [trung thể].",
+        "caption_en": "The diagram illustrates the structure of 'Cell Membrane'. The visual composition focuses on a central anatomical structure. Key labeled components and structures include: cytoplasm, Golgi Body, Mitochondrion, Vacuole, Ribosomes, smooth ER, Nuclear Membrane, Rough ER, Cell Membrane, Nucleus, Nucleolus, Lysosome, Centrosome.",
+        "method": "template_deterministic"
+      },
+      "qwen_plan": {
+        "caption_vi": "**  \nSơ đồ giáo dục song ngữ này mô tả cấu trúc tế bào với tiêu đề chính là \"Cell Membrane\" (màng tế bào). Trong sơ đồ, cấu trúc trung tâm được biểu diễn bằng một vùng không gian hình khối (blobs_P14), đại diện cho phần nội bào (cytoplasm) và các cấu trúc bên trong tế bào. Các chi tiết được chỉ rõ bằng nhãn chú thích, trong đó:\n\n- **Cytoplasm** (trung tâm tế bào) được chỉ vào cấu trúc **blobs_P14**.\n- **Golgi Body** (thể tích hóa học) được chỉ vào cấu trúc **blobs_P14**.\n- **Mitochondrion** (viên tế bào trung tâm) được chỉ vào cấu trúc **blobs_P14**.\n- **Vacuole** (thể tích hóa học) được chỉ vào cấu trúc **blobs_P14**.\n- **Ribosomes** (các hạt nhỏ) được chỉ vào cấu trúc **blobs_P14**.\n- **Smooth ER** (màng lưới trơn) được chỉ vào cấu trúc **blobs_P14**.\n- **Nuclear Membrane** (màng nhân) được chỉ vào cấu trúc **blobs_P14**.\n- **Rough ER** (màng lưới rậm) được chỉ vào cấu trúc **blobs_P14**.\n- **Cell Membrane** (màng tế bào) được chỉ vào cấu trúc **blobs_P14**.\n- **Nucleus** (tế bào nhân) được chỉ",
+        "caption_en": "",
+        "raw_output": "**[TIẾNG VIỆT]:**  \nSơ đồ giáo dục song ngữ này mô tả cấu trúc tế bào với tiêu đề chính là \"Cell Membrane\" (màng tế bào). Trong sơ đồ, cấu trúc trung tâm được biểu diễn bằng một vùng không gian hình khối (blobs_P14), đại diện cho phần nội bào (cytoplasm) và các cấu trúc bên trong tế bào. Các chi tiết được chỉ rõ bằng nhãn chú thích, trong đó:\n\n- **Cytoplasm** (trung tâm tế bào) được chỉ vào cấu trúc **blobs_P14**.\n- **Golgi Body** (thể tích hóa học) được chỉ vào cấu trúc **blobs_P14**.\n- **Mitochondrion** (viên tế bào trung tâm) được chỉ vào cấu trúc **blobs_P14**.\n- **Vacuole** (thể tích hóa học) được chỉ vào cấu trúc **blobs_P14**.\n- **Ribosomes** (các hạt nhỏ) được chỉ vào cấu trúc **blobs_P14**.\n- **Smooth ER** (màng lưới trơn) được chỉ vào cấu trúc **blobs_P14**.\n- **Nuclear Membrane** (màng nhân) được chỉ vào cấu trúc **blobs_P14**.\n- **Rough ER** (màng lưới rậm) được chỉ vào cấu trúc **blobs_P14**.\n- **Cell Membrane** (màng tế bào) được chỉ vào cấu trúc **blobs_P14**.\n- **Nucleus** (tế bào nhân) được chỉ",
+        "method": "qwen_content_plan_anchored"
+      },
+      "qwen_naive": {
+        "caption_vi": "**  \nSơ đồ này mô tả cấu trúc tế bào nhân eukaryotic (tế bào có nhân) với các bộ phận chính được phân chia rõ ràng. Tế bào gồm nhiều thành phần chức năng khác nhau, trong đó có màng tế bào (Cell Membrane), nhân (Nucleus), nhân hóa (Nucleolus), lưới nội chất (Rough ER, Smooth ER), các cơ quan trung tâm (Centrosome), các bào quan như ribosome, lysosome, vacuole, mitochondria, Golgi body, và các bộ phận liên quan đến quá trình tổng hợp và vận chuyển. Các bộ phận này được sắp xếp theo cách tương tác với nhau, thể hiện sự phân chia chức năng và cấu trúc tế bào. Tế bào có thể được chia thành hai phần chính: phần bên trong (cytoplasm) và phần bên ngoài (Cell Membrane). Trong đó, nhân nằm ở trung tâm, chứa DNA và điều khiển hoạt động của tế bào. Lưới nội chất, gồm lưới糙 (Rough ER) và lưới mịn (Smooth ER), nằm ở phần cytoplasm, tham gia vào quá trình tổng hợp protein và脂质. Ribosome phân bố trên bề mặt của Rough ER và trong cytoplasm, tham gia vào quá trình tổng hợp protein. Mitochondria, được gọi là \"cơ quan năng lượng\", nằm ở gần nhân, sản xuất ATP. Golgi body giúp xử lý, đóng gói và phân phối các chất trong tế bào. Lysosome chứa các enzyme tiêu diệt các chất độc hại",
+        "caption_en": "",
+        "raw_output": "**[TIẾNG VIỆT]:**  \nSơ đồ này mô tả cấu trúc tế bào nhân eukaryotic (tế bào có nhân) với các bộ phận chính được phân chia rõ ràng. Tế bào gồm nhiều thành phần chức năng khác nhau, trong đó có màng tế bào (Cell Membrane), nhân (Nucleus), nhân hóa (Nucleolus), lưới nội chất (Rough ER, Smooth ER), các cơ quan trung tâm (Centrosome), các bào quan như ribosome, lysosome, vacuole, mitochondria, Golgi body, và các bộ phận liên quan đến quá trình tổng hợp và vận chuyển. Các bộ phận này được sắp xếp theo cách tương tác với nhau, thể hiện sự phân chia chức năng và cấu trúc tế bào. Tế bào có thể được chia thành hai phần chính: phần bên trong (cytoplasm) và phần bên ngoài (Cell Membrane). Trong đó, nhân nằm ở trung tâm, chứa DNA và điều khiển hoạt động của tế bào. Lưới nội chất, gồm lưới糙 (Rough ER) và lưới mịn (Smooth ER), nằm ở phần cytoplasm, tham gia vào quá trình tổng hợp protein và脂质. Ribosome phân bố trên bề mặt của Rough ER và trong cytoplasm, tham gia vào quá trình tổng hợp protein. Mitochondria, được gọi là \"cơ quan năng lượng\", nằm ở gần nhân, sản xuất ATP. Golgi body giúp xử lý, đóng gói và phân phối các chất trong tế bào. Lysosome chứa các enzyme tiêu diệt các chất độc hại",
+        "method": "qwen_naive_ocr_baseline"
+      }
+    }
+  }
+]

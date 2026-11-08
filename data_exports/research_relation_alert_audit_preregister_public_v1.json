@@ -1,0 +1,30 @@
+{
+  "format": "public-audit-registration-summary-v1",
+  "gpu_seconds": 0,
+  "immutable_existing_source_ref_count": 44,
+  "input_manifest_sha256": "f440fd21bbbe7236b1e2c4009c20bd657d1662bf940c6c9faed451fa355269f1",
+  "maximum_cpu_seconds": 120,
+  "maximum_native_preads": 8,
+  "optimizer_steps": 0,
+  "original_run_fingerprint": "6df7895644a76d8778f7990635ed338b8b94de410ee5da423a6fd561f356b44e",
+  "original_server_preregister_sha256": "a8210ecc78772785732f49bd23b01d193990590584f7ee4f72b0f222603affef",
+  "role": "dev",
+  "scope": "Explicit allowlisted derived summary, NOT original preregistration bytes/fingerprint document or runnable replacement. Original remains server-only. No config dump/private operational state/raw annotation.",
+  "selected_ids": [
+    "ai2d:4776",
+    "ai2d:1389",
+    "ai2d:3225",
+    "ai2d:2047",
+    "ai2d:3443",
+    "ai2d:1286",
+    "ai2d:3333",
+    "ai2d:4168"
+  ],
+  "source_hashes": {
+    "configs/research_relation_alert_audit_v1.json": "c9444a5377b2874f00f18e54e0fb868d18d89368a89ed035402378389e53b290",
+    "scripts/run_research_relation_alert_audit_remote_v1.sh": "41bc66d8801987cfa0a3803be7e6b36b6739fdc4d3fb8cc6483b34b595071fb3",
+    "scripts/validate_research_relation_alert_audit_remote_v1.sh": "c3f1fee3d6ea0ece19a2e9aca4c48de6f537dad097dba34247d44c7c7e1bf782",
+    "src/edusgg/research_relation_alert_audit_v1.py": "cb9a1ef9f0e1a10b08a785eab8101692ef510812020cc558de95f02bf45c76ad",
+    "tests/test_research_relation_alert_audit_v1.py": "fc366db124af1c8e4a67a79e378ffc6660277f2dcf4ec806420d82c213a95b0b"
+  }
+}

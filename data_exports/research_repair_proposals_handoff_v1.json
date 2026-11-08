@@ -1,0 +1,16 @@
+{
+  "existing_source_refs_checked": 49,
+  "files": {
+    "docs/RESEARCH_EXECUTION_STATE.md": "5fd15a468ebfcfaff12ad03a985cb328f8e28d26defb974c328e8647d47acb7b",
+    "docs/research_repair_proposals_after_cpu_next.md": "ba44c3536a11576bdb69cd81b6dc5c537ec3259e564970c367afb0f8e91ec2b3",
+    "reports/research_repair_proposals_cpu_v1.md": "68972c9c6c486e398c1ea68303d799b0326136b728cbe44e7341fcd536ddb2c3"
+  },
+  "gpu_reserved_seconds": 26910,
+  "logical_program_bytes": 1851383931,
+  "new_native_pixel_prediction_model_optimizer_gpu_operations": 0,
+  "remaining_after40mib": 254156677,
+  "result_sha256": "080029825e39ff3138e5e58687d7119dda6dbd00d8ec797be067097d9d9aaba3",
+  "scope": "Operational source/receipt reconciliation only; no repeated proof, real repair quality or raw prereg export.",
+  "source_snapshot_pairs_checked": 6,
+  "status": "COMPLETE_VERIFIED_SYNTHETIC_CONSTRUCTOR_HANDOFF"
+}

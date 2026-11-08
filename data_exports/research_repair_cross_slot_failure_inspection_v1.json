@@ -1,0 +1,23 @@
+{
+  "active_phase": null,
+  "both_locks_acquired": true,
+  "evidence_journal_exists": false,
+  "failure": {
+    "error_type": "AssertionError",
+    "scope": "Preserve source/registration/attempt/partial outputs; no automatic repeat.",
+    "status": "FAILED",
+    "wall_seconds": 3.546551236882806
+  },
+  "fingerprint": "e72bc0985724e62af748086bf18ad050054161cd00241235959c4291153322e7",
+  "model_pixel_native_optimizer_gpu_operations": 0,
+  "observed_distribution_version": "2.12.0",
+  "observed_runtime_version": "2.12.0+cu130",
+  "predictions_exist": false,
+  "preregister_sha256": "a396834eb1dcbb64976122b63d67132e1ced1cb88589e14ff3a4167a72646f69",
+  "registered_torch_distribution_version": "2.12.0",
+  "remaining_after40mib": 253879222,
+  "runtime_cuda_initialized": false,
+  "scope": "No rerun or source edit of failed registered namespace. Any correction requires new namespace/registration preserving this evidence.",
+  "source_snapshot_pairs_unchanged": 12,
+  "status": "INSPECTED_TERMINAL_SOFTWARE_GUARD_FAILURE"
+}

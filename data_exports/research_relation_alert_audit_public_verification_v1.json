@@ -1,0 +1,17 @@
+{
+  "existing_source_refs_checked": 44,
+  "image_model_optimizer_gpu_operations": 0,
+  "native_journal_pairs_checked": 8,
+  "new_native_reads": 0,
+  "original_server_preregister_sha256": "a8210ecc78772785732f49bd23b01d193990590584f7ee4f72b0f222603affef",
+  "original_server_preregister_unchanged": true,
+  "public_summary_sha256": "e3383a497ed5f4cbd3dfbd8208e0f11f0d4277b03ed5a7983b75254775ed7ac9",
+  "raw_preregister_export": "Not performed: auto-review privacy rejection; safe minimal allowlisted summary used instead",
+  "result_sha256": "2e7039c775338e4e96c29fccc64249d37c2178d6058483ae34c0a2ae3fd32ea1",
+  "scope": "Stored JSON count arithmetic/journal/source reconciliation, not another native matcher/statistical-method/quality replay.",
+  "selected_predicted_conditions_before_native": 24,
+  "source_snapshot_pairs_checked": 5,
+  "status": "VERIFIED_PUBLIC_SUMMARY_AND_COUNT_JOURNAL",
+  "stored_occurrence_rows_recounted": 353,
+  "torch_imported": false
+}

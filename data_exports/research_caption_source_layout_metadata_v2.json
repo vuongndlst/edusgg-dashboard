@@ -1,0 +1,50 @@
+{
+  "caption_csv_image_archive_content_reads": 0,
+  "data_entries": [
+    {
+      "path": "num_of_caption_3.csv",
+      "sha": "8cd49e09f29a74cfac33a8d7307eb2e864da599d",
+      "size": 17683,
+      "type": "blob"
+    },
+    {
+      "path": "num_of_caption_4.csv",
+      "sha": "c97f8c2ddba5f65ed0b57ca49af35cd0320fb9d0",
+      "size": 35756,
+      "type": "blob"
+    },
+    {
+      "path": "num_of_caption_5.csv",
+      "sha": "7c66ac4dd333511db7fd1f0a80b28bc66fe651f2",
+      "size": 53915,
+      "type": "blob"
+    },
+    {
+      "path": "num_of_caption_6.csv",
+      "sha": "7cb36ec51b93332a6955089a804b43b6d1a036c1",
+      "size": 66540,
+      "type": "blob"
+    },
+    {
+      "path": "num_of_caption_7.csv",
+      "sha": "6384a5b54f61f9931db9ba278ba0f04e1c9752ed",
+      "size": 36106,
+      "type": "blob"
+    },
+    {
+      "path": "num_of_caption_8.csv",
+      "sha": "32a88b015d37f66e87796cab1f1c7211da3e87d2",
+      "size": 17306,
+      "type": "blob"
+    }
+  ],
+  "data_tree_git_sha": "f53254c224c41994a3348ef1c31e0f89afc4ce30",
+  "data_tree_source_url": "https://api.github.com/repos/yuri-ocha/DiagramCaption/git/trees/f53254c224c41994a3348ef1c31e0f89afc4ce30",
+  "license_bytes": 20136,
+  "license_git_blob_sha": "596e64d0b548c20e74ba3d8e52efd22e212272ac",
+  "license_sha256": "7a77fb7f2677fa525e2fc9a916c8d0c163987e144886dddbf608be4c6437a2eb",
+  "license_source_url": "https://api.github.com/repos/yuri-ocha/DiagramCaption/git/blobs/596e64d0b548c20e74ba3d8e52efd22e212272ac",
+  "license_title": "Attribution-ShareAlike 4.0 International",
+  "scope": "Repository LICENSE text and pinned directory metadata only. Repository-level license identification does not establish upstream image rights, annotation quality, language/stimulus compatibility, role-safe CSV access or independent evaluation.",
+  "status": "PINNED_PRIMARY_LICENSE_AND_DATA_LAYOUT_READ"
+}

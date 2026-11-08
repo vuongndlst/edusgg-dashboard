@@ -1,0 +1,52 @@
+{
+  "candidate_edit_counts": {
+    "delete": 2,
+    "flip": 2
+  },
+  "changed_cases": [
+    {
+      "edit_kind": "flip",
+      "image_id": "ai2d:2047",
+      "seed": 42
+    },
+    {
+      "edit_kind": "delete",
+      "image_id": "ai2d:4776",
+      "seed": 43
+    },
+    {
+      "edit_kind": "delete",
+      "image_id": "ai2d:4776",
+      "seed": 44
+    },
+    {
+      "edit_kind": "flip",
+      "image_id": "ai2d:4168",
+      "seed": 44
+    }
+  ],
+  "decoded_method_image_cases": 96,
+  "event_counts": {
+    "decoded_image_ready": 8,
+    "graph_model_bytes_returned": 3,
+    "graph_model_unchanged": 3,
+    "graph_score_ready": 24,
+    "image_bytes_returned": 8,
+    "planned_graph_model_bytes": 3,
+    "planned_image_bytes": 8
+  },
+  "immutable_source_refs": 69,
+  "journal_events": 57,
+  "native_quality_screen": "NOT_EVALUATED",
+  "new_native_pixel_model_optimizer_gpu_operations": 0,
+  "output_chunks": 12,
+  "primary_strict_joint_over_full_greedy_necessary_condition": "FAILED_IDENTICAL_FROZEN_GRAPHS",
+  "quality_gain_or_harm_measured": false,
+  "result_sha256": "1a7d3a6a15e869bc695845c4cef3e9fbc2a368dae32a1928f191c3271f2abb9f",
+  "same_greedy_joint_outputs_all24": true,
+  "same_identity_unary_outputs_all24": true,
+  "scope": "Stored artifact/source/access and exact wire reconciliation only. Identical graphs imply identical native metrics under any common evaluator; no extra label access or method-quality/statistical claim.",
+  "source_snapshot_pairs": 16,
+  "status": "STORED_SOURCE_JOURNAL_CODEC_RECONCILED",
+  "verifier_source_sha256": "38b8c6b330f8e7159b349c156ae87a99e5df638b54fee733ae1266622c37abd2"
+}

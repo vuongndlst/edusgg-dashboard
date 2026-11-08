@@ -1,0 +1,141 @@
+{
+  "source_sha256": "31a09e10aa2486f5fd6ff7edd4a7bab850127e72f2d6e436a1d04a3ec1e68742",
+  "train_images": 16,
+  "results": [
+    {
+      "image_id": "ai2d:110",
+      "seconds": 0.007123975083231926,
+      "bytes": 5289,
+      "pairs": 0,
+      "dimension": 307,
+      "positive_groups": 0
+    },
+    {
+      "image_id": "ai2d:2991",
+      "seconds": 0.3337635509669781,
+      "bytes": 176169,
+      "pairs": 117,
+      "dimension": 307,
+      "positive_groups": 5
+    },
+    {
+      "image_id": "ai2d:2736",
+      "seconds": 0.007535768672823906,
+      "bytes": 13417,
+      "pairs": 0,
+      "dimension": 307,
+      "positive_groups": 0
+    },
+    {
+      "image_id": "ai2d:2795",
+      "seconds": 0.0347516480833292,
+      "bytes": 86505,
+      "pairs": 51,
+      "dimension": 307,
+      "positive_groups": 3
+    },
+    {
+      "image_id": "ai2d:4879",
+      "seconds": 0.03357109986245632,
+      "bytes": 58537,
+      "pairs": 36,
+      "dimension": 307,
+      "positive_groups": 0
+    },
+    {
+      "image_id": "ai2d:3462",
+      "seconds": 0.0612940713763237,
+      "bytes": 148457,
+      "pairs": 99,
+      "dimension": 307,
+      "positive_groups": 8
+    },
+    {
+      "image_id": "ai2d:894",
+      "seconds": 0.2918368373066187,
+      "bytes": 366121,
+      "pairs": 242,
+      "dimension": 307,
+      "positive_groups": 8
+    },
+    {
+      "image_id": "ai2d:2787",
+      "seconds": 0.015118436887860298,
+      "bytes": 33193,
+      "pairs": 12,
+      "dimension": 307,
+      "positive_groups": 0
+    },
+    {
+      "image_id": "ai2d:15",
+      "seconds": 0.292238088324666,
+      "bytes": 467945,
+      "pairs": 309,
+      "dimension": 307,
+      "positive_groups": 14
+    },
+    {
+      "image_id": "ai2d:4538",
+      "seconds": 0.0013378672301769257,
+      "bytes": 4201,
+      "pairs": 0,
+      "dimension": 307,
+      "positive_groups": 0
+    },
+    {
+      "image_id": "ai2d:4445",
+      "seconds": 0.06495558097958565,
+      "bytes": 86953,
+      "pairs": 28,
+      "dimension": 307,
+      "positive_groups": 0
+    },
+    {
+      "image_id": "ai2d:1207",
+      "seconds": 0.038685405626893044,
+      "bytes": 89321,
+      "pairs": 62,
+      "dimension": 307,
+      "positive_groups": 5
+    },
+    {
+      "image_id": "ai2d:1569",
+      "seconds": 0.02704976685345173,
+      "bytes": 69353,
+      "pairs": 48,
+      "dimension": 307,
+      "positive_groups": 4
+    },
+    {
+      "image_id": "ai2d:1643",
+      "seconds": 0.042877428233623505,
+      "bytes": 115049,
+      "pairs": 74,
+      "dimension": 307,
+      "positive_groups": 0
+    },
+    {
+      "image_id": "ai2d:3899",
+      "seconds": 0.11759242415428162,
+      "bytes": 240105,
+      "pairs": 167,
+      "dimension": 307,
+      "positive_groups": 4
+    },
+    {
+      "image_id": "ai2d:2536",
+      "seconds": 0.007009701803326607,
+      "bytes": 13417,
+      "pairs": 0,
+      "dimension": 307,
+      "positive_groups": 0
+    }
+  ],
+  "all_baseline_strict_keys_equal": true,
+  "estimated_all1512_cache_bytes_1_5_safety": 279819036.0,
+  "estimated_train_dev_seconds_1_5_safety": 132.1671985387802,
+  "disk_free_gib": 61.61604690551758,
+  "model_fit": false,
+  "val_audit_test_images": 0,
+  "gpu_seconds": 0
+}

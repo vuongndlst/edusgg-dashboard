@@ -1430,6 +1430,7 @@ function setupSotaSubTabs() {
     } else if (tab === "vqa") {
       if (secVqa) secVqa.classList.remove("hidden");
       if (btnVqa) btnVqa.className = activeClass;
+      if (typeof initVisualVqa === "function") initVisualVqa();
     } else {
       if (secTable) secTable.classList.remove("hidden");
       if (btnTable) btnTable.className = activeClass;
@@ -2165,3 +2166,113 @@ document.addEventListener("DOMContentLoaded", () => {
   setupTopMenuNavigation();
   setupAuditModalEvents();
 });
+
+
+
+/* ==========================================================================
+   ACADEMIC TOP NAVIGATION & VIEW SWITCHER (5 VIEWS)
+   ========================================================================== */
+
+function setupTopMenuNavigation() {
+  const btnLeaderboard = document.getElementById("nav-menu-leaderboard");
+  const btnVqa = document.getElementById("nav-menu-vqa");
+  const btnCaption = document.getElementById("nav-menu-caption");
+  const btnVn = document.getElementById("nav-menu-vn");
+  const btnPipeline = document.getElementById("nav-menu-pipeline");
+
+  const viewSota = document.getElementById("view-sota");
+  const viewAi2d = document.getElementById("view-ai2d");
+  const viewVn = document.getElementById("view-vn");
+  const viewPipeline = document.getElementById("view-pipeline");
+
+  const activeBtnClass = "px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs cursor-pointer";
+  const inactiveBtnClass = "px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 cursor-pointer";
+
+  window.switchMenu = function(menu) {
+    // Hide all views first
+    if (viewSota) viewSota.classList.add("hidden");
+    if (viewAi2d) viewAi2d.classList.add("hidden");
+    if (viewVn) viewVn.classList.add("hidden");
+    if (viewPipeline) viewPipeline.classList.add("hidden");
+
+    // Reset all nav button classes
+    if (btnLeaderboard) btnLeaderboard.className = inactiveBtnClass;
+    if (btnVqa) btnVqa.className = inactiveBtnClass;
+    if (btnCaption) btnCaption.className = inactiveBtnClass;
+    if (btnVn) btnVn.className = inactiveBtnClass;
+    if (btnPipeline) btnPipeline.className = inactiveBtnClass;
+
+    if (menu === "leaderboard") {
+      if (viewSota) viewSota.classList.remove("hidden");
+      if (btnLeaderboard) btnLeaderboard.className = activeBtnClass;
+      // Default to table sub-tab
+      const btnTable = document.getElementById("btn-sota-tab-table");
+      if (btnTable) btnTable.click();
+      history.replaceState(null, "", "#leaderboard");
+    } else if (menu === "vqa") {
+      if (viewSota) viewSota.classList.remove("hidden");
+      if (btnVqa) btnVqa.className = activeBtnClass;
+      // Switch to VQA sub-tab
+      const btnSubVqa = document.getElementById("btn-sota-tab-vqa");
+      if (btnSubVqa) btnSubVqa.click();
+      if (typeof initVisualVqa === "function") initVisualVqa();
+      history.replaceState(null, "", "#vqa-explorer");
+    } else if (menu === "caption") {
+      if (viewAi2d) viewAi2d.classList.remove("hidden");
+      if (btnCaption) btnCaption.className = activeBtnClass;
+      history.replaceState(null, "", "#caption-gallery");
+    } else if (menu === "vn") {
+      if (viewVn) viewVn.classList.remove("hidden");
+      if (btnVn) btnVn.className = activeBtnClass;
+      history.replaceState(null, "", "#sgk-vn");
+    } else if (menu === "pipeline") {
+      if (viewPipeline) viewPipeline.classList.remove("hidden");
+      if (btnPipeline) btnPipeline.className = activeBtnClass;
+      history.replaceState(null, "", "#pipeline");
+    } else {
+      // Default fallback: Leaderboard
+      if (viewSota) viewSota.classList.remove("hidden");
+      if (btnLeaderboard) btnLeaderboard.className = activeBtnClass;
+    }
+  };
+
+  // Bind click handlers to buttons if not already using onclick
+  if (btnLeaderboard) btnLeaderboard.onclick = () => window.switchMenu("leaderboard");
+  if (btnVqa) btnVqa.onclick = () => window.switchMenu("vqa");
+  if (btnCaption) btnCaption.onclick = () => window.switchMenu("caption");
+  if (btnVn) btnVn.onclick = () => window.switchMenu("vn");
+  if (btnPipeline) btnPipeline.onclick = () => window.switchMenu("pipeline");
+
+  // Read hash on load
+  const hash = window.location.hash;
+  if (hash === "#vqa-explorer") {
+    window.switchMenu("vqa");
+  } else if (hash === "#caption-gallery") {
+    window.switchMenu("caption");
+  } else if (hash === "#sgk-vn") {
+    window.switchMenu("vn");
+  } else if (hash === "#pipeline") {
+    window.switchMenu("pipeline");
+  } else {
+    // Default view: Leaderboard
+    window.switchMenu("leaderboard");
+  }
+}
+
+function copyBibtexCitation() {
+  const bibBlock = document.getElementById("bibtex-block");
+  const btnText = document.getElementById("copy-bibtex-text");
+  if (!bibBlock) return;
+
+  const textToCopy = bibBlock.textContent || bibBlock.innerText;
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    if (btnText) {
+      btnText.textContent = "Đã sao chép! ✓";
+      setTimeout(() => {
+        btnText.textContent = "Sao chép BibTeX";
+      }, 2000);
+    }
+  }).catch(() => {
+    alert("Không thể sao chép tự động. Hãy bôi đen và nhấn Ctrl+C.");
+  });
+}

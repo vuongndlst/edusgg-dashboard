@@ -1,0 +1,8 @@
+{
+  "logical_program_bytes": 1851369978,
+  "public_summary_sha256": "5452c95db75797c4d10d8bb38ae298ada649c1a209b087ebc01ad3bce788cfeb",
+  "remaining_after40mib": 254170630,
+  "result_sha256": "080029825e39ff3138e5e58687d7119dda6dbd00d8ec797be067097d9d9aaba3",
+  "stage_bytes_before_completion": 243064,
+  "status": "COMPLETE_VERIFIED_SYNTHETIC_PROPOSALS"
+}

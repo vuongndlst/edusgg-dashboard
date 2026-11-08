@@ -1,0 +1,38 @@
+{
+  "status": "resource_smoke_handoff_verified",
+  "checked_utc": "2026-11-02T04:05:26.446804+00:00",
+  "before_state_sha256": "5ceae4df9bb658733b7e471c2bfb27ac924e028337abb05e2797aa765d3df668",
+  "after_state_sha256": "9b4e774ed0bce0bff85552a85370ee679ae84c86cc873e964f643fa6a4f93e4a",
+  "registered_preregisters_unchanged": {
+    "membership-v1": "fc7ff90e741fe6f7f3871716ea44fa7b882299bea9d88c2e46691142ef8a78ee",
+    "delta-proof-v1": "1d462e03e7c5defafdd92d4ae05523d1dfa7e5f536ad811311634915d0e10fc0",
+    "delta-proof-v2": "7e2cea1a2109ee4261fae28dda97c2d8c81ba80899b3f4409ec016ed9a838296",
+    "shared-proof-v1": "cd9ec431ed0a2ce17d8ce4e3e229e09416fb03191d2af220d87a922487e38fce",
+    "resource-plan-v1": "24495ae7680a5f9cc7e7868ec03c437e1e7be620452d1e2fe8fffa631f17c40b"
+  },
+  "documents": {
+    "docs/RESEARCH_EXECUTION_STATE.md": "802b490b51a8a22336a9651c82898bef4ed7fe3168748b3a7174232aabbd114f",
+    "docs/research_fullsystem_design_next.md": "56e78c2aa104d232eaa4dbbb1e96bc2fd8a455bee73edad5a4c070148220e18f",
+    "docs/research_fullsystem_resource_smoke_next.md": "6f484250389393365baf52973260509a8838d3c3b90d10e39a770faa8ae72cbb",
+    "docs/paper_comparison_2026_11_01.md": "2fa5bb7f0d3154fedd757fcc1dcb68d3211c8073a37d8a83405b23e77039aa90"
+  },
+  "gpu_reserved_seconds": 3720,
+  "active_phase": null,
+  "main_training_admitted": false,
+  "conservative_census": {
+    "scope_version": "fullsystem-conservative-v1",
+    "category_bytes": {
+      "experiments": 1663738876,
+      "reports": 67621024,
+      "public_sources": 2979885
+    },
+    "file_count": 33200,
+    "logical_file_bytes": 1734339785,
+    "remaining_after40mib": 371200823,
+    "size_manifest_sha256": "fc407fa65af6c27c796c02c06dae930904414475b387e1939fc94d5eb489e497",
+    "boundary": "All research-* experiments/checkpoints, research_*reports inclbundles/receipts, programme literaturefolder, and ALL public src/config/docs/tests/scripts inclpycache. Pre-existing frozen datasets/COCOweights/oldnonresearchcheckpoints excluded as not newprogramme outputs. Newmodel files must reside in registered research-*roots; no loopholeoutside scope."
+  },
+  "protected_or_audit_records_opened": 0,
+  "sealed_sources_verified": 42,
+  "sealed_checkpoints_verified": 6
+}

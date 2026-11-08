@@ -1,0 +1,72 @@
+{
+  "added_states": {
+    "supported_observed": 2
+  },
+  "baseline_matches_prior_stored_alert_audit": true,
+  "gained_supported_by_predicate": {
+    "ai2d:interObjectLinkage": 2
+  },
+  "immutable_source_refs": 74,
+  "journal_pairs": 8,
+  "lost_supported_by_predicate": {
+    "ai2d:arrowHeadTail": 2
+  },
+  "method_image_cases": 96,
+  "modified_cases": [
+    {
+      "added_states": {
+        "supported_observed": 1
+      },
+      "gained": 1,
+      "image_id": "ai2d:2047",
+      "lost": 0,
+      "removed_states": {
+        "observed_disagreement": 1
+      },
+      "seed": 42
+    },
+    {
+      "added_states": {},
+      "gained": 0,
+      "image_id": "ai2d:4776",
+      "lost": 1,
+      "removed_states": {
+        "supported_observed": 1
+      },
+      "seed": 43
+    },
+    {
+      "added_states": {},
+      "gained": 0,
+      "image_id": "ai2d:4776",
+      "lost": 1,
+      "removed_states": {
+        "supported_observed": 1
+      },
+      "seed": 44
+    },
+    {
+      "added_states": {
+        "supported_observed": 1
+      },
+      "gained": 1,
+      "image_id": "ai2d:4168",
+      "lost": 0,
+      "removed_states": {
+        "observed_disagreement": 1
+      },
+      "seed": 44
+    }
+  ],
+  "new_native_pixel_model_optimizer_gpu_operations": 0,
+  "original_preregister_sha256": "11d6ea2e6e6dd1e09e3c4b5bee03b3e1082f3b2c966deff15fc0067924e55327",
+  "ready_before_targets": true,
+  "removed_states": {
+    "observed_disagreement": 2,
+    "supported_observed": 2
+  },
+  "result_sha256": "5d7820971ec8d5ffb3412af4ebb6b1d769c9770961bdfcf257280c46a219093b",
+  "scope": "Stored source/journal and algebraic Counter/fullmetric reconciliation only; no independent native matcher/statistical method or model/native/pixel replay.",
+  "source_snapshot_pairs": 5,
+  "status": "STORED_COUNTS_SOURCES_JOURNAL_RECONCILED"
+}

@@ -1,0 +1,82 @@
+{
+  "adapter_evaluated": "/home/stackops/EduSGG/checkpoints/qwen2.5-14b-edusgg-lora/best_adapter",
+  "ai2d_caption_test_75": {
+    "num_samples": 75,
+    "cider": 22.67,
+    "cider_raw": 0.2267,
+    "bertscore": {
+      "precision": 94.17,
+      "recall": 88.06,
+      "f1": 90.98
+    },
+    "bleu_1": 18.44,
+    "bleu_4": 9.08,
+    "rouge_1": 40.81,
+    "rouge_2": 25.99,
+    "rouge_l": 37.64
+  },
+  "ai2d_full_test_split": {
+    "num_samples": 490,
+    "cider": 267.7,
+    "cider_raw": 2.677,
+    "bertscore": {
+      "precision": 95.87,
+      "recall": 94.69,
+      "f1": 95.26
+    },
+    "bleu_1": 59.01,
+    "bleu_4": 40.68,
+    "rouge_1": 68.22,
+    "rouge_2": 55.14,
+    "rouge_l": 66.69
+  },
+  "vi_edudiag_50": {
+    "num_samples": 50,
+    "cider": 0.0,
+    "cider_raw": 0.0,
+    "bertscore": {
+      "precision": 91.44,
+      "recall": 80.63,
+      "f1": 85.68
+    },
+    "bleu_1": 1.1,
+    "bleu_4": 0.24,
+    "rouge_1": 19.54,
+    "rouge_2": 5.89,
+    "rouge_l": 15.07
+  },
+  "diagrammergpt_comparison_75": {
+    "stable_diffusion_v14_zeroshot": {
+      "cider": 7.7,
+      "bertscore": 87.5
+    },
+    "vpgen_zeroshot": {
+      "cider": 6.1,
+      "bertscore": 87.2
+    },
+    "automatiz": {
+      "cider": 12.2,
+      "bertscore": 86.9
+    },
+    "stable_diffusion_finetuned": {
+      "cider": 18.2,
+      "bertscore": 88.5
+    },
+    "vpgen_finetuned": {
+      "cider": 4.2,
+      "bertscore": 86.9
+    },
+    "diagrammergpt": {
+      "cider": 31.7,
+      "bertscore": 90.1
+    },
+    "edusgg_m3_zeroshot": {
+      "cider": 10.03,
+      "bertscore": 89.7
+    },
+    "edusgg_m3_finetuned": {
+      "cider": 22.67,
+      "bertscore": 90.98
+    }
+  }
+}

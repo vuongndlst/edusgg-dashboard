@@ -1,0 +1,8 @@
+{
+  "logical_program_bytes": 1852793374,
+  "native_journal_sha256": "eb7f5527f45babbcef1c32f0c47375ba7bf5283e98f5bcc890bb40e7fb97ad09",
+  "public_summary_sha256": "de98e0b30f98f600d6d36d8e4b748918c2cb97625e20c05d01a341ff5c480c8b",
+  "remaining_after40mib": 252747234,
+  "result_sha256": "5d7820971ec8d5ffb3412af4ebb6b1d769c9770961bdfcf257280c46a219093b",
+  "status": "COMPLETE_VERIFIED_STORED_OUTPUT_HARM_DIAGNOSIS"
+}

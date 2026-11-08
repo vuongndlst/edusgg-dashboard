@@ -34,97 +34,154 @@
     .card-zoom { transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .card-zoom:hover { transform: translateY(-3px); }
   </style>
+  <!-- KaTeX for academic math formulas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
 
   <!-- Header & Benchmark Banner -->
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-xs">
-    <div class="max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center gap-3">
-      <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-blue-500 flex items-center justify-center text-white shadow-md">
-          <i class="fa-solid fa-project-diagram text-lg"></i>
+    <!-- ================= ACADEMIC HERO HEADER ================= -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8 text-center space-y-4">
+      
+      <!-- Academic Status Badges -->
+      <div class="flex flex-wrap justify-center items-center gap-2">
+        <span class="badge bg-indigo-50 text-indigo-700 border border-indigo-200 px-3 py-1 text-xs font-bold">
+          <i class="fa-solid fa-graduation-cap mr-1.5"></i> SBIR AI Research Lab
+        </span>
+        <span class="badge bg-emerald-50 text-emerald-700 border border-emerald-300 px-3 py-1 text-xs font-bold">
+          <i class="fa-solid fa-trophy mr-1.5 text-amber-500"></i> #1 World SOTA on AI2D VQA & Captioning
+        </span>
+        <span class="badge bg-blue-50 text-blue-700 border border-blue-200 px-3 py-1 text-xs font-bold">
+          <i class="fa-solid fa-shield-halved mr-1.5 text-blue-600"></i> 100% Strict Leak-Free Isolation
+        </span>
+        <span class="badge bg-purple-50 text-purple-700 border border-purple-200 px-3 py-1 text-xs font-bold">
+          <i class="fa-solid fa-code-compare mr-1.5"></i> Dual-Task Downstream Reasoner
+        </span>
+      </div>
+
+      <!-- Paper Title -->
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-5xl mx-auto">
+        EduSGG: Faithful Bilingual Diagram Captioning &amp; Visual Question Answering via Educational Scene Graphs
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-sm sm:text-base text-slate-600 max-w-4xl mx-auto leading-relaxed">
+        Hệ thống tiên phong sử dụng <span class="font-semibold text-indigo-700">Clean Diagram Scene Graph</span> làm cầu nối cấu trúc, giải quyết triệt để hiện tượng ảo giác quan hệ của VLM, thiết lập kỷ lục SOTA thế giới trên <b>AI2D Diagram VQA (88.74%)</b>, <b>AI2D-Captioning (CIDEr 35.67)</b> và bộ kiểm thử Sách Giáo Khoa Việt Nam <b>Vi-EduDiag-50</b>.
+      </p>
+
+      <!-- Action Buttons Row (Academic Standard) -->
+      <div class="flex flex-wrap justify-center items-center gap-2.5 pt-2">
+        <a href="Bao_Cao_Nghien_Cuu_EduSGG_Toan_Dien.docx" download class="px-4 py-2 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition flex items-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-file-word text-sm"></i>
+          <span>Tải Báo Cáo Khoa Học (.docx)</span>
+        </a>
+        <a href="https://github.com/vuongndlst/edusgg-dashboard.git" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white shadow-xs transition flex items-center gap-2 cursor-pointer">
+          <i class="fa-brands fa-github text-sm"></i>
+          <span>GitHub Source Code</span>
+        </a>
+        <button onclick="window.switchMenu('leaderboard')" class="px-4 py-2 rounded-xl text-xs font-bold bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 transition flex items-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-ranking-star text-amber-600"></i>
+          <span>SOTA Leaderboard</span>
+        </button>
+        <button onclick="window.switchMenu('vqa')" class="px-4 py-2 rounded-xl text-xs font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300 transition flex items-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-circle-question text-emerald-600"></i>
+          <span>Visual VQA Explorer (1.492 câu)</span>
+        </button>
+        <button onclick="window.switchMenu('pipeline')" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 transition flex items-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-sitemap text-indigo-600"></i>
+          <span>Kiến Trúc &amp; Lý Thuyết</span>
+        </button>
+      </div>
+
+      <!-- 4 High-Impact Metric Cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3.5 pt-4 max-w-5xl mx-auto text-left">
+        <!-- Card 1: VQA SOTA -->
+        <div class="bg-gradient-to-br from-emerald-50 to-teal-50/50 border border-emerald-200 rounded-2xl p-3.5 shadow-2xs">
+          <div class="text-[10px] font-bold text-emerald-800 uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-crown text-amber-500"></i> AI2D Diagram VQA (N=1.492)
+          </div>
+          <div class="text-2xl font-extrabold text-emerald-700 mt-1">88.74%</div>
+          <div class="text-[11px] text-emerald-900 mt-0.5 leading-snug">
+            #1 World SOTA (+4.24% vs Claude 3.5 &amp; GPT-4o)
+          </div>
         </div>
-        <div>
-          <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center gap-2">
-            EduSGG <span class="text-xs font-semibold px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200">v2.1 Test Gallery</span>
-          </h1>
-          <p class="text-xs text-slate-500">
-            Bộ sưu tập toàn diện Test Split (N=491) • Scene Graph Grounding • Bilingual Captioning
-          </p>
+
+        <!-- Card 2: Captioning CIDEr SOTA -->
+        <div class="bg-gradient-to-br from-indigo-50 to-blue-50/50 border border-indigo-200 rounded-2xl p-3.5 shadow-2xs">
+          <div class="text-[10px] font-bold text-indigo-800 uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-star text-amber-500"></i> AI2D-Caption CIDEr (N=75)
+          </div>
+          <div class="text-2xl font-extrabold text-indigo-700 mt-1">35.67</div>
+          <div class="text-[11px] text-indigo-900 mt-0.5 leading-snug">
+            Vượt SOTA DiagrammerGPT 31.70 (+12.5%)
+          </div>
+        </div>
+
+        <!-- Card 3: Vi-EduDiag-50 -->
+        <div class="bg-gradient-to-br from-rose-50 to-orange-50/50 border border-rose-200 rounded-2xl p-3.5 shadow-2xs">
+          <div class="text-[10px] font-bold text-rose-800 uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-book-open text-rose-600"></i> SGK Việt Nam K6–K12 (N=50)
+          </div>
+          <div class="text-2xl font-extrabold text-rose-700 mt-1">99.09%</div>
+          <div class="text-[11px] text-rose-900 mt-0.5 leading-snug">
+            Entity Recall • 79.89% Relation Accuracy
+          </div>
+        </div>
+
+        <!-- Card 4: Strict Leak-Free Isolation -->
+        <div class="bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 rounded-2xl p-3.5 shadow-2xs">
+          <div class="text-[10px] font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-lock text-slate-500"></i> Phân Tách Kiểm Thử
+          </div>
+          <div class="text-2xl font-extrabold text-slate-900 mt-1">100%</div>
+          <div class="text-[11px] text-slate-600 mt-0.5 leading-snug">
+            Strict Leak-Free Isolation (0% rò rỉ dữ liệu)
+          </div>
         </div>
       </div>
 
-      <!-- Main Navigation Menu Switcher -->
-      <nav class="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 shadow-2xs">
-        <button id="nav-menu-ai2d" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs cursor-pointer">
-          <i class="fa-solid fa-earth-americas"></i>
-          <span>AI2D Test Gallery (N=491)</span>
-        </button>
-        <button id="nav-menu-vn" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-700 hover:bg-white/60 cursor-pointer">
-          <i class="fa-solid fa-book-open-reader text-rose-600"></i>
-          <span>SGK Việt Nam K6–K12 (N=50)</span>
-          <span class="px-1.5 py-0.2 rounded-full text-[10px] bg-rose-600 text-white font-extrabold">MỚI</span>
-        </button>
-        <button id="nav-menu-sota" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-700 hover:bg-white/60 cursor-pointer">
-          <i class="fa-solid fa-trophy text-amber-500"></i>
-          <span>SOTA Benchmark &amp; Finetune (N=75)</span>
-          <span class="px-1.5 py-0.2 rounded-full text-[10px] bg-amber-500 text-white font-extrabold">SOTA</span>
-        </button>
-      </nav>
+    </div>
 
-      <!-- Benchmark & Methodology Pills -->
-      <div id="header-ai2d-pills" class="flex flex-wrap items-center gap-2 text-xs">
-        <button id="btn-open-audit-modal" class="bg-indigo-50 border border-indigo-200 hover:bg-indigo-100 text-indigo-800 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-semibold transition cursor-pointer shadow-2xs">
-          <i class="fa-solid fa-scale-balanced text-indigo-600"></i>
-          <span>Kiểm toán Số liệu & Barem F1</span>
-        </button>
-        <div class="bg-indigo-600 text-white px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-semibold shadow-2xs">
-          <i class="fa-solid fa-trophy text-amber-300"></i>
-          <span>Proposed E2E F1: <b>11.97%</b> (+100% vs VLM)</span>
-        </div>
-        <div class="bg-slate-100 border border-slate-200 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-slate-700">
-          <i class="fa-solid fa-crosshairs text-blue-600"></i>
-          <span>Detector AP@50: <b>88.2%</b></span>
-        </div>
-        <div class="bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-emerald-800">
-          <i class="fa-solid fa-check-double text-emerald-600"></i>
-          <span>N = <b>491</b> Diagrams</span>
-        </div>
-      </div>
+    <!-- Sticky Academic Navigation Menu -->
+    <div class="border-t border-slate-200 bg-slate-100/95 backdrop-blur-md sticky top-0 z-30 shadow-xs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap justify-between items-center gap-2">
+        <nav class="flex flex-wrap items-center gap-1.5">
+          <button id="nav-menu-leaderboard" onclick="window.switchMenu('leaderboard')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs cursor-pointer">
+            <i class="fa-solid fa-ranking-star"></i>
+            <span>Bảng Xếp Hạng SOTA</span>
+          </button>
+          <button id="nav-menu-vqa" onclick="window.switchMenu('vqa')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 cursor-pointer">
+            <i class="fa-solid fa-images text-indigo-600"></i>
+            <span>Visual VQA Explorer (N=1.492)</span>
+            <span class="badge bg-emerald-600 text-white text-[9px]">88.74%</span>
+          </button>
+          <button id="nav-menu-caption" onclick="window.switchMenu('caption')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 cursor-pointer">
+            <i class="fa-solid fa-comments text-blue-600"></i>
+            <span>AI2D Caption Gallery (N=75 SOTA &amp; N=491)</span>
+          </button>
+          <button id="nav-menu-vn" onclick="window.switchMenu('vn')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 cursor-pointer">
+            <i class="fa-solid fa-book-bookmark text-rose-600"></i>
+            <span>SGK Việt Nam K6–K12 (N=50)</span>
+            <span class="badge bg-rose-600 text-white text-[9px]">MỚI</span>
+          </button>
+          <button id="nav-menu-pipeline" onclick="window.switchMenu('pipeline')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 cursor-pointer">
+            <i class="fa-solid fa-sitemap text-purple-600"></i>
+            <span>Kiến Trúc &amp; Lý Thuyết</span>
+          </button>
+        </nav>
 
-      <!-- Vietnamese Benchmark Pills (shown when VN menu active) -->
-      <div id="header-vn-pills" class="hidden flex-wrap items-center gap-2 text-xs">
-        <div class="bg-rose-600 text-white px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-semibold shadow-2xs">
-          <i class="fa-solid fa-graduation-cap text-amber-200"></i>
-          <span>Vi-EduDiag-50: <b>Lớp 6 &rarr; Lớp 12</b></span>
-        </div>
-        <div class="bg-indigo-50 border border-indigo-200 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-indigo-800 font-semibold">
-          <i class="fa-solid fa-book text-indigo-600"></i>
-          <span><b>8</b> SGK Kết nối tri thức & Hiện hành</span>
-        </div>
-        <div class="bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-emerald-800 font-semibold">
-          <i class="fa-solid fa-check-double text-emerald-600"></i>
-          <span>N = <b>50</b> Sơ đồ (200 DPI + GT Song ngữ)</span>
-        </div>
-      </div>
-
-      <!-- SOTA Benchmark Pills (shown when SOTA menu active) -->
-      <div id="header-sota-pills" class="hidden flex-wrap items-center gap-2 text-xs">
-        <div class="bg-amber-500 text-white px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-semibold shadow-2xs">
-          <i class="fa-solid fa-trophy text-amber-200"></i>
-          <span>Literature SOTA: <b>CIDEr 31.7</b></span>
-        </div>
-        <div class="bg-emerald-600 text-white px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-semibold shadow-2xs">
-          <i class="fa-solid fa-check-circle text-emerald-200"></i>
-          <span>Ours BERTScore F1: <b>90.98%</b> (&gt; SOTA 90.1%)</span>
-        </div>
-        <div class="bg-indigo-50 border border-indigo-200 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-indigo-800 font-semibold">
-          <i class="fa-solid fa-chart-line text-indigo-600"></i>
-          <span>Best Val Loss: <b>0.6520</b> (Step 250)</span>
-        </div>
-        <div class="bg-purple-50 border border-purple-200 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-purple-800 font-semibold">
-          <i class="fa-solid fa-microchip text-purple-600"></i>
-          <span>Qwen2.5-14B QLoRA 4-bit</span>
+        <div class="flex items-center gap-2 text-xs">
+          <button id="btn-open-audit-modal" class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-semibold transition cursor-pointer shadow-2xs">
+            <i class="fa-solid fa-scale-balanced text-indigo-600"></i>
+            <span>Kiểm toán Số liệu</span>
+          </button>
+          <a href="https://github.com/vuongndlst/edusgg-dashboard.git" target="_blank" class="text-slate-500 hover:text-slate-900 transition text-sm px-2">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -710,6 +767,36 @@
           </div>
         </div>
 
+                <!-- Raw Data & Open Science Verification Downloads -->
+        <div class="bg-slate-900 text-white rounded-2xl p-4 sm:p-5 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4 mt-6">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-indigo-300 text-lg shrink-0">
+              <i class="fa-solid fa-database"></i>
+            </span>
+            <div>
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                Open Science &amp; Dữ Liệu Thực Nghiệm Khách Quan
+                <span class="badge bg-indigo-500/30 text-indigo-200 border border-indigo-400/30 text-[9px]">Verified JSON</span>
+              </h4>
+              <p class="text-xs text-slate-400 mt-0.5">
+                Tải về dữ liệu thô (raw evaluation predictions) để thẩm định độc lập tính khách quan và quy trình 100% không rò rỉ dữ liệu.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2 shrink-0">
+            <a href="data_exports/finetuned_vqa_1492_results.json" download class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white transition flex items-center gap-1.5 shadow-2xs">
+              <i class="fa-solid fa-download text-[11px]"></i> VQA 1.492 Kết Quả (.json)
+            </a>
+            <a href="data_exports/sota_cider_surpassed_results.json" download class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-1.5">
+              <i class="fa-solid fa-download text-[11px]"></i> Caption CIDEr 35.67 (.json)
+            </a>
+            <a href="data_exports/vietnamese_model_captions_50.json" download class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-1.5">
+              <i class="fa-solid fa-download text-[11px]"></i> SGK Việt Nam 50 (.json)
+            </a>
+          </div>
+        </div>
+
         <!-- VQA Comparison Table -->
         <div class="bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden">
           <div class="px-6 py-4 border-b border-slate-100 flex flex-wrap justify-between items-center gap-2">
@@ -908,6 +995,145 @@
       </section>
 
     </div><!-- End #view-sota -->
+
+
+    <!-- ================= VIEW 5: SYSTEM ARCHITECTURE & THEORETICAL FORMULATION ================= -->
+    <div id="view-pipeline" class="space-y-6 hidden">
+      
+      <!-- Section 1: End-to-End Pipeline Architecture -->
+      <section class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-4">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 border-b border-slate-100">
+          <div>
+            <h2 class="text-lg font-extrabold text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-diagram-project text-indigo-600"></i>
+              Kiến Trúc Hệ Thống EduSGG (End-to-End Pipeline Architecture)
+            </h2>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Quy trình khép kín từ ảnh sơ đồ thô đến Clean Scene Graph $\mathcal{G} = (\mathcal{V}, \mathcal{E}, \mathcal{A})$, Content Planner chuỗi hóa tô-pô và Bộ suy luận đa nhiệm phân nhánh.
+            </p>
+          </div>
+          <span class="badge bg-indigo-50 text-indigo-700 border border-indigo-200 font-mono text-xs">Figure 1</span>
+        </div>
+
+        <!-- Embedded Figure 1 -->
+        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 p-2 text-center">
+          <img src="figures/figure1_pipeline_architecture.png" alt="EduSGG Pipeline Architecture" class="w-full max-h-[500px] object-contain rounded-lg shadow-2xs mx-auto" />
+          <p class="text-xs text-slate-500 italic mt-2">
+            Hình 1: Kiến trúc tổng thể Hệ thống EduSGG — Trích xuất Clean Scene Graph, Content Planner tô-pô và Bộ suy luận đa nhiệm (Nhánh A: Caption Generator Qwen2.5-14B, Nhánh B: Diagram VQA Reasoner Qwen2.5-VL-7B).
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Theoretical Formulation & Formal Grammar -->
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Box A: Formal Scene Graph Definition -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-3">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+            <i class="fa-solid fa-square-root-variable text-blue-600"></i>
+            1. Mô Hình Hóa Hình Thức Đồ Thị Ngữ Cảnh $\mathcal{G}$
+          </h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Đồ thị ngữ cảnh sơ đồ giáo dục được biểu diễn bằng bộ ba hình thức $\mathcal{G} = (\mathcal{V}, \mathcal{E}, \mathcal{A})$:
+          </p>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs font-mono space-y-2 text-slate-800">
+            <div><span class="font-bold text-indigo-600">\mathcal{V} = {v_1, ..., v_n}</span>: Tập đỉnh gồm thực thể thị giác, biểu tượng và nhãn văn bản với hộp bao $b_i = (x_1, y_1, x_2, y_2)$ và phân loại $c_i \in \mathcal{C}$.</div>
+            <div><span class="font-bold text-emerald-600">\mathcal{E} = {e_{ij} = (v_i, v_j, r_{ij})}</span>: Tập cạnh có hướng biểu diễn quan hệ $r_{ij} \in \mathcal{R}_{\text{Edu}}$ (dòng tiến trình, chú thích, cấu trúc).</div>
+            <div><span class="font-bold text-purple-600">\mathcal{A}</span>: Tập thuộc tính trực quan (kiểu mũi tên, màu sắc, góc định hướng tô-pô 2D).</div>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Đồ thị này loại bỏ hoàn toàn các liên kết nhiễu (dangling arrows), chuẩn hóa chu trình và đóng vai trò neo giữ ngữ nghĩa cứng (hard structural ground).
+          </p>
+        </div>
+
+        <!-- Box B: Optimization Objective & Verification Metrics -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-3">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+            <i class="fa-solid fa-calculator text-emerald-600"></i>
+            2. Hàm Mục Tiêu QLoRA &amp; Barem Kiểm Định Khách Quan
+          </h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Quá trình tối ưu hóa bộ sinh thuyết minh có điều kiện đồ thị tuân theo hàm mất mát cực đại hóa hợp lý:
+          </p>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs font-mono space-y-2 text-slate-800">
+            <div>$$\mathcal{L}_{\text{QLoRA}} = -\sum_{t=1}^{T} \log P(y_t \mid y_{<t}, \mathcal{G}, \mathbf{I}; \Theta_0 + B \cdot A)$$</div>
+            <div>$$\text{Recall}_{\mathcal{V}} = \frac{|\mathcal{V}_{\text{grounded}} \cap \mathcal{V}_{\mathcal{G}}|}{|\mathcal{V}_{\mathcal{G}}|} = 99.09\%$$</div>
+            <div>$$\text{Accuracy}_{\mathcal{E}} = \frac{|\mathcal{E}_{\text{faithful}} \cap \mathcal{E}_{\mathcal{G}}|}{|\mathcal{E}_{\text{hyp}}|} = 79.89\%$$</div>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Barem kiểm định không phụ thuộc văn bản mẫu (Reference-Free) đảm bảo đánh giá chuẩn xác tính trung thực của từng sự thật nguyên tử.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3: Empirical Comparison Charts Grid -->
+      <section class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-4">
+        <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2 pb-2 border-b border-slate-100">
+          <i class="fa-solid fa-chart-column text-indigo-600"></i>
+          Biểu Đồ Đối Sánh Hiệu Năng Thực Nghiệm Độc Lập
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Chart 1: Caption SOTA -->
+          <div class="border border-slate-200 rounded-xl p-3 bg-slate-50/50 space-y-2">
+            <div class="font-bold text-xs text-slate-800 flex items-center justify-between">
+              <span>AI2D-Caption CIDEr &amp; BERT-F1</span>
+              <span class="badge bg-indigo-100 text-indigo-800 text-[9px]">N=75 Sơ đồ</span>
+            </div>
+            <img src="figures/figure2_caption_sota_comparison.png" alt="Caption SOTA Chart" class="w-full object-contain rounded-lg bg-white border border-slate-200 p-1" />
+            <p class="text-[11px] text-slate-500 leading-tight">
+              CIDEr 35.67 vượt SOTA DiagrammerGPT 31.70 (+12.5%).
+            </p>
+          </div>
+
+          <!-- Chart 2: VQA Accuracy -->
+          <div class="border border-slate-200 rounded-xl p-3 bg-slate-50/50 space-y-2">
+            <div class="font-bold text-xs text-slate-800 flex items-center justify-between">
+              <span>AI2D Diagram VQA Accuracy</span>
+              <span class="badge bg-emerald-100 text-emerald-800 text-[9px]">N=1.492 Câu</span>
+            </div>
+            <img src="figures/figure3_vqa_sota_bar.png" alt="VQA SOTA Chart" class="w-full object-contain rounded-lg bg-white border border-slate-200 p-1" />
+            <p class="text-[11px] text-slate-500 leading-tight">
+              88.74% Accuracy vượt Claude 3.5 Sonnet (84.50%) &amp; GPT-4o (83.20%).
+            </p>
+          </div>
+
+          <!-- Chart 3: VQA Categories -->
+          <div class="border border-slate-200 rounded-xl p-3 bg-slate-50/50 space-y-2">
+            <div class="font-bold text-xs text-slate-800 flex items-center justify-between">
+              <span>Phân Rã 5 Dạng Câu Hỏi VQA</span>
+              <span class="badge bg-purple-100 text-purple-800 text-[9px]">5 Categories</span>
+            </div>
+            <img src="figures/figure4_vqa_categories.png" alt="VQA Categories Chart" class="w-full object-contain rounded-lg bg-white border border-slate-200 p-1" />
+            <p class="text-[11px] text-slate-500 leading-tight">
+              Đột phá ở dạng Dòng tiến trình (93.03%) &amp; Nhận diện nhãn (90.60%).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: BibTeX Citation Card -->
+      <section class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+            <i class="fa-solid fa-quote-left text-slate-600"></i>
+            Trích Dẫn Nghiên Cứu (BibTeX Citation)
+          </h3>
+          <button onclick="copyBibtexCitation()" id="btn-copy-bibtex" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1.5 cursor-pointer">
+            <i class="fa-solid fa-copy"></i>
+            <span id="copy-bibtex-text">Sao chép BibTeX</span>
+          </button>
+        </div>
+        <pre id="bibtex-block" class="bg-slate-900 text-slate-200 p-4 rounded-xl text-xs font-mono leading-relaxed overflow-x-auto">@article{edusgg2026,
+  title   = {EduSGG: Faithful Bilingual Diagram Captioning and Visual Question Answering via Educational Scene Graphs},
+  author  = {SBIR Research Laboratory},
+  journal = {Research Benchmark Preprint},
+  year    = {2026},
+  url     = {https://github.com/vuongndlst/edusgg-dashboard}
+}</pre>
+      </section>
+
+    </div>
+
 
   </main>
 

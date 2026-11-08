@@ -1,0 +1,32 @@
+{
+  "dataset_caption_image_content_reads": 0,
+  "entries": [
+    {
+      "html_url": "https://github.com/yuri-ocha/DiagramCaption/blob/main/LICENSE",
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "sha": "596e64d0b548c20e74ba3d8e52efd22e212272ac",
+      "size": 20136,
+      "type": "file"
+    },
+    {
+      "html_url": "https://github.com/yuri-ocha/DiagramCaption/blob/main/README.md",
+      "name": "README.md",
+      "path": "README.md",
+      "sha": "f1d679c2fa9f081731845afd4eff90fcb306f2d3",
+      "size": 1691,
+      "type": "file"
+    },
+    {
+      "html_url": "https://github.com/yuri-ocha/DiagramCaption/tree/main/data",
+      "name": "data",
+      "path": "data",
+      "sha": "f53254c224c41994a3348ef1c31e0f89afc4ce30",
+      "size": 0,
+      "type": "dir"
+    }
+  ],
+  "scope": "Official GitHub root listing metadata only; no README/CSV/caption/image/archive content fetched. No license inference from missing fields.",
+  "source_url": "https://api.github.com/repos/yuri-ocha/DiagramCaption/contents",
+  "status": "PRIMARY_REPOSITORY_ROOT_METADATA_READ"
+}

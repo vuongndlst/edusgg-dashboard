@@ -1,0 +1,37 @@
+{
+  "feature_dim": 381,
+  "source_sha256": "08122a3c8b3664b8830c6f29b9f00b7eb1b8071c0e3aeb4f34c2583ae3053685",
+  "support": {
+    "fit": {
+      "full_native_head_tail_links": 2989,
+      "predicted_slots": 2900,
+      "candidate_rows": 4098,
+      "supported_slots": 2226,
+      "one_candidate_supported": 1367,
+      "competing_candidate_supported": 859,
+      "multiple_positive_slots": 0
+    },
+    "internal_dev": {
+      "predicted_slots": 821,
+      "candidate_rows": 1168,
+      "supported_slots": 645,
+      "one_candidate_supported": 393,
+      "competing_candidate_supported": 252,
+      "multiple_positive_slots": 0,
+      "full_native_head_tail_links": 857
+    }
+  },
+  "train_images": 1024,
+  "val_images_read": 0,
+  "test_records_read": 0,
+  "calibration_audit_records_read": 0,
+  "fit_performed": false,
+  "smoke_images": 16,
+  "estimated_total_bytes_1_5_safety": 139674780.0,
+  "estimated_train_dev_seconds_1_5_safety": 45.07725977897644,
+  "cpu_seconds": 21.453603124246,
+  "program_artifact_bytes": 1486221120,
+  "disk_free_bytes": 65798139904,
+  "gpu_reserved_seconds": 3720,
+  "all_boundary_rebuilds_exact": true
+}

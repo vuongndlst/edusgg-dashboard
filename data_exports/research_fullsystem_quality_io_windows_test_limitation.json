@@ -1,0 +1,12 @@
+{
+  "status": "local_windows_sandbox_atomic_rename_not_validated",
+  "unit_cases": 3,
+  "failed_cases": 2,
+  "error_type": "PermissionError",
+  "winerror": 5,
+  "reason": "Sandbox denied os.replace on temporary fixture files. Source was not changed to bypass atomicity.",
+  "execution_target": "SSH/Linux",
+  "target_ssh_full_suite": "175 tests passed",
+  "native_model_or_data_work_performed_locally": false,
+  "main_training_admitted": false
+}

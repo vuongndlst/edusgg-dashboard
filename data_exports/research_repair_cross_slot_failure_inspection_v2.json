@@ -1,0 +1,27 @@
+{
+  "active_phase": null,
+  "both_locks_acquired": true,
+  "cause": "Core strict edge_key rejects confidence metadata added by controller before identity comparison; provider/equations were not evaluated against targets.",
+  "decoded_images": 1,
+  "encoded_images_returned": 1,
+  "evidence_journal_events": 5,
+  "failure": {
+    "error_type": "ValueError",
+    "scope": "Preserve source/registration/attempt/partial outputs; no automatic repeat.",
+    "status": "FAILED",
+    "wall_seconds": 2.1317693796008825
+  },
+  "fingerprint": "c4e1ab8b58475aeda03da85336b9dfd19b03661079fb43d8e9fdd5097924bc96",
+  "forward_count_limitation": "Forward was executed before source line83 strict identity comparison; no separate ready event was present, not an independent forward receipt.",
+  "gpu_seconds": 0,
+  "graph_forwards_from_exact_failure_location": 1,
+  "models_returned": 1,
+  "native_reads": 0,
+  "optimizer_steps": 0,
+  "predictions_exist": false,
+  "preregister_sha256": "bedda1a89763e6c0d8c29e1dc1e2d1aa1dd13c86bf0e750e13e2f4d3255728cb",
+  "remaining_after40mib": 253769671,
+  "scope": "Preserved failed namespace; no resume/rewrite. A new driver/source/validation/namespace is needed.",
+  "source_snapshot_pairs_unchanged": 13,
+  "status": "INSPECTED_TERMINAL_STRICT_EDGE_METADATA_DRIVER_FAILURE"
+}

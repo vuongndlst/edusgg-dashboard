@@ -1,0 +1,37 @@
+{
+  "status": "inference_resource_proposal_handoff_verified",
+  "checked_utc": "2026-11-02T06:50:39.909570+00:00",
+  "before_state_sha256": "4f0e80ce00cac68a6ec2c4e140c6acee8eb3fc39dc867958a25aad35eba3e59a",
+  "after_state_sha256": "1afacc334742d455d19dca2b9481b3dc98f048efa8492cdbabe5827c72b015ef",
+  "registered_science_unchanged": {
+    "research-fullsystem-target-schema-v1": "97622d457b90e2334facc0f2bfd96ad6e37d2bc05587bdd4d8dccf83d7b11ffa",
+    "research-fullsystem-pipeline-v1": "4c2470311c19a1e123b1d9c0256ac36f29a9182df895329533f6ed329077ae72"
+  },
+  "documents": {
+    "docs/RESEARCH_EXECUTION_STATE.md": "8004049e70852a9e10f02d394c851e190123ca9fd1d85b8174f84d56af4deb4f",
+    "docs/research_fullsystem_method_protocol_next.md": "96c69c54f2be127e9f6eaa897bf67ae9585259293d4f9ec70641512cc3e21d5e",
+    "docs/research_fullsystem_design_next.md": "60bb9ad2aa19d22a210d3bdfc62bd2e4b025a166db85abad3753b60ef465831a",
+    "docs/research_fullsystem_inference_resource_next.md": "08714ccd6fb591a8d07a8ee285d77e785c02adc48c2fd6173212bc892f88ab33",
+    "docs/paper_comparison_2026_11_01.md": "2370c7245a5d71d08930ea799c3aa335cbad0ad7098c6ec65ce5a11769e11e30"
+  },
+  "gpu_reserved_seconds": 3780,
+  "conservative_census": {
+    "scope_version": "fullsystem-conservative-v1",
+    "category_bytes": {
+      "experiments": 1663944829,
+      "reports": 67757473,
+      "public_sources": 3221282
+    },
+    "file_count": 33291,
+    "logical_file_bytes": 1734923584,
+    "remaining_after40mib": 370617024,
+    "size_manifest_sha256": "6dc5d9a1aaa61d336d0a967e95b4ee77aed2b56ad4cf50805ac94b264b0ef036",
+    "boundary": "All research-* experiments/checkpoints, research_*reports inclbundles/receipts, programme literaturefolder, and ALL public src/config/docs/tests/scripts inclpycache. Pre-existing frozen datasets/COCOweights/oldnonresearchcheckpoints excluded as not newprogramme outputs. Newmodel files must reside in registered research-*roots; no loopholeoutside scope."
+  },
+  "main_training_admitted": false,
+  "new_gpu_reserved": false,
+  "protected_or_audit_records_opened": 0,
+  "sealed_sources_verified": 42,
+  "sealed_checkpoints_verified": 6,
+  "planning_note": "CDF arrays RAM/hashrefs only unless newaffordablemanifest; no scientificCDF/source change."
+}

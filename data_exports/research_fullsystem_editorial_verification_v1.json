@@ -1,0 +1,20 @@
+{
+  "status": "VERIFIED_EDITORIAL_CONSISTENCY",
+  "final_preregister_sha256": "378334760a926d72f2e547ba999b583e67cf3fb0e56879ccfa91342148a606a4",
+  "verification_sha256": "b08f78f20e5547fa0f38269537c8a76c364abb79e2ae9cbed50096cde74cad5d",
+  "manuscript_numeric_tokens_checked": 34,
+  "relative_links_checked": 2,
+  "target_free_api_example_ast_and_functions_checked": true,
+  "figure_hashes_verified": true,
+  "new_scientific_analysis_or_model": false,
+  "native_or_pixel_reads": 0,
+  "gpu_seconds": 0,
+  "source_sha256": {
+    "docs/research_manuscript_internal_v1.md": "f45636b8d271c3e5cd5fc166a7546062ae63f7d304865c1b5e5362d82652f056",
+    "docs/research_fullsystem_reproduction_v1.md": "564f7264790cb7d46ca365bb384b515c15f05a9153c0370d0cade195ca3da0af",
+    "docs/paper_comparison_2026_11_03_addendum.md": "5c6a4648ef4de1762dc37ce0c142dcb04d6a7e1cba1af16119d191823a708eb4",
+    "docs/research_fullsystem_after_final_next.md": "9e4454a0eccd3b506eadc07941de15bebcc64db006160f8bf49ed33c34d4a2dc",
+    "scripts/verify_research_fullsystem_editorial_remote.sh": "87bf67989b83975f055e94510a8fe808cd6c110e0cd1be9fbeea7bf0a864c1ee"
+  },
+  "scope": "Rounding, claim-limit text, source APIs, relative links and figure provenance. Not peer review, journal acceptance or proof of literature exhaustiveness."
+}

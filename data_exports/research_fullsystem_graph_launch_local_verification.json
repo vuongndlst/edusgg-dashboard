@@ -1,0 +1,11 @@
+{
+  "bundle_sha256": "66b81d41a4d5a1463a303a26eaec5e7930f3a670655b21a91b0aef1b7610860c",
+  "receipt_files_verified": 34,
+  "text_secret_and_private_path_checks": 35,
+  "secret_or_private_path_matches": 0,
+  "detector_seeds_complete": 3,
+  "native_graph_fit_started": true,
+  "run_fingerprint": "82a904ff607a7a059667c63e964cd7c1c11fd071f90ea915322e7f5c76ae9a57",
+  "protected_gate_open": false,
+  "fullsystem_quality_result": false
+}

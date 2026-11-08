@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_HARNESS_BEFORE_TEST_DISCOVERY",
+  "reason": "Self-hash helper was executed through bridge stdin but not uploaded to its canonical scripts path",
+  "tests_run": 0,
+  "native_reads": 0,
+  "pixels": 0,
+  "optimizer_steps": 0,
+  "gpu_seconds": 0,
+  "original_helper_sha256": "89155836aec59ed65348441d048ed128a29ec57b35ff03dc8e1939b66dea3dfb",
+  "fix": "Explicit helper upload and new v2 validation namespace; no scientific module change"
+}

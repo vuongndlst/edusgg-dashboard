@@ -1,0 +1,7 @@
+{
+  "logical_program_bytes": 1850766634,
+  "remaining_after40mib": 254773974,
+  "result_sha256": "54b7880303715e8f774a4bb3de7938504bcc3e9e11d6daa984227d0afd0d43e1",
+  "stage_bytes_before_completion": 154774,
+  "status": "COMPLETE_VERIFIED_KERNEL_ONLY"
+}

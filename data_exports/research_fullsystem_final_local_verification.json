@@ -1,0 +1,18 @@
+{
+  "status": "VERIFIED",
+  "bundle_sha256": "0f746689bfd420764f5420d9fd6b3aa47ece81290a72e960cfe1027cd8f92239",
+  "public_verification_sha256": "74348c1dd09a32a79da705fba51c81ba7b4e56f5ac680918d88f32efd498b144",
+  "shipped_files_verified": 225,
+  "scientific_source_snapshot_files_verified": 30,
+  "text_secret_checks": 142,
+  "secret_matches": 0,
+  "native_system_cases_verified_on_server": 4800,
+  "full_final_tests": 222,
+  "separate_audit_fixture_tests": 4,
+  "primary_guard_passed": false,
+  "audit_exact_wall_seconds": null,
+  "audit_deadline_seconds": 600,
+  "no_local_model_or_dataset_processing": true,
+  "no_model_proposal_or_ROI_cache_copied": true,
+  "paper_sota_claim": false
+}

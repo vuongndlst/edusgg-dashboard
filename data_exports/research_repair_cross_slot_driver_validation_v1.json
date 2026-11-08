@@ -1,0 +1,17 @@
+{
+  "errors": 0,
+  "failures": 0,
+  "native_pixel_prediction_model_optimizer_gpu_operations": 0,
+  "peak_rss_bytes": 47820800,
+  "scope": "Three NEW driver regression fixtures; 3synthetic seeds x4methods exactconfidence codec, blank-evidence nochange, strict identity mismatch. Earlier32fixture receipt retained, not rerun.",
+  "sources": {
+    "configs/research_repair_cross_slot_wire_v3.json": "7140f0e6355fcd6bfbea57808ac5ea49cd10388491f4628a76f4d2ac02b5f475",
+    "scripts/validate_research_repair_cross_slot_driver_remote_v1.sh": "c43791d52b0e3c7385cc9dd6eea5c3bf59d887caec48532817540d8a77d979be",
+    "src/edusgg/research_repair_cross_slot_runtime_v1.py": "b0fc3b4336898d6b332251ccc3f814a994bbbe75e7855b0749a2bc92a75e578e",
+    "tests/test_research_repair_cross_slot_runtime_v1.py": "3d42b71a121f1b6080bd0dd1f4d5e2cc62749fbe53408e64f2dc17673c38e088"
+  },
+  "status": "PASSED",
+  "tests_run": 3,
+  "torch_imported": false,
+  "wall_seconds": 0.01642821729183197
+}

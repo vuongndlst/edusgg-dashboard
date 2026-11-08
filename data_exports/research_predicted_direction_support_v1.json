@@ -1,0 +1,47 @@
+{
+  "source_sha256": "dad8577a1a758e322147a519117c3dfb4a1757965501922a47f55b458fc5b7aa",
+  "parent_preregister_sha256": "66b3e572e7c148a313afd1d550d8952df59f4b035eace20ea9364e9de831db57",
+  "parent_feature_snapshot_sha256": "e7adb774bff16f4f2f105db6a158adbdcfe10bd12dfbe215ff12b98dd004ae52",
+  "images": {
+    "fit": 823,
+    "internal_dev": 201
+  },
+  "support": {
+    "fit": {
+      "native_mode:directed": 1368,
+      "predicted_interobject_queries": 3113,
+      "correct_pair_native_relations": 1642,
+      "queries_with_supported_target": 1642,
+      "queries_with_multiple_supported_targets": 0,
+      "queries_without_nearby_heads": 817,
+      "target_class:0": 740,
+      "target_class:1": 628,
+      "target_class:2": 274,
+      "native_mode:undirected": 274
+    },
+    "internal_dev": {
+      "native_mode:directed": 349,
+      "predicted_interobject_queries": 780,
+      "correct_pair_native_relations": 379,
+      "queries_with_supported_target": 379,
+      "queries_with_multiple_supported_targets": 0,
+      "queries_without_nearby_heads": 132,
+      "target_class:0": 187,
+      "target_class:1": 162,
+      "target_class:2": 30,
+      "native_mode:undirected": 30
+    }
+  },
+  "groups_with_supported_targets": {
+    "fit": 279,
+    "internal_dev": 67
+  },
+  "elapsed_cpu_seconds": 21.972565380856395,
+  "zero_roi_used_for_support_only": true,
+  "all_release_direction_rebuilds_match": true,
+  "feature_dim": 367,
+  "model_fit": false,
+  "val_audit_test_records_read": 0,
+  "gpu_seconds": 0,
+  "disk_free_gib": 61.36362838745117
+}

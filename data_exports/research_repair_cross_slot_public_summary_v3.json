@@ -1,0 +1,57 @@
+{
+  "format": "public-cross-slot-wire-registration-summary-v1",
+  "immutable_source_ref_count": 69,
+  "original_run_fingerprint": "f934efd951da145beef66291e9bbaeb07dd661809e653488830c4d116198ab91",
+  "original_server_preregister_sha256": "73048c5c4c5b16dcb38386a26e9c393b24da51db8ca6af14ee329a71233fb7f7",
+  "policy": {
+    "axis_policy": "frozen_predicted_pixel_axes_v1",
+    "controls": [
+      "identity",
+      "unary_greedy",
+      "factor_greedy"
+    ],
+    "edit_penalty": 0.05,
+    "factor_to_edit_cost_ratio": 3.0,
+    "format": "pixel-head-link-factor-policy-v1",
+    "head_radius_diagonal_fraction": 0.04,
+    "maximum_factors": 4096,
+    "maximum_pixel_count": 3000000,
+    "primary": "factor_joint",
+    "scope": "Direction compatibility under a chosen predicted head attachment, not scientific causality; no learned presence/addition claim.",
+    "unary_policy": "occupied_slot_tanh_margin_empty_slot_minus_one_v1"
+  },
+  "resource_caps": {
+    "maximum_cpu_seconds": 300,
+    "maximum_rss_bytes": 1610612736,
+    "maximum_stage_bytes": 4194304
+  },
+  "scope": "Explicit minimal derived public summary; not original registration bytes/runnable registration. No pixel paths/private server metadata.",
+  "selected_ids": [
+    "ai2d:4776",
+    "ai2d:1389",
+    "ai2d:3225",
+    "ai2d:2047",
+    "ai2d:3443",
+    "ai2d:1286",
+    "ai2d:3333",
+    "ai2d:4168"
+  ],
+  "source_hashes": {
+    "configs/research_repair_cross_slot_inputs_v1.json": "f1889f8ec34407f2e67fe994f6246fdb93ed818d691fd587752eb16d0e0fd0a2",
+    "configs/research_repair_cross_slot_wire_v1.json": "cc8213f06a226f62207a8c31eadb224f1a541ac894c6599f2116e36f3b671500",
+    "configs/research_repair_cross_slot_wire_v3.json": "7140f0e6355fcd6bfbea57808ac5ea49cd10388491f4628a76f4d2ac02b5f475",
+    "docs/research_repair_cross_slot_design_v1.md": "1b4c9a76296357bfc1e479c4a1df5fd334852a22414388693401d21c19e89565",
+    "scripts/prepare_research_repair_cross_slot_inputs_v1.py": "3217cada64376d6294877fbc904c111970144c213c8be694677423e1cc840e32",
+    "scripts/run_research_repair_cross_slot_remote_v4.sh": "978f8cddde40c79748206dbb3f233323c0f4c9835e981855fc8976806fb1864b",
+    "scripts/validate_research_repair_cross_slot_driver_remote_v1.sh": "c43791d52b0e3c7385cc9dd6eea5c3bf59d887caec48532817540d8a77d979be",
+    "scripts/validate_research_repair_cross_slot_remote_v1.sh": "e0741eec989c8fa328d524f7ced5dc9396aced3bbdf36c4e59341d86ecd58ec8",
+    "src/edusgg/research_repair_cross_slot_fixtures_v1.py": "e11273bd3328e461f914a3a44a9c31b8754311c9ee3a9ae45f46f55843dc4e9d",
+    "src/edusgg/research_repair_cross_slot_io_v1.py": "fc8793c8a5c197c0dde6a489dd88fb56290e701bde8b561967f815b5d0ef64c5",
+    "src/edusgg/research_repair_cross_slot_runtime_v1.py": "b0fc3b4336898d6b332251ccc3f814a994bbbe75e7855b0749a2bc92a75e578e",
+    "src/edusgg/research_repair_cross_slot_v1.py": "fcf999b260302e84d2d89c34ab33ce012fc7891b300d3f662864c31f0a908775",
+    "src/edusgg/research_repair_graph_codec_v1.py": "e6e242ca97c199ddf874ce249a3205e4688295d591f2ed4ea7fb535511da0fe2",
+    "tests/test_research_repair_cross_slot_io_v1.py": "02a18bd3242d0a3f950ad6d2bb2dbbc2627e434fe4c3c484749b173220c24008",
+    "tests/test_research_repair_cross_slot_runtime_v1.py": "3d42b71a121f1b6080bd0dd1f4d5e2cc62749fbe53408e64f2dc17673c38e088",
+    "tests/test_research_repair_cross_slot_v1.py": "a524e3f0b6305a0f96457fc2744f8444f0d12fbaa6328e48410a815639525b20"
+  }
+}

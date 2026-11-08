@@ -1,0 +1,36 @@
+{
+  "status": "inference_resource_proposal_handoff_verified",
+  "checked_utc": "2026-11-02T06:49:13.538471+00:00",
+  "before_state_sha256": "ad5ad498cb5d06152adf4d99bc2e910f71710015c9aeec2594aa55e6a615c36c",
+  "after_state_sha256": "4f0e80ce00cac68a6ec2c4e140c6acee8eb3fc39dc867958a25aad35eba3e59a",
+  "registered_science_unchanged": {
+    "research-fullsystem-target-schema-v1": "97622d457b90e2334facc0f2bfd96ad6e37d2bc05587bdd4d8dccf83d7b11ffa",
+    "research-fullsystem-pipeline-v1": "4c2470311c19a1e123b1d9c0256ac36f29a9182df895329533f6ed329077ae72"
+  },
+  "documents": {
+    "docs/RESEARCH_EXECUTION_STATE.md": "21a02e4ecafc2876d9fd5e0016979558ed06897184c8320d456aa0f92ba0daa6",
+    "docs/research_fullsystem_method_protocol_next.md": "96c69c54f2be127e9f6eaa897bf67ae9585259293d4f9ec70641512cc3e21d5e",
+    "docs/research_fullsystem_design_next.md": "60bb9ad2aa19d22a210d3bdfc62bd2e4b025a166db85abad3753b60ef465831a",
+    "docs/research_fullsystem_inference_resource_next.md": "f5da95d156dfcb0a0ff2fd318586f82448c32ad60d3b4893885c848acc47a87e",
+    "docs/paper_comparison_2026_11_01.md": "2370c7245a5d71d08930ea799c3aa335cbad0ad7098c6ec65ce5a11769e11e30"
+  },
+  "gpu_reserved_seconds": 3780,
+  "conservative_census": {
+    "scope_version": "fullsystem-conservative-v1",
+    "category_bytes": {
+      "experiments": 1663944469,
+      "reports": 67755323,
+      "public_sources": 3219953
+    },
+    "file_count": 33290,
+    "logical_file_bytes": 1734919745,
+    "remaining_after40mib": 370620863,
+    "size_manifest_sha256": "35ef54ca2d800cf711de1ca5ab2c2de8432d79617383416a3c8a8c662f681c39",
+    "boundary": "All research-* experiments/checkpoints, research_*reports inclbundles/receipts, programme literaturefolder, and ALL public src/config/docs/tests/scripts inclpycache. Pre-existing frozen datasets/COCOweights/oldnonresearchcheckpoints excluded as not newprogramme outputs. Newmodel files must reside in registered research-*roots; no loopholeoutside scope."
+  },
+  "main_training_admitted": false,
+  "new_gpu_reserved": false,
+  "protected_or_audit_records_opened": 0,
+  "sealed_sources_verified": 42,
+  "sealed_checkpoints_verified": 6
+}

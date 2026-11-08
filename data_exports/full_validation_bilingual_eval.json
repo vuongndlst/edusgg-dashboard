@@ -1,0 +1,167 @@
+{
+  "dataset_evaluated": "data/processed/phase2-v1/ai2d.jsonl",
+  "split": "val",
+  "total_diagrams": 490,
+  "total_atomic_facts": 6426,
+  "methods_summary": {
+    "template_generator": {
+      "num_diagrams": 490,
+      "total_atomic_facts": 6426,
+      "vietnamese": {
+        "mean_fact_coverage_recall": 96.93,
+        "mean_directional_faithfulness": 99.97,
+        "total_direction_inversion_errors": 1,
+        "total_hallucinations_detected": 9,
+        "mean_factual_f1": 96.29
+      },
+      "english": {
+        "mean_fact_coverage_recall": 96.93,
+        "mean_directional_faithfulness": 100.0,
+        "total_direction_inversion_errors": 0,
+        "total_hallucinations_detected": 9,
+        "mean_factual_f1": 96.32
+      },
+      "overall_macro_factual_f1": 96.3
+    },
+    "qwen_content_plan_anchored": {
+      "num_diagrams": 490,
+      "total_atomic_facts": 6426,
+      "vietnamese": {
+        "mean_fact_coverage_recall": 79.1,
+        "mean_directional_faithfulness": 100.0,
+        "total_direction_inversion_errors": 0,
+        "total_hallucinations_detected": 4,
+        "mean_factual_f1": 88.8
+      },
+      "english": {
+        "mean_fact_coverage_recall": 78.15,
+        "mean_directional_faithfulness": 99.93,
+        "total_direction_inversion_errors": 1,
+        "total_hallucinations_detected": 4,
+        "mean_factual_f1": 88.11
+      },
+      "overall_macro_factual_f1": 88.46
+    },
+    "qwen_naive_ocr_baseline": {
+      "num_diagrams": 490,
+      "total_atomic_facts": 6426,
+      "vietnamese": {
+        "mean_fact_coverage_recall": 28.99,
+        "mean_directional_faithfulness": 100.0,
+        "total_direction_inversion_errors": 0,
+        "total_hallucinations_detected": 4,
+        "mean_factual_f1": 44.96
+      },
+      "english": {
+        "mean_fact_coverage_recall": 36.69,
+        "mean_directional_faithfulness": 100.0,
+        "total_direction_inversion_errors": 0,
+        "total_hallucinations_detected": 3,
+        "mean_factual_f1": 53.97
+      },
+      "overall_macro_factual_f1": 49.47
+    }
+  },
+  "sample_comparisons": [
+    {
+      "image_id": "ai2d:1005",
+      "template": {
+        "caption_vi": "Sơ đồ minh họa về chủ đề 'Buttonhole foot' (Buttonhole foot). Hình ảnh tập trung vào một cấu trúc thực thể trung tâm. Trên sơ đồ, các thành phần và vị trí được định danh bao gồm: Buttonhole foot [Buttonhole foot], Overcasting foot [Overcasting foot], Screwdriver [Screwdriver], cleaning brush [cleaning brush], Ball point needle [Ball point needle], Twin Needle [Twin Needle], Needle Set [Needle Set], 75/11 1 needle 90/14 1 needle 100/16 1 needle [75/11 1 needle 90/14 1 needle 100/16 1 needle], Bobbin [Bobbin], Monogramming foot [Monogramming foot], Zipper Foot [Zipper Foot], Zigzag foot [Zigzag foot], Blind Stitch [Blind Stitch], Button fitting foot [Button fitting foot], Seam Ripper [Seam Ripper], Foot controller [Foot controller], Extra spool pin [Extra spool pin].",
+        "caption_en": "The diagram illustrates the structure of 'Buttonhole foot'. The visual composition focuses on a central anatomical structure. Key labeled components and structures include: Buttonhole foot, Overcasting foot, Screwdriver, cleaning brush, Ball point needle, Twin Needle, Needle Set, 75/11 1 needle 90/14 1 needle 100/16 1 needle, Bobbin, Monogramming foot, Zipper Foot, Zigzag foot, Blind Stitch, Button fitting foot, Seam Ripper, Foot controller, Extra spool pin.",
+        "method": "template_deterministic"
+      },
+      "qwen_proposed": {
+        "caption_vi": "Sơ đồ mô tả cấu trúc \"Buttonhole foot\" với các chi tiết được chỉ định bằng nhãn chú thích, trong đó \"Buttonhole foot\" là phần trung tâm, được xác định bởi cấu trúc \"blobs_B2\". Các chi tiết khác như \"Overcasting foot\", \"Screwdriver\", \"cleaning brush\", \"Ball point needle\", \"Twin Needle\", \"Needle Set\", \"75/11 1 needle 90/14 1 needle 100/16 1 needle\", \"Bobbin\", \"Monogramming foot\", \"Zipper Foot\", \"Zigzag foot\", \"Blind Stitch\", \"Button fitting foot\", \"Seam Ripper\", \"Foot controller\", và \"Extra spool pin\" được phân bổ vào các cấu trúc khác nhau, được xác định rõ ràng qua các nhãn chú thích tương ứng.",
+        "caption_en": "The diagram illustrates the \"Buttonhole foot\" as the central structure, identified by \"blobs_B2\", with other components such as \"Overcasting foot\", \"Screwdriver\", \"cleaning brush\", \"Ball point needle\", \"Twin Needle\", \"Needle Set\", \"75/11 1 needle 90/14 1 needle 100/16 1 needle\", \"Bobbin\", \"Monogramming foot\", \"Zipper Foot\", \"Zigzag foot\", \"Blind Stitch\", \"Button fitting foot\", \"Seam Ripper\", \"Foot controller\", and \"Extra spool pin\" linked to respective structures \"blobs_B3\", \"blobs_B8\", \"blobs_B7\", \"blobs_B6\", \"blobs_B5\", \"blobs_B1\", \"blobs_B0\", \"blobs_B4\", \"blobs_B15\", \"blobs_B14\", \"",
+        "raw_output": "**TIẾNG VIỆT:**  \nSơ đồ mô tả cấu trúc \"Buttonhole foot\" với các chi tiết được chỉ định bằng nhãn chú thích, trong đó \"Buttonhole foot\" là phần trung tâm, được xác định bởi cấu trúc \"blobs_B2\". Các chi tiết khác như \"Overcasting foot\", \"Screwdriver\", \"cleaning brush\", \"Ball point needle\", \"Twin Needle\", \"Needle Set\", \"75/11 1 needle 90/14 1 needle 100/16 1 needle\", \"Bobbin\", \"Monogramming foot\", \"Zipper Foot\", \"Zigzag foot\", \"Blind Stitch\", \"Button fitting foot\", \"Seam Ripper\", \"Foot controller\", và \"Extra spool pin\" được phân bổ vào các cấu trúc khác nhau, được xác định rõ ràng qua các nhãn chú thích tương ứng.\n\n**ENGLISH:**  \nThe diagram illustrates the \"Buttonhole foot\" as the central structure, identified by \"blobs_B2\", with other components such as \"Overcasting foot\", \"Screwdriver\", \"cleaning brush\", \"Ball point needle\", \"Twin Needle\", \"Needle Set\", \"75/11 1 needle 90/14 1 needle 100/16 1 needle\", \"Bobbin\", \"Monogramming foot\", \"Zipper Foot\", \"Zigzag foot\", \"Blind Stitch\", \"Button fitting foot\", \"Seam Ripper\", \"Foot controller\", and \"Extra spool pin\" linked to respective structures \"blobs_B3\", \"blobs_B8\", \"blobs_B7\", \"blobs_B6\", \"blobs_B5\", \"blobs_B1\", \"blobs_B0\", \"blobs_B4\", \"blobs_B15\", \"blobs_B14\", \"",
+        "method": "qwen_content_plan_anchored"
+      },
+      "qwen_naive": {
+        "caption_vi": "Buttonhole foot: Thiết bị dùng để tạo lỗ nhỏ cho các loại nút, thường được dùng trong việc thay đổi hoặc sửa chữa các loại nút tròn hoặc hình chữ nhật. Overcasting foot: Dùng để tạo lớp phủ hoặc che phủ các cạnh của các chi tiết, giúp tăng độ bền và thẩm mỹ. Screwdriver: Công cụ dùng để tháo lắp các bộ phận, đặc biệt là các bộ phận gắn vào máy cài đặt. Cleaning brush: Công cụ dùng để vệ sinh các bộ phận máy móc, giúp loại bỏ bụi bẩn và tạp chất. Ball point needle: Lõi kim dùng để thay đổi các loại lõi kim, thường dùng trong các công việc cần độ chính xác cao. Twin Needle: Lõi kim dùng để thay đổi các loại lõi kim, thường dùng trong các công việc cần độ chính xác cao. Needle Set: Bộ phận gồm các lõi kim dùng để thay đổi các loại lõi kim, thường dùng trong các công việc cần độ chính xác cao. 75/11 1 needle 90/14 1 needle 100/16 1 needle: Các loại lõi kim dùng để thay đổi các loại lõi kim, thường dùng trong các công việc cần độ chính xác cao. Bobbin: Bộ phận dùng để giữ và truyền các sợi dây, thường dùng trong các công việc cần độ chính xác cao. Monogramming foot: Thiết bị dùng để in các ký tự hoặc hình ảnh trên các sản phẩm, thường dùng trong các công việc cần độ chính xác cao. Zipper Foot: Thiết bị dùng để tạo các đường nối bằng dây kéo, thường dùng trong các công việc cần độ chính xác cao. Zigzag foot: Thiết bị dùng để tạo các đường nối theo hình dạng zigzag, thường",
+        "caption_en": "",
+        "raw_output": "[TIẾNG VIỆT]:\nButtonhole foot: Thiết bị dùng để tạo lỗ nhỏ cho các loại nút, thường được dùng trong việc thay đổi hoặc sửa chữa các loại nút tròn hoặc hình chữ nhật. Overcasting foot: Dùng để tạo lớp phủ hoặc che phủ các cạnh của các chi tiết, giúp tăng độ bền và thẩm mỹ. Screwdriver: Công cụ dùng để tháo lắp các bộ phận, đặc biệt là các bộ phận gắn vào máy cài đặt. Cleaning brush: Công cụ dùng để vệ sinh các bộ phận máy móc, giúp loại bỏ bụi bẩn và tạp chất. Ball point needle: Lõi kim dùng để thay đổi các loại lõi kim, thường dùng trong các công việc cần độ chính xác cao. Twin Needle: Lõi kim dùng để thay đổi các loại lõi kim, thường dùng trong các công việc cần độ chính xác cao. Needle Set: Bộ phận gồm các lõi kim dùng để thay đổi các loại lõi kim, thường dùng trong các công việc cần độ chính xác cao. 75/11 1 needle 90/14 1 needle 100/16 1 needle: Các loại lõi kim dùng để thay đổi các loại lõi kim, thường dùng trong các công việc cần độ chính xác cao. Bobbin: Bộ phận dùng để giữ và truyền các sợi dây, thường dùng trong các công việc cần độ chính xác cao. Monogramming foot: Thiết bị dùng để in các ký tự hoặc hình ảnh trên các sản phẩm, thường dùng trong các công việc cần độ chính xác cao. Zipper Foot: Thiết bị dùng để tạo các đường nối bằng dây kéo, thường dùng trong các công việc cần độ chính xác cao. Zigzag foot: Thiết bị dùng để tạo các đường nối theo hình dạng zigzag, thường",
+        "method": "qwen_naive_ocr_baseline"
+      }
+    },
+    {
+      "image_id": "ai2d:1011",
+      "template": {
+        "caption_vi": "Sơ đồ minh họa về chủ đề 'LIGULE OF RAY FLOWER' (LIGULE OF RAY FLOWER). Hình ảnh tập trung vào một cấu trúc thực thể trung tâm. Trên sơ đồ, các thành phần và vị trí được định danh bao gồm: LIGULE OF RAY FLOWER [LIGULE OF RAY FLOWER], RAY FLOWER [RAY FLOWER], Disc flower [Disc flower], Phyllaries [Phyllaries], Receptacle [Receptacle], Bract [Bract], Receptacle scale [Receptacle scale].",
+        "caption_en": "The diagram illustrates the structure of 'LIGULE OF RAY FLOWER'. The visual composition focuses on a central anatomical structure. Key labeled components and structures include: LIGULE OF RAY FLOWER, RAY FLOWER, Disc flower, Phyllaries, Receptacle, Bract, Receptacle scale.",
+        "method": "template_deterministic"
+      },
+      "qwen_proposed": {
+        "caption_vi": "Sơ đồ mô tả cấu trúc của **LIGULE OF RAY FLOWER**, tập trung vào vùng trung tâm **blobs_B0**, với các chi tiết như **RAY FLOWER**, **Disc flower**, **Phyllaries**, **Receptacle**, **Bract** và **Receptacle scale** được chỉ định bằng nhãn chú thích tương ứng. Các thành phần này đều nằm trong cùng một cấu trúc **blobs_B0**, thể hiện mối liên hệ trực tiếp giữa các bộ phận và cấu trúc trung tâm.",
+        "caption_en": "The diagram illustrates the **LIGULE OF RAY FLOWER**, focusing on the central structure **blobs_B0**, with **RAY FLOWER**, **Disc flower**, **Phyllaries**, **Receptacle**, **Bract**, and **Receptacle scale** labeled and pointing to this central structure. All labeled components are directly associated with **blobs_B0**, maintaining the correct spatial relationships as defined.",
+        "raw_output": "**TIẾNG VIỆT:**  \nSơ đồ mô tả cấu trúc của **LIGULE OF RAY FLOWER**, tập trung vào vùng trung tâm **blobs_B0**, với các chi tiết như **RAY FLOWER**, **Disc flower**, **Phyllaries**, **Receptacle**, **Bract** và **Receptacle scale** được chỉ định bằng nhãn chú thích tương ứng. Các thành phần này đều nằm trong cùng một cấu trúc **blobs_B0**, thể hiện mối liên hệ trực tiếp giữa các bộ phận và cấu trúc trung tâm.\n\n**ENGLISH:**  \nThe diagram illustrates the **LIGULE OF RAY FLOWER**, focusing on the central structure **blobs_B0**, with **RAY FLOWER**, **Disc flower**, **Phyllaries**, **Receptacle**, **Bract**, and **Receptacle scale** labeled and pointing to this central structure. All labeled components are directly associated with **blobs_B0**, maintaining the correct spatial relationships as defined.",
+        "method": "qwen_content_plan_anchored"
+      },
+      "qwen_naive": {
+        "caption_vi": "Lưỡng bội, có thể là một loài thực vật thuộc họ Cúc, với các cánh hoa hình lục giác, có thể là một loài hoa đặc trưng của vùng núi phía Bắc. Hoa có cấu trúc phức tạp, gồm các phần như lông, cánh hoa, và các phần phụ trợ như các lá hoa (phyllaries) và các phần trung tâm (receptacle). Loài này thường được tìm thấy trong các khu vực rừng núi, và có thể là một loài hoa được sử dụng trong các công trình kiến trúc hoặc nghệ thuật truyền thống.",
+        "caption_en": "It is a bisexual, possibly a species of the Asteraceae family, with a complex structure including lobe-like petals, phyllaries, and a central receptacle. The plant is typically found in mountainous regions and may be used in traditional architecture or art.",
+        "raw_output": "[TIẾNG VIỆT]:\nLưỡng bội, có thể là một loài thực vật thuộc họ Cúc, với các cánh hoa hình lục giác, có thể là một loài hoa đặc trưng của vùng núi phía Bắc. Hoa có cấu trúc phức tạp, gồm các phần như lông, cánh hoa, và các phần phụ trợ như các lá hoa (phyllaries) và các phần trung tâm (receptacle). Loài này thường được tìm thấy trong các khu vực rừng núi, và có thể là một loài hoa được sử dụng trong các công trình kiến trúc hoặc nghệ thuật truyền thống.\n\n[ENGLISH]:\nIt is a bisexual, possibly a species of the Asteraceae family, with a complex structure including lobe-like petals, phyllaries, and a central receptacle. The plant is typically found in mountainous regions and may be used in traditional architecture or art.",
+        "method": "qwen_naive_ocr_baseline"
+      }
+    },
+    {
+      "image_id": "ai2d:1021",
+      "template": {
+        "caption_vi": "Sơ đồ minh họa về chủ đề 'Leaf Edges' (Leaf Edges). Hình ảnh tập trung vào một cấu trúc thực thể trung tâm. Trên sơ đồ, các thành phần và vị trí được định danh bao gồm: smooth [smooth], angular sharp [angular sharp], wavy or crenate [wavy or crenate], jagged or serrated [jagged or serrated], NOTCHED [NOTCHED].",
+        "caption_en": "The diagram illustrates the structure of 'Leaf Edges'. The visual composition focuses on a central anatomical structure. Key labeled components and structures include: smooth, angular sharp, wavy or crenate, jagged or serrated, NOTCHED.",
+        "method": "template_deterministic"
+      },
+      "qwen_proposed": {
+        "caption_vi": "Sơ đồ mô tả các đặc điểm hình học của các cạnh lá (leaf edges) thông qua các cấu trúc không gian trung tâm (blobs_B9), với các chi tiết được phân biệt bằng nhãn chú thích: 'smooth' chỉ vào 'blobs_B0', 'angular sharp' chỉ vào 'blobs_B7', 'wavy or crenate' chỉ vào 'blobs_B2', 'jagged or serrated' chỉ vào 'blobs_B4', và 'NOTCHED' chỉ vào 'blobs_B9'. Các chi tiết này được sắp xếp theo đúng cấu trúc và chiều liên kết nguyên tử, không bịa đặt thêm thông tin.",
+        "caption_en": "The diagram illustrates the morphological features of leaf edges, with the central structure labeled 'blobs_B9' serving as the reference point. The 'smooth' feature is associated with 'blobs_B0', 'angular sharp' with 'blobs_B7', 'wavy or crenate' with 'blobs_B2', 'jagged or serrated' with 'blobs_B4', and 'NOTCHED' with 'blobs_B9'. All labels are correctly linked to their respective structures, maintaining the original spatial relationships as defined by atomic facts.",
+        "raw_output": "**TIẾNG VIỆT:**  \nSơ đồ mô tả các đặc điểm hình học của các cạnh lá (leaf edges) thông qua các cấu trúc không gian trung tâm (blobs_B9), với các chi tiết được phân biệt bằng nhãn chú thích: 'smooth' chỉ vào 'blobs_B0', 'angular sharp' chỉ vào 'blobs_B7', 'wavy or crenate' chỉ vào 'blobs_B2', 'jagged or serrated' chỉ vào 'blobs_B4', và 'NOTCHED' chỉ vào 'blobs_B9'. Các chi tiết này được sắp xếp theo đúng cấu trúc và chiều liên kết nguyên tử, không bịa đặt thêm thông tin.\n\n**ENGLISH:**  \nThe diagram illustrates the morphological features of leaf edges, with the central structure labeled 'blobs_B9' serving as the reference point. The 'smooth' feature is associated with 'blobs_B0', 'angular sharp' with 'blobs_B7', 'wavy or crenate' with 'blobs_B2', 'jagged or serrated' with 'blobs_B4', and 'NOTCHED' with 'blobs_B9'. All labels are correctly linked to their respective structures, maintaining the original spatial relationships as defined by atomic facts.",
+        "method": "qwen_content_plan_anchored"
+      },
+      "qwen_naive": {
+        "caption_vi": "Đường viền lá (leaf edges) có thể là trơn (smooth), có góc cạnh sắc nét (angular sharp), có dạng vôn (wavy or crenate), có dạng răng cưa (jagged or serrated), hoặc có các khe hở (notched). Các dạng này thường được dùng để phân biệt các loại lá trong thực vật, giúp nhận diện các đặc điểm sinh học và môi trường sống.",
+        "caption_en": "Leaf edges can be smooth (smooth), sharply angular (angular sharp), wavy or crenate (wavy or crenate), jagged or serrated (jagged or serrated), or notched (notched). These characteristics are used to identify different leaf types in plants, aiding in botanical classification and ecological studies.",
+        "raw_output": "[TIẾNG VIỆT]:\nĐường viền lá (leaf edges) có thể là trơn (smooth), có góc cạnh sắc nét (angular sharp), có dạng vôn (wavy or crenate), có dạng răng cưa (jagged or serrated), hoặc có các khe hở (notched). Các dạng này thường được dùng để phân biệt các loại lá trong thực vật, giúp nhận diện các đặc điểm sinh học và môi trường sống.\n\n[ENGLISH]:\nLeaf edges can be smooth (smooth), sharply angular (angular sharp), wavy or crenate (wavy or crenate), jagged or serrated (jagged or serrated), or notched (notched). These characteristics are used to identify different leaf types in plants, aiding in botanical classification and ecological studies.",
+        "method": "qwen_naive_ocr_baseline"
+      }
+    },
+    {
+      "image_id": "ai2d:1032",
+      "template": {
+        "caption_vi": "Sơ đồ cấu trúc giải phẫu học với các chi tiết và bào quan được chú giải rõ ràng. Hình ảnh tập trung vào một cấu trúc thực thể trung tâm. Trên sơ đồ, các thành phần và vị trí được định danh bao gồm: TOOTHED [TOOTHED], TOOTHLESS [TOOTHLESS], LOBED [LOBED].",
+        "caption_en": "This is an anatomical educational diagram detailing internal structures and organelle components. The visual composition focuses on a central anatomical structure. Key labeled components and structures include: TOOTHED, TOOTHLESS, LOBED.",
+        "method": "template_deterministic"
+      },
+      "qwen_proposed": {
+        "caption_vi": "Sơ đồ thể hiện cấu trúc trung tâm (blobs_B4) với các chi tiết chú thích: 'TOOTHED' chỉ vào 'blobs_B1', 'TOOTHLESS' chỉ vào 'blobs_B2', và 'LOBED' chỉ vào 'blobs_B4'. Các chi tiết này phản ánh các đặc điểm phân biệt của các vùng cấu trúc, không có liên kết sai lệch.",
+        "caption_en": "The diagram illustrates a central structure (blobs_B4) with labeled features: 'TOOTHED' points to blobs_B1, 'TOOTHLESS' points to blobs_B2, and 'LOBED' points to blobs_B4. These labels represent distinct characteristics of the structures, with no incorrect connections.",
+        "raw_output": "**TIẾNG VIỆT:**  \nSơ đồ thể hiện cấu trúc trung tâm (blobs_B4) với các chi tiết chú thích: 'TOOTHED' chỉ vào 'blobs_B1', 'TOOTHLESS' chỉ vào 'blobs_B2', và 'LOBED' chỉ vào 'blobs_B4'. Các chi tiết này phản ánh các đặc điểm phân biệt của các vùng cấu trúc, không có liên kết sai lệch.\n\n**ENGLISH:**  \nThe diagram illustrates a central structure (blobs_B4) with labeled features: 'TOOTHED' points to blobs_B1, 'TOOTHLESS' points to blobs_B2, and 'LOBED' points to blobs_B4. These labels represent distinct characteristics of the structures, with no incorrect connections.",
+        "method": "qwen_content_plan_anchored"
+      },
+      "qwen_naive": {
+        "caption_vi": "Sơ đồ này thể hiện các đặc điểm hình học và cấu trúc của một loài thực vật, có thể là một loài cây hoặc thực vật có hoa, với các chi tiết như các cạnh lá (leaf margins) được chia thành các phần rõ ràng, có thể là răng cưa (toothed) hoặc không có răng (toothless), và các hình dạng cụ thể như hình dạng lobe (lobed) được mô tả bằng hình ảnh Figure 9-1. Các yếu tố này cho thấy sự phân loại và phân tích cấu trúc hình học của các phần lá, có thể liên quan đến các đặc điểm sinh học hoặc sinh thái của loài thực vật đó.",
+        "caption_en": "The diagram illustrates the morphological features of a plant species, showing leaf margins that are either toothed or toothless, and lobed structures, as depicted in Figure 9-1. These features are used to classify and analyze the plant's leaf anatomy, highlighting variations in leaf shape and edge structure.",
+        "raw_output": "[TIẾNG VIỆT]:\nSơ đồ này thể hiện các đặc điểm hình học và cấu trúc của một loài thực vật, có thể là một loài cây hoặc thực vật có hoa, với các chi tiết như các cạnh lá (leaf margins) được chia thành các phần rõ ràng, có thể là răng cưa (toothed) hoặc không có răng (toothless), và các hình dạng cụ thể như hình dạng lobe (lobed) được mô tả bằng hình ảnh Figure 9-1. Các yếu tố này cho thấy sự phân loại và phân tích cấu trúc hình học của các phần lá, có thể liên quan đến các đặc điểm sinh học hoặc sinh thái của loài thực vật đó.\n\n[ENGLISH]:\nThe diagram illustrates the morphological features of a plant species, showing leaf margins that are either toothed or toothless, and lobed structures, as depicted in Figure 9-1. These features are used to classify and analyze the plant's leaf anatomy, highlighting variations in leaf shape and edge structure.",
+        "method": "qwen_naive_ocr_baseline"
+      }
+    },
+    {
+      "image_id": "ai2d:104",
+      "template": {
+        "caption_vi": "Sơ đồ minh họa về chủ đề 'adult' (adult). Hình ảnh tập trung vào một cấu trúc thực thể trung tâm. Trên sơ đồ, các thành phần và vị trí được định danh bao gồm: pupa [pupa], adult [adult], egg [egg], larva [larva]. Các liên kết có hướng ghi nhận: từ blobs_B0 hướng tới blobs_B1; từ blobs_B1 hướng tới blobs_B2; từ blobs_B2 hướng tới blobs_B3; từ blobs_B3 hướng tới blobs_B0. Chu trình diễn tiến tuần tự theo thứ tự: blobs_B0 (blobs_B0) -> blobs_B1 (blobs_B1) -> blobs_B2 (blobs_B2) -> blobs_B3 (blobs_B3) | blobs_B1 (blobs_B1) -> blobs_B2 (blobs_B2) -> blobs_B3 (blobs_B3) -> blobs_B0 (blobs_B0) | blobs_B2 (blobs_B2) -> blobs_B3 (blobs_B3) -> blobs_B0 (blobs_B0) -> blobs_B1 (blobs_B1) | blobs_B3 (blobs_B3) -> blobs_B0 (blobs_B0) -> blobs_B1 (blobs_B1) -> blobs_B2 (blobs_B2).",
+        "caption_en": "The diagram illustrates the structure of 'adult'. The visual composition focuses on a central anatomical structure. Key labeled components and structures include: pupa, adult, egg, larva. Directed relationships indicate: blobs_B0 directed to blobs_B1; blobs_B1 directed to blobs_B2; blobs_B2 directed to blobs_B3; blobs_B3 directed to blobs_B0. The ordered process sequence follows: blobs_B0 -> blobs_B1 -> blobs_B2 -> blobs_B3 | blobs_B1 -> blobs_B2 -> blobs_B3 -> blobs_B0 | blobs_B2 -> blobs_B3 -> blobs_B0 -> blobs_B1 | blobs_B3 -> blobs_B0 -> blobs_B1 -> blobs_B2.",
+        "method": "template_deterministic"
+      },
+      "qwen_proposed": {
+        "caption_vi": "Sơ đồ thể hiện quá trình phát triển của một sinh vật từ giai đoạn trứng (blobs_B1) qua larva (blobs_B2), pupa (blobs_B3), đến thành thể trưởng thành (blobs_B0), với chuỗi tiến hóa tuần hoàn theo hướng: blobs_B0 → blobs_B1 → blobs_B2 → blobs_B3 → blobs_B0. Các cấu trúc được liên kết theo trình tự xác định, với 'adult' là giai đoạn cuối cùng, và 'egg' là giai đoạn đầu tiên, được xác định rõ ràng qua các nhãn chú thích.",
+        "caption_en": "The diagram illustrates the life cycle of an adult organism, starting from the egg (blobs_B1), progressing through the larva (blobs_B2), pupa (blobs_B3), and culminating in the adult stage (blobs_B0). The process follows a directed sequence: blobs_B0 → blobs_B1 → blobs_B2 → blobs_B3 → blobs_B0, with each stage linked sequentially. The adult stage is indicated as the final endpoint, and the egg is the initial stage, as clearly marked by the labels.",
+        "raw_output": "**TIẾNG VIỆT:**  \nSơ đồ thể hiện quá trình phát triển của một sinh vật từ giai đoạn trứng (blobs_B1) qua larva (blobs_B2), pupa (blobs_B3), đến thành thể trưởng thành (blobs_B0), với chuỗi tiến hóa tuần hoàn theo hướng: blobs_B0 → blobs_B1 → blobs_B2 → blobs_B3 → blobs_B0. Các cấu trúc được liên kết theo trình tự xác định, với 'adult' là giai đoạn cuối cùng, và 'egg' là giai đoạn đầu tiên, được xác định rõ ràng qua các nhãn chú thích.\n\n**ENGLISH:**  \nThe diagram illustrates the life cycle of an adult organism, starting from the egg (blobs_B1), progressing through the larva (blobs_B2), pupa (blobs_B3), and culminating in the adult stage (blobs_B0). The process follows a directed sequence: blobs_B0 → blobs_B1 → blobs_B2 → blobs_B3 → blobs_B0, with each stage linked sequentially. The adult stage is indicated as the final endpoint, and the egg is the initial stage, as clearly marked by the labels.",
+        "method": "qwen_content_plan_anchored"
+      },
+      "qwen_naive": {
+        "caption_vi": "Pupa là giai đoạn phát triển giữa larva và adult, trong đó con vật thay đổi hình dạng và cấu trúc để chuẩn bị cho việc chuyển hóa thành con trưởng thành. Adult là giai đoạn trưởng thành, có thể sinh sản và duy trì tính sống. Egg là giai đoạn đầu tiên của quá trình phát triển, là hình thức sinh sản của loài. Larva là giai đoạn phát triển giữa egg và adult, thường có hình dạng khác biệt và chức năng sinh sản khác.",
+        "caption_en": "The pupa is the transitional stage between the larva and adult, during which the organism undergoes transformation to prepare for adulthood. The adult is the mature, reproductive stage capable of living and reproducing. The egg is the initial stage of development, representing the reproductive stage of the organism. The larva is the stage between the egg and the adult, typically characterized by a different form and function.",
+        "raw_output": "[TIẾNG VIỆT]:\nPupa là giai đoạn phát triển giữa larva và adult, trong đó con vật thay đổi hình dạng và cấu trúc để chuẩn bị cho việc chuyển hóa thành con trưởng thành. Adult là giai đoạn trưởng thành, có thể sinh sản và duy trì tính sống. Egg là giai đoạn đầu tiên của quá trình phát triển, là hình thức sinh sản của loài. Larva là giai đoạn phát triển giữa egg và adult, thường có hình dạng khác biệt và chức năng sinh sản khác.\n\n[ENGLISH]:\nThe pupa is the transitional stage between the larva and adult, during which the organism undergoes transformation to prepare for adulthood. The adult is the mature, reproductive stage capable of living and reproducing. The egg is the initial stage of development, representing the reproductive stage of the organism. The larva is the stage between the egg and the adult, typically characterized by a different form and function.",
+        "method": "qwen_naive_ocr_baseline"
+      }
+    }
+  ]
+}

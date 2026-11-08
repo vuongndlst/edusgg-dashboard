@@ -1,0 +1,47 @@
+{
+  "parent_preregister_sha256": "66b3e572e7c148a313afd1d550d8952df59f4b035eace20ea9364e9de831db57",
+  "groups": {
+    "fit": {
+      "images": 823,
+      "all_native_interobject_modes": {
+        "directed": 2036,
+        "undirected": 478
+      },
+      "all_native_edges_by_predicate": {
+        "ai2d:intraObjectLabel": 2743,
+        "ai2d:arrowHeadTail": 2989,
+        "ai2d:intraObjectRegionLabel": 363,
+        "ai2d:intraObjectLinkage": 2560,
+        "ai2d:interObjectLinkage": 2514,
+        "ai2d:misc": 194,
+        "ai2d:imageTitle": 251,
+        "ai2d:arrowDescriptor": 108,
+        "ai2d:sectionTitle": 119,
+        "ai2d:imageCaption": 89,
+        "ai2d:intraObjectTextLinkage": 1
+      }
+    },
+    "internal_dev": {
+      "images": 201,
+      "all_native_interobject_modes": {
+        "directed": 584,
+        "undirected": 67
+      },
+      "all_native_edges_by_predicate": {
+        "ai2d:arrowHeadTail": 857,
+        "ai2d:interObjectLinkage": 651,
+        "ai2d:intraObjectLabel": 623,
+        "ai2d:intraObjectRegionLabel": 61,
+        "ai2d:imageCaption": 28,
+        "ai2d:intraObjectLinkage": 725,
+        "ai2d:imageTitle": 62,
+        "ai2d:sectionTitle": 36,
+        "ai2d:misc": 49,
+        "ai2d:arrowDescriptor": 28
+      }
+    }
+  },
+  "new_val_audit_test_records": 0,
+  "model_fit": false,
+  "gpu_seconds": 0
+}

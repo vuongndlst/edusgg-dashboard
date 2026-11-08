@@ -1,0 +1,17 @@
+{
+  "active_phase": null,
+  "both_locks_acquired": true,
+  "disk_free": 64704741376,
+  "failed_python_line": 24,
+  "memory": {
+    "MemAvailable": 43374538752,
+    "MemFree": 849604608
+  },
+  "namespace_exists": false,
+  "new_pixel_model_native_optimizer_gpu_operations": 0,
+  "reason": "SC_AVPHYS_PAGES gate examined free physical pages; inspect alongside MemAvailable before any admission decision. No lowered reserve admitted.",
+  "remaining_after40mib": 253979230,
+  "runner_sha256": "cb2d42bf2edec025421df052d6c34d3fa31411d4dbcb310975ec826862cf4d83",
+  "sc_free_pages_bytes": 849604608,
+  "status": "PREFLIGHT_RESOURCE_ASSERTION_FAILED_BEFORE_REGISTRATION"
+}

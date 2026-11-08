@@ -1,0 +1,8 @@
+{
+  "logical_program_bytes": 1852324099,
+  "output_bytes": 15360,
+  "public_summary_sha256": "b4eb30d62cab51c8f58d42f7b9cd8903bbd43101a860af00f49ebcbc30a1a10c",
+  "remaining_after40mib": 253216509,
+  "result_sha256": "1a7d3a6a15e869bc695845c4cef3e9fbc2a368dae32a1928f191c3271f2abb9f",
+  "status": "COMPLETE_VERIFIED_TARGET_FREE_PROVIDER_WIRE"
+}

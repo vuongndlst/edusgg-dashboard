@@ -1,0 +1,26 @@
+{
+  "status": "VERIFIED",
+  "files": [
+    {
+      "file": "docs/RESEARCH_EXECUTION_STATE.md",
+      "sha256": "b6937f35c80b9533aae12ec36c63e075a5e266e937382283e70afeee16b61cdf"
+    },
+    {
+      "file": "docs/research_fullsystem_graph_execution_next.md",
+      "sha256": "e0d485b054bbb90a800112e08c3b0e0a63389bd3e20ffa17da2109c4321bc845"
+    },
+    {
+      "file": "docs/research_fullsystem_final_integration_next.md",
+      "sha256": "14c5aafe2d9168bd285affa394e8f76a5ca3e096fcab8d190de49205b3a6d55a"
+    },
+    {
+      "file": "scripts/export_research_fullsystem_graph_launch_v2_remote.sh",
+      "sha256": "0aec4248ac65e114ba73e3fca117ec170964a2001746f0e55eb380ee23c01d73"
+    },
+    {
+      "file": "scripts/verify_research_fullsystem_graph_launch_local.py",
+      "sha256": "05f7ceb3bd8b4e9c378b6ffcf80593dce2029036c23e321b5103a9ed65a89985"
+    }
+  ],
+  "model_work": false
+}

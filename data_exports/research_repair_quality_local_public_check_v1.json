@@ -1,0 +1,8 @@
+{
+  "files_checked": 16,
+  "result_sha256": "5d7820971ec8d5ffb3412af4ebb6b1d769c9770961bdfcf257280c46a219093b",
+  "scope": "Local public source/result/text check only; no raw prereg/log/targets/images/model/proposal copy and no native/pixel/model execution.",
+  "secret_or_private_path_matches": 0,
+  "source_hashes_matched": 5,
+  "status": "LOCAL_PUBLIC_HASH_PRIVACY_CHECK_PASSED"
+}

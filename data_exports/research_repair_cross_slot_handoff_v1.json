@@ -1,0 +1,18 @@
+{
+  "files": {
+    "docs/RESEARCH_EXECUTION_STATE.md": "585185a640d87361ae6bac5aa9bed016abbe235d24059e2124ef1dba1ffe4ce7",
+    "docs/research_repair_cross_slot_after_wire_next.md": "d9a05b7220e357ace5a3b2d6fba4b45d19c57a91ebc3d0031562a5bd9b3a5a50",
+    "reports/research_repair_cross_slot_local_public_check_v1.json": "e548cc6016909f0d8955af4ddddec86cc5811ba0d3e26360963c0c6dcd2ddba0",
+    "reports/research_repair_cross_slot_stored_verification_v1.json": "dcdef621bd193f137b4f45b433ac2f0123933d291f935bc4602d5af33bb541cc",
+    "reports/research_repair_cross_slot_wire_v3.md": "d927551ccf1bbdbde401ebce12afa2d1e08dcf1318362f52c9fdfa0b37917d50"
+  },
+  "gpu_reserved_seconds": 26910,
+  "immutable_source_refs": 69,
+  "logical_program_bytes": 1852345125,
+  "new_native_pixel_model_optimizer_gpu_operations": 0,
+  "remaining_after40mib": 253195483,
+  "result_sha256": "1a7d3a6a15e869bc695845c4cef3e9fbc2a368dae32a1928f191c3271f2abb9f",
+  "scope": "Operational handoff only. Registeredv1/v2 failures and v3 inputs/outputs/sources preserved; no completed proof/audit rerun.",
+  "source_snapshot_pairs": 16,
+  "status": "CROSS_SLOT_PROVIDER_WIRE_HANDOFF_COMPLETE"
+}

@@ -1,0 +1,39 @@
+{
+  "status": "quality_controller_code_next_handoff_verified",
+  "checked_utc": "2026-11-02T07:55:15.822362+00:00",
+  "before_state_sha256": "0a92cb6e96fd730a812fbb49cf67badba120ddd8dd1b10f036b11ca3a9cd1e47",
+  "after_state_sha256": "ab769d235e78dd852cb6b921f582f6b1ec8dd37677bdd5bfa9deece9213f2bde",
+  "registered_scientific_preregisters_unchanged": {
+    "research-fullsystem-inference-resource-v1": "389b8e383bba952d900b2672b5c82e4bdbae537931a3ec1d73d207f739d9d605",
+    "research-fullsystem-edge-storage-v1": "525b1f763691b2f396da75ca1ccf42fbe009b8a25836f497d4f2abcf3b1a7a64",
+    "research-fullsystem-quality-admission-v1": "db704a1dd635e583394125c43475781efa8b3ba0a5048f6a10456d7917b779e8",
+    "research-fullsystem-pipeline-v1": "4c2470311c19a1e123b1d9c0256ac36f29a9182df895329533f6ed329077ae72"
+  },
+  "document_sha256": {
+    "docs/RESEARCH_EXECUTION_STATE.md": "c311cc982c499655bbd4f17f0f18bf8c0fdb16b9a99c30f94b1dfaf89daac4aa",
+    "docs/research_fullsystem_inference_resource_next.md": "ca3329043270837d6ab7418a0007e9855d2d0d70e0e3d332f1c04d5cca0537c9",
+    "docs/research_fullsystem_quality_controller_next.md": "d88228d0e63d9a594873d99e0f2dfbdb2fa9415b0ada7dc00b7a7c6e517805a0",
+    "docs/paper_comparison_2026_11_01.md": "58dc684ba365374b1574ef8087eef0ad94eaf80f78e8f50c22ce121c1b13aa85"
+  },
+  "unregistered_prototype_sha256": "708f5a67e56d419f33833fe5e82b17b455e981756dee41af7fe233fa99b74aca",
+  "unregistered_main_proposal_sha256": "b84ef88a3a7037df6d318429536f0dc39b0183de492701749b13834136beaa5a",
+  "gpu_reserved_seconds": 3810,
+  "new_gpu_reserved": false,
+  "main_training_admitted": false,
+  "conservative_census": {
+    "scope_version": "fullsystem-conservative-v1",
+    "category_bytes": {
+      "experiments": 1665901926,
+      "reports": 68257805,
+      "public_sources": 3382845
+    },
+    "file_count": 33368,
+    "logical_file_bytes": 1737542576,
+    "remaining_after40mib": 367998032,
+    "size_manifest_sha256": "4fe66755dc71aedf1bbb1568e44174e123ea783ce4e552984bff39d9b6268d9c",
+    "boundary": "All research-* experiments/checkpoints, research_*reports inclbundles/receipts, programme literaturefolder, and ALL public src/config/docs/tests/scripts inclpycache. Pre-existing frozen datasets/COCOweights/oldnonresearchcheckpoints excluded as not newprogramme outputs. Newmodel files must reside in registered research-*roots; no loopholeoutside scope."
+  },
+  "protected_or_audit_records_opened": 0,
+  "sealed_sources_verified": 42,
+  "sealed_weights_verified": 6
+}

@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED",
+  "shipped_files": 21,
+  "text_secret_checks": 22,
+  "secret_matches": 0,
+  "bundle_sha256": "5086c11c1122c384df79dacac8bf6ace5ede6deb0026774f1cdaff38018992ab",
+  "partial_tests": 11,
+  "full_suite_executed": false,
+  "native_records_or_real_pixels_opened": 0,
+  "final_registered": false
+}

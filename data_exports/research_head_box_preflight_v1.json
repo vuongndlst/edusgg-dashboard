@@ -1,0 +1,73 @@
+{
+  "source_sha256": "76a6e763fee6e7a60475f27b444ad761a2f2b178e2e6d1938122684c84be78af",
+  "feature_dim": 221,
+  "support": {
+    "fit": {
+      "native_heads": 2988,
+      "predicted_heads": 3048,
+      "supported_native_heads": 2721
+    },
+    "internal_dev": {
+      "native_heads": 857,
+      "predicted_heads": 862,
+      "supported_native_heads": 799
+    }
+  },
+  "fit_raw_target_quantiles": [
+    [
+      -0.425626372243434,
+      -0.425654232638799,
+      -0.8216069156505255,
+      -0.8068059946095606
+    ],
+    [
+      -0.23203086134022144,
+      -0.23875237764216983,
+      -0.45644509832686647,
+      -0.4762176561407014
+    ],
+    [
+      -0.005326615553121577,
+      -0.007327597266530392,
+      0.0022853242089931752,
+      -0.0015833124555338846
+    ],
+    [
+      0.24271820261933416,
+      0.20745683623152442,
+      0.6038037380160791,
+      0.5717626906773273
+    ],
+    [
+      0.453747361636093,
+      0.441171592299783,
+      0.9485749246632493,
+      0.778344562065429
+    ]
+  ],
+  "fit_target_clip_fraction_by_coordinate": [
+    0.0,
+    0.0,
+    0.0033076074972436605,
+    0.0033076074972436605
+  ],
+  "bounds": [
+    0.5,
+    0.5,
+    0.6931471805599453,
+    0.6931471805599453
+  ],
+  "smoke_images": 16,
+  "estimated_total_bytes_1_5_safety": 165003804.0,
+  "estimated_train_dev_seconds_1_5_safety": 19.10290002822876,
+  "cpu_seconds": 1.408829851076007,
+  "program_artifact_bytes": 1557075132,
+  "disk_free_bytes": 65683542016,
+  "gpu_reserved_seconds": 3720,
+  "fit_performed": false,
+  "val_records_read": 0,
+  "test_records_read": 0,
+  "calibration_audit_records_read": 0,
+  "identity_nodes_exact": true,
+  "interpretation": "Weak native correspondence residual targets, not verified instance identities. Quantiles from TRAINfit only; no transform/threshold selected on dev/VAL."
+}

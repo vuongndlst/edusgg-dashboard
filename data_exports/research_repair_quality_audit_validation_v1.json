@@ -1,0 +1,18 @@
+{
+  "cv2_threads": 2,
+  "errors": 0,
+  "failures": 0,
+  "native_pixel_prediction_model_optimizer_gpu_operations": 0,
+  "peak_rss_bytes": 66162688,
+  "scope": "18new fixtures only, including 3seedx4method/96fake-output codec loader. No oldsuite rerun, native reads or quality claim.",
+  "sources": {
+    "configs/research_repair_quality_audit_v1.json": "657516f80d78510323b135c5c7259b8bcd0115667a76679fd63f67581834376a",
+    "scripts/validate_research_repair_quality_audit_remote_v1.sh": "300f21dc73eb4ea011cf26cf93af00b29341a82cb576ccbd0e1d94002b5a6d17",
+    "src/edusgg/research_repair_quality_audit_v1.py": "b73d3bc1eead4fdf36cd0de8af86df7b14c910148878d09e066e4fb9f4510475",
+    "tests/test_research_repair_quality_audit_v1.py": "ab8508129620899adb12044fa6189b186780090bb79d051c3b68c851da3aa6d7"
+  },
+  "status": "PASSED",
+  "tests_run": 18,
+  "torch_imported": false,
+  "wall_seconds": 0.0767090916633606
+}

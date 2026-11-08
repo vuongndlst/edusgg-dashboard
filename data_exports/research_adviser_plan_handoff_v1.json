@@ -1,0 +1,22 @@
+{
+  "disk_free_bytes": 65445466112,
+  "files": {
+    "docs/RESEARCH_EXECUTION_STATE.md": "4ed31926758dd0cf8be18ab643f82a6972ddc8798bc94ac6816a4414ee344ed3",
+    "docs/research_adviser_two_directions_plan_2026_11_03.md": "c775b632825ad47c8edc1aebd29f57baf1faa44eed8c017ea7d1b2f2d7f3904f",
+    "docs/research_group_development_after_verified_next.md": "e92cd042ba1c233fbbbd8a6ad5f2512c9749a7ef174b03b8ca7942193709f97f",
+    "reports/research_adviser_two_directions_plan_receipt_v1.json": "1c4ed9a0f33a8fc4493ad19053414b81ffad91824a3b2bf71877e12af4836e87",
+    "reports/research_group_development_v1.md": "00a0d94281236e40236d02537a05b2035f5393012c4529d987b23feeac3503d7"
+  },
+  "gpu_reserved_seconds": 26910,
+  "group_development_screen_passed": false,
+  "group_verification_sha256": "75f2cda06c19810262522adc857647671c468cc41d4017b2d7d167ab987fa937",
+  "logical_file_bytes": 1850233355,
+  "native_pixel_reads": 0,
+  "new_gpu_seconds": 0,
+  "new_optimizer_steps": 0,
+  "remaining_after40mib": 255307253,
+  "scope": "Operational record and planning. Scientific registrations/results unchanged; no caption/refinement fits or new evaluation admitted.",
+  "source_hashes_unchanged": 32,
+  "status": "GROUP_VERIFIED_AND_ADVISER_PLAN_DELIVERED",
+  "torch_imported": false
+}

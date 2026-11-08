@@ -1,0 +1,9 @@
+{
+  "status": "LOCAL_PUBLIC_VIEW_VERIFIED_PRIVATE_DUPLICATE_REMOVED",
+  "original_server_preregister_sha256": "83c89707c1dd1f25c1a830bdd47268c6e471d9ba2c627f0c02f4bb8ab8f3156c",
+  "public_view_sha256": "6e534969100ec58511bf158597c2b7489e3c9bdacf5c40417cff9b5ba8956115",
+  "source_files_hash_matched": 32,
+  "local_private_duplicate_absent": true,
+  "original_server_preserved_by_export_receipt": true,
+  "native_model_or_training_work": false
+}

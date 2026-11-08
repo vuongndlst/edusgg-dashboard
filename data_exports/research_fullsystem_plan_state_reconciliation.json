@@ -1,0 +1,11 @@
+{
+  "checked_utc": "2026-11-01T22:51:41.524913+00:00",
+  "stage": "fullsystem_feasibility_complete_verified",
+  "active_phase": null,
+  "previous_current_preregister_sha256": "d1a617a2bfcd68face06b6e32c76d96cd1fa0f780e8b1356379dc3212fa2414e",
+  "current_preregister_sha256": "dee84f09544d84a8acd48a9c46bbdfe26060f6649529f1b3ea322ff6acf10b40",
+  "previous_model_preregister_sha256": "d1a617a2bfcd68face06b6e32c76d96cd1fa0f780e8b1356379dc3212fa2414e",
+  "small_residual_branch_closed": true,
+  "gpu_reserved_seconds": 3720,
+  "scientific_sources_results_snapshots_changed": false
+}

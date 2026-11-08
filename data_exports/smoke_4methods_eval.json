@@ -1,0 +1,190 @@
+{
+  "dataset_evaluated": "data/processed/phase2-v1/ai2d.jsonl",
+  "split": "val",
+  "total_diagrams": 4,
+  "total_atomic_facts": 39,
+  "methods_summary": {
+    "template_generator": {
+      "num_diagrams": 4,
+      "total_atomic_facts": 39,
+      "vietnamese": {
+        "mean_fact_coverage_recall": 100.0,
+        "mean_directional_faithfulness": 100.0,
+        "total_direction_inversion_errors": 0,
+        "total_hallucinations_detected": 0,
+        "mean_factual_f1": 100.0
+      },
+      "english": {
+        "mean_fact_coverage_recall": 100.0,
+        "mean_directional_faithfulness": 100.0,
+        "total_direction_inversion_errors": 0,
+        "total_hallucinations_detected": 0,
+        "mean_factual_f1": 100.0
+      },
+      "overall_macro_factual_f1": 100.0
+    },
+    "qwen_content_plan_anchored": {
+      "num_diagrams": 4,
+      "total_atomic_facts": 39,
+      "vietnamese": {
+        "mean_fact_coverage_recall": 97.44,
+        "mean_directional_faithfulness": 100.0,
+        "total_direction_inversion_errors": 0,
+        "total_hallucinations_detected": 0,
+        "mean_factual_f1": 98.08
+      },
+      "english": {
+        "mean_fact_coverage_recall": 100.0,
+        "mean_directional_faithfulness": 100.0,
+        "total_direction_inversion_errors": 0,
+        "total_hallucinations_detected": 0,
+        "mean_factual_f1": 100.0
+      },
+      "overall_macro_factual_f1": 99.04
+    },
+    "qwen_vlm_only_baseline": {
+      "num_diagrams": 4,
+      "total_atomic_facts": 39,
+      "vietnamese": {
+        "mean_fact_coverage_recall": 41.03,
+        "mean_directional_faithfulness": 100.0,
+        "total_direction_inversion_errors": 0,
+        "total_hallucinations_detected": 0,
+        "mean_factual_f1": 66.71
+      },
+      "english": {
+        "mean_fact_coverage_recall": 41.03,
+        "mean_directional_faithfulness": 100.0,
+        "total_direction_inversion_errors": 0,
+        "total_hallucinations_detected": 0,
+        "mean_factual_f1": 59.29
+      },
+      "overall_macro_factual_f1": 63.0
+    },
+    "qwen_naive_ocr_baseline": {
+      "num_diagrams": 4,
+      "total_atomic_facts": 39,
+      "vietnamese": {
+        "mean_fact_coverage_recall": 69.23,
+        "mean_directional_faithfulness": 100.0,
+        "total_direction_inversion_errors": 0,
+        "total_hallucinations_detected": 0,
+        "mean_factual_f1": 81.79
+      },
+      "english": {
+        "mean_fact_coverage_recall": 33.33,
+        "mean_directional_faithfulness": 100.0,
+        "total_direction_inversion_errors": 0,
+        "total_hallucinations_detected": 0,
+        "mean_factual_f1": 60.58
+      },
+      "overall_macro_factual_f1": 71.18
+    }
+  },
+  "sample_comparisons": [
+    {
+      "image_id": "ai2d:1005",
+      "template": {
+        "caption_vi": "Sơ đồ minh họa về chủ đề 'Buttonhole foot' (Buttonhole foot). Hình ảnh tập trung vào một cấu trúc thực thể trung tâm. Trên sơ đồ, các thành phần và vị trí được định danh bao gồm: Buttonhole foot [Buttonhole foot], Overcasting foot [Overcasting foot], Screwdriver [Screwdriver], cleaning brush [cleaning brush], Ball point needle [Ball point needle], Twin Needle [Twin Needle], Needle Set [Needle Set], 75/11 1 needle 90/14 1 needle 100/16 1 needle [75/11 1 needle 90/14 1 needle 100/16 1 needle], Bobbin [Bobbin], Monogramming foot [Monogramming foot], Zipper Foot [Zipper Foot], Zigzag foot [Zigzag foot], Blind Stitch [Blind Stitch], Button fitting foot [Button fitting foot], Seam Ripper [Seam Ripper], Foot controller [Foot controller], Extra spool pin [Extra spool pin].",
+        "caption_en": "The diagram illustrates the structure of 'Buttonhole foot'. The visual composition focuses on a central anatomical structure. Key labeled components and structures include: Buttonhole foot, Overcasting foot, Screwdriver, cleaning brush, Ball point needle, Twin Needle, Needle Set, 75/11 1 needle 90/14 1 needle 100/16 1 needle, Bobbin, Monogramming foot, Zipper Foot, Zigzag foot, Blind Stitch, Button fitting foot, Seam Ripper, Foot controller, Extra spool pin.",
+        "method": "template_deterministic"
+      },
+      "qwen_proposed": {
+        "caption_vi": "Sơ đồ mô tả cấu trúc \"Buttonhole foot\" với các chi tiết được đánh dấu bằng nhãn chú thích, trong đó \"Buttonhole foot\" là phần trung tâm, được chỉ vào bởi chi tiết \"Button fitting foot\" và \"Buttonhole foot\" là một bộ phận của cấu trúc \"blobs_B2\". Các chi tiết khác như \"Overcasting foot\", \"Screwdriver\", \"cleaning brush\", \"Ball point needle\", \"Twin Needle\", \"Needle Set\", \"75/11 1 needle 90/14 1 needle 100/16 1 needle\", \"Bobbin\", \"Monogramming foot\", \"Zipper Foot\", \"Zigzag foot\", \"Blind Stitch\", \"Seam Ripper\", \"Foot controller\", và \"Extra spool pin\" được phân bổ trong các cấu trúc khác nhau, được chỉ vào bởi các nhãn chú thích tương ứng.",
+        "caption_en": "The diagram illustrates the \"Buttonhole foot\" as a central structure, labeled by the \"Button fitting foot\" and \"Buttonhole foot\" pointing to \"blobs_B2\". The \"Overcasting foot\" is associated with \"blobs_B3\", while \"Screwdriver\", \"cleaning brush\", \"Ball point needle\", \"Twin Needle\", \"Needle Set\", \"75/11 1 needle 90/14 1 needle 100/16 1 needle\", \"Bobbin\", \"Monogramming foot\", \"Zipper Foot\", \"Zigzag foot\", \"Blind Stitch\", \"Seam Ripper\", \"Foot controller\", and \"Extra spool pin\" are linked to respective structures \"blobs_B3\", \"blobs_B8\", \"blobs_B7\", \"blobs_B6\", \"blobs_B5\", \"blobs_B1\",",
+        "raw_output": "**TIẾNG VIỆT:**  \nSơ đồ mô tả cấu trúc \"Buttonhole foot\" với các chi tiết được đánh dấu bằng nhãn chú thích, trong đó \"Buttonhole foot\" là phần trung tâm, được chỉ vào bởi chi tiết \"Button fitting foot\" và \"Buttonhole foot\" là một bộ phận của cấu trúc \"blobs_B2\". Các chi tiết khác như \"Overcasting foot\", \"Screwdriver\", \"cleaning brush\", \"Ball point needle\", \"Twin Needle\", \"Needle Set\", \"75/11 1 needle 90/14 1 needle 100/16 1 needle\", \"Bobbin\", \"Monogramming foot\", \"Zipper Foot\", \"Zigzag foot\", \"Blind Stitch\", \"Seam Ripper\", \"Foot controller\", và \"Extra spool pin\" được phân bổ trong các cấu trúc khác nhau, được chỉ vào bởi các nhãn chú thích tương ứng.\n\n**ENGLISH:**  \nThe diagram illustrates the \"Buttonhole foot\" as a central structure, labeled by the \"Button fitting foot\" and \"Buttonhole foot\" pointing to \"blobs_B2\". The \"Overcasting foot\" is associated with \"blobs_B3\", while \"Screwdriver\", \"cleaning brush\", \"Ball point needle\", \"Twin Needle\", \"Needle Set\", \"75/11 1 needle 90/14 1 needle 100/16 1 needle\", \"Bobbin\", \"Monogramming foot\", \"Zipper Foot\", \"Zigzag foot\", \"Blind Stitch\", \"Seam Ripper\", \"Foot controller\", and \"Extra spool pin\" are linked to respective structures \"blobs_B3\", \"blobs_B8\", \"blobs_B7\", \"blobs_B6\", \"blobs_B5\", \"blobs_B1\",",
+        "method": "qwen_content_plan_anchored"
+      },
+      "qwen_vlm_only": {
+        "caption_vi": "Hình ảnh này là một sơ đồ minh họa các dụng cụ và thiết bị thường dùng trong quá trình may mặc, bao gồm các loại mũi khoan, công cụ hỗ trợ như bobbins, cần gài, và các thiết bị điều khiển như foot controller. Mỗi công cụ đều được minh họa rõ ràng với tên gọi và hình ảnh minh họa.",
+        "caption_en": "The image is a diagram illustrating various tools and equipment used in sewing, including different types of needles, a needle set, a ball point needle, a cleaning brush, a screwdriver, an extra spool pin, and a foot controller. Each tool is clearly labeled and depicted with a visual representation.",
+        "raw_output": "**[TIẾNG VIỆT]:**  \nHình ảnh này là một sơ đồ minh họa các dụng cụ và thiết bị thường dùng trong quá trình may mặc, bao gồm các loại mũi khoan, công cụ hỗ trợ như bobbins, cần gài, và các thiết bị điều khiển như foot controller. Mỗi công cụ đều được minh họa rõ ràng với tên gọi và hình ảnh minh họa.\n\n**[ENGLISH]:**  \nThe image is a diagram illustrating various tools and equipment used in sewing, including different types of needles, a needle set, a ball point needle, a cleaning brush, a screwdriver, an extra spool pin, and a foot controller. Each tool is clearly labeled and depicted with a visual representation.",
+        "method": "qwen_vlm_only_baseline"
+      },
+      "qwen_naive": {
+        "caption_vi": "Buttonhole foot: Thiết bị dùng để tạo đường chỉ ở vị trí giữa hai lớp vải, thường dùng trong việc thay đổi kiểu dáng của các sản phẩm như áo sơ mi hoặc túi. Overcasting foot: Dùng để tạo đường chỉ liên tục, giúp tăng độ bền và tránh các vết rách ở các góc cạnh. Screwdriver: Một công cụ dùng để điều chỉnh hoặc tháo lắp các bộ phận của máy may, giúp bảo trì và sửa chữa hiệu quả. Cleaning brush: Công cụ dùng để vệ sinh các bộ phận máy may, giúp loại bỏ bụi bẩn và cặn bám. Ball point needle: Lõi kim chỉ dùng để tạo đường chỉ mảnh, phù hợp với các loại vải mềm như vải cotton hoặc vải len. Twin Needle: Lõi kim chỉ dùng để tạo đường chỉ hai lớp, thường dùng trong các sản phẩm cần độ bền cao. Needle Set: Bộ phận gồm các lõi kim chỉ khác nhau, dùng để thay đổi kiểu dáng và độ dày của đường chỉ. 75/11 1 needle 90/14 1 needle 100/16 1 needle: Các loại lõi kim chỉ khác nhau, dùng để tạo đường chỉ với độ dày và kiểu dáng khác nhau. Bobbin: Bộ phận chứa sợi chỉ, dùng để cung cấp sợi chỉ cho máy may. Monogramming foot: Thiết bị dùng để in chữ hoặc hình ảnh trên vải, thường dùng trong các sản phẩm có logo hoặc tên thương hiệu. Zipper Foot: Thiết bị dùng để tạo đường chỉ với kiểu zipper, thường dùng trong các sản phẩm có khóa kéo. Zigzag foot: Thiết bị dùng để tạo đường chỉ dạng zigzag, giúp tăng độ bền và thẩm mỹ. Blind Stitch: Đường chỉ không nhìn thấy, thường dùng để tạo đường chỉ ở các vị",
+        "caption_en": "",
+        "raw_output": "[TIẾNG VIỆT]:\nButtonhole foot: Thiết bị dùng để tạo đường chỉ ở vị trí giữa hai lớp vải, thường dùng trong việc thay đổi kiểu dáng của các sản phẩm như áo sơ mi hoặc túi. Overcasting foot: Dùng để tạo đường chỉ liên tục, giúp tăng độ bền và tránh các vết rách ở các góc cạnh. Screwdriver: Một công cụ dùng để điều chỉnh hoặc tháo lắp các bộ phận của máy may, giúp bảo trì và sửa chữa hiệu quả. Cleaning brush: Công cụ dùng để vệ sinh các bộ phận máy may, giúp loại bỏ bụi bẩn và cặn bám. Ball point needle: Lõi kim chỉ dùng để tạo đường chỉ mảnh, phù hợp với các loại vải mềm như vải cotton hoặc vải len. Twin Needle: Lõi kim chỉ dùng để tạo đường chỉ hai lớp, thường dùng trong các sản phẩm cần độ bền cao. Needle Set: Bộ phận gồm các lõi kim chỉ khác nhau, dùng để thay đổi kiểu dáng và độ dày của đường chỉ. 75/11 1 needle 90/14 1 needle 100/16 1 needle: Các loại lõi kim chỉ khác nhau, dùng để tạo đường chỉ với độ dày và kiểu dáng khác nhau. Bobbin: Bộ phận chứa sợi chỉ, dùng để cung cấp sợi chỉ cho máy may. Monogramming foot: Thiết bị dùng để in chữ hoặc hình ảnh trên vải, thường dùng trong các sản phẩm có logo hoặc tên thương hiệu. Zipper Foot: Thiết bị dùng để tạo đường chỉ với kiểu zipper, thường dùng trong các sản phẩm có khóa kéo. Zigzag foot: Thiết bị dùng để tạo đường chỉ dạng zigzag, giúp tăng độ bền và thẩm mỹ. Blind Stitch: Đường chỉ không nhìn thấy, thường dùng để tạo đường chỉ ở các vị",
+        "method": "qwen_naive_ocr_baseline"
+      }
+    },
+    {
+      "image_id": "ai2d:1011",
+      "template": {
+        "caption_vi": "Sơ đồ minh họa về chủ đề 'LIGULE OF RAY FLOWER' (LIGULE OF RAY FLOWER). Hình ảnh tập trung vào một cấu trúc thực thể trung tâm. Trên sơ đồ, các thành phần và vị trí được định danh bao gồm: LIGULE OF RAY FLOWER [LIGULE OF RAY FLOWER], RAY FLOWER [RAY FLOWER], Disc flower [Disc flower], Phyllaries [Phyllaries], Receptacle [Receptacle], Bract [Bract], Receptacle scale [Receptacle scale].",
+        "caption_en": "The diagram illustrates the structure of 'LIGULE OF RAY FLOWER'. The visual composition focuses on a central anatomical structure. Key labeled components and structures include: LIGULE OF RAY FLOWER, RAY FLOWER, Disc flower, Phyllaries, Receptacle, Bract, Receptacle scale.",
+        "method": "template_deterministic"
+      },
+      "qwen_proposed": {
+        "caption_vi": "Sơ đồ mô tả cấu trúc của **LIGULE OF RAY FLOWER**, tập trung vào vùng trung tâm **blobs_B0**, với các chi tiết được chỉ định rõ ràng: **LIGULE OF RAY FLOWER** là một phần của **blobs_B0**, **RAY FLOWER** là một phần của **blobs_B0**, **Disc flower** là một phần của **blobs_B0**, **Phyllaries** là một phần của **blobs_B0**, **Receptacle** là một phần của **blobs_B0**, **Bract** là một phần của **blobs_B0**, và **Receptacle scale** là một phần của **blobs_B0**. Các chi tiết này được liên kết chính xác theo hướng chỉ vào cấu trúc **blobs_B0**.",
+        "caption_en": "The diagram illustrates the **LIGULE OF RAY FLOWER**, which is a central structure labeled **blobs_B0**. The **LIGULE OF RAY FLOWER** is a component of **blobs_B0**, and the **RAY FLOWER** is also part of **blobs_B0**. The **Disc flower**, **Phyllaries**, **Receptacle**, **Bract**, and **Receptacle scale** are all components of **blobs_B0**, with each labeled directly pointing to the central structure.",
+        "raw_output": "**TIẾNG VIỆT:**  \nSơ đồ mô tả cấu trúc của **LIGULE OF RAY FLOWER**, tập trung vào vùng trung tâm **blobs_B0**, với các chi tiết được chỉ định rõ ràng: **LIGULE OF RAY FLOWER** là một phần của **blobs_B0**, **RAY FLOWER** là một phần của **blobs_B0**, **Disc flower** là một phần của **blobs_B0**, **Phyllaries** là một phần của **blobs_B0**, **Receptacle** là một phần của **blobs_B0**, **Bract** là một phần của **blobs_B0**, và **Receptacle scale** là một phần của **blobs_B0**. Các chi tiết này được liên kết chính xác theo hướng chỉ vào cấu trúc **blobs_B0**.\n\n**ENGLISH:**  \nThe diagram illustrates the **LIGULE OF RAY FLOWER**, which is a central structure labeled **blobs_B0**. The **LIGULE OF RAY FLOWER** is a component of **blobs_B0**, and the **RAY FLOWER** is also part of **blobs_B0**. The **Disc flower**, **Phyllaries**, **Receptacle**, **Bract**, and **Receptacle scale** are all components of **blobs_B0**, with each labeled directly pointing to the central structure.",
+        "method": "qwen_content_plan_anchored"
+      },
+      "qwen_vlm_only": {
+        "caption_vi": "Hình ảnh mô tả cấu trúc của một bông hoa composite, cụ thể là bông hoa hướng dương. Bông hoa này có cấu trúc gồm các bông hoa nhỏ (ray flower) ở mặt trên, được gọi là \"lông\" hoặc \"lông hoa\", và các bông hoa lớn ở mặt dưới (disc flower), được gọi là \"bông hoa trung tâm\". Các phần này được sắp xếp theo hình dạng của một bông hoa, với các \"lông\" (ray flower) ở hai bên và \"bông hoa trung tâm\" ở giữa. Các phần khác như \"lông\" (ligule), \"bông hoa trung tâm\" (disc flower), \"lông\" (phyllaries), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông",
+        "caption_en": "",
+        "raw_output": "**[TIẾNG VIỆT]:**  \nHình ảnh mô tả cấu trúc của một bông hoa composite, cụ thể là bông hoa hướng dương. Bông hoa này có cấu trúc gồm các bông hoa nhỏ (ray flower) ở mặt trên, được gọi là \"lông\" hoặc \"lông hoa\", và các bông hoa lớn ở mặt dưới (disc flower), được gọi là \"bông hoa trung tâm\". Các phần này được sắp xếp theo hình dạng của một bông hoa, với các \"lông\" (ray flower) ở hai bên và \"bông hoa trung tâm\" ở giữa. Các phần khác như \"lông\" (ligule), \"bông hoa trung tâm\" (disc flower), \"lông\" (phyllaries), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông hoa trung tâm\" (disc flower), \"bông",
+        "method": "qwen_vlm_only_baseline"
+      },
+      "qwen_naive": {
+        "caption_vi": "Lưỡng bội, có thể là một loài thực vật thuộc họ Cúc, với các cánh hoa hình lục giác, có thể là một loài hoa đặc trưng của vùng núi phía Bắc. Hoa có cấu trúc phức tạp, gồm các phần như lông, cánh hoa, và các phần phụ trợ như các lá hoa (phyllaries) và các phần trung tâm (receptacle). Loài này thường được tìm thấy trong các khu vực rừng núi, và có thể là một loài hoa được sử dụng trong các công trình kiến trúc hoặc nghệ thuật truyền thống.",
+        "caption_en": "It is a bisexual, possibly a species of the Asteraceae family, with a complex structure including lobe-like petals, phyllaries, and a central receptacle. The plant is typically found in mountainous regions and may be used in traditional architecture or art.",
+        "raw_output": "[TIẾNG VIỆT]:\nLưỡng bội, có thể là một loài thực vật thuộc họ Cúc, với các cánh hoa hình lục giác, có thể là một loài hoa đặc trưng của vùng núi phía Bắc. Hoa có cấu trúc phức tạp, gồm các phần như lông, cánh hoa, và các phần phụ trợ như các lá hoa (phyllaries) và các phần trung tâm (receptacle). Loài này thường được tìm thấy trong các khu vực rừng núi, và có thể là một loài hoa được sử dụng trong các công trình kiến trúc hoặc nghệ thuật truyền thống.\n\n[ENGLISH]:\nIt is a bisexual, possibly a species of the Asteraceae family, with a complex structure including lobe-like petals, phyllaries, and a central receptacle. The plant is typically found in mountainous regions and may be used in traditional architecture or art.",
+        "method": "qwen_naive_ocr_baseline"
+      }
+    },
+    {
+      "image_id": "ai2d:1021",
+      "template": {
+        "caption_vi": "Sơ đồ minh họa về chủ đề 'Leaf Edges' (Leaf Edges). Hình ảnh tập trung vào một cấu trúc thực thể trung tâm. Trên sơ đồ, các thành phần và vị trí được định danh bao gồm: smooth [smooth], angular sharp [angular sharp], wavy or crenate [wavy or crenate], jagged or serrated [jagged or serrated], NOTCHED [NOTCHED].",
+        "caption_en": "The diagram illustrates the structure of 'Leaf Edges'. The visual composition focuses on a central anatomical structure. Key labeled components and structures include: smooth, angular sharp, wavy or crenate, jagged or serrated, NOTCHED.",
+        "method": "template_deterministic"
+      },
+      "qwen_proposed": {
+        "caption_vi": "Sơ đồ mô tả các dạng biên của lá, với cấu trúc trung tâm 'blobs_B9' được chỉ định là vùng không gian trung tâm. Các chi tiết như 'smooth', 'angular sharp', 'wavy or crenate', 'jagged or serrated', và 'NOTCHED' được gắn nhãn tương ứng với các cấu trúc cụ thể: 'blobs_B0', 'blobs_B7', 'blobs_B2', 'blobs_B4', và 'blobs_B9' theo thứ tự tương ứng.",
+        "caption_en": "The diagram illustrates leaf edges, with the central structure 'blobs_B9' representing the central region. The labels 'smooth', 'angular sharp', 'wavy or crenate', 'jagged or serrated', and 'NOTCHED' correspond to specific structures: 'blobs_B0', 'blobs_B7', 'blobs_B2', 'blobs_B4', and 'blobs_B9' respectively, maintaining the correct directional relationships.",
+        "raw_output": "**TIẾNG VIỆT:**  \nSơ đồ mô tả các dạng biên của lá, với cấu trúc trung tâm 'blobs_B9' được chỉ định là vùng không gian trung tâm. Các chi tiết như 'smooth', 'angular sharp', 'wavy or crenate', 'jagged or serrated', và 'NOTCHED' được gắn nhãn tương ứng với các cấu trúc cụ thể: 'blobs_B0', 'blobs_B7', 'blobs_B2', 'blobs_B4', và 'blobs_B9' theo thứ tự tương ứng.  \n\n**ENGLISH:**  \nThe diagram illustrates leaf edges, with the central structure 'blobs_B9' representing the central region. The labels 'smooth', 'angular sharp', 'wavy or crenate', 'jagged or serrated', and 'NOTCHED' correspond to specific structures: 'blobs_B0', 'blobs_B7', 'blobs_B2', 'blobs_B4', and 'blobs_B9' respectively, maintaining the correct directional relationships.",
+        "method": "qwen_content_plan_anchored"
+      },
+      "qwen_vlm_only": {
+        "caption_vi": "Hình ảnh này trình bày các loại hình thù của viền lá (leaf edges) thông qua các mẫu vẽ minh họa. Các loại được phân loại là: viền lá trơn (smooth), viền lá sóng hoặc răng cưa (wavy or crenate), viền lá răng cưa (jagged or serrated), viền lá góc nhọn (angular sharp), và viền lá răng cưa (notched).",
+        "caption_en": "The image illustrates various leaf edge types, including smooth, wavy or crenate, jagged or serrated, angular sharp, and notched, each depicted with detailed drawings to show their distinct shapes.",
+        "raw_output": "**[TIẾNG VIỆT]:**  \nHình ảnh này trình bày các loại hình thù của viền lá (leaf edges) thông qua các mẫu vẽ minh họa. Các loại được phân loại là: viền lá trơn (smooth), viền lá sóng hoặc răng cưa (wavy or crenate), viền lá răng cưa (jagged or serrated), viền lá góc nhọn (angular sharp), và viền lá răng cưa (notched).\n\n**[ENGLISH]:**  \nThe image illustrates various leaf edge types, including smooth, wavy or crenate, jagged or serrated, angular sharp, and notched, each depicted with detailed drawings to show their distinct shapes.",
+        "method": "qwen_vlm_only_baseline"
+      },
+      "qwen_naive": {
+        "caption_vi": "Đường viền lá (leaf edges) có thể là trơn (smooth), có góc cạnh sắc nét (angular sharp), có dạng vôn (wavy or crenate), có dạng răng cưa (jagged or serrated), hoặc có các khe hở (notched). Các dạng này thường được dùng để phân biệt các loại lá trong thực vật, giúp nhận diện các đặc điểm sinh học và môi trường sống.",
+        "caption_en": "Leaf edges can be smooth (smooth), sharply angular (angular sharp), wavy or crenate (wavy or crenate), jagged or serrated (jagged or serrated), or notched (notched). These characteristics are used to distinguish leaf types in plants and help identify their ecological and biological traits.",
+        "raw_output": "[TIẾNG VIỆT]:\nĐường viền lá (leaf edges) có thể là trơn (smooth), có góc cạnh sắc nét (angular sharp), có dạng vôn (wavy or crenate), có dạng răng cưa (jagged or serrated), hoặc có các khe hở (notched). Các dạng này thường được dùng để phân biệt các loại lá trong thực vật, giúp nhận diện các đặc điểm sinh học và môi trường sống.\n\n[ENGLISH]:\nLeaf edges can be smooth (smooth), sharply angular (angular sharp), wavy or crenate (wavy or crenate), jagged or serrated (jagged or serrated), or notched (notched). These characteristics are used to distinguish leaf types in plants and help identify their ecological and biological traits.",
+        "method": "qwen_naive_ocr_baseline"
+      }
+    },
+    {
+      "image_id": "ai2d:1032",
+      "template": {
+        "caption_vi": "Sơ đồ cấu trúc giải phẫu học với các chi tiết và bào quan được chú giải rõ ràng. Hình ảnh tập trung vào một cấu trúc thực thể trung tâm. Trên sơ đồ, các thành phần và vị trí được định danh bao gồm: TOOTHED [TOOTHED], TOOTHLESS [TOOTHLESS], LOBED [LOBED].",
+        "caption_en": "This is an anatomical educational diagram detailing internal structures and organelle components. The visual composition focuses on a central anatomical structure. Key labeled components and structures include: TOOTHED, TOOTHLESS, LOBED.",
+        "method": "template_deterministic"
+      },
+      "qwen_proposed": {
+        "caption_vi": "Sơ đồ thể hiện cấu trúc trung tâm (blobs_B4) với các chi tiết chú thích: 'TOOTHED' chỉ vào 'blobs_B1', 'TOOTHLESS' chỉ vào 'blobs_B2', và 'LOBED' chỉ vào 'blobs_B4'. Các chi tiết này phản ánh các đặc điểm phân biệt của các cấu trúc, với 'blobs_B1' và 'blobs_B2' tương ứng với các bộ phận có răng và không có răng, trong khi 'blobs_B4' là vùng có cấu trúc lobed.",
+        "caption_en": "The diagram illustrates a central structure (blobs_B4) with labeled features: 'TOOTHED' points to blobs_B1, 'TOOTHLESS' points to blobs_B2, and 'LOBED' points to blobs_B4. These labels indicate distinct characteristics of the structures, with blobs_B1 and blobs_B2 representing toothed and toothless regions, respectively, while blobs_B4 is the lobed structure.",
+        "raw_output": "**TIẾNG VIỆT:**  \nSơ đồ thể hiện cấu trúc trung tâm (blobs_B4) với các chi tiết chú thích: 'TOOTHED' chỉ vào 'blobs_B1', 'TOOTHLESS' chỉ vào 'blobs_B2', và 'LOBED' chỉ vào 'blobs_B4'. Các chi tiết này phản ánh các đặc điểm phân biệt của các cấu trúc, với 'blobs_B1' và 'blobs_B2' tương ứng với các bộ phận có răng và không có răng, trong khi 'blobs_B4' là vùng có cấu trúc lobed.\n\n**ENGLISH:**  \nThe diagram illustrates a central structure (blobs_B4) with labeled features: 'TOOTHED' points to blobs_B1, 'TOOTHLESS' points to blobs_B2, and 'LOBED' points to blobs_B4. These labels indicate distinct characteristics of the structures, with blobs_B1 and blobs_B2 representing toothed and toothless regions, respectively, while blobs_B4 is the lobed structure.",
+        "method": "qwen_content_plan_anchored"
+      },
+      "qwen_vlm_only": {
+        "caption_vi": "Hình ảnh này trình bày ba loại hình thù của viền lá: lá có viền răng cưa (toothed), lá không có viền răng cưa (toothless), và lá có viền lobe (lobed). Mỗi loại được minh họa bằng hình vẽ đơn giản, giúp học sinh dễ dàng nhận biết và phân biệt.",
+        "caption_en": "The diagram illustrates three types of leaf margins: toothed, toothless, and lobed. Each type is depicted with a simple line drawing to help students easily identify and distinguish between them.",
+        "raw_output": "[TIẾNG VIỆT]:\nHình ảnh này trình bày ba loại hình thù của viền lá: lá có viền răng cưa (toothed), lá không có viền răng cưa (toothless), và lá có viền lobe (lobed). Mỗi loại được minh họa bằng hình vẽ đơn giản, giúp học sinh dễ dàng nhận biết và phân biệt.\n\n[ENGLISH]:\nThe diagram illustrates three types of leaf margins: toothed, toothless, and lobed. Each type is depicted with a simple line drawing to help students easily identify and distinguish between them.",
+        "method": "qwen_vlm_only_baseline"
+      },
+      "qwen_naive": {
+        "caption_vi": "Sơ đồ này thể hiện các đặc điểm hình học và cấu trúc của một loài thực vật, có thể là một loài cây hoặc thực vật có hoa, với các chi tiết như các cạnh lá (leaf margins) được chia thành các phần, có thể là răng cưa (toothed) hoặc không răng cưa (toothless), và các hình dạng cụ thể như hình dạng lobe (lobed). Hình 9-1 là một biểu đồ minh họa cho các đặc điểm này, giúp phân biệt các dạng cấu trúc lá khác nhau.",
+        "caption_en": "The diagram illustrates the morphological features of a plant, showing leaf margins that are either toothed or toothless, and lobed structures. Figure 9-1 provides a visual representation of these characteristics, aiding in the identification of different leaf forms.",
+        "raw_output": "[TIẾNG VIỆT]:\nSơ đồ này thể hiện các đặc điểm hình học và cấu trúc của một loài thực vật, có thể là một loài cây hoặc thực vật có hoa, với các chi tiết như các cạnh lá (leaf margins) được chia thành các phần, có thể là răng cưa (toothed) hoặc không răng cưa (toothless), và các hình dạng cụ thể như hình dạng lobe (lobed). Hình 9-1 là một biểu đồ minh họa cho các đặc điểm này, giúp phân biệt các dạng cấu trúc lá khác nhau.\n\n[ENGLISH]:\nThe diagram illustrates the morphological features of a plant, showing leaf margins that are either toothed or toothless, and lobed structures. Figure 9-1 provides a visual representation of these characteristics, aiding in the identification of different leaf forms.",
+        "method": "qwen_naive_ocr_baseline"
+      }
+    }
+  ]
+}

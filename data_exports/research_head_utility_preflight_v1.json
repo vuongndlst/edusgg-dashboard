@@ -1,0 +1,36 @@
+{
+  "source_sha256": "f9d1da5b026b4e4d50e88aad5bcce51cfd61a1e8b05e0a5d13ed8507585fec58",
+  "feature_dim": 170,
+  "pool": "tip_d0.5",
+  "support": {
+    "fit": {
+      "candidates": 1212,
+      "distinct_utility_opportunities": 84,
+      "detection_positive_candidates": 285,
+      "utility_positive_candidates": 88,
+      "candidates_losing_existing_tp": 0,
+      "candidates_changing_existing_mapping": 0
+    },
+    "internal_dev": {
+      "candidates": 287,
+      "detection_positive_candidates": 65,
+      "utility_positive_candidates": 13,
+      "candidates_losing_existing_tp": 0,
+      "candidates_changing_existing_mapping": 0,
+      "distinct_utility_opportunities": 13
+    }
+  },
+  "fit_admission_passed": true,
+  "smoke_images": 16,
+  "estimated_total_bytes_1_5_safety": 139883436.0,
+  "estimated_train_dev_seconds_1_5_safety": 58.71234619617462,
+  "elapsed_cpu_seconds": 31.90011507831514,
+  "gpu_reserved_seconds": 3720,
+  "program_artifact_bytes": 1610870300,
+  "disk_free_bytes": 65616875520,
+  "fit_performed": false,
+  "val_records_read": 0,
+  "test_records_read": 0,
+  "calibration_audit_records_read": 0,
+  "interpretation": "Observed singleton marginal utility after full greedy rematching, not learned performance or physically verified scientificnegative labels."
+}

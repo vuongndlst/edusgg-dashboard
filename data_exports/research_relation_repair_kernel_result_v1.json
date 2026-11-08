@@ -1,0 +1,1964 @@
+{
+  "decoded_graph_records": 576,
+  "decoded_proposal_records": 645,
+  "fingerprint": "9043f8187221fdb55525c136d98150e19bafa4a065c305ac1732194d9a8ad3f9",
+  "gpu_reserved_seconds": 26910,
+  "gpu_seconds": 0,
+  "model_loads": 0,
+  "native_target_reads": 0,
+  "optimizer_steps": 0,
+  "peak_rss_bytes": 79675392,
+  "preregister_sha256": "64c0bf04cf71892d1e4ee3341a7f2addc68f4ca02b47bb19b98ed55baa5b43c1",
+  "real_image_reads": 0,
+  "scope": "Target-free frozen DEV prediction wire proof; no alternatives proposed, no repair gain or semantic-caption quality measured. Soft alerts are unverified; all real outputs intentionally preserved.",
+  "selected_case_count": 24,
+  "selected_cases": [
+    {
+      "alerts": [],
+      "edge_occurrences": 0,
+      "image_id": "ai2d:1286",
+      "nodes": 6,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": true,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 0,
+            "total_claims": 0,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": true,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 0,
+            "total_claims": 0,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": true,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 0,
+            "total_claims": 0,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 42,
+      "structural_description_sha256": "1e07d304a995a0b6b5f08e3ca6d224850b7933ca81a68d802ef6f15ecdc46718"
+    },
+    {
+      "alerts": [],
+      "edge_occurrences": 17,
+      "image_id": "ai2d:1389",
+      "nodes": 37,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 17,
+            "total_claims": 17,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 17,
+            "total_claims": 17,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 17,
+            "total_claims": 17,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 42,
+      "structural_description_sha256": "300a8c5b68b8bb6a38526e4e53760e1a9115e92c9885ffeacad9a0359fc21a26"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:001",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.05080258202712357
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:005",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.034067657470703124
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:006",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.027973724365234376
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:010",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.011130340576171875,
+            "target_connector_gap": 0.06460784912109375
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:012",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.02941406196569541,
+            "target_connector_gap": 0.0
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:018",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.02001123046875
+          }
+        }
+      ],
+      "edge_occurrences": 47,
+      "image_id": "ai2d:2047",
+      "nodes": 73,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 47,
+            "total_claims": 47,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 47,
+            "total_claims": 47,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 47,
+            "total_claims": 47,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 42,
+      "structural_description_sha256": "e0cfadad8ea70fd8d29e882b7524a5cde274534a70312976d200591941653131"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:000",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.06663884012104405
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:001",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.07059103506430067
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:002",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.10364800598525917
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:003",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.05974962191535024,
+            "target_connector_gap": 0.06799421106676423
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:005",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0006536948187512218,
+            "target_connector_gap": 0.09861170348052448
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:006",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.13545791254809295,
+            "target_connector_gap": 0.04877972608983384
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:007",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.053070051720789685,
+            "target_connector_gap": 0.11215299000995596
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:009",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.09602893741840601
+          }
+        }
+      ],
+      "edge_occurrences": 12,
+      "image_id": "ai2d:3225",
+      "nodes": 24,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 12,
+            "total_claims": 12,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 12,
+            "total_claims": 12,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 12,
+            "total_claims": 12,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 42,
+      "structural_description_sha256": "4c32f5304ab5ecfdeecf4c1766f0828eeea97399ff720d5ae6c76a709c3f779f"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:005",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.03460740194128737
+          }
+        }
+      ],
+      "edge_occurrences": 17,
+      "image_id": "ai2d:3333",
+      "nodes": 40,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 17,
+            "total_claims": 17,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 17,
+            "total_claims": 17,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 17,
+            "total_claims": 17,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 42,
+      "structural_description_sha256": "bf339af587e43aef5fd43a9cab455b55a8b1a5f587aae17a231ef09ec662b1cd"
+    },
+    {
+      "alerts": [],
+      "edge_occurrences": 6,
+      "image_id": "ai2d:3443",
+      "nodes": 13,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 6,
+            "total_claims": 6,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 6,
+            "total_claims": 6,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 6,
+            "total_claims": 6,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 42,
+      "structural_description_sha256": "d96609b8f947cc0baaddc90f4362ca34746088f220f49d9a0cde46e1ec75ebff"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:000",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.004648676677342859,
+            "target_connector_gap": 0.02869828873786082
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:001",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.057073698275997134,
+            "target_connector_gap": 0.006484235234521595
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:002",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.020204547920393744,
+            "target_connector_gap": 0.018076899276925396
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:003",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.004262739205349865,
+            "target_connector_gap": 0.02607241720634189
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:004",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.041652417358533526,
+            "target_connector_gap": 0.029081693456108153
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:005",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.03548394251382579,
+            "target_connector_gap": 0.0
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:008",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.014500036039613206,
+            "target_connector_gap": 0.14694093941080155
+          }
+        }
+      ],
+      "edge_occurrences": 11,
+      "image_id": "ai2d:4168",
+      "nodes": 29,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 11,
+            "total_claims": 11,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 11,
+            "total_claims": 11,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 11,
+            "total_claims": 11,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 42,
+      "structural_description_sha256": "744ce7ece979a30b7165a6fdd32044a0e141ad8c4149b107dcd5cb009ec9ba20"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:000",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.025798526827219562
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:001",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.030656643578354372,
+            "target_connector_gap": 0.0
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:004",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.22643809885864633
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:005",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.10341549302717386
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:006",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.03536097172843331,
+            "target_connector_gap": 0.0225169759594443
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:008",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.041213590756656523,
+            "target_connector_gap": 0.0
+          }
+        }
+      ],
+      "edge_occurrences": 20,
+      "image_id": "ai2d:4776",
+      "nodes": 34,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 20,
+            "total_claims": 20,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 20,
+            "total_claims": 20,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 20,
+            "total_claims": 20,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 42,
+      "structural_description_sha256": "9fd8645fc8c25ae731555b1037cfa9752b11b42780560f801a5cf28883daa4a6"
+    },
+    {
+      "alerts": [],
+      "edge_occurrences": 0,
+      "image_id": "ai2d:1286",
+      "nodes": 7,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": true,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 0,
+            "total_claims": 0,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": true,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 0,
+            "total_claims": 0,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": true,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 0,
+            "total_claims": 0,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 43,
+      "structural_description_sha256": "1e07d304a995a0b6b5f08e3ca6d224850b7933ca81a68d802ef6f15ecdc46718"
+    },
+    {
+      "alerts": [],
+      "edge_occurrences": 13,
+      "image_id": "ai2d:1389",
+      "nodes": 30,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 13,
+            "total_claims": 13,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 13,
+            "total_claims": 13,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 13,
+            "total_claims": 13,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 43,
+      "structural_description_sha256": "6cc5db750ea5bb37bb7c56adac5254a30268bcf650f8bd61a9f9af4a7688941e"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:000",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.049520760395551824
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:005",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.03217715454101563
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:006",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.02525396728515625
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:010",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.07570302257877992,
+            "target_connector_gap": 0.08277434310107712
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:014",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.02075372314453125
+          }
+        }
+      ],
+      "edge_occurrences": 41,
+      "image_id": "ai2d:2047",
+      "nodes": 72,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 41,
+            "total_claims": 41,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 41,
+            "total_claims": 41,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 41,
+            "total_claims": 41,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 43,
+      "structural_description_sha256": "f789db2bb45b0553d0cb2ffba30386914f01c7da303309e0610654a5198f50f2"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:001",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.10557594502575418
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:002",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.06238136996444274,
+            "target_connector_gap": 0.05790724045472159
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:003",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.08495013358717365,
+            "target_connector_gap": 0.06808721742722545
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:004",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.09738206907296586
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:005",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.06655230995625822
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:006",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.07504812495920857
+          }
+        }
+      ],
+      "edge_occurrences": 8,
+      "image_id": "ai2d:3225",
+      "nodes": 21,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 8,
+            "total_claims": 8,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 8,
+            "total_claims": 8,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 8,
+            "total_claims": 8,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 43,
+      "structural_description_sha256": "47aaf9b03aac90e9d46b7083045ceee8ad74df0efcbe9c91c5370f70137ec4b0"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:011",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 7.799029658612463e-05,
+            "target_connector_gap": 0.034373328836199264
+          }
+        }
+      ],
+      "edge_occurrences": 16,
+      "image_id": "ai2d:3333",
+      "nodes": 38,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 16,
+            "total_claims": 16,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 16,
+            "total_claims": 16,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 16,
+            "total_claims": 16,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 43,
+      "structural_description_sha256": "95271d6f3f99bfbe2f718e56452b9155546845d7c7b62f82cd3b8c8a1f493a88"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:003",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.11882256054250916,
+            "target_connector_gap": 0.0
+          }
+        }
+      ],
+      "edge_occurrences": 5,
+      "image_id": "ai2d:3443",
+      "nodes": 13,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 5,
+            "total_claims": 5,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 5,
+            "total_claims": 5,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 5,
+            "total_claims": 5,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 43,
+      "structural_description_sha256": "2de76598d997a424067b69d0bbaf31e826d62c6044bad4cd9500891e3e3cd137"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:000",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.028767246346014262,
+            "target_connector_gap": 0.0031515794879946437
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:001",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.025839508090290373,
+            "target_connector_gap": 0.008531732123651976
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:002",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0246794026462289,
+            "target_connector_gap": 0.017360640686794725
+          }
+        }
+      ],
+      "edge_occurrences": 7,
+      "image_id": "ai2d:4168",
+      "nodes": 25,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 7,
+            "total_claims": 7,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 7,
+            "total_claims": 7,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 7,
+            "total_claims": 7,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 43,
+      "structural_description_sha256": "21e6dcb96af928d6ba10b6be80609a1c7b82bfaa93dc21b70ccffa78bf57c322"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:000",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.033413309205865625,
+            "target_connector_gap": 0.0
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:003",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.03529187732453821,
+            "target_connector_gap": 0.020945688854217423
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:004",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.059018657790039945,
+            "target_connector_gap": 0.0
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:006",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.08981485404045841,
+            "target_connector_gap": 0.0
+          }
+        }
+      ],
+      "edge_occurrences": 18,
+      "image_id": "ai2d:4776",
+      "nodes": 32,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 18,
+            "total_claims": 18,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 18,
+            "total_claims": 18,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 18,
+            "total_claims": 18,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 43,
+      "structural_description_sha256": "423f8afeec6fdc0eae345c10af3fe9bc53300d5cc351003df16bd01711016b00"
+    },
+    {
+      "alerts": [],
+      "edge_occurrences": 0,
+      "image_id": "ai2d:1286",
+      "nodes": 6,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": true,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 0,
+            "total_claims": 0,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": true,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 0,
+            "total_claims": 0,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": true,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 0,
+            "total_claims": 0,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 44,
+      "structural_description_sha256": "1e07d304a995a0b6b5f08e3ca6d224850b7933ca81a68d802ef6f15ecdc46718"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:002",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.07462409441314811
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:013",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.05824488530647428
+          }
+        }
+      ],
+      "edge_occurrences": 16,
+      "image_id": "ai2d:1389",
+      "nodes": 32,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 16,
+            "total_claims": 16,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 16,
+            "total_claims": 16,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 16,
+            "total_claims": 16,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 44,
+      "structural_description_sha256": "cbcf7e61076a066543218d44b0f8686d10786c5cecd64c1535b94eda9fe210cf"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:003",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.03368829345703125
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:005",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.025873382568359374
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:007",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0049549560546875,
+            "target_connector_gap": 0.034403594970703125
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:008",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.04976326299749078
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:013",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.010858154296875,
+            "target_connector_gap": 0.06701312255859375
+          }
+        }
+      ],
+      "edge_occurrences": 40,
+      "image_id": "ai2d:2047",
+      "nodes": 76,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 40,
+            "total_claims": 40,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 40,
+            "total_claims": 40,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 40,
+            "total_claims": 40,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 44,
+      "structural_description_sha256": "46fcc29fe4160014ee4f9dd647d14eb72d91e8ca224056901597ddc3aa63c13b"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:003",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.04892490664687459,
+            "target_connector_gap": 0.0
+          }
+        }
+      ],
+      "edge_occurrences": 13,
+      "image_id": "ai2d:3225",
+      "nodes": 24,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 13,
+            "total_claims": 13,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 13,
+            "total_claims": 13,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 13,
+            "total_claims": 13,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 44,
+      "structural_description_sha256": "54c2883889b97bc28cd1c36826a68f96b21a6ccef940e35958af88d8873b8c61"
+    },
+    {
+      "alerts": [],
+      "edge_occurrences": 14,
+      "image_id": "ai2d:3333",
+      "nodes": 38,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 14,
+            "total_claims": 14,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 14,
+            "total_claims": 14,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 14,
+            "total_claims": 14,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 44,
+      "structural_description_sha256": "3fd238272270c2a1caa5a68b2723ddbdec349eddc97d3476e1f8836e7b2990f1"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:002",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.11959976298570099,
+            "target_connector_gap": 0.0
+          }
+        }
+      ],
+      "edge_occurrences": 5,
+      "image_id": "ai2d:3443",
+      "nodes": 12,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 5,
+            "total_claims": 5,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 5,
+            "total_claims": 5,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 5,
+            "total_claims": 5,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 44,
+      "structural_description_sha256": "ccb5cc98cc6c04032aa83fc10a9fa053916953979a0965dd9a3ab1c1f04e8fc0"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:000",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.00237653599611285,
+            "target_connector_gap": 0.026147399224639326
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:001",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.006482776034832737,
+            "target_connector_gap": 0.05880026503927313
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:002",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.008011256440346311,
+            "target_connector_gap": 0.026203661795499707
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:005",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.011784673875747621,
+            "target_connector_gap": 0.14852975309980507
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:006",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.12029453364482963,
+            "target_connector_gap": 0.009478377498943424
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:007",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.008082590459421607,
+            "target_connector_gap": 0.025211670520088363
+          }
+        }
+      ],
+      "edge_occurrences": 10,
+      "image_id": "ai2d:4168",
+      "nodes": 28,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 10,
+            "total_claims": 10,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 10,
+            "total_claims": 10,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 10,
+            "total_claims": 10,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 44,
+      "structural_description_sha256": "de9e59b386860d8a6f5b02d7b213df6e091c3d7775aca25c5775693bf1c0a3a6"
+    },
+    {
+      "alerts": [
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:001",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0905329760383013,
+            "target_connector_gap": 0.0
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:003",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.035404033301416234,
+            "target_connector_gap": 0.017217387909717878
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:004",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.022221768740065782,
+            "target_connector_gap": 0.0
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:005",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.0,
+            "target_connector_gap": 0.10141415825528628
+          }
+        },
+        {
+          "decision": "abstain_no_edit",
+          "occurrence_id": "edge:006",
+          "rule": "connector_bbox_noncontact",
+          "state": "unverified_geometry_alert",
+          "threshold": 0.02,
+          "values": {
+            "source_connector_gap": 0.028850518037811974,
+            "target_connector_gap": 0.0
+          }
+        }
+      ],
+      "edge_occurrences": 17,
+      "image_id": "ai2d:4776",
+      "nodes": 31,
+      "outputs": {
+        "greedy": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 17,
+            "total_claims": 17,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "greedy_complete"
+        },
+        "identity": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 17,
+            "total_claims": 17,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "identity"
+        },
+        "joint": {
+          "claim_counts": {
+            "empty_caption": false,
+            "explicitly_contradicted": 0,
+            "omitted_observed_edge_occurrences": 0,
+            "scope": "Graph-consistency/coverage diagnostic only; no image or scientific semantic verification.",
+            "supported_by_supplied_graph": 17,
+            "total_claims": 17,
+            "unverifiable": 0
+          },
+          "logical_edits": 0,
+          "status": "optimal_declared_neighborhood"
+        }
+      },
+      "seed": 44,
+      "structural_description_sha256": "700336cbc7b3fa4f766b0ebe58ec6da4d63c0f59a47cbf0fd475b50ff808b9cf"
+    }
+  ],
+  "status": "COMPLETE_VERIFIED_KERNEL_ONLY",
+  "synthetic_candidate_subset_oracle_problems": 80,
+  "synthetic_tests_passed": 41,
+  "torch_imported": false,
+  "unverified_geometry_alert_count": 68,
+  "wall_seconds": 3.086563864722848
+}

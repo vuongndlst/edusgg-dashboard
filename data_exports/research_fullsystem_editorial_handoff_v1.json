@@ -1,0 +1,32 @@
+{
+  "status": "EDITORIAL_DRAFT_AND_REPRODUCTION_READY_FOR_SUBSTANTIVE_REVIEW",
+  "final_scientific_stage": "fullsystem_final_complete_verified",
+  "final_preregister_sha256": "378334760a926d72f2e547ba999b583e67cf3fb0e56879ccfa91342148a606a4",
+  "editorial_consistency_sha256": "ea433e858349c5665098e0bdc305d403ec6b3d23149e4798369c5a20bf45e2b8",
+  "files": {
+    "docs/research_manuscript_internal_v1.md": "f45636b8d271c3e5cd5fc166a7546062ae63f7d304865c1b5e5362d82652f056",
+    "docs/research_fullsystem_reproduction_v1.md": "564f7264790cb7d46ca365bb384b515c15f05a9153c0370d0cade195ca3da0af",
+    "docs/paper_comparison_2026_11_03_addendum.md": "5c6a4648ef4de1762dc37ce0c142dcb04d6a7e1cba1af16119d191823a708eb4",
+    "docs/research_fullsystem_after_final_next.md": "9e4454a0eccd3b506eadc07941de15bebcc64db006160f8bf49ed33c34d4a2dc"
+  },
+  "figure_receipt_sha256": "f07579f3f966fdaf6354090788fb4f6082ca6137fe1793d98c240255d73e7499",
+  "primary_guard_failed": true,
+  "active_compute": false,
+  "new_native_model_or_gpu_work": false,
+  "gpu_reserved_seconds": 26910,
+  "resource_census": {
+    "scope_version": "fullsystem-conservative-v1",
+    "category_bytes": {
+      "experiments": 1768539849,
+      "reports": 70836386,
+      "public_sources": 4104199
+    },
+    "file_count": 37328,
+    "logical_file_bytes": 1843480434,
+    "remaining_after40mib": 262060174,
+    "size_manifest_sha256": "ffa17cea63ef162aba343f14d56a57826cb265157e38187219b0a2671722506a",
+    "boundary": "All research-* experiments/checkpoints, research_*reports inclbundles/receipts, programme literaturefolder, and ALL public src/config/docs/tests/scripts inclpycache. Pre-existing frozen datasets/COCOweights/oldnonresearchcheckpoints excluded as not newprogramme outputs. Newmodel files must reside in registered research-*roots; no loopholeoutside scope."
+  },
+  "paper_sota_or_acceptance_claim": false,
+  "overall_goal_complete": false
+}

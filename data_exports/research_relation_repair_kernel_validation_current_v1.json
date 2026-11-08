@@ -1,0 +1,28 @@
+{
+  "errors": 0,
+  "failures": 0,
+  "gpu_seconds": 0,
+  "native_reads": 0,
+  "optimizer_steps": 0,
+  "peak_rss_bytes": 49786880,
+  "real_pixels": 0,
+  "real_prediction_records": 0,
+  "scope": "32kernel fixtures incl80 independent subset-oracle problems plus9adapter fixtures, synthetic645proposal/selected24graph paths; no real prediction input/model/native/image execution.",
+  "sources": {
+    "configs/research_relation_repair_kernel_v1.json": "3fe8d0791877fb66ad2ed53ab8f1bddff6492b888e0523d80e33496e66ab2b4e",
+    "configs/research_relation_repair_wire_inputs_v1.json": "f440fd21bbbe7236b1e2c4009c20bd657d1662bf940c6c9faed451fa355269f1",
+    "scripts/prepare_research_relation_repair_inputs_v1.py": "f75ce6abe282eff7aaef7837c8b4039da73fc0802ced29071eb727df90084440",
+    "scripts/validate_research_relation_repair_wire_remote_v2.sh": "4813564743e84ec2c376c003d1ddf24ef6d75e41a726e2e8981dfb9e897d080d",
+    "src/edusgg/research_relation_repair_evidence_v1.py": "822356c9aa94109f0fee0f9772efc142861f518ef5231bbc9be03f95eb2d4a81",
+    "src/edusgg/research_relation_repair_metrics_v1.py": "8e356cec0dd4b94d27ad4c6a7e8f1edcc13df45379ac45fec0a92f4d3a069391",
+    "src/edusgg/research_relation_repair_v1.py": "cdbdca4d711d18aa353ef732a2547f843617add48969a5492c7c3f54232b59fb",
+    "src/edusgg/research_relation_repair_wire_v1.py": "8d20973fb5892e87b299a65bbbdd1c31d89fbc45c1ce580362c1c0fa028039cb",
+    "src/edusgg/research_structural_caption_v1.py": "6620f04ea052c5bc815da2d7c5f00f80e41464304a464109c3d639ca29f68997",
+    "tests/test_research_relation_repair_v1.py": "9600fe93b3f62494ea0111842feb96e019e3ec552cb58f5ee9bf4b960d862eba",
+    "tests/test_research_relation_repair_wire_v1.py": "bf5fb9a0424424dd1cc7da37b7708251651f7fd63bc3458ab1a42d23d798a5cf"
+  },
+  "status": "PASSED",
+  "tests_run": 41,
+  "torch_imported": false,
+  "wall_seconds": 0.2103525660932064
+}

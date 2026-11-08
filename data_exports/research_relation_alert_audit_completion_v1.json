@@ -1,0 +1,8 @@
+{
+  "journal_sha256": "eb7f5527f45babbcef1c32f0c47375ba7bf5283e98f5bcc890bb40e7fb97ad09",
+  "logical_program_bytes": 1851013383,
+  "remaining_after40mib": 254527225,
+  "result_sha256": "2e7039c775338e4e96c29fccc64249d37c2178d6058483ae34c0a2ae3fd32ea1",
+  "stage_bytes_before_completion": 149731,
+  "status": "COMPLETE_VERIFIED_DEVELOPMENT_DIAGNOSIS"
+}
