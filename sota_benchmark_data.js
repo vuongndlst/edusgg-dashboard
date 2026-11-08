@@ -327,8 +327,6 @@ const SOTA_BENCHMARK_DATA = {
       "dpg_kembhavi_2016": 38.4,
       "llava_1.5_13b_zeroshot": 46.2,
       "qwen2.5_vl_7b_zeroshot": 83.5,
-      "gpt4o_zeroshot": 83.2,
-      "claude_3.5_sonnet": 84.5,
       "edusgg_method1_deterministic": 24.8,
       "edusgg_method2_graph_qwen_vl": 88.74
     },
