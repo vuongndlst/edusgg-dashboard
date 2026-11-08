@@ -2,14 +2,14 @@
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch 2.1+](https://img.shields.io/badge/PyTorch-2.1%2B-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-EduSGG%20Model%20Zoo-yellow.svg)](https://huggingface.co/EduSGG)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-EduSGG%20Model%20Zoo-yellow.svg)](https://huggingface.co/ndvuongsp)
 [![AI2D VQA Benchmark](https://img.shields.io/badge/AI2D%20VQA-%231%20SOTA%20(88.74%25)-emerald.svg?logo=kaggle&logoColor=white)](https://www.sota2.com/research/sota/general-vqa-on-ai2d)
 [![AI2D Captioning SOTA](https://img.shields.io/badge/AI2D%20Caption-CIDEr%2035.67%20(%2B12.5%25)-indigo.svg)](https://colmweb.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
 > **Official Project Page & Open-Source Codebase:**  
 > **🌐 Project Website**: [https://vuongndlst.github.io/edusgg-dashboard/](https://vuongndlst.github.io/edusgg-dashboard/)  
-> **🤗 Hugging Face Models**: [https://huggingface.co/EduSGG](https://huggingface.co/EduSGG)  
+> **🤗 Hugging Face Models**: [https://huggingface.co/ndvuongsp](https://huggingface.co/ndvuongsp)  
 > *(Target: Leading Q-Ranked International Journal / IEEE / Elsevier / Springer)*
 
 ---
@@ -154,9 +154,9 @@ All model checkpoints and datasets are hosted publicly on **Hugging Face Hub** f
 
 | Model Checkpoint | Hugging Face Repository | Size | Download Command |
 | :--- | :--- | :---: | :--- |
-| **Faster R-CNN Entity Detector** | [🤗 EduSGG/diagram-detector-faster-rcnn](https://huggingface.co/EduSGG/diagram-detector-faster-rcnn) | ~164 MB | `python scripts/download_checkpoints.py --model detector` |
-| **Qwen2.5-14B EduSGG LoRA Adapter** | [🤗 EduSGG/qwen2.5-14b-edusgg-vqa-lora](https://huggingface.co/EduSGG/qwen2.5-14b-edusgg-vqa-lora) | ~182 MB | `python scripts/download_checkpoints.py --model vqa_lora` |
-| **Vi-EduDiag-50 Benchmark Dataset** | [🤗 datasets/EduSGG/Vi-EduDiag-50](https://huggingface.co/datasets/EduSGG/Vi-EduDiag-50) | ~45 MB | `git clone https://huggingface.co/datasets/EduSGG/Vi-EduDiag-50` |
+| **Faster R-CNN Entity Detector** | [🤗 ndvuongsp/diagram-detector-faster-rcnn](https://huggingface.co/ndvuongsp/diagram-detector-faster-rcnn) | ~164 MB | `python scripts/download_checkpoints.py --model detector` |
+| **Qwen2.5-14B EduSGG LoRA Adapter** | [🤗 ndvuongsp/qwen2.5-14b-edusgg-vqa-lora](https://huggingface.co/ndvuongsp/qwen2.5-14b-edusgg-vqa-lora) | ~182 MB | `python scripts/download_checkpoints.py --model vqa_lora` |
+| **Vi-EduDiag-50 Benchmark Dataset** | [🤗 datasets/ndvuongsp/Vi-EduDiag-50](https://huggingface.co/datasets/ndvuongsp/Vi-EduDiag-50) | ~45 MB | `git clone https://huggingface.co/datasets/ndvuongsp/Vi-EduDiag-50` |
 
 #### One-Click Checkpoint Downloader:
 ```bash
