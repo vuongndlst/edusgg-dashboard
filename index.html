@@ -615,9 +615,9 @@
             <div class="text-[11px] text-rose-700 mt-0.5">Duyệt đồ thị thuần (41.3% ở nhãn)</div>
           </div>
           <div class="bg-white border border-emerald-200 rounded-2xl p-4 shadow-xs bg-emerald-50/30">
-            <div class="text-xs font-semibold text-emerald-800 uppercase tracking-wider">Method 2 (G-LLM)</div>
-            <div class="text-2xl font-extrabold text-emerald-600 mt-1">59.65%</div>
-            <div class="text-[11px] text-emerald-800 font-semibold mt-0.5">Vượt trội VLM (+13.45% vs LLaVA)</div>
+            <div class="text-xs font-semibold text-emerald-800 uppercase tracking-wider">Method 2 (EduSG + VLM)</div>
+            <div class="text-2xl font-extrabold text-emerald-600 mt-1">88.74%</div>
+            <div class="text-[11px] text-emerald-800 font-semibold mt-0.5">Vượt SOTA (+4.24% vs Claude 3.5 &amp; Qwen-VL)</div>
           </div>
         </div>
 
@@ -676,6 +676,30 @@
                   <td class="py-3 px-4 font-mono text-slate-600">44.80%</td>
                   <td class="py-3 px-4 font-mono text-slate-600">45.60%</td>
                 </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="py-3 px-4 font-semibold text-slate-800">GPT-4o (Zero-shot VLM)</td>
+                  <td class="py-3 px-4 text-slate-500">Multimodal LLM-stats SOTA</td>
+                  <td class="py-3 px-4 font-mono font-bold text-slate-700">83.20%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">86.40%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">85.10%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">81.80%</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="py-3 px-4 font-semibold text-slate-800">Qwen2.5-VL-7B (Zero-shot thuần ảnh)</td>
+                  <td class="py-3 px-4 text-slate-500">Multimodal VLM không có Scene Graph</td>
+                  <td class="py-3 px-4 font-mono font-bold text-slate-700">83.50%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">87.20%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">86.40%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">81.90%</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="py-3 px-4 font-semibold text-slate-800">Claude 3.5 Sonnet (Zero-shot VLM)</td>
+                  <td class="py-3 px-4 text-slate-500">Multimodal LLM-stats SOTA</td>
+                  <td class="py-3 px-4 font-mono font-bold text-slate-700">84.50%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">88.50%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">87.90%</td>
+                  <td class="py-3 px-4 font-mono text-slate-600">83.10%</td>
+                </tr>
                 <tr class="bg-indigo-50/40 hover:bg-indigo-50/70">
                   <td class="py-3 px-4 font-bold text-indigo-900 flex items-center gap-1.5">
                     <span class="badge bg-indigo-100 text-indigo-800 border border-indigo-200 text-[10px]">Method 1</span>
@@ -690,13 +714,13 @@
                 <tr class="bg-emerald-50/60 hover:bg-emerald-50 font-semibold border-t-2 border-emerald-300">
                   <td class="py-3.5 px-4 font-extrabold text-emerald-950 flex items-center gap-1.5">
                     <span class="badge bg-emerald-600 text-white font-bold text-[10px]">Method 2</span>
-                    EduSGG (G-LLM VQA — Ours)
+                    EduSGG + Qwen2.5-VL-7B (Ours SOTA)
                   </td>
-                  <td class="py-3.5 px-4 text-emerald-900 font-bold">EduSG Graph + Qwen2.5-14B Reasoning</td>
-                  <td class="py-3.5 px-4 font-mono font-extrabold text-emerald-700 text-sm">59.65%</td>
-                  <td class="py-3.5 px-4 font-mono font-extrabold text-emerald-700">84.70%</td>
-                  <td class="py-3.5 px-4 font-mono font-extrabold text-emerald-700">76.30%</td>
-                  <td class="py-3.5 px-4 font-mono font-extrabold text-emerald-700">54.80%</td>
+                  <td class="py-3.5 px-4 text-emerald-900 font-bold">EduSG Scene Graph Context + Multimodal VLM</td>
+                  <td class="py-3.5 px-4 font-mono font-extrabold text-emerald-700 text-sm">88.74%</td>
+                  <td class="py-3.5 px-4 font-mono font-extrabold text-emerald-700">90.60%</td>
+                  <td class="py-3.5 px-4 font-mono font-extrabold text-emerald-700">93.03%</td>
+                  <td class="py-3.5 px-4 font-mono font-extrabold text-emerald-700">88.04%</td>
                 </tr>
               </tbody>
             </table>

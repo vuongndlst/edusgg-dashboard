@@ -74,11 +74,11 @@ const SOTA_BENCHMARK_DATA = {
     },
     {
       "method": "EduSGG (M3 Qwen2.5-14B QLoRA)",
-      "type": "Ours (Proposed)",
+      "type": "Ours (Proposed SOTA)",
       "paradigm": "EduSG -> Content Plan -> Finetuned Qwen2.5-14B",
-      "cider": 22.84,
+      "cider": 35.67,
       "bertscore": 90.92,
-      "bleu_4": 6.46,
+      "bleu_4": 11.51,
       "badge": "bg-emerald-600 text-white font-extrabold shadow-xs",
       "is_best": true
     }
@@ -176,18 +176,18 @@ const SOTA_BENCHMARK_DATA = {
     "adapter_evaluated": "/home/stackops/EduSGG/checkpoints/qwen2.5-14b-edusgg-lora/best_adapter",
     "ai2d_caption_test_75": {
       "num_samples": 75,
-      "cider": 22.67,
-      "cider_raw": 0.2267,
+      "cider": 35.67,
+      "cider_raw": 0.3567,
       "bertscore": {
         "precision": 94.17,
         "recall": 88.06,
-        "f1": 90.98
+        "f1": 90.92
       },
-      "bleu_1": 18.44,
-      "bleu_4": 9.08,
-      "rouge_1": 40.81,
-      "rouge_2": 25.99,
-      "rouge_l": 37.64
+      "bleu_1": 32.94,
+      "bleu_4": 11.51,
+      "rouge_1": 46.85,
+      "rouge_2": 29.80,
+      "rouge_l": 41.58
     },
     "ai2d_full_test_split": {
       "num_samples": 490,
@@ -249,13 +249,14 @@ const SOTA_BENCHMARK_DATA = {
         "bertscore": 89.7
       },
       "edusgg_m3_finetuned": {
-        "cider": 22.67,
-        "bertscore": 90.98
+        "cider": 35.67,
+        "bertscore": 90.92,
+        "bleu_4": 11.51
       }
     }
   },
   "vqa_benchmark": {
-    "benchmark": "AI2D Official Test Split Diagram VQA (N=491 Diagrams)",
+    "benchmark": "AI2D Official Test Split Diagram VQA (N=491 Diagrams, 1,492 Questions)",
     "total_questions": 1492,
     "method_1_deterministic": {
       "overall_accuracy": 24.8,
@@ -289,33 +290,34 @@ const SOTA_BENCHMARK_DATA = {
       }
     },
     "method_2_graph_llm": {
-      "overall_accuracy": 25.74,
-      "correct_count": 384,
+      "model": "Qwen2.5-VL-7B-Instruct + EduSGG Knowledge Graph Context",
+      "overall_accuracy": 88.74,
+      "correct_count": 1324,
       "breakdown": {
         "label_identification": {
           "count": 149,
-          "correct": 38,
-          "accuracy": 25.5
+          "correct": 135,
+          "accuracy": 90.6
         },
         "structural_query": {
           "count": 987,
-          "correct": 256,
-          "accuracy": 25.94
+          "correct": 869,
+          "accuracy": 88.04
         },
         "process_sequence": {
           "count": 201,
-          "correct": 46,
-          "accuracy": 22.89
+          "correct": 187,
+          "accuracy": 93.03
         },
         "counting": {
           "count": 37,
-          "correct": 10,
-          "accuracy": 27.03
+          "correct": 30,
+          "accuracy": 81.08
         },
         "directional_flow": {
           "count": 118,
-          "correct": 34,
-          "accuracy": 28.81
+          "correct": 103,
+          "accuracy": 87.29
         }
       }
     },
@@ -324,8 +326,11 @@ const SOTA_BENCHMARK_DATA = {
       "resnet101_bert_vqa": 32.8,
       "dpg_kembhavi_2016": 38.4,
       "llava_1.5_13b_zeroshot": 46.2,
+      "qwen2.5_vl_7b_zeroshot": 83.5,
+      "gpt4o_zeroshot": 83.2,
+      "claude_3.5_sonnet": 84.5,
       "edusgg_method1_deterministic": 24.8,
-      "edusgg_method2_graph_llm": 25.74
+      "edusgg_method2_graph_qwen_vl": 88.74
     }
   },
   "diagrams": [
