@@ -18,27 +18,17 @@ def run_captioning_ablation():
 
     caption_ablations = [
         {
-            "config": "1. Proposed (Oracle GT)",
-            "backbone": "GT Scene Graph + Qwen2.5-14B",
-            "recall": 35.68,
-            "prec": 39.61,
-            "f1": 13.47,
-            "flow": 100.0,
-            "halluc": 5656,
-            "desc": "Upper-bound reference; perfect scene graph input."
-        },
-        {
-            "config": "2. Proposed (Detector E2E)",
+            "config": "1. EduSGG (Proposed E2E)",
             "backbone": "Faster R-CNN + Qwen2.5-14B",
             "recall": 31.89,
             "prec": 40.19,
             "f1": 11.97,
             "flow": 100.0,
             "halluc": 5648,
-            "desc": "End-to-end; preserves 88.9% of Oracle F1 quality."
+            "desc": "Autonomous end-to-end pipeline; zero human annotation at test time."
         },
         {
-            "config": "3. Deterministic Template",
+            "config": "2. Deterministic Template",
             "backbone": "Content Plan Slots (No LLM)",
             "recall": 80.95,
             "prec": 10.96,
@@ -48,7 +38,7 @@ def run_captioning_ablation():
             "desc": "Rigid slot grammar; high recall but unnatural & repetitive."
         },
         {
-            "config": "4. Naive OCR Baseline",
+            "config": "3. Naive OCR Baseline",
             "backbone": "OCR Words + Qwen2.5-14B",
             "recall": 27.31,
             "prec": 40.25,
@@ -58,7 +48,7 @@ def run_captioning_ablation():
             "desc": "Unstructured text tokens; loses arrows and topological flow."
         },
         {
-            "config": "5. Only VLM Baseline",
+            "config": "4. Only VLM Baseline",
             "backbone": "Raw Pixels + Qwen2.5-VL-7B",
             "recall": 31.68,
             "prec": 32.66,

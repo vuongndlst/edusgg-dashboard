@@ -800,8 +800,10 @@ function renderComparativeCaptions(captions, evaluations = {}, labels = []) {
   const qwenGt = captions.qwen_proposed_gt || captions.qwen_proposed || {};
   const evGt = evaluations.qwen_proposed_gt || evaluations.qwen_proposed;
   renderMethodBadge("badge-qwen-gt", evGt);
-  document.getElementById("modal-qwen-gt-vi").innerHTML = highlightEntitiesInText(qwenGt.caption_vi, labels) || "<span class='italic text-slate-400'>Chưa có mô tả tiếng Việt.</span>";
-  document.getElementById("modal-qwen-gt-en").innerHTML = highlightEntitiesInText(qwenGt.caption_en, labels) || "<span class='italic text-slate-400'>No English caption available.</span>";
+  const elGtVi = document.getElementById("modal-qwen-gt-vi");
+  if (elGtVi) elGtVi.innerHTML = highlightEntitiesInText(qwenGt.caption_vi, labels) || "<span class='italic text-slate-400'>Chưa có mô tả tiếng Việt.</span>";
+  const elGtEn = document.getElementById("modal-qwen-gt-en");
+  if (elGtEn) elGtEn.innerHTML = highlightEntitiesInText(qwenGt.caption_en, labels) || "<span class='italic text-slate-400'>No English caption available.</span>";
 
   // 2. Proposed Qwen2.5-14B (Detector Predicted Plan)
   const qwenPred = captions.qwen_proposed_pred || {};

@@ -92,13 +92,12 @@ Evaluates factual recall, precision, and directional fidelity across 5 system co
 
 | Configuration | Input / Backbone | Fact F1 (%) | Flow Fidelity (%) | Hallucinations | Key Finding |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **1. Proposed (Oracle GT)** | GT Scene Graph + Qwen2.5-14B | **13.47%** | **100.0%** | 5,656 | Upper-bound reference with perfect graph input. |
-| **2. Proposed (Detector E2E)** | Faster R-CNN + Qwen2.5-14B | **11.97%** | **100.0%** | **5,648** | **Preserves 88.9% of Oracle F1 quality end-to-end.** |
-| **3. Deterministic Template** | Content Plan Slots (No LLM) | 9.26% | 100.0% | 11,857 | High recall (80.95%) but rigid and unnatural. |
-| **4. Naive OCR Baseline** | OCR Words + Qwen2.5-14B | 7.78% | 100.0% | 6,367 | Unstructured text tokens lose arrow connections. |
-| **5. Only VLM Baseline** | Raw Pixels + Qwen2.5-VL-7B | **5.99%** | 99.97% | 7,966 | **Severe hallucinations & inverted arrow flows.** |
+| **1. EduSGG (Proposed E2E)** | Faster R-CNN + Qwen2.5-14B | **11.97%** | **100.0%** | **5,648** | **Autonomous end-to-end system; 0 human annotations.** |
+| **2. Deterministic Template** | Content Plan Slots (No LLM) | 9.26% | 100.0% | 11,857 | High recall (80.95%) but rigid and unnatural. |
+| **3. Naive OCR Baseline** | OCR Words + Qwen2.5-14B | 7.78% | 100.0% | 6,367 | Unstructured text tokens lose arrow connections. |
+| **4. Only VLM Baseline** | Raw Pixels + Qwen2.5-VL-7B | **5.99%** | 99.97% | 7,966 | **Severe hallucinations & inverted arrow flows.** |
 
-> **Key Insight**: Proposed E2E (11.97% F1) achieves a **2.0x improvement (+100% relative)** over the standalone VLM baseline (5.99% F1), validating the necessity of explicit scene graph grounding.
+> **Key Insight**: EduSGG Proposed E2E (11.97% F1) achieves a **2.0x improvement (+100% relative)** over the standalone VLM baseline (5.99% F1), validating the necessity of explicit scene graph grounding.
 
 ### Ablation 2: Diagram VQA Component Contribution ($N = 1,492$ Questions)
 
