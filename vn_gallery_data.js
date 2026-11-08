@@ -161,6 +161,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ mô tả mô hình hạt của ba thể của chất (rắn, lỏng, khí) và các quá trình chuyển thể qua lại: Khi nhận nhiệt, chất rắn nóng chảy chuyển thành chất lỏng, và chất lỏng tiếp tục hoá hơi chuyển thành chất khí; ngược lại, khi giảm nhiệt, chất khí ngưng tụ chuyển thành chất lỏng, và chất lỏng đông đặc chuyển trở lại thành chất rắn.",
       "gt_caption_en": "The diagram illustrates the particle model of the three states of matter (solid, liquid, gas) and their reversible phase transitions: absorbing heat causes solid to melt into liquid, and liquid to vaporize into gas; conversely, cooling down causes gas to condense into liquid, and liquid to freeze back into solid.",
+      "generated_caption_vi": "Sơ đồ minh họa mô hình hạt và các quá trình chuyển thể của chất (mô hình hạt và sự chuyển thể của chất). Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: chất rắn, chất lỏng, chất khí, nóng chảy, hoá hơi, đông đặc, ngưng tụ cùng các cấu trúc liên quan (mô hình hạt). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: chất rắn nóng chảy chất lỏng; chất lỏng hoá hơi chất khí; chất khí ngưng tụ chất lỏng; chất lỏng đông đặc chất rắn.",
+      "generated_caption_en": "The diagram illustrates the phase changes of matter through a model of particles, showing transitions between solid, liquid, and gas states. It depicts the processes of melting (solid to liquid), vaporization (liquid to gas), condensation (gas to liquid), and freezing (liquid to solid).",
+      "metrics_vi": {
+        "bleu_1": 0.48,
+        "bleu_4": 0.061855670103092786,
+        "rouge_l": 0.44970414201183434,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.5
+      },
+      "metrics_en": {
+        "cider": 36.0,
+        "bertscore_f1": 91.17
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -350,6 +363,19 @@ const VN_GALLERY_DATA = {
       "directional_relations": [],
       "gt_caption_vi": "Hình ảnh so sánh cấu tạo giữa tế bào nhân sơ và tế bào nhân thực: Cả hai loại tế bào đều có màng tế bào bao bọc bên ngoài và tế bào chất chứa các thành phần tế bào bên trong; tuy nhiên, tế bào nhân sơ chỉ có vùng nhân chứa vật chất di truyền mà chưa có màng nhân ngăn cách, trong khi tế bào nhân thực sở hữu nhân hoàn chỉnh được bao bọc bởi màng nhân.",
       "gt_caption_en": "The diagram compares the structures of a prokaryotic cell and a eukaryotic cell: Both cell types share an outer cell membrane and cytoplasm; however, the prokaryotic cell only has a nucleoid region without a nuclear membrane, whereas the eukaryotic cell contains a true nucleus enclosed by a nuclear envelope.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của so sánh cấu tạo tế bào nhân sơ và tế bào nhân thực trong chương trình Khoa học tự nhiên 6. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: tế bào nhân sơ, tế bào nhân thực, vùng nhân, nhân, tế bào chất, màng tế bào. Các chi tiết cấu tạo được liên kết chặt chẽ theo trật tự không gian và phân cấp chức năng sinh học.",
+      "generated_caption_en": "The diagram compares the structure of prokaryotic cells and eukaryotic cells, highlighting key components such as the nucleus region, cell membrane, cytoplasm, and actual nucleus. The layout organizes these elements to illustrate their presence or absence in each type of cell.",
+      "metrics_vi": {
+        "bleu_1": 0.4367816091954023,
+        "bleu_4": 0.10714285714285714,
+        "rouge_l": 0.3333333333333333,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 36.04,
+        "bertscore_f1": 91.2
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -556,6 +582,19 @@ const VN_GALLERY_DATA = {
       "directional_relations": [],
       "gt_caption_vi": "Sơ đồ đối chiếu cấu tạo giải phẫu giữa tế bào động vật và tế bào thực vật: Hai loại tế bào đều chứa các thành phần chung gồm nhân, tế bào chất, ti thể và màng tế bào; điểm khác biệt then chốt là tế bào thực vật có thêm thành tế bào bao bọc bên ngoài tạo độ cứng cáp, lục lạp chứa diệp lục để thực hiện quang hợp, và không bào trung tâm kích thước lớn để dự trữ dinh dưỡng.",
       "gt_caption_en": "The diagram provides an anatomical comparison between animal and plant cells: Both share fundamental components including the nucleus, cytoplasm, mitochondria, and cell membrane; however, plant cells uniquely possess a rigid cell wall for structural protection, chloroplasts containing chlorophyll for photosynthesis, and a large central vacuole for storage.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của cấu tạo tế bào động vật và tế bào thực vật trong chương trình Khoa học tự nhiên 6. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: tế bào động vật, tế bào thực vật, nhân, tế bào chất, ti thể, màng tế bào, lục lạp cùng các cấu trúc liên quan (không bào, thành tế bào). Các chi tiết cấu tạo được liên kết chặt chẽ theo trật tự không gian và phân cấp chức năng sinh học.",
+      "generated_caption_en": "The diagram compares the structures of animal and plant cells, highlighting key components such as the nucleus, cytoplasm, mitochondria, cell membrane, chloroplasts, vacuoles, and cell wall. The layout organizes these elements to illustrate their presence and differences between the two types of cells.",
+      "metrics_vi": {
+        "bleu_1": 0.46938775510204084,
+        "bleu_4": 0.10526315789473684,
+        "rouge_l": 0.34972677595628415,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 98.0,
+        "bertscore_f1": 91.77
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -849,6 +888,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ tiến trình mô tả quy luật lớn lên và phân chia liên tiếp của tế bào: Ban đầu từ 1 tế bào mẹ thực hiện phân chia tạo thành 2 tế bào con; các tế bào con qua quá trình trao đổi chất sẽ lớn lên đạt kích thước trưởng thành, sau đó tiếp tục phân chia thành 4 tế bào con, giúp cơ thể sinh vật tăng trưởng về số lượng tế bào và khối lượng.",
       "gt_caption_en": "The flow diagram illustrates the sequential growth and division cycle of cells: An initial mother cell divides into 2 daughter cells; through metabolism these daughter cells grow to full maturity and subsequently divide into 4 cells, facilitating the overall physical growth and tissue development of the organism.",
+      "generated_caption_vi": "Sơ đồ trình bày tiến trình khoa học diễn tiến theo từng giai đoạn của sơ đồ quá trình lớn lên và sinh sản của tế bào. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: 1 tế bào, phân chia, 2 tế bào, tế bào lớn lên, 4 tế bào. Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: 1 tế bào phân chia thành 2 tế bào; 2 tế bào sinh trưởng tế bào lớn lên; tế bào lớn lên phân chia thành 4 tế bào.",
+      "generated_caption_en": "The diagram illustrates the growth and reproduction process of cells, showing a single cell dividing into two cells, these two cells then growing larger, and finally each of those larger cells dividing again to produce four cells in total. The process highlights the steps of cell division and growth sequentially.",
+      "metrics_vi": {
+        "bleu_1": 0.42424242424242425,
+        "bleu_4": 0.041666666666666664,
+        "rouge_l": 0.34831460674157305,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 48.73,
+        "bertscore_f1": 91.21
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -1012,6 +1064,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ cấu trúc phân cấp các cấp tổ chức trong cơ thể người từ mức độ vi mô đến vĩ mô theo chiều mũi tên: Các tế bào đơn lẻ (như tế bào cơ) tập hợp tạo thành mô; nhiều mô phối hợp tạo nên cơ quan (như dạ dày); các cơ quan cùng thực hiện chức năng liên kết thành hệ cơ quan (như hệ tiêu hoá); và các hệ cơ quan phối hợp nhịp nhàng tạo thành cơ thể người hoàn chỉnh.",
       "gt_caption_en": "The structural diagram illustrates the biological levels of organization in the human body from microscopic to macroscopic levels along directional arrows: Individual cells (such as muscle cells) form tissues; tissues assemble into organs (such as the stomach); related organs work together within organ systems (such as the digestive system); and organ systems integrate to constitute the complete human organism.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Sơ đồ các cấp tổ chức cấu tạo cơ thể người'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: tế bào, tế bào cơ, mô, cơ quan, dạ dày, hệ cơ quan, hệ tiêu hoá cùng các cấu trúc liên quan (cơ thể). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: tế bào tập hợp thành mô; mô cấu tạo nên cơ quan; cơ quan phối hợp thành hệ cơ quan; hệ cơ quan tổng hòa tạo nên cơ thể.",
+      "generated_caption_en": "The diagram illustrates the hierarchical organization of human body structures, showing how cells form tissues, such as muscle tissue, which then combine to create organs like the stomach. These organs work together to form organ systems, such as the digestive system, which ultimately make up the entire body.",
+      "metrics_vi": {
+        "bleu_1": 0.5436893203883495,
+        "bleu_4": 0.04,
+        "rouge_l": 0.3829787234042553,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.75
+      },
+      "metrics_en": {
+        "cider": 22.28,
+        "bertscore_f1": 91.18
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -1224,6 +1289,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ tuần hoàn mô tả quỹ đạo chuyển động của Mặt Trăng quanh Trái Đất và 8 pha hình dạng nhìn thấy được chiếu sáng bởi ánh sáng Mặt Trời: Khởi đầu từ vị trí 1 là Không Trăng (trăng non), tiến dần qua Trăng khuyết đầu tháng, Bán nguyệt (vị trí 3), đạt đỉnh điểm ở vị trí 5 là Trăng tròn (ngày rằm), sau đó khuyết dần qua Bán nguyệt cuối tháng (vị trí 7) rồi quay trở lại Không Trăng, hoàn thành một chu kì tuần trăng kéo dài khoảng một tháng.",
       "gt_caption_en": "The orbital cycle diagram illustrates the Moon revolving around Earth and the 8 visible lunar phases illuminated by sunlight: Beginning at position 1 as New Moon, it waxes through Crescent and First Quarter (position 3) to reach peak illumination at position 5 as Full Moon, before waning through Third Quarter (position 7) back to New Moon, completing an approximately one-month lunar cycle.",
+      "generated_caption_vi": "Sơ đồ biểu diễn chu trình sinh học khép kín và tiến trình phát triển của các hình dạng nhìn thấy của mặt trăng trong tuần trăng. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: Mặt Trăng, Trái Đất, ánh sáng mặt trời, quỹ đạo, Không Trăng, Trăng khuyết, bán nguyệt cùng các cấu trúc liên quan (Trăng tròn). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: Không Trăng chuyển tiếp quỹ đạo Trăng khuyết đầu tháng; Trăng khuyết đầu tháng chuyển tiếp quỹ đạo Bán nguyệt; Bán nguyệt đạt đỉnh sáng Trăng tròn; Trăng tròn khuyết dần kết thúc chu kì Không Trăng.",
+      "generated_caption_en": "The diagram illustrates the various shapes of the Moon throughout a lunar month, showing how the Moon's appearance changes due to its position relative to the Sun and Earth as it orbits. Starting with the new moon, where the illuminated side faces away from Earth, the cycle progresses through the waxing crescent, first quarter (half moon), full moon, and back to the waning crescent until reaching another new moon.",
+      "metrics_vi": {
+        "bleu_1": 0.452991452991453,
+        "bleu_4": 0.02631578947368421,
+        "rouge_l": 0.2910798122065728,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.5
+      },
+      "metrics_en": {
+        "cider": 28.22,
+        "bertscore_f1": 88.07
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -1429,6 +1507,19 @@ const VN_GALLERY_DATA = {
       "directional_relations": [],
       "gt_caption_vi": "Sơ đồ thiên văn thể hiện cấu trúc Hệ Mặt Trời với Mặt Trời ở vị trí trung tâm và 8 hành tinh cùng quay trên các quỹ đạo elip theo thứ tự khoảng cách từ trong ra ngoài: Thuỷ tinh, Kim tinh, Trái Đất, Hoả tinh, ngăn cách bởi vành đai tiểu hành tinh, tiếp đến là 4 hành tinh khí khổng lồ ngoài cùng gồm Mộc tinh, Thổ tinh, Thiên Vương tinh và Hải Vương tinh.",
       "gt_caption_en": "The astronomical diagram displays the structure of the Solar System with the central Sun and 8 planets revolving along elliptical orbits ordered outward by distance: Mercury, Venus, Earth, and Mars, separated by an asteroid belt, followed by the four outer gas giant planets: Jupiter, Saturn, Uranus, and Neptune.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Các hành tinh của Hệ Mặt Trời từ trong ra ngoài'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: Mặt Trời, Thuỷ tinh, Kim tinh, Trái Đất, Hoả tinh, vành đai tiểu hành tinh, Mộc tinh cùng các cấu trúc liên quan (Thổ tinh, Thiên Vương tinh, Hải Vương tinh). Các chi tiết cấu tạo được liên kết chặt chẽ theo trật tự không gian và phân cấp chức năng sinh học.",
+      "generated_caption_en": "The diagram illustrates the order of planets in our solar system from the innermost to the outermost regions, starting with the Sun at the center. Listed sequentially are Mercury, Venus, Earth, Mars, followed by the asteroid belt, then Jupiter, Saturn, Uranus, and Neptune.",
+      "metrics_vi": {
+        "bleu_1": 0.5333333333333333,
+        "bleu_4": 0.11494252873563218,
+        "rouge_l": 0.38095238095238093,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 157.32,
+        "bertscore_f1": 90.93
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -1733,6 +1824,19 @@ const VN_GALLERY_DATA = {
       "directional_relations": [],
       "gt_caption_vi": "Hình ảnh thiên văn minh họa hình dạng xoắn ốc khổng lồ của dải Ngân Hà (Milky Way) và chỉ rõ vị trí của Hệ Mặt Trời: Hệ Mặt Trời của chúng ta nằm ở rìa ngoài của một nhánh xoắn ốc, cách tâm Ngân Hà khoảng 26 000 năm ánh sáng và đang quay quanh tâm Ngân Hà với tốc độ khoảng 220 000 m/s.",
       "gt_caption_en": "The astronomical illustration depicts the massive spiral structure of the Milky Way galaxy and pinpoints the location of our Solar System: Our Solar System resides on the edge of an outer spiral arm, approximately 26,000 light-years away from the galactic center, orbiting the galactic core at roughly 220,000 m/s.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Cấu trúc dải Ngân Hà và vị trí Hệ Mặt Trời'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: Ngân Hà, vòng xoắn, tâm Ngân Hà, Hệ Mặt Trời, 26 000 năm ánh sáng, Mặt Trời, các hành tinh cùng các cấu trúc liên quan (). Các chi tiết cấu tạo được liên kết chặt chẽ theo trật tự không gian và phân cấp chức năng sinh học.",
+      "generated_caption_en": "The diagram illustrates the structure of the Milky Way galaxy, showing its spiral arms and central bulge. It also indicates the position of our solar system, located approximately 26,000 light-years from the galactic center, along with the Sun and the planets orbiting it.",
+      "metrics_vi": {
+        "bleu_1": 0.3058823529411765,
+        "bleu_4": 0.024390243902439025,
+        "rouge_l": 0.27631578947368424,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 128.12,
+        "bertscore_f1": 92.24
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -1965,6 +2069,19 @@ const VN_GALLERY_DATA = {
       "directional_relations": [],
       "gt_caption_vi": "Sơ đồ giải phẫu chi tiết cấu tạo tế bào vi khuẩn (sinh vật nhân sơ): Bên ngoài tế bào gồm có lông bám, màng ngoài, thành tế bào peptidoglycan, màng tế bào và roi dài dùng để di chuyển; bên trong tế bào chất chứa vùng nhân mang phân tử DNA mạch vòng chưa có màng bọc, các bào quan hạt ribosome tổng hợp protein và các vòng DNA nhỏ plasmid.",
       "gt_caption_en": "The detailed anatomical diagram of a typical prokaryotic bacterium illustrates its structural components: The external layers include pilus/fimbriae, outer membrane, peptidoglycan cell wall, plasma membrane, and a locomotion flagellum; the internal cytoplasm accommodates the nucleoid containing circular chromosomal DNA without a nuclear membrane, ribosomes for protein synthesis, and circular plasmids.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của cấu tạo tế bào nhân sơ điển hình (vi khuẩn) trong chương trình Sinh học 10. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: lông, màng ngoài, thành tế bào, màng tế bào, tế bào chất, vùng nhân, ribosome cùng các cấu trúc liên quan (plasmid, roi). Các chi tiết cấu tạo được liên kết chặt chẽ theo trật tự không gian và phân cấp chức năng sinh học.",
+      "generated_caption_en": "This diagram illustrates the structure of a typical prokaryotic cell, specifically a bacterium, showing key components such as flagella, outer membrane, cell wall, plasma membrane, cytoplasm, nucleoid region containing DNA, ribosomes, and plasmids. The various parts are arranged within the schematic to depict their relative positions and functions within the cell.",
+      "metrics_vi": {
+        "bleu_1": 0.4318181818181818,
+        "bleu_4": 0.047058823529411764,
+        "rouge_l": 0.37499999999999994,
+        "entity_recall": 0.9,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 142.14,
+        "bertscore_f1": 90.19
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -2272,6 +2389,19 @@ const VN_GALLERY_DATA = {
       "directional_relations": [],
       "gt_caption_vi": "Biểu đồ thước đo thể hiện dải kích thước các đối tượng sinh học tăng dần từ 0.1 nanômét đến 1 milimét: Các phân tử siêu vi mô gồm nguyên tử, amino acid, protein và virus (quan sát được dưới kính hiển vi điện tử); tiếp theo là lục lạp, tế bào vi khuẩn, tế bào động vật và thực vật (nằm trong giới hạn phân giải của kính hiển vi quang học); và lớn nhất là các tế bào trứng có thể đạt tới kích thước 1 milimét.",
       "gt_caption_en": "The dimensional logarithmic scale illustrates biological objects spanning from 0.1 nanometers to 1 millimeter: Submicroscopic structures including atoms, amino acids, proteins, and viruses require an electron microscope; cellular entities such as chloroplasts, bacteria, plant and animal cells can be resolved by optical light microscopes; while the largest human/frog egg cells approach 1 millimeter.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Kích thước các cấp độ từ nguyên tử đến tế bào'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: nguyên tử, amino acid, protein, virus, lục lạp, vi khuẩn, tế bào động vật và thực vật cùng các cấu trúc liên quan (tế bào trứng, kính hiển vi điện tử, kính hiển vi quang học). Các chi tiết cấu tạo được liên kết chặt chẽ theo trật tự không gian và phân cấp chức năng sinh học.",
+      "generated_caption_en": "The diagram illustrates the scale hierarchy of various biological structures from atoms to cells, showing the relative sizes of atoms, amino acids, proteins, viruses, chloroplasts, bacteria, animal and plant cells, and egg cells. These components are arranged in order of increasing size, transitioning from microscopic atomic scales observable with electron microscopes to larger cellular structures viewable under optical microscopes.",
+      "metrics_vi": {
+        "bleu_1": 0.5263157894736842,
+        "bleu_4": 0.14130434782608695,
+        "rouge_l": 0.33513513513513515,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 67.82,
+        "bertscore_f1": 88.63
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -2583,6 +2713,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ cơ chế vận chuyển thụ động các chất qua màng sinh chất từ dịch ngoại bào vào tế bào chất theo chiều gradient nồng độ: Hình thức (a) là khuếch tán đơn giản trực tiếp xuyên qua lớp kép phospholipid dành cho các phân tử nhỏ không phân cực; hình thức (b) là khuếch tán tăng cường qua protein kênh; và hình thức (c) là khuếch tán tăng cường qua protein mang biến đổi cấu hình.",
       "gt_caption_en": "The diagram illustrates passive transport mechanisms across the cell plasma membrane from extracellular fluid into cytoplasm following concentration gradients: Mode (a) represents simple diffusion passing directly across the phospholipid bilayer for small nonpolar molecules; mode (b) shows facilitated diffusion through channel proteins; and mode (c) depicts facilitated diffusion mediated by conformational carrier proteins.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Khuếch tán qua lớp kép phospholipid và protein màng'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: khuếch tán đơn giản, khuếch tán tăng cường, lớp kép phospholipid, protein kênh, protein mang, dịch ngoại bào, tế bào chất cùng các cấu trúc liên quan (gradient nồng độ). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: dịch ngoại bào khuếch tán xuôi chiều gradient tế bào chất.",
+      "generated_caption_en": "The diagram illustrates simple diffusion and facilitated diffusion through a double-layered phospholipid membrane containing channel and carrier proteins. It shows the movement of substances from the extracellular fluid into the cytoplasm along a concentration gradient.",
+      "metrics_vi": {
+        "bleu_1": 0.4157303370786517,
+        "bleu_4": 0.03488372093023256,
+        "rouge_l": 0.2155688622754491,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 2.3,
+        "bertscore_f1": 90.22
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -2735,6 +2878,19 @@ const VN_GALLERY_DATA = {
       "directional_relations": [],
       "gt_caption_vi": "Sơ đồ đối chứng sự biến đổi hình thái của tế bào động vật và tế bào thực vật khi đặt trong ba loại dung dịch: Trong môi trường ưu trương, nước thẩm thấu ra ngoài làm tế bào động vật bị teo lại và tế bào thực vật bị co nguyên sinh; trong môi trường đẳng trương, lượng nước ra vào cân bằng nên tế bào giữ nguyên hình dạng; còn trong môi trường nhược trương, nước thẩm thấu ồ ạt vào trong khiến tế bào động vật căng phồng và vỡ ra, trong khi tế bào thực vật trương căng nhưng không vỡ nhờ có thành tế bào vững chắc.",
       "gt_caption_en": "The comparative diagram demonstrates the morphological changes of animal and plant cells across three osmotic environments: In a hypertonic solution, water exits causing animal cells to shrivel and plant cells to undergo plasmolysis; in an isotonic solution, water exchange is balanced maintaining normal cell shape; in a hypotonic solution, water rushes inward causing animal cells to swell and lyse, whereas plant cells remain intact and turgid due to the rigid cell wall.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của sự thay đổi hình dạng tế bào trong các môi trường thẩm thấu trong chương trình Sinh học 10. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: môi trường ưu trương, môi trường đẳng trương, môi trường nhược trương, tế bào động vật, tế bào thực vật, nước H2O, co nguyên sinh cùng các cấu trúc liên quan (teo bào). Các chi tiết cấu tạo được liên kết chặt chẽ theo trật tự không gian và phân cấp chức năng sinh học.",
+      "generated_caption_en": "The diagram illustrates how cell shapes change in different osmotic environments, specifically showing animal cells and plant cells in hypertonic, isotonic, and hypotonic solutions. It highlights key concepts such as plasmolysis in animal cells and cytorrhysis (cell shrinking) in plant cells due to water movement across the cell membrane.",
+      "metrics_vi": {
+        "bleu_1": 0.42574257425742573,
+        "bleu_4": 0.05102040816326531,
+        "rouge_l": 0.28169014084507044,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 0.09,
+        "bertscore_f1": 89.43
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -3015,6 +3171,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ chuyển hoá năng lượng tóm tắt ba giai đoạn của quá trình phân giải hiếu khí glucose: Giai đoạn 1 là đường phân diễn ra trong tế bào chất biến đổi glucose thành 2 phân tử pyruvate, tạo 2 ATP và 2 NADH; giai đoạn 2 là chu trình Krebs diễn ra trong chất nền ti thể phân giải acetyl-CoA tạo 2 ATP, 4 CO2, 6 NADH và 2 FADH2; giai đoạn 3 là chuỗi truyền electron ở màng trong ti thể tận dụng các coenzyme mang điện tử để tổng hợp lượng lớn 26 đến 28 ATP.",
       "gt_caption_en": "The metabolic pathway diagram summarizes the three stages of aerobic cellular respiration of glucose: Glycolysis in the cytoplasm breaks glucose down into 2 pyruvate molecules yielding 2 ATP and 2 NADH; the Krebs cycle in the mitochondrial matrix oxidizes acetyl-CoA producing 2 ATP, 4 CO2, 6 NADH, and 2 FADH2; and the electron transport chain on the inner mitochondrial membrane utilizes electron carriers to generate 26 to 28 ATP.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Sơ đồ quá trình phân giải hiếu khí glucose trong tế bào nhân thực'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: glucose, đường phân, pyruvate, tế bào chất, ti thể, acetyl-CoA, chu trình Krebs cùng các cấu trúc liên quan (chuỗi truyền electron). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: glucose đường phân tạo 2 ATP và 2 NADH 2 Pyruvate; 2 Pyruvate khử carboxyl tạo 2 CO2 và 2 NADH 2 Acetyl-CoA; 2 Acetyl-CoA oxi hoá tạo 2 ATP, 4 CO2, 6 NADH, 2 FADH2 chu trình Krebs; chu trình Krebs vận chuyển electron tạo 26-28 ATP chuỗi truyền electron.",
+      "generated_caption_en": "The diagram illustrates the aerobic glucose breakdown process within a eukaryotic cell, showing the transformation of glucose into pyruvate in the cytoplasm, which yields 2 ATP and 2 NADH per molecule of glucose. Further, it depicts the conversion of two molecules of pyruvate into acetyl-CoA in the mitochondria, releasing two carbon dioxide molecules and generating another pair of NADH, followed by the oxidation of acetyl-CoA through the citric acid cycle to produce additional ATP, NADH, FADH2, and carbon dioxide, ultimately leading these reduced coenzymes to the electron transport chain where they generate between 26 to 28 ATP.",
+      "metrics_vi": {
+        "bleu_1": 0.4076923076923077,
+        "bleu_4": 0.08661417322834646,
+        "rouge_l": 0.329004329004329,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.75
+      },
+      "metrics_en": {
+        "cider": 0.0,
+        "bertscore_f1": 90.14
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -3295,6 +3464,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ biểu diễn mối liên hệ tuần hoàn chặt chẽ giữa hai pha của quang hợp trong lục lạp: Tại thylakoid, pha sáng hấp thụ năng lượng ánh sáng và phân li nước H2O để giải phóng O2, đồng thời tích luỹ năng lượng tạo ATP và NADPH; các sản phẩm này được chuyển sang chất nền lục lạp để cung cấp cho pha tối (chu trình Calvin) khử CO2 thành đường, sau đó giải phóng ADP và NADP+ quay trở lại tái tạo cho pha sáng.",
       "gt_caption_en": "The cycle diagram illustrates the interdependent coupling between the two phases of photosynthesis inside the chloroplast: In the thylakoid membranes, light-dependent reactions capture light and split H2O to release O2 while producing ATP and NADPH; these energy carriers are transferred to the stroma to power the Calvin cycle (dark reactions) in reducing CO2 into sugars, returning ADP and NADP+ back to recharge in the light reactions.",
+      "generated_caption_vi": "Sơ đồ biểu diễn chu trình sinh học khép kín và tiến trình phát triển của mối quan hệ giữa pha sáng và pha tối của quang hợp. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: pha sáng, pha tối, chu trình Calvin, thylakoid, chất nền lục lạp, ánh sáng, đường cùng các cấu trúc liên quan (NADP+). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: pha sáng cung cấp ATP và NADPH pha tối; pha tối tái sinh ADP và NADP+ pha sáng.",
+      "generated_caption_en": "The diagram illustrates the relationship between the light-dependent reactions (pha sáng) and the Calvin cycle (pha tối) of photosynthesis. The light phase occurs in the thylakoids where water (H₂O) is split to produce oxygen (O₂), ATP, and NADPH, which are then used in the dark phase occurring in the chloroplast stroma to fix carbon dioxide (CO₂) into sugars through the Calvin cycle, while also regenerating ADP and NADP+ that are recycled back to the light phase.",
+      "metrics_vi": {
+        "bleu_1": 0.44329896907216493,
+        "bleu_4": 0.0425531914893617,
+        "rouge_l": 0.2810810810810811,
+        "entity_recall": 0.7857142857142857,
+        "dir_accuracy": 0.5
+      },
+      "metrics_en": {
+        "cider": 25.26,
+        "bertscore_f1": 88.68
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -3561,6 +3743,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ hai chu kì nhân lên của thể thực khuẩn (bacteriophage) trong tế bào vi khuẩn: Chu kì sinh tan gồm 5 bước tuần tự: 1. Hấp phụ bám lên bề mặt tế bào; 2. Xâm nhập tiêm DNA vào bên trong; 3. Tổng hợp sao chép DNA và vỏ protein của virus; 4. Lắp ráp các bộ phận tạo hạt virus hoàn chỉnh; 5. Giải phóng làm tan vỡ tế bào chủ; trong khi đó ở chu kì tiềm tan, DNA virus cài xen vào hệ gene vi khuẩn và nhân lên âm thầm cùng quá trình phân chia của tế bào chủ.",
       "gt_caption_en": "The dual-cycle diagram illustrates bacteriophage multiplication within a bacterial host: The lytic cycle comprises 5 sequential steps: 1. Attachment/adsorption onto the cell surface; 2. Penetration/injection of viral DNA; 3. Biosynthesis of viral DNA and capsid proteins; 4. Assembly into mature virions; 5. Lysis/release destroying the host cell; alternatively, in the lysogenic cycle, the viral genome integrates as a prophage into the bacterial chromosome, replicating silently alongside bacterial binary fission.",
+      "generated_caption_vi": "Sơ đồ biểu diễn chu trình sinh học khép kín và tiến trình phát triển của chu kì sinh tan và tiềm tan của thể thực khuẩn. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: thể thực khuẩn, chu kì sinh tan, chu kì tiềm tan, hấp phụ, xâm nhập, tổng hợp, lắp ráp cùng các cấu trúc liên quan (giải phóng, DNA virus, tế bào vi khuẩn, phân chia tế bào). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: 1. Hấp phụ tiêm DNA 2. Xâm nhập; 2. Xâm nhập sinh tổng hợp protein & DNA 3. Tổng hợp; 3. Tổng hợp tạo virus hoàn chỉnh 4. Lắp ráp; 4. Lắp ráp phá vỡ tế bào giải phóng virus 5. Giải phóng; 2. Xâm nhập tích hợp DNA vào hệ gene chủ Chu kì tiềm tan.",
+      "generated_caption_en": "The diagram illustrates the lytic and lysogenic cycles of bacteriophages, showing key steps including adsorption, injection, synthesis, assembly, and release. It also depicts how during the injection phase, the phage can either enter the lytic cycle for viral replication and cell lysis, or integrate into the bacterial genome to initiate the lysogenic cycle where the viral DNA remains dormant within the host's genetic material.",
+      "metrics_vi": {
+        "bleu_1": 0.4563758389261745,
+        "bleu_4": 0.04794520547945205,
+        "rouge_l": 0.2992125984251969,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.8
+      },
+      "metrics_en": {
+        "cider": 61.69,
+        "bertscore_f1": 88.81
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -3887,6 +4082,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ vòng tròn chu kì tế bào ở sinh vật nhân thực gồm hai giai đoạn chính: Kì trung gian chiếm phần lớn thời gian bao gồm pha G1 (tăng trưởng kích thước và tổng hợp bào quan), pha S (nhân đôi DNA và tạo nhiễm sắc thể kép), pha G2 (chuẩn bị phân bào); tiếp theo là pha M (phân bào nguyên phân) diễn ra qua bốn kì: kì đầu, kì giữa, kì sau, kì cuối và kết thúc bằng phân chia tế bào chất để tạo hai tế bào con mới.",
       "gt_caption_en": "The eukaryotic cell cycle circular diagram shows two major stages: Interphase occupies the majority of the cycle, divided into G1 phase (cell growth and organelle synthesis), S phase (DNA replication yielding sister chromatids), and G2 phase (mitotic preparation); followed by the M phase (mitosis) progressing through prophase, metaphase, anaphase, telophase, and concluding with cytokinesis to produce two daughter cells.",
+      "generated_caption_vi": "Sơ đồ biểu diễn chu trình sinh học khép kín và tiến trình phát triển của các giai đoạn trong chu kì tế bào. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: chu kì tế bào, kì trung gian, pha G1, pha S, pha G2, phân bào, pha M cùng các cấu trúc liên quan (kì đầu, kì giữa, kì sau, kì cuối, phân chia tế bào chất). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: pha G1 chuẩn bị nhân đôi DNA pha S; pha S nhân đôi NST tạo NST kép pha G2; pha G2 chuẩn bị bước vào phân bào pha M; pha M tạo 2 tế bào con khép kín chu kì pha G1.",
+      "generated_caption_en": "The diagram illustrates the stages of the cell cycle, including interphase with its sub-phases G1, S, and G2, where DNA replication occurs during the S phase, followed by mitosis (M phase) for nuclear division and cytokinesis for cytoplasmic division, ultimately leading back to G1 in daughter cells, completing the cycle.",
+      "metrics_vi": {
+        "bleu_1": 0.44274809160305345,
+        "bleu_4": 0.078125,
+        "rouge_l": 0.3288888888888889,
+        "entity_recall": 0.9230769230769231,
+        "dir_accuracy": 0.75
+      },
+      "metrics_en": {
+        "cider": 14.76,
+        "bertscore_f1": 87.71
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -4156,6 +4364,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ tiến trình mô tả bốn giai đoạn tuần tự của quá trình phân chia nhân trong nguyên phân: (a) Kì đầu: thoi phân bào bắt đầu hình thành, các nhiễm sắc thể co xoắn và màng nhân tiêu biến; (b) Kì giữa: các nhiễm sắc thể co xoắn cực đại và tập trung thành một hàng trên mặt phẳng xích đạo; (c) Kì sau: hai chromatid chị em tách nhau ở tâm động và phân li đồng đều về hai cực của tế bào; (d) Kì cuối: nhiễm sắc thể dãn xoắn, màng nhân và hạch nhân tái xuất hiện tạo thành hai nhân con mới.",
       "gt_caption_en": "The sequential process diagram illustrates the four successive phases of nuclear division in mitosis: (a) Prophase: spindle fibers assemble, chromosomes condense, and the nuclear envelope disintegrates; (b) Metaphase: maximum chromosome condensation as chromosomes align singly along the equatorial metaphase plate; (c) Anaphase: sister chromatids separate at the centromere and migrate toward opposite cell poles; (d) Telophase: chromosomes decondense, and nuclear envelopes reform around two distinct daughter nuclei.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Diễn biến các kì của quá trình nguyên phân'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: kì đầu, kì giữa, kì sau, kì cuối, thoi phân bào, nhiễm sắc thể, mặt phẳng xích đạo cùng các cấu trúc liên quan (chromatid, màng nhân, hai nhân mới). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: kì đầu NST xếp hàng tại mặt phẳng xích đạo kì giữa; kì giữa tách chromatid phân li về hai cực kì sau; kì sau tái tạo màng nhân và hạch nhân kì cuối.",
+      "generated_caption_en": "The diagram illustrates the phases of mitosis, labeling key stages including prophase, metaphase, anaphase, telophase, and cytokinesis. It shows the alignment of chromosomes at the equatorial plane during metaphase, their separation and movement to opposite poles during anaphase, and the reformation of nuclear membranes in telophase.",
+      "metrics_vi": {
+        "bleu_1": 0.5178571428571429,
+        "bleu_4": 0.027522935779816515,
+        "rouge_l": 0.32727272727272727,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 0.12,
+        "bertscore_f1": 86.65
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -4378,6 +4599,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ so sánh hai kiểu tuần hoàn kín ở động vật có xương sống: (a) Hệ tuần hoàn đơn ở cá xương chỉ có một vòng tuần hoàn duy nhất, máu từ tâm thất được bơm lên mao mạch mang để trao đổi khí rồi theo động mạch lưng đi nuôi cơ quan và trở về tâm nhĩ với áp lực trung bình; (b) Hệ tuần hoàn kép ở thú gồm hai vòng tuần hoàn riêng biệt: vòng tuần hoàn phổi bơm máu lên phổi nhận O2 và thải CO2, và vòng tuần hoàn hệ thống bơm máu từ tim đi khắp cơ thể dưới áp lực rất cao để đáp ứng nhu cầu năng lượng lớn.",
       "gt_caption_en": "The comparative diagram illustrates two closed circulatory systems in vertebrates: (a) The single circulation in bony fish features a single circuit where blood from the ventricle is pumped to gill capillaries for gas exchange and flows under moderate pressure through the dorsal aorta to bodily organs; (b) The double circulation in mammals comprises two discrete circuits: the pulmonary circuit pumping deoxygenated blood to the lungs, and the systemic circuit delivering oxygenated blood to the entire body under high pressure to support intensive metabolism.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của hệ tuần hoàn đơn ở cá xương và hệ tuần hoàn kép ở thú trong chương trình Sinh học 11. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: hệ tuần hoàn đơn, hệ tuần hoàn kép, cá xương, thú, tim, tâm thất, tâm nhĩ cùng các cấu trúc liên quan (mao mạch mang, mao mạch phổi, vòng tuần hoàn phổi, vòng tuần hoàn hệ thống, áp lực máu). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: tâm thất bơm máu đến mang trao đổi khí mao mạch mang; tâm thất phải vòng tuần hoàn nhỏ mao mạch phổi; tâm thất trái bơm máu giàu oxi đi nuôi cơ thể vòng tuần hoàn hệ thống.",
+      "generated_caption_en": "The diagram compares the single circulatory system of bony fish with the double circulatory system of mammals. In bony fish, blood is pumped from the ventricle to the gill capillaries for gas exchange, while in mammals, blood moves from the right ventricle to pulmonary capillaries via the smaller pulmonary circuit and from the left ventricle to systemic circulation, supplying oxygenated blood to the body tissues.",
+      "metrics_vi": {
+        "bleu_1": 0.45652173913043476,
+        "bleu_4": 0.07407407407407407,
+        "rouge_l": 0.28125,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.3333333333333333
+      },
+      "metrics_en": {
+        "cider": 1.55,
+        "bertscore_f1": 90.95
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -4662,6 +4896,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ giải phẫu cắt dọc tim người và thú thể hiện cấu trúc bốn ngăn hoàn chỉnh và hướng luân chuyển của dòng máu: Máu nghèo oxy từ tĩnh mạch chủ đổ vào tâm nhĩ phải, đi qua van 3 lá xuống tâm thất phải rồi được tống lên động mạch phổi; ngược lại, máu giàu oxy từ phổi theo tĩnh mạch phổi về tâm nhĩ trái, qua van 2 lá xuống tâm thất trái có thành cơ dày nhất để bơm vào động mạch chủ đi khắp cơ thể, các hệ thống van tim đảm bảo máu luôn lưu thông một chiều.",
       "gt_caption_en": "The cross-sectional anatomical diagram of the mammalian heart shows its four distinct chambers and directional blood flow: Deoxygenated blood from the vena cava enters the right atrium, passes through the tricuspid valve into the right ventricle, and is pumped into the pulmonary artery; meanwhile, oxygenated blood from the pulmonary veins enters the left atrium, passes through the bicuspid (mitral) valve into the thick-walled left ventricle, and is forcefully ejected into the aorta, with heart valves ensuring unidirectional flow.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của cấu tạo 4 ngăn tim và các mạch máu ở người và thú trong chương trình Sinh học 11. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: tâm nhĩ phải, tâm thất phải, tâm nhĩ trái, tâm thất trái, động mạch chủ, động mạch phổi, tĩnh mạch phổi cùng các cấu trúc liên quan (tĩnh mạch chủ, van 3 lá, van 2 lá, van động mạch). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: tĩnh mạch chủ đưa máu giàu CO2 về tim tâm nhĩ phải; tâm nhĩ phải qua van 3 lá tâm thất phải; tâm thất phải bơm máu lên phổi động mạch phổi; tĩnh mạch phổi đưa máu giàu O2 về tim tâm nhĩ trái; tâm nhĩ trái qua van 2 lá tâm thất trái; tâm thất trái bơm máu đi nuôi cơ thể động mạch chủ.",
+      "generated_caption_en": "The diagram illustrates the four-chambered heart structure and associated blood vessels in humans and animals, showing key components such as the right atrium, right ventricle, left atrium, and left ventricle, along with major arteries and veins including the pulmonary artery, pulmonary vein, vena cava, and aorta. It also depicts the flow of blood through these structures, starting from deoxygenated blood entering the right atrium via the vena cava, passing to the right ventricle, then to the lungs for oxygenation via the pulmonary artery, returning to the left atrium via the pulmonary vein, moving to the left ventricle, and finally being pumped out to the body via the aorta.",
+      "metrics_vi": {
+        "bleu_1": 0.3719512195121951,
+        "bleu_4": 0.031055900621118012,
+        "rouge_l": 0.3283582089552239,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.6666666666666666
+      },
+      "metrics_en": {
+        "cider": 0.0,
+        "bertscore_f1": 88.29
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -4926,6 +5173,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ cấu tạo vi mô của một synapse hoá học điển hình: Phần tận cùng của sợi trục phình to thành chuỳ synapse chứa các túi nhỏ đựng chất dẫn truyền thần kinh (như acetylcholine) và ti thể; ngăn cách giữa chuỳ synapse và tế bào tiếp nhận là khe synapse chứa dịch lỏng; trên bề mặt màng sau synapse phân bố các phân tử protein thụ thể đặc hiệu để tiếp nhận chất dẫn truyền hoá học, biến đổi thành tín hiệu điện ở tế bào sau synapse.",
       "gt_caption_en": "The microscopic structural diagram depicts a typical chemical synapse: The axon terminal expands into a synaptic bulb containing synaptic vesicles loaded with neurotransmitters (such as acetylcholine) alongside mitochondria; separated by a fluid-filled synaptic cleft, the postsynaptic membrane displays specialized receptor proteins that bind released neurotransmitters to propagate electrical impulses.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Sơ đồ cấu tạo của synapse hoá học'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: synapse hoá học, chuỳ synapse, túi chứa chất trung gian, acetylcholine, màng trước synapse, khe synapse, màng sau synapse cùng các cấu trúc liên quan (thụ thể tiếp nhận). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: chuỳ synapse giải phóng chất trung gian qua màng trước khe synapse; khe synapse gắn vào thụ thể đặc hiệu màng sau synapse.",
+      "generated_caption_en": "The diagram illustrates the structure of a chemical synapse, showing key components such as the synaptic knob releasing vesicles containing neurotransmitters like acetylcholine across the synaptic cleft towards the postsynaptic membrane where specific receptors bind these molecules. The process demonstrates how neurotransmitter-containing vesicles at the presynaptic membrane release their contents into the synaptic gap, which then interact with receptors on the postsynaptic side.",
+      "metrics_vi": {
+        "bleu_1": 0.41414141414141414,
+        "bleu_4": 0.020833333333333332,
+        "rouge_l": 0.30687830687830686,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 5.95,
+        "bertscore_f1": 89.47
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -5106,6 +5366,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ các mức độ phóng đại cấu trúc niêm mạc ruột non giúp tối ưu hoá bề mặt hấp thụ dinh dưỡng: Thành ruột non có các nếp gấp ruột cuộn lại; trên các nếp gấp mọc dày đặc hàng triệu lông ruột chứa mạng lưới mao mạch máu và mao mạch bạch huyết; trên bề mặt mỗi tế bào niêm mạc ruột lại có vô số vi nhung mao siêu nhỏ, làm gia tăng diện tích tiếp xúc hấp thụ của ruột non lên tới hàng trăm mét vuông.",
       "gt_caption_en": "The hierarchical magnification diagram illustrates the structural adaptation of the small intestine for nutrient absorption: The intestinal wall features folded circular plicae; densely covering these folds are millions of villi supplied with blood capillaries and central lacteals; each intestinal epithelial cell further develops microscopic microvilli on its apical surface, expanding the total absorptive surface area to hundreds of square meters.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Cấu tạo nếp gấp ruột non, lông ruột và tế bào niêm mạc'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: ruột non, nếp gấp ruột, lông ruột, mạch máu, mao mạch bạch huyết, tế bào niêm mạc ruột, vi nhung mao cùng các cấu trúc liên quan (). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: nếp gấp ruột phóng to cấu trúc vi mô lông ruột; lông ruột phóng to bề mặt biểu mô tế bào niêm mạc ruột; tế bào niêm mạc ruột cấu trúc hấp thụ cực nhỏ vi nhung mao.",
+      "generated_caption_en": "The diagram illustrates the microscopic structure of the small intestine, showing the folds of the intestinal wall, villi, and microvilli. It demonstrates how the folds increase the surface area for absorption, leading to the villi which contain blood vessels and lymphatic capillaries, and further magnifies to reveal the intestinal mucosa cells and the even finer microvilli that enhance nutrient uptake.",
+      "metrics_vi": {
+        "bleu_1": 0.38461538461538464,
+        "bleu_4": 0.02631578947368421,
+        "rouge_l": 0.27884615384615385,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 85.68,
+        "bertscore_f1": 89.57
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -5275,6 +5548,19 @@ const VN_GALLERY_DATA = {
       "directional_relations": [],
       "gt_caption_vi": "Sơ đồ mô hình cấu trúc phân tử DNA theo Watson và Crick: DNA gồm hai mạch polynucleotide xoắn đều quanh một trục tưởng tượng theo chiều từ trái sang phải tạo chuỗi xoắn kép có đường kính 2 nm và chu kì xoắn 3.4 nm (gồm 10 cặp nucleotide); khung xương bên ngoài cấu tạo từ các phân tử đường deoxyribose liên kết với nhóm phosphate; các base nitơ quay vào trong liên kết theo nguyên tắc bổ sung A liên kết với T bằng 2 liên kết hydro, G liên kết với C bằng 3 liên kết hydro, và hai mạch chạy song song ngược chiều nhau (5'-3' và 3'-5').",
       "gt_caption_en": "The molecular model diagram of DNA proposed by Watson and Crick depicts a right-handed double helix with a 2 nm diameter and a 3.4 nm helical pitch containing 10 base pairs per turn: The alternating sugar-phosphate backbone lines the exterior, while inward-projecting nitrogenous bases pair complementary via hydrogen bonds (A pairs with T through 2 bonds; G pairs with C through 3 bonds), with the two polynucleotide strands running antiparallel in 5'-to-3' and 3'-to-5' orientations.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Mô hình cấu trúc không gian phân tử DNA theo Watson và Crick'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: phân tử DNA, chuỗi xoắn kép, nhóm phosphate, đường deoxyribose, adenine, thymine, guanine cùng các cấu trúc liên quan (cytosine, nguyên tắc bổ sung, 5' đến 3', 3' đến 5'). Các chi tiết cấu tạo được liên kết chặt chẽ theo trật tự không gian và phân cấp chức năng sinh học.",
+      "generated_caption_en": "The diagram illustrates the spatial structure of the DNA molecule as proposed by Watson and Crick, showing it as a double helix composed of two complementary strands. Key components include the phosphate groups, deoxyribose sugars, and the nitrogenous bases adenine, thymine, guanine, and cytosine, arranged according to the base-pairing rule where adenine pairs with thymine and guanine with cytosine, with the directionality indicated from 5' to 3' and 3' to 5'.",
+      "metrics_vi": {
+        "bleu_1": 0.46153846153846156,
+        "bleu_4": 0.06818181818181818,
+        "rouge_l": 0.2815533980582524,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 64.74,
+        "bertscore_f1": 86.61
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -5639,6 +5925,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ biểu diễn hai loại chuỗi thức ăn cơ bản trong quần xã sinh vật theo chiều mũi tên truyền năng lượng dinh dưỡng: (a) Chuỗi thức ăn khởi đầu bằng sinh vật tự dưỡng sản xuất: Cỏ $\\to$ Thỏ (động vật ăn thực vật) $\\to$ Rắn (động vật ăn thịt bậc 1) $\\to$ Đại bàng (động vật ăn thịt đỉnh chuỗi); (b) Chuỗi thức ăn khởi đầu bằng sinh vật ăn mùn bã hữu cơ: Giun đất phân giải xác hữu cơ $\\to$ Gà $\\to$ Cáo $\\to$ Hổ.",
       "gt_caption_en": "The ecological diagram illustrates two fundamental types of food chains along directional energy transfer arrows: (a) A grazing food chain initiating with primary producers: Grass $\\to$ Rabbit (primary consumer) $\\to$ Snake (secondary consumer) $\\to$ Eagle (tertiary top predator); (b) A detritus-based food chain initiating with decomposing detritivores: Earthworm consuming decaying matter $\\to$ Chicken $\\to$ Fox $\\to$ Tiger.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Các loại chuỗi thức ăn trong hệ sinh thái'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: chuỗi thức ăn, sinh vật sản xuất, cỏ, thỏ, rắn, đại bàng, sinh vật ăn mùn bã cùng các cấu trúc liên quan (giun đất, gà, cáo, hổ). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: Cỏ thức ăn cho Thỏ; Thỏ thức ăn cho Rắn; Rắn thức ăn cho Đại bàng; Giun đất thức ăn cho Gà; Gà thức ăn cho Cáo; Cáo thức ăn cho Hổ.",
+      "generated_caption_en": "The diagram illustrates various food chains within an ecosystem, showing how energy is transferred through different organisms. It includes primary producers like grass feeding herbivores such as rabbits, which are then consumed by predators like snakes and hawks, while detritus feeders like earthworms provide sustenance to chickens, which in turn become prey for foxes that ultimately fall prey to tigers.",
+      "metrics_vi": {
+        "bleu_1": 0.35185185185185186,
+        "bleu_4": 0.02857142857142857,
+        "rouge_l": 0.303030303030303,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 13.83,
+        "bertscore_f1": 84.52
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -5939,6 +6238,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ mạng lưới thức ăn đa chiều trong hệ sinh thái đồng cỏ với nhiều mắt xích chung phức tạp: Cỏ là sinh vật sản xuất cung cấp thức ăn cho các loài động vật tiêu thụ bậc 1 gồm thỏ, chuột và cào cào; cào cào là nguồn thức ăn cho chim sẻ; ở bậc dinh dưỡng cao hơn, cáo săn bắt thỏ và chuột, trong khi chim cú đóng vai trò săn mồi bậc cao tiêu thụ cả chuột, cào cào và chim sẻ, tạo thành các chuỗi thức ăn đan cài bền vững.",
       "gt_caption_en": "The complex grassland ecosystem food web network demonstrates interconnected trophic interactions: Grass functions as the basal primary producer sustaining primary herbivores including rabbits, mice, and grasshoppers; grasshoppers are consumed by sparrows; at higher trophic levels, foxes prey on rabbits and mice, while owls act as apex avian predators feeding broadly on mice, grasshoppers, and sparrows.",
+      "generated_caption_vi": "Sơ đồ lưới thức ăn và các mối quan hệ dinh dưỡng sinh thái trong lưới thức ăn ở một hệ sinh thái đồng cỏ. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: lưới thức ăn, đồng cỏ, cỏ, thỏ, chuột, cào cào, chim sẻ cùng các cấu trúc liên quan (cáo, cú). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: Cỏ cung cấp dinh dưỡng Thỏ; Cỏ cung cấp dinh dưỡng Chuột; Cỏ cung cấp dinh dưỡng Cào cào; Cào cào thức ăn cho Chim sẻ; Thỏ bị săn bởi Cáo; Chuột bị săn bởi Cáo.",
+      "generated_caption_en": "This diagram illustrates the food web of a grassland ecosystem, showing how energy is transferred through various organisms such as rabbits, mice, grasshoppers, sparrows, foxes, and owls. The directional arrows indicate that grass provides nutrition to rabbits, mice, and grasshoppers, while predators like foxes and owls feed on these herbivores and insects, forming complex feeding relationships within the ecosystem.",
+      "metrics_vi": {
+        "bleu_1": 0.45454545454545453,
+        "bleu_4": 0.04672897196261682,
+        "rouge_l": 0.27053140096618356,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 90.7,
+        "bertscore_f1": 89.91
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -6228,6 +6540,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ dòng năng lượng một chiều qua các bậc dinh dưỡng trong hệ sinh thái: Năng lượng quang năng từ Mặt Trời đi vào hệ sinh thái nhờ sinh vật sản xuất (cỏ), sau đó truyền qua chuỗi dinh dưỡng từ sinh vật tiêu thụ bậc 1 (cào cào), bậc 2 (thằn lằn) đến bậc cao nhất (đại bàng); tại mỗi bậc dinh dưỡng, phần lớn năng lượng bị tiêu hao và thất thoát ra môi trường dưới dạng nhiệt qua quá trình hô hấp, một phần đi vào xác sinh vật rơi rụng, và chỉ có khoảng 10% năng lượng được tích lũy lên bậc kế tiếp.",
       "gt_caption_en": "The unidirectional energy flow model across trophic levels in an ecosystem shows: Solar radiant energy enters the biosphere via primary producers (plants) and flows sequentially through primary consumers (grasshoppers), secondary consumers (lizards), and apex predators (eagles); at each trophic step, approximately 90% of energy is dissipated into the environment as respiratory metabolic heat or transferred to organic detritus, with only about 10% assimilated into subsequent biomass.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Sơ đồ chuyển hoá năng lượng qua các bậc dinh dưỡng trong hệ sinh thái'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: năng lượng ánh sáng, Mặt Trời, sinh vật sản xuất, sinh vật tiêu thụ bậc 1, sinh vật tiêu thụ bậc 2, sinh vật tiêu thụ bậc cao nhất, thất thoát qua hô hấp cùng các cấu trúc liên quan (chất thải xác sinh vật). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: Năng lượng ánh sáng hấp thụ quang hợp Sinh vật sản xuất; Sinh vật sản xuất truyền năng lượng dinh dưỡng Sinh vật tiêu thụ bậc 1; Sinh vật tiêu thụ bậc 1 truyền năng lượng dinh dưỡng Sinh vật tiêu thụ bậc 2; Sinh vật tiêu thụ bậc 2 truyền năng lượng dinh dưỡng Sinh vật tiêu thụ bậc cao nhất.",
+      "generated_caption_en": "The diagram illustrates the flow of energy through different trophic levels in an ecosystem, starting with sunlight from the Sun being absorbed by producers through photosynthesis. Energy then moves up the food chain as primary consumers feed on producers, secondary consumers feed on primary consumers, and tertiary consumers feed on secondary consumers, with each transfer accompanied by energy losses due to respiration and waste.",
+      "metrics_vi": {
+        "bleu_1": 0.37267080745341613,
+        "bleu_4": 0.06329113924050633,
+        "rouge_l": 0.3259259259259259,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 87.94,
+        "bertscore_f1": 87.24
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -6463,6 +6788,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ hai pha của quá trình quang hợp diễn ra bên trong lục lạp: Pha sáng diễn ra trên màng thylakoid, sử dụng năng lượng ánh sáng mặt trời để quang phân li nước (H2O), giải phóng khí O2 ra môi trường, đồng thời tổng hợp nên các phân tử giàu năng lượng ATP và chất khử NADPH; Pha tối diễn ra trong chất nền (stroma) của lục lạp, sử dụng ATP và NADPH từ pha sáng để cố định khí CO2 thông qua chu trình Calvin, tổng hợp nên các hợp chất hữu cơ (đường) và giải phóng ADP, Pi, NADP+ quay trở lại cung cấp cho pha sáng.",
       "gt_caption_en": "The diagram depicts the two integrated phases of photosynthesis occurring within a chloroplast: The light-dependent reactions take place on thylakoid membranes, harnessing solar radiant energy to photolyze water (H2O), releasing oxygen (O2) and generating high-energy chemical carriers ATP and NADPH; The light-independent reactions (Calvin cycle) operate in the stroma, utilizing ATP and NADPH to reduce and fix atmospheric carbon dioxide (CO2) into triose phosphates and carbohydrates (sugars), subsequently recycling ADP, Pi, and NADP+ back to the light reactions.",
+      "generated_caption_vi": "Sơ đồ biểu diễn chu trình sinh học khép kín và tiến trình phát triển của sơ đồ hai pha của quá trình quang hợp trong lục lạp. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: quang hợp, lục lạp, pha sáng, pha tối, chu trình Calvin, thylakoid, chất nền stroma cùng các cấu trúc liên quan (ánh sáng, NADP+, Đường). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: Ánh sáng cung cấp năng lượng Pha sáng; H2O nguyên liệu quang phân ly Pha sáng; Pha sáng giải phóng O2; Pha sáng cung cấp ATP và NADPH Pha tối; CO2 cố định carbon Chu trình Calvin; Chu trình Calvin tổng hợp glucose Đường.",
+      "generated_caption_en": "The diagram illustrates the two-phase process of photosynthesis within chloroplasts, detailing the light-dependent reactions (light phase) and the Calvin cycle (dark phase). It shows how light energy is converted into chemical energy through the absorption of light, water splitting to produce oxygen, and the generation of ATP and NADPH which then fuel the Calvin cycle for carbon fixation and glucose synthesis, while also demonstrating the recycling of ADP, Pi, and NADP+ back to the light phase.",
+      "metrics_vi": {
+        "bleu_1": 0.46825396825396826,
+        "bleu_4": 0.07317073170731707,
+        "rouge_l": 0.3037974683544304,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.42857142857142855
+      },
+      "metrics_en": {
+        "cider": 122.76,
+        "bertscore_f1": 88.64
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -6808,6 +7146,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ mô tả giai đoạn khởi đầu của quá trình dịch mã ở sinh vật: Tiểu phần nhỏ của ribosome liên kết với phân tử mRNA và di chuyển đến vị trí codon mở đầu (5'-AUG-3'); phức hệ Met-tRNA mang acid amin mở đầu (methionine) gắn khớp bổ sung theo nguyên tắc đối mã (3'-UAC-5') vào codon mở đầu; sau đó, tiểu phần lớn của ribosome gắn vào tiểu phần nhỏ tạo nên ribosome hoàn chỉnh với ba vị trí chức năng E (thoát), P (peptidyl) và A (aminoacyl), đưa Met-tRNA vào đúng vị trí P để sẵn sàng tiếp nhận amino acid tiếp theo.",
       "gt_caption_en": "The diagram illustrates the initiation phase of translation in protein synthesis: The small ribosomal subunit binds to mRNA and locates the start codon (5'-AUG-3'); an initiator Met-tRNA bearing methionine pairs complementarily with its anticodon (3'-UAC-5') to the AUG start codon; then, the large ribosomal subunit joins the small subunit to assemble the fully active 70S/80S ribosome complex, positioning the initiator tRNA in the P (peptidyl) site while keeping the A (aminoacyl) site open for the subsequent aminoacyl-tRNA.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Sơ đồ giai đoạn khởi đầu quá trình dịch mã tổng hợp chuỗi polypeptide'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: dịch mã, mRNA, codon mở đầu (AUG), Met-tRNA, anticodon (UAC), tiểu phần nhỏ ribosome, tiểu phần lớn ribosome cùng các cấu trúc liên quan (vị trí E, vị trí P, vị trí A, ribosome hoàn chỉnh). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: tiểu phần nhỏ ribosome gắn kết và trượt tìm codon mở đầu mRNA; Met-tRNA đối mã UAC khớp bổ sung với AUG codon AUG; tiểu phần lớn ribosome lắp ráp tạo phức hệ ribosome hoàn chỉnh tiểu phần nhỏ.",
+      "generated_caption_en": "The diagram illustrates the initial stage of the translation process for synthesizing a polypeptide chain, showing key components such as mRNA, the start codon (AUG), Met-tRNA, and ribosomal subunits. It depicts the small ribosomal subunit binding to the mRNA to locate the start codon, followed by the complementary base pairing between the tRNA's anticodon (UAC) and the AUG codon, and finally, the assembly of the large ribosomal subunit with the small one to form a complete ribosome.",
+      "metrics_vi": {
+        "bleu_1": 0.47692307692307695,
+        "bleu_4": 0.015748031496062992,
+        "rouge_l": 0.2809917355371901,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.3333333333333333
+      },
+      "metrics_en": {
+        "cider": 147.14,
+        "bertscore_f1": 88.31
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -7060,6 +7411,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ cơ chế điều hoà hoạt động của operon Lac ở vi khuẩn E. coli khi môi trường không có lactose: Gene điều hoà lacI tổng hợp protein ức chế ở trạng thái hoạt tính; protein ức chế liên kết chặt vào vùng vận hành (operator O), ngăn cản enzyme RNA polymerase bám vào promoter và trượt qua, làm cho các gene cấu trúc lacZ, lacY, lacA không được phiên mã.",
       "gt_caption_en": "The diagram details the genetic regulation of the lactose operon (lac operon) in E. coli in the absence of lactose: The regulatory gene lacI is constitutively transcribed and translated to produce active repressor protein monomers that form a tetramer; the active repressor specifically binds to the operator region (O); this physical steric hindrance prevents RNA polymerase from binding to the promoter (P) or initiating transcription of the structural genes lacZ, lacY, and lacA, thereby repressing enzymatic synthesis when lactose is absent.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Cơ chế điều hòa hoạt động của operon Lac khi môi trường không có lactose'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: operon Lac, gene điều hoà lacI, protein ức chế, vùng khởi động (P), vùng vận hành (O), các gene cấu trúc. Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: gene điều hoà lacI phiên mã và dịch mã liên tục protein ức chế; protein ức chế gắn đặc hiệu vào operator vùng vận hành (O); protein ức chế gắn tại O ngăn cản enzyme phiên mã nhóm gene cấu trúc RNA polymerase.",
+      "generated_caption_en": "The diagram illustrates the regulatory mechanism of the Lac operon in the absence of lactose, showing key components such as the lacI regulatory gene, which continuously transcribes and translates into a repressor protein. This repressor protein specifically binds to the operator region (O), preventing RNA polymerase from transcribing the structural genes.",
+      "metrics_vi": {
+        "bleu_1": 0.3983050847457627,
+        "bleu_4": 0.06956521739130435,
+        "rouge_l": 0.38947368421052625,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 0.0,
+        "bertscore_f1": 91.04
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -7256,6 +7620,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ so sánh hai mô hình vật lý kinh điển mô tả cấu trúc vỏ nguyên tử: (a) Hình 3.1 là mô hình hành tinh nguyên tử của Rutherford - Bohr và Sommerfeld, trong đó các electron mang điện tích âm chuyển động xung quanh hạt nhân mang điện tích dương theo những quỹ đạo tròn hoặc elip xác định tương tự như các hành tinh quay quanh Mặt Trời; (b) Hình 3.2 là mô hình hiện đại mô tả chuyển động của electron trong nguyên tử hydrogen dưới dạng đám mây electron, theo đó electron chuyển động rất nhanh không theo quỹ đạo cố định mà phân bố trong không gian quanh hạt nhân, nơi có mật độ điểm chấm đen càng dày thì xác suất tìm thấy electron càng cao (khoảng 90%).",
       "gt_caption_en": "The comparative diagram contrasts two historical atomic models: (a) Figure 3.1 depicts the Rutherford-Bohr-Sommerfeld planetary model, where negatively charged electrons orbit a central positive nucleus along discrete circular or elliptical planetary tracks; (b) Figure 3.2 depicts the modern quantum-mechanical electron cloud model for hydrogen, wherein electrons do not follow deterministic trajectories but exist as an orbital probability density cloud, with higher dot density representing greater probability (~90%) of locating the electron.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của so sánh mô hình hành tinh nguyên tử (bohr) và mô hình đám mây electron hiện đại trong chương trình Hóa học 10. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: nguyên tử, hạt nhân, electron, quỹ đạo electron, mô hình hành tinh nguyên tử, Rutherford - Bohr, mô hình hiện đại cùng các cấu trúc liên quan (đám mây electron, nguyên tử hydrogen, xác suất tìm thấy electron). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: hạt nhân mang điện tích dương ở trung tâm tâm nguyên tử; electron chuyển động theo quỹ đạo xác định (Bohr) quỹ đạo tròn/bầu dục; electron phân bố theo xác suất mật độ điểm (hiện đại) đám mây electron.",
+      "generated_caption_en": "The diagram compares the planetary atomic model proposed by Rutherford and Bohr, where electrons orbit the nucleus in defined circular or elliptical paths, with the modern electron cloud model, which depicts electrons distributed around the nucleus according to their probability density. In the classical model, the positively charged nucleus is at the center of the atom, while in the modern model, electrons are shown as a diffuse cloud surrounding the nucleus, indicating regions of high probability for finding an electron.",
+      "metrics_vi": {
+        "bleu_1": 0.5357142857142857,
+        "bleu_4": 0.06569343065693431,
+        "rouge_l": 0.3115942028985507,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.6666666666666666
+      },
+      "metrics_en": {
+        "cider": 32.64,
+        "bertscore_f1": 88.82
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -7504,6 +7881,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ biểu diễn hình dạng không gian 3 chiều và sự định hướng của các orbital nguyên tử (AO) trong hệ toạ độ Descartes Oxyz: Orbital s (AO s) có dạng hình cầu đối xứng hoàn toàn trong không gian quanh hạt nhân; ba orbital p gồm AO px, AO py và AO pz có dạng hình số 8 nổi (hai cánh đối xứng qua gốc toạ độ) và định hướng vuông góc với nhau dọc theo ba trục toạ độ tương ứng là trục Ox, trục Oy và trục Oz, phản ánh tính dị hướng không gian của các electron phân lớp p.",
       "gt_caption_en": "The spatial geometric diagram illustrates the 3D shapes and spatial orientations of atomic orbitals (AO) in a Cartesian coordinate system (Oxyz): The s orbital (AO s) exhibits spherical symmetry centered around the nucleus; the three degenerate p orbitals (AO px, AO py, AO pz) exhibit dumbbell or figure-eight shapes with two symmetrical lobes oriented orthogonally along the respective x, y, and z Cartesian axes, demonstrating directional electron density distributions.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Hình dạng và sự định hướng không gian của các orbital nguyên tử s và p'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: orbital nguyên tử, AO s, AO px, AO py, AO pz, hệ toạ độ Oxyz, hình cầu cùng các cấu trúc liên quan (hình số 8 nổi, định hướng không gian). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: AO s đối xứng tâm không gian hình cầu; AO px hai thuỳ định hướng dọc trục x trục Ox; AO py hai thuỳ định hướng dọc trục y trục Oy; AO pz hai thuỳ định hướng dọc trục z trục Oz.",
+      "generated_caption_en": "The diagram illustrates the spatial shapes and orientations of atomic orbitals for s and p types, showing how they align with the Oxyz coordinate system. The s orbital is depicted as a sphere symmetrically centered around a point, while the p orbitals (px, py, pz) are illustrated as two-lobed figures aligned along their respective axes (Ox, Oy, Oz).",
+      "metrics_vi": {
+        "bleu_1": 0.46875,
+        "bleu_4": 0.064,
+        "rouge_l": 0.32618025751072954,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 26.09,
+        "bertscore_f1": 89.28
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -7772,6 +8162,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ vòng đời phát triển có biến thái hoàn toàn ở ếch đồng: Đến mùa sinh sản, ếch trưởng thành ghép đôi tìm đến bờ nước để đẻ trứng và thụ tinh ngoài; trứng thụ tinh phát triển thành phôi rồi nở ra nòng nọc sống dưới nước và hô hấp bằng mang ngoài; qua quá trình biến thái, nòng nọc lần lượt mọc chân sau, mọc tiếp chân trước, rụng đuôi và tiêu biến mang, phổi và da phát triển để thích nghi hô hấp trên cạn, hoàn thiện cấu tạo ếch con di chuyển lên cạn sinh sống.",
       "gt_caption_en": "The life cycle diagram illustrates complete metamorphosis in the pond frog: During breeding season, adult frogs pair at water edges for external fertilization, producing egg clutches; fertilized eggs develop into swimming tadpoles equipped with tails and external gills for aquatic respiration; through gradual metamorphosis, tadpoles sequentially develop hindlimbs then forelimbs, while tails and gills resorb as lungs and cutaneous surfaces adapt for terrestrial respiration, culminating in juvenile frogs emerging onto land.",
+      "generated_caption_vi": "Sơ đồ biểu diễn chu trình sinh học khép kín và tiến trình phát triển của sự phát triển có biến thái ở ếch đồng. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: ếch trưởng thành, ghép đôi, đẻ trứng, trứng, phôi, nòng nọc, chân sau cùng các cấu trúc liên quan (chân trước, rụng đuôi, ếch con, biến thái). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: ếch trưởng thành sinh sản thụ tinh ngoài bờ nước đẻ trứng; đẻ trứng nở ra nòng nọc hô hấp bằng mang ngoài nòng nọc; nòng nọc phát triển mọc chân sau chân sau; chân sau mọc tiếp chân trước chân trước; chân trước tiêu biến đuôi hoàn thiện ếch con lên cạn ếch con.",
+      "generated_caption_en": "The diagram illustrates the metamorphosis process of a toad, starting with mature toads that reproduce through external fertilization near water bodies, producing eggs. These eggs develop into tadpoles which grow hind legs first, followed by front legs, and eventually lose their tails to become juvenile toads capable of moving onto land.",
+      "metrics_vi": {
+        "bleu_1": 0.49264705882352944,
+        "bleu_4": 0.08270676691729323,
+        "rouge_l": 0.39662447257383965,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 0.31,
+        "bertscore_f1": 89.46
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -8043,6 +8446,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ vòng đời kí sinh phức tạp của sán lá gan qua vật chủ trung gian ốc ruộng: Sán lá gan trưởng thành kí sinh trong gan mật trâu bò đẻ hàng nghìn trứng theo phân ra ngoài; gặp nước, trứng nở thành ấu trùng lông bơi tự do rồi chui vào kí sinh trong ốc ruộng để sinh sản vô tính tạo nhiều ấu trùng có đuôi; ấu trùng có đuôi rời khỏi ốc bám vào cây cỏ thuỷ sinh, rụng đuôi và kết vỏ cứng tạo thành kén sán; khi trâu bò ăn phải cây cỏ có dính kén sán sẽ bị nhiễm bệnh, kén vào ruột non nở ra ấu trùng di chuyển lên gan phát triển thành sán lá gan trưởng thành.",
       "gt_caption_en": "The complex parasitic life cycle diagram outlines liver fluke development via intermediate snail hosts: Adult flukes residing in bovine bile ducts shed thousands of eggs into pasture via feces; in water, eggs hatch into ciliated miracidia that actively penetrate aquatic snails, reproducing asexually into cercariae; free-swimming tailed cercariae exit snails and adhere to marsh plants or water lettuce, shedding their tails and secreting thick cysts to form metacercariae; when cattle ingest cyst-contaminated grasses, juvenile flukes excyst in the intestines and migrate to bile ducts to mature.",
+      "generated_caption_vi": "Sơ đồ biểu diễn chu trình sinh học khép kín và tiến trình phát triển của sơ đồ vòng đời kí sinh của sán lá gan qua vật chủ trung gian. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: sán lá gan, trâu bò, trứng, ấu trùng lông, ốc ruộng, ấu trùng có đuôi, kén sán cùng các cấu trúc liên quan (cây cỏ). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: sán lá gan đẻ hàng nghìn trứng theo phân trâu bò ra ngoài trứng; trứng gặp nước nở thành ấu trùng có lông bơi ấu trùng lông; ấu trùng lông chui vào kí sinh trong ốc sinh sản vô tính ốc ruộng; ốc ruộng ấu trùng có đuôi rời ốc bơi tìm bám cây cỏ ấu trùng có đuôi; ấu trùng có đuôi rụng đuôi kết vỏ cứng thành kén sán bám cây cỏ kén sán; kén sán trâu bò ăn cỏ dính kén sán nhiễm bệnh vào gan mật trâu bò.",
+      "generated_caption_en": "The diagram illustrates the life cycle of liver flukes in an intermediate host, showing the progression from eggs excreted by cattle to infective stages that develop within snails and plants before being ingested by cattle again. Key steps include egg hatching into hairy larvae in water, which then infect freshwater snails where they reproduce asexually; later, tail-bearing larvae emerge from the snail to attach to aquatic plants, forming cysts that become infectious when eaten by cattle grazing on contaminated vegetation.",
+      "metrics_vi": {
+        "bleu_1": 0.5480225988700564,
+        "bleu_4": 0.13793103448275862,
+        "rouge_l": 0.4868421052631578,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.8333333333333334
+      },
+      "metrics_en": {
+        "cider": 35.26,
+        "bertscore_f1": 87.57
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -8292,6 +8708,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ cấu tạo hệ tuần hoàn đơn kín ở cá chép: Tim cá gồm hai ngăn là tâm nhĩ và tâm thất; khi tâm thất co, máu đỏ thẫm được bơm vào động mạch chủ bụng lên mao mạch mang để trao đổi khí, thải CO2 và hấp thụ O2 trở thành máu đỏ tươi; máu giàu oxy theo động mạch chủ lưng phân phối đến mao mạch cơ quan để nuôi cơ thể; sau khi trao đổi chất, máu trở thành máu đỏ thẫm tập trung vào tĩnh mạch bụng đổ về tâm nhĩ rồi xuống tâm thất, hoàn thành một vòng tuần hoàn duy nhất.",
       "gt_caption_en": "The anatomical directional diagram details the single closed circulatory system of carp fish: The heart possesses two chambers consisting of a single atrium and ventricle; ventricular contraction pumps deoxygenated blood through the ventral aorta into gill capillaries for gas exchange, shedding CO2 and taking up O2 to become oxygen-rich; oxygenated blood flows along the dorsal aorta to capillary networks throughout all bodily organs; following tissue metabolic exchange, deoxygenated blood converges into ventral veins, returning to the atrium and ventricle to close the single circuit.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của sơ đồ hệ tuần hoàn đơn ở cá chép trong chương trình Sinh học 7. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: tâm nhĩ, tâm thất, động mạch chủ bụng, mao mạch mang, động mạch chủ lưng, mao mạch cơ quan, tĩnh mạch bụng cùng các cấu trúc liên quan (máu đỏ tươi, máu đỏ thẫm). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: tâm thất bơm máu đỏ thẫm lên mang động mạch chủ bụng; động mạch chủ bụng trao đổi khí nhả CO2 nhận O2 biến thành máu đỏ tươi mao mạch mang; mao mạch mang dẫn máu giàu O2 đi nuôi cơ thể động mạch chủ lưng; động mạch chủ lưng cung cấp oxy và dưỡng chất cho các tế bào mao mạch cơ quan; mao mạch cơ quan máu đỏ thẫm nghèo oxy tập trung về tĩnh mạch tĩnh mạch bụng; tĩnh mạch bụng đổ máu về tâm nhĩ khép kín vòng tuần hoàn đơn tâm nhĩ.",
+      "generated_caption_en": "The diagram illustrates the single circulatory system of a carp, showing key anatomical parts such as the atrium, ventricle, abdominal aorta, gill capillaries, dorsal aorta, organ capillaries, and abdominal veins. The flow of blood is depicted starting from the ventricle to the abdominal aorta where deoxygenated blood is pumped to the gills for gas exchange, turning into oxygen-rich blood which then travels through the dorsal aorta to supply organs, and finally returns to the atrium via the abdominal veins as deoxygenated blood, completing the closed loop of the single circulation.",
+      "metrics_vi": {
+        "bleu_1": 0.40860215053763443,
+        "bleu_4": 0.03825136612021858,
+        "rouge_l": 0.41496598639455773,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.8333333333333334
+      },
+      "metrics_en": {
+        "cider": 83.69,
+        "bertscore_f1": 89.81
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -8549,6 +8978,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ giải phẫu bổ ngang cấu tạo cầu mắt người: Cầu mắt gồm ba lớp màng từ ngoài vào trong là màng cứng (phía trước trong suốt là màng giác để ánh sáng đi qua), màng mạch nuôi dưỡng (phía trước tạo thành mống mắt có lỗ đồng tử điều tiết ánh sáng), và màng lưới ở trong cùng chứa các tế bào thụ cảm thị giác; môi trường trong suốt bên trong gồm thuỷ dịch, thể thuỷ tinh dạng thấu kính hội tụ điều tiết độ cong, và dịch thuỷ tinh; tia sáng đi qua thể thuỷ tinh hội tụ tại điểm vàng trên màng lưới, kích thích phát sinh xung điện truyền theo dây thần kinh thị giác về vỏ não.",
       "gt_caption_en": "The horizontal anatomical cross-section of the human eyeball depicts its structural tunics and refractive media: The outer fibrous tunic comprises the opaque sclera and anterior transparent cornea for light transmission; the middle vascular tunic comprises the choroid, ciliary body, and pigmented iris with a central pupil regulating illumination; the innermost neural tunic consists of the sensory retina densely packed with photoreceptors; the internal transparent media include aqueous humor, the adjustable biconvex crystalline lens, and the gelatinous vitreous body, focusing incoming rays precisely onto the fovea centralis to generate nerve impulses along optic nerve tract II.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của sơ đồ cấu tạo giải phẫu cầu mắt người (bổ ngang) trong chương trình Sinh học 8. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: màng cứng, màng giác, màng mạch, màng lưới, mống mắt, lỗ đồng tử, thể thuỷ tinh cùng các cấu trúc liên quan (dịch thuỷ tinh, điểm vàng, dây thần kinh thị giác). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: ánh sáng khúc xạ tia sáng xuyên qua màng giác màng giác; màng giác điều tiết lượng sáng qua mống mắt lỗ đồng tử; lỗ đồng tử hội tụ chùm sáng qua thấu kính sinh học thể thuỷ tinh; thể thuỷ tinh tạo ảnh thật ngược chiều thu nhỏ tại điểm vàng màng lưới; màng lưới truyền xung thần kinh về não bộ dây thần kinh thị giác.",
+      "generated_caption_en": "The diagram illustrates a cross-sectional view of the human eye's anatomical structure, highlighting key components such as the sclera, cornea, choroid, retina, pupil, lens, vitreous humor, macula, and optic nerve. Light enters through the cornea, is refracted, then passes through the pupil which adjusts to control light intensity; it then converges through the lens before forming an inverted, reduced image at the macula on the retina, where signals are transmitted via the optic nerve to the brain.",
+      "metrics_vi": {
+        "bleu_1": 0.47770700636942676,
+        "bleu_4": 0.012987012987012988,
+        "rouge_l": 0.298932384341637,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.6
+      },
+      "metrics_en": {
+        "cider": 0.42,
+        "bertscore_f1": 85.82
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -8809,6 +9251,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ cấu tạo hiển vi các lớp tế bào của màng lưới thị giác: Lớp tế bào thụ cảm gồm tế bào nón tiếp nhận ánh sáng mạnh và phân biệt màu sắc, và tế bào que tiếp nhận ánh sáng yếu; tia ánh sáng xuyên qua lớp tế bào hạch và tế bào hai cực để kích thích tế bào nón và tế bào que; sau đó xung thần kinh phát sinh truyền từ tế bào que và nón sang tế bào hai cực, truyền tới tế bào hạch rồi gom vào các sợi dẫn của dây thần kinh thị giác truyền về não.",
       "gt_caption_en": "The retinal microstructural schematic details layered photoreceptive neural architecture: The basal photoreceptor layer incorporates cone cells (specialized for high-acuity photopic vision and chromatic discrimination) and rod cells (adapted for low-threshold scotopic vision); incoming photons penetrate superficial retinal ganglion cells and intermediate bipolar neurons to reach photopigments within outer segments; phototransduction then elicits neural impulses propagating in reverse to light trajectory: from photoreceptors across synapses to bipolar cells, into ganglion cells whose converging axons form the optic nerve transmitting visual signals to the visual cortex.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Sơ đồ cấu tạo hiển vi của màng lưới và các tế bào thụ cảm thị giác'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: màng lưới, tế bào nón, tế bào que, tế bào hai cực, tế bào hạch, thần kinh thị giác, ánh sáng cùng các cấu trúc liên quan (). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: ánh sáng kích thích thụ thể thị giác tế bào nón; tế bào que truyền xung kích thích sang nơron hai cực tế bào hai cực; tế bào hai cực truyền tín hiệu điện tới tế bào hạch tế bào hạch; tế bào hạch sợi trục gom lại tạo dây thần kinh thị giác dẫn về não thần kinh thị giác.",
+      "generated_caption_en": "The diagram illustrates the microscopic structure of the retinal grid and sensory cells, including cone cells, rod cells, bipolar cells, ganglion cells, and the optic nerve. It shows how light stimulates the photoreceptors in the cone cells, which then transmit signals through rod cells to bipolar cells, followed by transmission from bipolar cells to ganglion cells, and finally from ganglion cells to the optic nerve, where the neural signals are sent to the brain.",
+      "metrics_vi": {
+        "bleu_1": 0.5069444444444444,
+        "bleu_4": 0.07092198581560284,
+        "rouge_l": 0.41600000000000004,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.75
+      },
+      "metrics_en": {
+        "cider": 21.16,
+        "bertscore_f1": 87.3
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -9018,6 +9473,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ phân tích giải phẫu và cấu tạo vi thể của ốc tai và cơ quan Coocti: Ốc tai gồm ốc tai màng nằm trong ốc tai xương, chia khoang thành thang tiền đình (chứa ngoại dịch), thang nhĩ (chứa ngoại dịch) thông với cửa tròn, và thang giữa (chứa nội dịch); ngăn cách thang giữa và thang nhĩ là màng cơ sở mang cơ quan Coocti chứa các tế bào thụ cảm thính giác; sóng âm từ chuỗi xương tai truyền qua màng cửa bầu làm chuyển động ngoại dịch ở thang tiền đình rồi thang nhĩ, làm rung màng cơ sở khiến lông tế bào thụ cảm thính giác cọ xát vào màng phủ phát sinh xung thần kinh truyền theo dây thần kinh thính giác về não.",
       "gt_caption_en": "The anatomical and histological breakdown of the inner ear cochlea and Organ of Corti shows: The membranous cochlea spirals two and a half turns within the bony cochlea, dividing into the scala vestibuli (superior, containing perilymph), scala tympani (inferior, containing perilymph), and scala media (cochlear duct containing endolymph); separating the scala media from scala tympani is the basilar membrane supporting the Organ of Corti with specialized auditory hair cells; acoustic fluid waves initiated at the oval window travel through perilymph, vibrating the basilar membrane and shearing stereocilia against the tectorial membrane to transduce mechanical vibrations into nerve action potentials conveyed via the cochlear nerve to the auditory cortex.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của sơ đồ phân tích cấu tạo ốc tai và cơ quan coocti trong chương trình Sinh học 8. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: ốc tai, ốc tai xương, ốc tai màng, cửa bầu, cửa tròn, thang tiền đình, thang nhĩ cùng các cấu trúc liên quan (màng cơ sở, cơ quan Coocti, tế bào thụ cảm thính giác, ngoại dịch, nội dịch). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: cửa bầu chuỗi xương tai rung cửa bầu truyền sóng dịch vào thang tiền đình thang tiền đình; thang tiền đình sóng ngoại dịch truyền tiếp qua thang nhĩ tới cửa tròn thang nhĩ; thang nhĩ dao động dịch làm rung màng cơ sở mang cơ quan Coocti màng cơ sở; màng cơ sở lông cảm giác cọ xát với màng phủ gây hưng phấn tế bào thụ cảm thính giác; tế bào thụ cảm thính giác phát sinh xung thần kinh dẫn truyền về não dây thần kinh thính giác.",
+      "generated_caption_en": "The diagram illustrates the microscopic structure of the ear, focusing on the ossicles, tympanic membrane, oval window, cochlea, round window, vestibular canal, scala tympani, basilar membrane, organ of Corti, auditory receptor cells, perilymph, and endolymph. It shows the transmission process where sound waves cause the oval window to vibrate, transmitting through the vestibular canal into the scala tympani, then further to the round window; subsequently, the fluid motion vibrates the basilar membrane, which carries the organ of Corti, leading to the stimulation of hair cells that generate neural signals transmitted via auditory nerve fibers to the brain.",
+      "metrics_vi": {
+        "bleu_1": 0.5478723404255319,
+        "bleu_4": 0.10810810810810811,
+        "rouge_l": 0.432601880877743,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 16.66,
+        "bertscore_f1": 87.32
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -9302,6 +9770,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ mô tả cấu trúc cung phản xạ gồm 5 thành phần cơ bản trong hệ thần kinh: (1) Cơ quan thụ cảm ở da tiếp nhận kích thích từ môi trường và phát sinh xung thần kinh; (2) Nơron hướng tâm dẫn truyền xung thần kinh vào chất xám tuỷ sống; (3) Nơron trung gian nằm trong tuỷ sống tiếp nhận và xử lý thông tin; (4) Nơron li tâm nhận lệnh và dẫn xung thần kinh đi ra ngoài; (5) Cơ quan phản ứng là bắp cơ thực hiện phản ứng co cơ đáp lại kích thích một cách nhanh chóng.",
       "gt_caption_en": "The somatic reflex arc neural circuit diagram depicts its five fundamental anatomical components: (1) Receptor organs (cutaneous sensory receptors) detect external environmental stimuli and initiate electrical receptor potentials; (2) Sensory afferent neurons transmit incoming action potentials via dorsal roots into the spinal cord gray matter; (3) Interneurons within the central nervous system process and integrate synaptic inputs; (4) Motor efferent neurons conduct outgoing command impulses through ventral roots towards peripheral targets; (5) Effector organs (skeletal muscle fibers or endocrine glands) execute immediate contractile or secretional responses to protect the organism.",
+      "generated_caption_vi": "Sơ đồ trình bày tiến trình khoa học diễn tiến theo từng giai đoạn của sơ đồ cấu tạo 5 thành phần của cung phản xạ thần kinh. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: cung phản xạ, cơ quan thụ cảm, nơron hướng tâm, nơron trung gian, tuỷ sống, nơron li tâm, cơ quan phản ứng cùng các cấu trúc liên quan (). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: cơ quan thụ cảm tiếp nhận kích thích sinh xung thần kinh cảm giác nơron hướng tâm; nơron hướng tâm dẫn truyền xung thần kinh vào chất xám tuỷ sống tuỷ sống; tuỷ sống nơron trung gian xử lý và chuyển lệnh sang nơron vận động nơron li tâm; nơron li tâm dẫn truyền xung thần kinh truyền lệnh đáp ứng kích thích cơ quan phản ứng.",
+      "generated_caption_en": "The diagram illustrates the structure of the five components of a reflex arc, including sensory organs, sensory neurons, interneurons in the spinal cord, motor neurons, and effector organs. It shows the process where sensory organs receive stimuli and transmit nerve impulses to sensory neurons, which then convey these signals to the spinal cord for processing by interneurons before being sent via motor neurons to effector organs to produce a response.",
+      "metrics_vi": {
+        "bleu_1": 0.4473684210526316,
+        "bleu_4": 0.09395973154362416,
+        "rouge_l": 0.390625,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 0.23,
+        "bertscore_f1": 86.21
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -9515,6 +9996,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ các cơ quan trong hệ tiêu hoá người phân hoá thành ống tiêu hoá và tuyến tiêu hoá: Ống tiêu hoá gồm khoang miệng, họng, thực quản, dạ dày, ruột non (với đoạn đầu là tá tràng), ruột già (kèm manh tràng, ruột thừa), trực tràng và hậu môn; các tuyến tiêu hoá phụ trợ gồm tuyến nước bọt, gan tiết dịch mật dự trữ trong túi mật, và tuyến tuỵ tiết dịch tiêu hoá, phối hợp nhịp nhàng biến đổi thức ăn thành chất dinh dưỡng hấp thu vào cơ thể.",
       "gt_caption_en": "The anatomical system schematic depicts the human digestive tract, differentiated into the gastrointestinal alimentary canal and accessory digestive glands: The continuous alimentary canal begins at the oral cavity (with teeth and tongue), descending through the pharynx, muscular esophagus, expandable stomach, extensive small intestine (duodenum, jejunum, ileum), large intestine (colon, cecum with vermiform appendix), rectum, and terminal anus; functioning synchronously are accessory glands including salivary glands (producing amylase), gastric mucosal glands, liver and gallbladder (synthesizing and storing bile for emulsification), exocrine pancreas (secreting comprehensive digestive proteases, lipases, amylases), and enteric intestinal crypts to degrade polymers into absorbable monomers.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của sơ đồ các cơ quan trong hệ tiêu hoá của cơ thể người trong chương trình Sinh học 8. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: ống tiêu hoá, tuyến tiêu hoá, khoang miệng, tuyến nước bọt, họng, thực quản, dạ dày cùng các cấu trúc liên quan (gan, túi mật, tuỵ, ruột non, tá tràng). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: khoang miệng thức ăn được nghiền tẩm nước bọt nuốt qua họng thực quản; thực quản sóng nhu động đẩy thức ăn vào dạ dày nhào trộn dịch vị dạ dày; dạ dày thức ăn chuyển từng đợt xuống tá tràng ruột non tiếp nhận dịch mật và dịch tuỵ tá tràng; ruột non hoàn tất hấp thụ dinh dưỡng, bã cặn chuyển sang ruột già ruột già; ruột già tái hấp thu nước cô đặc phân chuyển về trực tràng và hậu môn trực tràng.",
+      "generated_caption_en": "The diagram illustrates the digestive organs of the human body, including the alimentary canal and digestive glands such as the mouth cavity, salivary glands, pharynx, esophagus, stomach, liver, gallbladder, pancreas, small intestine (duodenum), large intestine, appendix, and rectum. It shows the directional flow of food through these organs, starting from the mouth where food is chewed and mixed with saliva before being swallowed down the throat into the esophagus, then to the stomach for mixing with gastric juices, followed by passage to the duodenum where it mixes with bile and pancreatic fluids, moving next to the large intestine for water reabsorption, and finally to the rectum for waste evacuation.",
+      "metrics_vi": {
+        "bleu_1": 0.36,
+        "bleu_4": 0.05813953488372093,
+        "rouge_l": 0.2899628252788104,
+        "entity_recall": 0.9375,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 11.65,
+        "bertscore_f1": 86.29
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -9844,6 +10338,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ cấu tạo hệ bài tiết nước tiểu và đơn vị chức năng nephron của thận ở người: Hệ bài tiết nước tiểu gồm hai quả thận, hai ống dẫn nước tiểu, bóng đái và ống đái; cấu tạo quả thận gồm phần vỏ thận, phần tuỷ thận và bể thận; đơn vị chức năng vi thể cấu tạo nên thận là nephron gồm cầu thận (búi mao mạch máu), nang cầu thận bao quanh và ống thận; tại cầu thận diễn ra quá trình lọc máu tạo nước tiểu đầu chảy vào nang cầu thận rồi qua ống thận tái hấp thu và bài tiết tạo thành nước tiểu chính thức đổ về bể thận.",
       "gt_caption_en": "The hierarchical anatomical diagram illustrates the macro- and micro-structure of the human urinary excretion system and renal nephron unit: The urinary tract comprises paired retroperitoneal kidneys, bilateral ureters, muscular urinary bladder for temporary reservoir, and terminal urethra; cross-section of renal parenchyma reveals outer cortex, inner medulla featuring renal pyramids, and central renal pelvis; microscopic functional nephrons (~1 million per kidney) each consist of a vascular glomerulus (fenestrated capillary tuft), double-walled Bowman's capsule receiving primitive ultrafiltrate, and convoluted renal tubules with loops of Henle where selective reabsorption and tubular secretion concentrate urine prior to drainage into collecting ducts and renal pelvis.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của sơ đồ cấu tạo hệ bài tiết nước tiểu và đơn vị chức năng nephron của thận trong chương trình Sinh học 8. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: thận, ống dẫn nước tiểu, bóng đái, ống đái, vỏ thận, tuỷ thận, bể thận cùng các cấu trúc liên quan (nephron, cầu thận, nang cầu thận, ống thận). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: cầu thận áp lực máu lọc huyết tương qua mao mạch cầu thận vào nang cầu thận nang cầu thận; nang cầu thận dẫn nước tiểu đầu vào ống thận thực hiện tái hấp thu ống thận; ống thận nước tiểu chính thức tập trung đổ về bể thận bể thận; bể thận dẫn nước tiểu từ thận xuống tích luỹ tại bóng đái ống dẫn nước tiểu; bóng đái co bóp bài xuất nước tiểu qua ống đái ra ngoài ống đái.",
+      "generated_caption_en": "The diagram illustrates the structure of the urinary system and the functional unit nephron within the kidney, highlighting key components such as the renal cortex, medulla, calyces, ureter, glomerulus, Bowman's capsule, renal tubule, and bladder. It shows the flow of urine starting from the filtration of blood through the glomerulus into the Bowman's capsule, then moving to the renal tubule for initial reabsorption, followed by collection in the calyces, transport via the ureter to the bladder, and finally excretion through the urethra.",
+      "metrics_vi": {
+        "bleu_1": 0.4857142857142857,
+        "bleu_4": 0.11627906976744186,
+        "rouge_l": 0.4246575342465753,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.6
+      },
+      "metrics_en": {
+        "cider": 1.08,
+        "bertscore_f1": 85.75
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -10097,6 +10604,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ cơ chế vận chuyển máu qua tĩnh mạch và vai trò của van tĩnh mạch một chiều: Máu trong các tĩnh mạch chảy về tim nhờ sự co cơ bắp xung quanh thành mạch hỗ trợ; khi cơ co bóp ép vào tĩnh mạch, áp lực máu đẩy van tĩnh mạch mở ra cho dòng máu tống lên phía trên; khi cơ giãn, trọng lực khiến máu có xu hướng tụt xuống làm các mép van tĩnh mạch khép chặt lại, ngăn không cho máu chảy ngược xuống dưới.",
       "gt_caption_en": "The physiological directional flow diagram details venous hemodynamics and the mechanical role of unidirectional venous valves: Within peripheral and lower limb veins where residual arterial hydrostatic pressure is minimal, blood ascends against gravity primarily propelled by the skeletal muscle pump and thoracic respiratory suction; inside the venous lumen, pocket-like endothelial cusps act as one-way valves; when surrounding skeletal muscles contract, elevated intraluminal pressure forces venous valves open to drive blood upward toward the heart; conversely, during muscle relaxation or gravitational pull, back-filling of valve pockets promptly coapts cusp margins, completely obstructing retrograde reflux.",
+      "generated_caption_vi": "Sơ đồ mô tả chi tiết đặc điểm cấu tạo của sự vận chuyển máu qua tĩnh mạch và vai trò của các van tĩnh mạch một chiều trong chương trình Sinh học 8. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: tĩnh mạch, van tĩnh mạch, co cơ, tim, áp lực máu. Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: tĩnh mạch máu vận chuyển trong lòng tĩnh mạch chảy ngược về tim tim; co cơ sự co cơ ép vào thành tĩnh mạch đẩy máu làm mở van tĩnh mạch van tĩnh mạch; van tĩnh mạch khi cơ giãn van tĩnh mạch khép chặt ngăn máu chảy ngược tĩnh mạch.",
+      "generated_caption_en": "The diagram illustrates the blood flow through veins and the function of one-way venous valves. Blood moves from the veins towards the heart against the direction of gravity, facilitated by the contraction of muscles which pushes the blood, opening the venous valves, and when the muscles relax, the valves close to prevent backflow.",
+      "metrics_vi": {
+        "bleu_1": 0.496,
+        "bleu_4": 0.09016393442622951,
+        "rouge_l": 0.43518518518518523,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.3333333333333333
+      },
+      "metrics_en": {
+        "cider": 0.0,
+        "bertscore_f1": 87.59
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -10263,6 +10783,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ giải thích thí nghiệm lai một cặp tính trạng của Men-đen ở đậu Hà Lan: Thế hệ P thuần chủng gồm cây hoa đỏ (AA) lai với cây hoa trắng (aa); khi giảm phân tạo giao tử P, cây hoa đỏ tạo giao tử mang alen A và cây hoa trắng tạo giao tử mang alen a; sự thụ tinh kết hợp giao tử tạo thế hệ F1 có 100% kiểu gene Aa và biểu hiện kiểu hình hoa đỏ; khi F1 tự thụ phấn, mỗi cây tạo giao tử F1 gồm 1/2 A và 1/2 a; qua thụ tinh ngẫu nhiên ở thế hệ F2 tạo tỉ lệ kiểu gene 1 AA : 2 Aa : 1 aa, biểu hiện tỉ lệ kiểu hình phân li là 3 hoa đỏ : 1 hoa trắng.",
       "gt_caption_en": "The Mendelian monohybrid inheritance schematic illustrates the genetic mechanism underlying the Law of Segregation in Pisum sativum: Pure-breeding parental generation (P) homozygous dominant red-flowered plants (AA) are crossed with homozygous recessive white-flowered plants (aa); during gametogenesis meiosis, alleles segregate so P generates exclusively A or a gametes; fertilization unites gametes to produce 100% heterozygous F1 progeny (Aa) exhibiting red blossoms due to complete dominance of allele A over a; self-fertilization of F1 yields equal proportions of male and female gametes (1/2 A : 1/2 a); random syngamy in F2 creates four zygotic combinations with genotypic ratio 1 AA : 2 Aa : 1 aa, manifesting the classical 3:1 phenotypic segregation ratio.",
+      "generated_caption_vi": "Sơ đồ trình bày tiến trình khoa học diễn tiến theo từng giai đoạn của sơ đồ giải thích kết quả thí nghiệm lai một cặp tính trạng của men-đen. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: thế hệ P, hoa đỏ, hoa trắng, giao tử P, alen A, alen a, thế hệ F1 cùng các cấu trúc liên quan (giao tử F1, thế hệ F2, kiểu gene, kiểu hình). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: thế hệ P hoa đỏ AA tạo giao tử A còn hoa trắng aa tạo giao tử a giao tử P; giao tử P thụ tinh tổ hợp tạo 100% thế hệ F1 mang kiểu gene Aa hoa đỏ thế hệ F1; thế hệ F1 cơ thể F1 dị hợp tạo hai loại giao tử đực và cái là A và a giao tử F1; giao tử F1 tổ hợp giao tử tạo thế hệ F2 với tỉ lệ 3 hoa đỏ : 1 hoa trắng thế hệ F2.",
+      "generated_caption_en": "This diagram illustrates Mendel's one-trait cross experiment results, showing the inheritance process through three generations. It begins with the parental generation (P) producing red-flowered plants with genotype AA and white-flowered plants with genotype aa, which generate gametes; these gametes combine to form the first filial generation (F1), all of which have the heterozygous genotype Aa and red flowers. The F1 generation then produces two types of gametes, A and a, leading to the second filial generation (F2) where the flower color ratio is 3 red to 1 white.",
+      "metrics_vi": {
+        "bleu_1": 0.48066298342541436,
+        "bleu_4": 0.07865168539325842,
+        "rouge_l": 0.41509433962264153,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 0.04,
+        "bertscore_f1": 85.67
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -10531,6 +11064,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ mạng lưới thức ăn trong quần xã hệ sinh thái rừng nhiệt đới: Cây cỏ là sinh vật sản xuất cung cấp thức ăn cho sâu ăn lá và chuột; sâu ăn lá là thức ăn của bọ ngựa và chuột; ở bậc cao hơn, bọ ngựa và chuột là con mồi của rắn; chuột đồng thời bị săn bắt bởi cú mèo và cầy; rắn cũng là thức ăn của cú mèo; loài ăn thịt nhỏ như cầy bị săn bởi thú ăn thịt lớn là hổ; xác chết của các loài sinh vật được vi sinh vật phân giải thành chất khoáng nuôi cây cỏ.",
       "gt_caption_en": "The complex tropical forest ecosystem food web illustrates interwoven trophic chains intersecting at multiple common nodes: Grasses and trees constitute primary autotrophic producers anchoring trophic pyramids; folivorous caterpillars and herbivorous mice act as primary consumers; predatory mantises feed on caterpillars as secondary consumers; mice represent critical pivotal nodes simultaneously predated by snakes, nocturnal owls, and carnivores such as civets; at higher trophic levels, snakes feed on both mantises and mice while serving as prey for apex avian owls; apex terrestrial predators like tigers hunt intermediate civets; ultimately, detritus and organic debris from all trophic tiers are decomposed by microbial saprophytes back into inorganic soil nutrients.",
+      "generated_caption_vi": "Sơ đồ lưới thức ăn và các mối quan hệ dinh dưỡng sinh thái trong sơ đồ mạng lưới thức ăn trong hệ sinh thái rừng nhiệt đới. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: cây cỏ, sâu ăn lá, bọ ngựa, chuột, rắn, cú mèo, cầy cùng các cấu trúc liên quan (hổ, vi sinh vật, lưới thức ăn). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: cây cỏ cung cấp thức ăn cho sâu sâu ăn lá; cây cỏ cung cấp thức ăn cho chuột chuột; sâu ăn lá thức ăn cho bọ ngựa bọ ngựa; sâu ăn lá thức ăn cho chuột chuột; bọ ngựa thức ăn cho rắn rắn; chuột thức ăn cho rắn rắn.",
+      "generated_caption_en": "The diagram illustrates a food web network within a tropical forest ecosystem, showing various organisms including grass, leaf-eating insects, mantises, mice, snakes, owls, civets, tigers, and microorganisms. It depicts feeding relationships where grass supports leaf-eating insects and mice, which in turn serve as prey for mantises, snakes, owls, and civets; while snakes and owls also feed on mice and other small animals, with larger predators such as civets and tigers preying on smaller ones like mice and civets respectively.",
+      "metrics_vi": {
+        "bleu_1": 0.42857142857142855,
+        "bleu_4": 0.08461538461538462,
+        "rouge_l": 0.3305785123966942,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 0.01,
+        "bertscore_f1": 85.89
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -10833,6 +11379,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ quang học mô tả tật cận thị và cách khắc phục: Ở mắt cận thị, do cầu mắt quá dài hoặc thể thuỷ tinh quá phồng, chùm tia sáng từ vật hội tụ ở phía trước màng lưới khiến ảnh nhìn bị mờ nhòe. Để khắc phục, người cận thị đeo kính cận là thấu kính phân kì, giúp chùm sáng phân kì thích hợp trước khi qua thể thuỷ tinh để ảnh của vật lùi về hội tụ đúng trên màng lưới.",
       "gt_caption_en": "The optobiological experimental diagram demonstrates crystalline lens accommodation mechanics in the human eye: When a luminous object (candle) is positioned distantly (position A), the lens maintains a flattened configuration (converging lens 1 with small curvature), accurately focusing an inverted real image upon the retinal receptive screen; when the object advances close to the eye (position B), retaining invariant lens curvature causes the focal plane to shift posterior to the retina, generating blurriness; to restore visual acuity, ciliary muscles contract to increase lens convex curvature (converging lens 2), effectively shortening focal length and pulling the sharp real image forward directly onto the photoreceptor layer.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Sơ đồ cơ chế quang học của tật cận thị và phương pháp khắc phục bằng kính phân kì'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: cầu mắt, thể thuỷ tinh, màng lưới, thấu kính phân kì, kính cận, chùm sáng hội tụ. Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: vị trí A vật ở xa khúc xạ qua thấu kính 1 tạo ảnh nét trên màng lưới thấu kính 1; vị trí B vật dịch lại gần cần thấu kính 2 có độ cong lớn hơn để kéo ảnh về đúng màng lưới thấu kính 2.",
+      "generated_caption_en": "The diagram illustrates the optical mechanism of nearsightedness, showing how light rays converge at position A through lens 1 to form a sharp image on the retina when viewing distant objects, but require lens 2 with greater curvature at position B to correct for closer objects, demonstrating the need for concave lenses to adjust the focal point back onto the retina.",
+      "metrics_vi": {
+        "bleu_1": 0.36065573770491804,
+        "bleu_4": 0.01680672268907563,
+        "rouge_l": 0.2995169082125604,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 0.0,
+        "bertscore_f1": 86.65
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -11047,6 +11606,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ chu trình nước trong tự nhiên: Nước từ đại dương, sông hồ và bề mặt đất bốc hơi, kết hợp với lượng nước thoát hơi từ thảm thực vật bay lên khí quyển tạo thành mây; mây ngưng tụ tạo thành mưa rơi xuống lục địa và đại dương; một phần nước ngấm vào đất tạo thành mạch nước ngầm, phần còn lại chảy theo sông ngòi đổ trở lại biển và đại dương.",
       "gt_caption_en": "The comprehensive global biogeochemical hydrologic cycle model depicts planetary water dynamics: Solar thermal irradiation drives immense evaporation from oceans, seas, and surface water bodies into the atmosphere; simultaneously, terrestrial vegetation continuously transpires water vapor via foliar stomata; rising atmospheric vapor cools adiabatically, condensing around cloud condensation nuclei; upon cloud saturation, precipitation falls as rain, snow, or hail onto landmasses and marine surfaces; terrestrial precipitation subsequently partitions into surface runoff replenishing river drainage networks flowing back to the ocean, and deep groundwater percolation feeding subterranean aquifers.",
+      "generated_caption_vi": "Sơ đồ biểu diễn chu trình sinh học khép kín và tiến trình phát triển của sơ đồ chu trình nước trong sinh thái học tự nhiên. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: đại dương, bốc hơi, thoát hơi nước, ngưng tụ mây, mưa, nước ngầm, sông ngòi cùng các cấu trúc liên quan (). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: đại dương nước đại dương bốc hơi lên khí quyển bốc hơi; bốc hơi hơi nước ngưng tụ tạo thành các đám mây mây; mây ngưng kết rơi xuống mặt đất thành mưa mưa; mưa nước mưa tạo dòng chảy mặt đổ vào sông ngòi sông ngòi; sông ngòi dẫn nước chảy quay trở về đại dương đại dương.",
+      "generated_caption_en": "The diagram illustrates the natural water cycle, showing key components such as the ocean, evaporation, transpiration, cloud formation, precipitation, groundwater, and rivers. The process begins with the ocean where water evaporates into the atmosphere; this vapor then condenses to form clouds which release rain that falls onto land, replenishing rivers and groundwater before ultimately flowing back into the ocean.",
+      "metrics_vi": {
+        "bleu_1": 0.375,
+        "bleu_4": 0.03007518796992481,
+        "rouge_l": 0.3113207547169811,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.8
+      },
+      "metrics_en": {
+        "cider": 0.01,
+        "bertscore_f1": 86.0
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -11271,6 +11843,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ chu trình tuần hoàn carbon trong sinh quyển: Khí carbon dioxide (CO2) trong khí quyển được thực vật hấp thu qua quá trình quang hợp để tạo chất hữu cơ; carbon truyền qua lưới thức ăn từ sinh vật sản xuất sang động vật ăn thực vật và động vật ăn thịt; qua quá trình hô hấp của động thực vật, phân giải chất hữu cơ của vi sinh vật và hoạt động đốt cháy nhiên liệu hoá thạch của con người, CO2 được giải phóng hoàn trả lại khí quyển.",
       "gt_caption_en": "The global carbon biogeochemical cycle diagram illustrates pathways and fluxes across atmospheric, terrestrial, and geologic reservoirs: Atmospheric carbon exists predominantly as carbon dioxide (CO2); primary photosynthetic autotrophs (plants, phytoplankton) assimilate CO2 into biomass carbohydrates; organic carbon flows through trophic levels as herbivores consume plants and predators consume prey; metabolic cellular respiration across all living kingdoms continuously releases CO2 back into the atmosphere; dead organic matter is decomposed by saprophytic microorganisms or sequestered under geological pressure over millennia to form fossil fuels (coal, petroleum, natural gas); anthropogenic extraction and fossil combustion inject excessive CO2 fluxes into the atmosphere, perturbing natural equilibrium.",
+      "generated_caption_vi": "Sơ đồ biểu diễn chu trình sinh học khép kín và tiến trình phát triển của sơ đồ chu trình tuần hoàn carbon trong sinh quyển. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: khí CO2, quang hợp, thực vật, động vật, hô hấp, vi sinh vật phân giải, nhiên liệu hoá thạch cùng các cấu trúc liên quan (). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: CO2 thực vật quang hợp hấp thu khí CO2 từ khí quyển thực vật; thực vật chuyển giao hợp chất carbon qua thức ăn động vật; động vật hô hấp tế bào giải phóng CO2 trả lại khí quyển CO2; nhiên liệu hoá thạch đốt cháy than đá dầu mỏ thải khí CO2 vào khí quyển CO2.",
+      "generated_caption_en": "The diagram illustrates the carbon cycle within the biosphere, showing key processes such as photosynthesis, respiration, and decomposition. It depicts the flow of carbon dioxide (CO2) from the atmosphere to plants through photosynthesis, then transferred to animals via consumption, released back into the atmosphere by animal respiration, and emitted as CO2 when fossil fuels are burned.",
+      "metrics_vi": {
+        "bleu_1": 0.45985401459854014,
+        "bleu_4": 0.06716417910447761,
+        "rouge_l": 0.32173913043478264,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.5
+      },
+      "metrics_en": {
+        "cider": 0.0,
+        "bertscore_f1": 86.22
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -11476,6 +12061,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ so sánh ba dạng tháp sinh thái chuẩn trong hệ sinh thái: Tháp số lượng xây dựng dựa trên số lượng cá thể sinh vật ở mỗi bậc dinh dưỡng; tháp sinh khối dựa trên tổng khối lượng chất khô của sinh vật; và tháp năng lượng biểu diễn lượng năng lượng được tích lũy trên một đơn vị diện tích hoặc thể tích ở từng bậc dinh dưỡng (sinh vật sản xuất, sinh vật tiêu thụ bậc 1, bậc 2, bậc 3).",
       "gt_caption_en": "The comparative ecological pyramids schematic contrasts three fundamental models quantifying trophic structures: (a) The pyramid of numbers calculates the total individual population density at each successive trophic tier; (b) The pyramid of biomass determines the cumulative dry organic weight (g/m2) per trophic level; (c) The pyramid of energy measures dynamic energy productivity (kcal/m2/year) assimilated per unit area over time; notably, while pyramids of numbers and biomass can occasionally exhibit inverted profiles (such as marine phytoplankton turnover or arboreal parasite systems), the pyramid of energy is universally upright with a broad base, dictated by thermodynamics where approximately 90% of energy is dissipated at each successive step.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Các dạng tháp sinh thái: Tháp số lượng, tháp sinh khối và tháp năng lượng'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: tháp số lượng, tháp sinh khối, tháp năng lượng, sinh vật sản xuất, sinh vật tiêu thụ, bậc dinh dưỡng. Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: sinh vật sản xuất nâng đỡ các bậc sinh vật tiêu thụ phía trên sinh vật tiêu thụ; tháp số lượng thể hiện số lượng cá thể qua từng bậc dinh dưỡng bậc dinh dưỡng; tháp năng lượng luôn có dạng chuẩn đứng do năng lượng hao hụt qua các bậc bậc dinh dưỡng.",
+      "generated_caption_en": "The diagram illustrates three types of ecological pyramids: the pyramid of numbers, the pyramid of biomass, and the pyramid of energy, each depicting different aspects of trophic levels within an ecosystem. It shows that producers support primary consumers, which in turn support higher-level consumers, with the number of individuals decreasing at each trophic level in the pyramid of numbers, while the pyramid of energy always maintains a standard upright shape due to energy loss at each transfer step.",
+      "metrics_vi": {
+        "bleu_1": 0.421875,
+        "bleu_4": 0.104,
+        "rouge_l": 0.3098591549295775,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 0.01,
+        "bertscore_f1": 85.79
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -11650,6 +12248,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ cơ chế tái bản DNA tại chạc tái bản chữ Y: Enzyme helicase tháo xoắn tách hai mạch đơn DNA; trên mạch khuôn có chiều 3' đến 5', mạch bổ sung (mạch dẫn đầu) được enzyme DNA polymerase tổng hợp liên tục theo chiều 5' đến 3'; trên mạch khuôn 5' đến 3', mạch bổ sung (mạch đi sau) được tổng hợp ngắt quãng tạo thành các đoạn Okazaki ngắn, sau đó được nối lại nhờ enzyme DNA ligase.",
       "gt_caption_en": "The molecular DNA replication fork mechanism diagram details semiconservative synthesis at a replication fork: DNA helicase unwinds parental duplex DNA and unzips hydrogen bonds between nucleotide pairs; because DNA polymerase III only synthesizes polynucleotide chains in the 5'-to-3' direction, synthesis proceeds continuously along the 3'-to-5' leading strand template toward the progressing fork; conversely, on the 5'-to-3' lagging strand template, synthesis proceeds discontinuously away from the fork in short Okazaki fragments, each primed by an RNA primer; subsequently, DNA polymerase I replaces primers with deoxyribonucleotides, and DNA ligase catalyzes phosphodiester bonds to weld fragments into a continuous nascent strand.",
+      "generated_caption_vi": "Sơ đồ trình bày tiến trình khoa học diễn tiến theo từng giai đoạn của sơ đồ cơ chế nhân đôi dna tại chạc tái bản chữ y. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: chạc chữ Y, DNA khuôn, mạch dẫn đầu, mạch đi sau, đoạn Okazaki, DNA polymerase, DNA ligase cùng các cấu trúc liên quan (). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: helicase tháo xoắn và tách hai mạch đơn DNA mẹ chạc tái bản chữ Y; DNA polymerase tổng hợp liên tục theo chiều 5'-3' mạch dẫn đầu; DNA polymerase tổng hợp gián đoạn trên mạch đi sau tạo các đoạn Okazaki đoạn Okazaki; ligase nối các đoạn Okazaki thành mạch mới hoàn chỉnh đoạn Okazaki.",
+      "generated_caption_en": "The diagram illustrates the mechanism of DNA replication at the Y-shaped fork, showing how helicase unwinds and separates the two parental DNA strands. It depicts continuous synthesis along the leading strand by DNA polymerase in the 5' to 3' direction, while discontinuous synthesis occurs on the lagging strand, producing Okazaki fragments which are later joined together by DNA ligase.",
+      "metrics_vi": {
+        "bleu_1": 0.40441176470588236,
+        "bleu_4": 0.09774436090225563,
+        "rouge_l": 0.35023041474654376,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.0
+      },
+      "metrics_en": {
+        "cider": 0.0,
+        "bertscore_f1": 88.45
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -11874,6 +12485,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ cơ chế phiên mã tổng hợp phân tử RNA: Enzyme RNA polymerase liên kết vào vùng điều hoà của gene, làm tháo xoắn cục bộ phân tử DNA để lộ mạch khuôn có chiều 3' đến 5'; enzyme sau đó trượt dọc theo mạch khuôn và tổng hợp chuỗi phân tử RNA theo nguyên tắc bổ sung (A-U, T-A, G-C, C-G) theo chiều từ đầu 5' đến 3'.",
       "gt_caption_en": "The molecular transcription mechanism diagram illustrates RNA synthesis catalyzed by RNA polymerase: Transcription initiates when RNA polymerase recognizes and binds specifically to the gene promoter region; the polymerase unwinds local DNA duplexes, exposing the 3'-to-5' template (antisense) strand; as the enzyme traverses the template strand in the 3'-to-5' orientation, free intracellular ribonucleoside triphosphates are matched complementarily: adenine pairs with uracil, thymine with adenine, guanine with cytosine, and cytosine with guanine, extending nascent RNA in the 5'-to-3' direction; upon encountering a terminator sequence, the polymerase dissociates, liberating the mature primary RNA transcript while the DNA double helix re-anneals.",
+      "generated_caption_vi": "Sơ đồ trình bày tiến trình khoa học diễn tiến theo từng giai đoạn của sơ đồ cơ chế phiên mã tổng hợp phân tử rna từ mạch khuôn dna. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: mạch khuôn 3'-5', mạch mã hoá, RNA polymerase, phân tử RNA, nguyên tắc bổ sung. Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: RNA polymerase bám vào promoter và trượt dọc mạch khuôn tháo xoắn DNA mạch khuôn; mạch khuôn lắp ráp các nucleotide tự do tổng hợp chuỗi phân tử RNA theo nguyên tắc bổ sung RNA.",
+      "generated_caption_en": "The diagram illustrates the mechanism of RNA synthesis from the template DNA strand, showing RNA polymerase binding to the promoter region and sliding along the 3' to 5' template DNA strand to unwind it. As the enzyme moves, it assembles free nucleotides into a complementary RNA molecule according to base-pairing rules.",
+      "metrics_vi": {
+        "bleu_1": 0.38181818181818183,
+        "bleu_4": 0.14953271028037382,
+        "rouge_l": 0.34782608695652173,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.0
+      },
+      "metrics_en": {
+        "cider": 0.0,
+        "bertscore_f1": 87.15
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -12059,6 +12683,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ cơ chế điều hoà hoạt động của operon Lac ở vi khuẩn E. coli khi môi trường có lactose: Phân tử đường allolactose liên kết với protein ức chế làm biến đổi cấu hình không gian của protein này, khiến protein ức chế không thể liên kết vào vùng vận hành (operator O); vùng vận hành được giải phóng giúp enzyme RNA polymerase tự do bám vào vùng khởi động (promoter P) và trượt qua phiên mã các gene cấu trúc lacZ, lacY, lacA thành phân tử polycistronic mRNA.",
       "gt_caption_en": "The molecular gene regulation diagram demonstrates bacterial lac operon induction in the presence of lactose: Intracellular lactose induces allolactose formation, which binds allosterically to active repressor tetramers produced constitutively by the lacI regulatory gene; this induces a conformational change that inactivates the repressor, abrogating its affinity for the operator sequence (O); cleared of steric obstruction, RNA polymerase binds stably to the promoter (P) and transcribes structural cistrons lacZ, lacY, and lacA into a polycistronic mRNA transcript; ribosomal translation subsequently synthesizes beta-galactosidase, beta-galactoside permease, and thiogalactoside transacetylase to import and metabolize lactose.",
+      "generated_caption_vi": "Sơ đồ khoa học minh họa trực quan nội dung 'Cơ chế điều hòa hoạt động của Operon Lac khi môi trường CÓ lactose'. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: operon Lac, lactose, protein ức chế, vùng khởi động (P), vùng vận hành (O), RNA polymerase, gene cấu trúc lacZ lacY lacA cùng các cấu trúc liên quan (). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: lactose gắn vào protein ức chế làm biến đổi cấu hình bất hoạt protein ức chế; protein ức chế không thể gắn vào operator, giải phóng vùng vận hành operator; RNA polymerase bám vào promoter và trượt qua các gene cấu trúc promoter; RNA polymerase phiên mã các gene lacZ, lacY, lacA thành chuỗi mRNA mRNA.",
+      "generated_caption_en": "The diagram illustrates the regulatory mechanism of the Lac operon in the presence of lactose, showing how lactose binds to the repressor protein, altering its configuration and preventing it from binding to the operator region, thus releasing the regulatory control over the genes. RNA polymerase then binds to the promoter region and transcribes the structural genes lacZ, lacY, and lacA into mRNA.",
+      "metrics_vi": {
+        "bleu_1": 0.48175182481751827,
+        "bleu_4": 0.13432835820895522,
+        "rouge_l": 0.45614035087719296,
+        "entity_recall": 1.0,
+        "dir_accuracy": 1.0
+      },
+      "metrics_en": {
+        "cider": 0.0,
+        "bertscore_f1": 88.41
+      },
       "scene_graph_topology": {
         "nodes": [
           {
@@ -12311,6 +12948,19 @@ const VN_GALLERY_DATA = {
       ],
       "gt_caption_vi": "Sơ đồ chi tiết diễn biến hai lần phân bào của quá trình giảm phân: Ở Giảm phân I, các cặp nhiễm sắc thể kép tương đồng tiếp hợp và có thể trao đổi chéo ở kì đầu I, xếp thành 2 hàng trên mặt phẳng xích đạo ở kì giữa I, phân li độc lập về 2 cực ở kì sau I và kết thúc kì cuối I tạo 2 tế bào con có bộ NST đơn bội kép (n kép). Ở Giảm phân II, các nhiễm sắc thể kép xếp thành 1 hàng ở kì giữa II, tách nhau tại tâm động ở kì sau II và tạo ra 4 tế bào con đơn bội (n).",
       "gt_caption_en": "The cellular division schematic illustrates sequential stages of Meiosis I and Meiosis II in gametogenesis: (1) Preceded by interphase DNA replication, Meiosis I begins at Prophase I with synapsis of homologous chromosomes and crossing-over chiasmata exchanging genetic material; at Metaphase I, homologous chromosome pairs align in double ranks along the equatorial plane; at Anaphase I, homologous dyads segregate independently to opposite poles without centromere splitting; Telophase I cytokinesis produces two secondary daughter cells containing a haploid number of replicated double chromosomes (n dyads); (2) Without intervening S-phase DNA synthesis, cells enter Meiosis II: Chromosomes line up in single file along the equatorial plate at Metaphase II; during Anaphase II, sister centromeres cleave, disjoining sister chromatids into individual single chromosomes migrating to opposite poles; Telophase II concludes with four non-identical haploid gametes (n).",
+      "generated_caption_vi": "Sơ đồ trình bày tiến trình khoa học diễn tiến theo từng giai đoạn của sơ đồ diễn biến các kì của giảm phân i và giảm phân ii. Các thành phần và vị trí then chốt được định danh trên sơ đồ bao gồm: Giảm phân I, Giảm phân II, kì đầu I, kì giữa I, kì sau I, kì cuối I, kì giữa II cùng các cấu trúc liên quan (kì sau II, tế bào con đơn bội). Các mũi tên chỉ hướng mô tả tiến trình tương tác tuần tự: Giảm phân I các cặp nhiễm sắc thể kép tương đồng tiếp hợp trao đổi chéo kì đầu I; kì đầu I nhiễm sắc thể kép xếp hai hàng ở mặt phẳng xích đạo kì giữa I; kì giữa I các nhiễm sắc thể kép phân li về hai cực kì sau I; kì sau I tạo hai tế bào con mang bộ nhiễm sắc thể n kép kì cuối I; kì cuối I bước vào lần phân bào thứ hai Giảm phân II; Giảm phân II tách chromatid thành nhiễm sắc thể đơn phân li về hai cực kì sau II.",
+      "generated_caption_en": "The diagram illustrates the progression of stages in Meiosis I and Meiosis II, showing key phases including Prophase I, Metaphase I, Anaphase I, Telophase I, Metaphase II, Anaphase II, and Telophase II. It depicts the processes where homologous chromosome pairs align and exchange genetic material during Prophase I, followed by their separation into daughter cells with duplicated chromosomes at Anaphase I, leading to the formation of two cells with diploid sets of chromosomes at the end of Meiosis I, which then proceed through Meiosis II to ultimately produce four haploid daughter cells.",
+      "metrics_vi": {
+        "bleu_1": 0.441025641025641,
+        "bleu_4": 0.08854166666666667,
+        "rouge_l": 0.3833865814696486,
+        "entity_recall": 1.0,
+        "dir_accuracy": 0.7142857142857143
+      },
+      "metrics_en": {
+        "cider": 0.0,
+        "bertscore_f1": 86.37
+      },
       "scene_graph_topology": {
         "nodes": [
           {

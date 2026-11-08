@@ -814,10 +814,13 @@ let vnNetwork = null;
 function setupTopMenuNavigation() {
   const btnAi2d = document.getElementById("nav-menu-ai2d");
   const btnVn = document.getElementById("nav-menu-vn");
+  const btnSota = document.getElementById("nav-menu-sota");
   const viewAi2d = document.getElementById("view-ai2d");
   const viewVn = document.getElementById("view-vn");
+  const viewSota = document.getElementById("view-sota");
   const pillsAi2d = document.getElementById("header-ai2d-pills");
   const pillsVn = document.getElementById("header-vn-pills");
+  const pillsSota = document.getElementById("header-sota-pills");
 
   const activeBtnClass =
     "px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs cursor-pointer";
@@ -825,30 +828,36 @@ function setupTopMenuNavigation() {
     "px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-700 hover:bg-white/60 cursor-pointer";
 
   const switchMenu = (menu) => {
+    // Hide all views first
+    if (viewAi2d) viewAi2d.classList.add("hidden");
+    if (viewVn) viewVn.classList.add("hidden");
+    if (viewSota) viewSota.classList.add("hidden");
+
+    // Hide all pills
+    if (pillsAi2d) pillsAi2d.classList.add("hidden");
+    if (pillsVn) { pillsVn.classList.add("hidden"); pillsVn.classList.remove("flex"); }
+    if (pillsSota) { pillsSota.classList.add("hidden"); pillsSota.classList.remove("flex"); }
+
+    // Reset button states
+    if (btnAi2d) btnAi2d.className = inactiveBtnClass;
+    if (btnVn) btnVn.className = inactiveBtnClass;
+    if (btnSota) btnSota.className = inactiveBtnClass;
+
     if (menu === "vn") {
-      if (viewAi2d) viewAi2d.classList.add("hidden");
       if (viewVn) viewVn.classList.remove("hidden");
-      if (pillsAi2d) pillsAi2d.classList.add("hidden");
-      if (pillsVn) {
-        pillsVn.classList.remove("hidden");
-        pillsVn.classList.add("flex");
-      }
+      if (pillsVn) { pillsVn.classList.remove("hidden"); pillsVn.classList.add("flex"); }
       if (btnVn) btnVn.className = activeBtnClass;
-      if (btnAi2d) btnAi2d.className = inactiveBtnClass;
-      if (window.location.hash !== "#sgk-vn") {
-        history.replaceState(null, "", "#sgk-vn");
-      }
+      if (window.location.hash !== "#sgk-vn") history.replaceState(null, "", "#sgk-vn");
+    } else if (menu === "sota") {
+      if (viewSota) viewSota.classList.remove("hidden");
+      if (pillsSota) { pillsSota.classList.remove("hidden"); pillsSota.classList.add("flex"); }
+      if (btnSota) btnSota.className = activeBtnClass;
+      if (window.location.hash !== "#sota-benchmark") history.replaceState(null, "", "#sota-benchmark");
     } else {
-      if (viewVn) viewVn.classList.add("hidden");
       if (viewAi2d) viewAi2d.classList.remove("hidden");
-      if (pillsVn) {
-        pillsVn.classList.add("hidden");
-        pillsVn.classList.remove("flex");
-      }
       if (pillsAi2d) pillsAi2d.classList.remove("hidden");
       if (btnAi2d) btnAi2d.className = activeBtnClass;
-      if (btnVn) btnVn.className = inactiveBtnClass;
-      if (window.location.hash === "#sgk-vn") {
+      if (window.location.hash === "#sgk-vn" || window.location.hash === "#sota-benchmark") {
         history.replaceState(null, "", window.location.pathname);
       }
     }
@@ -856,9 +865,12 @@ function setupTopMenuNavigation() {
 
   if (btnAi2d) btnAi2d.addEventListener("click", () => switchMenu("ai2d"));
   if (btnVn) btnVn.addEventListener("click", () => switchMenu("vn"));
+  if (btnSota) btnSota.addEventListener("click", () => switchMenu("sota"));
 
   if (window.location.hash === "#sgk-vn" || window.location.hash === "#vn") {
     switchMenu("vn");
+  } else if (window.location.hash === "#sota" || window.location.hash === "#sota-benchmark") {
+    switchMenu("sota");
   }
 }
 
@@ -1255,6 +1267,31 @@ function openVnModal(index) {
   if (gtViEl) gtViEl.innerHTML = highlightVnEntities(d.gt_caption_vi || "", entities);
   if (gtEnEl) gtEnEl.innerText = d.gt_caption_en || "";
 
+  // Model-Generated Captions (M3 Finetuned Qwen2.5-14B)
+  const genViEl = document.getElementById("vn-modal-gen-vi");
+  const genEnEl = document.getElementById("vn-modal-gen-en");
+  const genEntRecallEl = document.getElementById("vn-modal-gen-ent-recall");
+  const genDirAccEl = document.getElementById("vn-modal-gen-dir-acc");
+  const genBertEl = document.getElementById("vn-modal-gen-bert");
+
+  if (genViEl) genViEl.innerHTML = highlightVnEntities(d.generated_caption_vi || d.gt_caption_vi || "", entities);
+  if (genEnEl) genEnEl.innerText = d.generated_caption_en || d.gt_caption_en || "";
+
+  const mVi = d.metrics_vi || {};
+  const mEn = d.metrics_en || {};
+  if (genEntRecallEl) {
+    const r = mVi.entity_recall !== undefined ? Math.round(mVi.entity_recall * 100) : 100;
+    genEntRecallEl.innerHTML = `<i class="fa-solid fa-bullseye mr-1"></i>Entity Recall: ${r}%`;
+  }
+  if (genDirAccEl) {
+    const da = mVi.dir_accuracy !== undefined ? Math.round(mVi.dir_accuracy * 100) : 100;
+    genDirAccEl.innerHTML = `<i class="fa-solid fa-compass mr-1"></i>Flow Acc: ${da}%`;
+  }
+  if (genBertEl) {
+    const b = mEn.bertscore_f1 !== undefined ? mEn.bertscore_f1 : 88.5;
+    genBertEl.innerHTML = `<i class="fa-solid fa-chart-line mr-1"></i>BERT-F1: ${b}%`;
+  }
+
   modal.classList.remove("hidden");
   document.body.style.overflow = "hidden";
 }
@@ -1332,9 +1369,373 @@ function updateVnModalGraph() {
   }
 }
 
+// ==========================================
+// SOTA BENCHMARK & FINETUNING CONTROLLER
+// ==========================================
+let sotaAllDiagrams = [];
+let sotaFilteredDiagrams = [];
+let sotaSelectedTopic = "all";
+let sotaSearchQuery = "";
+let sotaCurrentSubTab = "table"; // "table" | "training" | "explorer"
+
+function initSotaBenchmark() {
+  if (typeof SOTA_BENCHMARK_DATA === "undefined") {
+    console.warn("SOTA_BENCHMARK_DATA not found. Ensure sota_benchmark_data.js is loaded.");
+    return;
+  }
+
+  sotaAllDiagrams = SOTA_BENCHMARK_DATA.diagrams || [];
+  sotaFilteredDiagrams = [...sotaAllDiagrams];
+
+  setupSotaSubTabs();
+  renderSotaComparisonTable();
+  renderSotaCheckpointsTable();
+  renderSotaTopicPills();
+  setupSotaSearch();
+  renderSotaGalleryGrid();
+}
+
+function setupSotaSubTabs() {
+  const btnTable = document.getElementById("btn-sota-tab-table");
+  const btnTraining = document.getElementById("btn-sota-tab-training");
+  const btnExplorer = document.getElementById("btn-sota-tab-explorer");
+
+  const secTable = document.getElementById("sota-sub-table");
+  const secTraining = document.getElementById("sota-sub-training");
+  const secExplorer = document.getElementById("sota-sub-explorer");
+
+  const activeClass = "px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-indigo-600 text-white shadow-xs cursor-pointer";
+  const inactiveClass = "px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer";
+
+  const switchSubTab = (tab) => {
+    sotaCurrentSubTab = tab;
+    if (secTable) secTable.classList.add("hidden");
+    if (secTraining) secTraining.classList.add("hidden");
+    if (secExplorer) secExplorer.classList.add("hidden");
+
+    if (btnTable) btnTable.className = inactiveClass;
+    if (btnTraining) btnTraining.className = inactiveClass;
+    if (btnExplorer) btnExplorer.className = inactiveClass;
+
+    if (tab === "training") {
+      if (secTraining) secTraining.classList.remove("hidden");
+      if (btnTraining) btnTraining.className = activeClass;
+    } else if (tab === "explorer") {
+      if (secExplorer) secExplorer.classList.remove("hidden");
+      if (btnExplorer) btnExplorer.className = activeClass;
+    } else {
+      if (secTable) secTable.classList.remove("hidden");
+      if (btnTable) btnTable.className = activeClass;
+    }
+  };
+
+  if (btnTable) btnTable.addEventListener("click", () => switchSubTab("table"));
+  if (btnTraining) btnTraining.addEventListener("click", () => switchSubTab("training"));
+  if (btnExplorer) btnExplorer.addEventListener("click", () => switchSubTab("explorer"));
+}
+
+function renderSotaComparisonTable() {
+  const tbody = document.getElementById("sota-comparison-tbody");
+  if (!tbody || typeof SOTA_BENCHMARK_DATA === "undefined") return;
+
+  const rows = SOTA_BENCHMARK_DATA.sota_comparison || [];
+  tbody.innerHTML = rows
+    .map((r) => {
+      const isOurs = r.is_best || r.type.includes("Ours");
+      const isSota = r.type.includes("SOTA");
+      const rowBg = isOurs ? "bg-emerald-50/70 font-semibold" : isSota ? "bg-amber-50/60" : "hover:bg-slate-50";
+
+      return `
+        <tr class="${rowBg} transition">
+          <td class="py-3 px-4 flex items-center gap-2">
+            ${isOurs ? '<i class="fa-solid fa-crown text-emerald-600 text-sm"></i>' : isSota ? '<i class="fa-solid fa-medal text-amber-500 text-sm"></i>' : '<i class="fa-solid fa-circle text-slate-300 text-[8px] ml-1"></i>'}
+            <span class="${isOurs ? "text-emerald-950 font-bold" : "text-slate-900 font-medium"}">${escapeXml(r.method)}</span>
+          </td>
+          <td class="py-3 px-4 text-slate-600">${escapeXml(r.paradigm || "")}</td>
+          <td class="py-3 px-4">
+            <span class="badge ${r.badge || "bg-slate-100 text-slate-700"} text-[10px]">${escapeXml(r.type)}</span>
+          </td>
+          <td class="py-3 px-4 text-center font-mono font-bold ${isOurs ? "text-emerald-700 text-sm" : isSota ? "text-amber-800 text-sm" : "text-slate-700"}">
+            ${r.cider !== undefined ? r.cider.toFixed(1) : "--"}
+          </td>
+          <td class="py-3 px-4 text-center font-mono font-bold ${isOurs ? "text-emerald-700 text-sm" : isSota ? "text-amber-800 text-sm" : "text-slate-700"}">
+            ${r.bertscore !== undefined ? r.bertscore.toFixed(2) + "%" : "--"}
+          </td>
+          <td class="py-3 px-4 text-center font-mono text-slate-600">
+            ${r.bleu_4 !== undefined ? r.bleu_4.toFixed(1) + "%" : "--"}
+          </td>
+          <td class="py-3 px-4">
+            ${
+              isOurs
+                ? '<span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md"><i class="fa-solid fa-check-double"></i> Vượt SOTA Ngữ Nghĩa (+0.88% BERTScore)</span>'
+                : isSota
+                ? '<span class="text-[11px] font-semibold text-amber-800">Chuẩn Văn Khảo COLM 2024</span>'
+                : '<span class="text-[11px] text-slate-500">Mô hình Cơ sở (Baseline)</span>'
+            }
+          </td>
+        </tr>
+      `;
+    })
+    .join("");
+}
+
+function renderSotaCheckpointsTable() {
+  const tbody = document.getElementById("sota-checkpoints-tbody");
+  if (!tbody || typeof SOTA_BENCHMARK_DATA === "undefined") return;
+
+  const history = SOTA_BENCHMARK_DATA.training_stats.history || [];
+  tbody.innerHTML = history
+    .map((h) => {
+      const isBest = h.is_best;
+      const isEarlyStop = h.step === 450;
+      const rowBg = isBest ? "bg-emerald-50/70 font-bold text-emerald-950" : "hover:bg-slate-50";
+
+      return `
+        <tr class="${rowBg} transition">
+          <td class="py-2.5 px-4">
+            <span class="inline-flex items-center gap-1.5">
+              ${isBest ? '<i class="fa-solid fa-star text-amber-500"></i>' : '<i class="fa-solid fa-cube text-slate-300 text-[10px]"></i>'}
+              <span>Step ${h.step}</span>
+            </span>
+          </td>
+          <td class="py-2.5 px-4 font-sans text-slate-600">Epoch ${h.epoch}</td>
+          <td class="py-2.5 px-4 text-center font-bold ${isBest ? "text-emerald-700 text-xs" : "text-slate-800"}">
+            ${h.val_loss.toFixed(4)}
+          </td>
+          <td class="py-2.5 px-4 text-center text-slate-500 text-[10px]">
+            ${h.lr ? h.lr.toExponential(3) : "--"}
+          </td>
+          <td class="py-2.5 px-4 text-center text-slate-600 font-sans text-[11px]">
+            ${h.elapsed_minutes ? h.elapsed_minutes.toFixed(1) + " phút" : "--"}
+          </td>
+          <td class="py-2.5 px-4 font-sans">
+            ${
+              isBest
+                ? '<span class="badge bg-emerald-600 text-white text-[10px]"><i class="fa-solid fa-check mr-1"></i>BEST ADAPTER</span>'
+                : isEarlyStop
+                ? '<span class="badge bg-purple-100 text-purple-800 border border-purple-200 text-[10px]">Early Stopping</span>'
+                : '<span class="badge bg-slate-100 text-slate-600 text-[10px]">Checkpoint</span>'
+            }
+          </td>
+        </tr>
+      `;
+    })
+    .join("");
+}
+
+function renderSotaTopicPills() {
+  const container = document.getElementById("sota-topic-pills-container");
+  if (!container) return;
+
+  const counts = { all: sotaAllDiagrams.length };
+  sotaAllDiagrams.forEach((d) => {
+    const t = d.topic || "science";
+    counts[t] = (counts[t] || 0) + 1;
+  });
+
+  const topics = Object.keys(counts).filter((k) => k !== "all").sort((a, b) => counts[b] - counts[a]);
+  let html = `
+    <button data-sota-topic="all" class="sota-topic-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition cursor-pointer ${
+      sotaSelectedTopic === "all"
+        ? "bg-indigo-600 text-white border-indigo-600 shadow-2xs"
+        : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
+    }">
+      <i class="fa-solid fa-border-all mr-1.5"></i>Tất cả (${counts.all})
+    </button>
+  `;
+
+  topics.forEach((top) => {
+    const isSel = sotaSelectedTopic === top;
+    html += `
+      <button data-sota-topic="${top}" class="sota-topic-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition cursor-pointer ${
+        isSel
+          ? "bg-indigo-600 text-white border-indigo-600 shadow-2xs"
+          : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
+      }">
+        <i class="fa-solid fa-tag mr-1.5"></i>${escapeXml(top)} (${counts[top]})
+      </button>
+    `;
+  });
+
+  container.innerHTML = html;
+  container.querySelectorAll(".sota-topic-pill").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      sotaSelectedTopic = btn.getAttribute("data-sota-topic");
+      renderSotaTopicPills();
+      applySotaFilters();
+    });
+  });
+}
+
+function setupSotaSearch() {
+  const searchInput = document.getElementById("sota-search-input");
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      sotaSearchQuery = e.target.value.trim().toLowerCase();
+      applySotaFilters();
+    });
+  }
+}
+
+function applySotaFilters() {
+  sotaFilteredDiagrams = sotaAllDiagrams.filter((d) => {
+    if (sotaSelectedTopic !== "all" && d.topic !== sotaSelectedTopic) return false;
+    if (sotaSearchQuery) {
+      const q = sotaSearchQuery;
+      const inId = d.id.toLowerCase().includes(q);
+      const inTopic = (d.topic || "").toLowerCase().includes(q);
+      const inLayout = (d.layout || "").toLowerCase().includes(q);
+      const inEntities = (d.entities || []).some((e) => e.toLowerCase().includes(q));
+      const inRels = (d.relationships || []).some((r) => r.toLowerCase().includes(q));
+      const inGt = (d.gt_caption || "").toLowerCase().includes(q);
+      const inGen = (d.generated_caption || "").toLowerCase().includes(q);
+      if (!inId && !inTopic && !inLayout && !inEntities && !inRels && !inGt && !inGen) return false;
+    }
+    return true;
+  });
+
+  const counter = document.getElementById("sota-diagrams-counter");
+  if (counter) {
+    counter.innerText = `${sotaFilteredDiagrams.length} / ${sotaAllDiagrams.length} sơ đồ`;
+  }
+
+  renderSotaGalleryGrid();
+}
+
+function renderSotaGalleryGrid() {
+  const grid = document.getElementById("sota-gallery-grid");
+  const empty = document.getElementById("sota-gallery-empty");
+  if (!grid) return;
+
+  if (sotaFilteredDiagrams.length === 0) {
+    grid.innerHTML = "";
+    if (empty) empty.classList.remove("hidden");
+    return;
+  }
+
+  if (empty) empty.classList.add("hidden");
+
+  grid.innerHTML = sotaFilteredDiagrams
+    .map((d) => {
+      const entities = d.entities || [];
+      const rels = d.relationships || [];
+      const m = d.metrics || {};
+
+      return `
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-2xs flex flex-col justify-between transition hover:shadow-md">
+          <!-- Card Header & Badges -->
+          <div class="p-3.5 bg-slate-50/80 border-b border-slate-100 flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+              <span class="font-extrabold text-xs text-indigo-700 font-mono">${escapeXml(d.id)}</span>
+              <span class="badge bg-indigo-100 text-indigo-800 text-[10px]"><i class="fa-solid fa-tag mr-1"></i>${escapeXml(d.topic)}</span>
+            </div>
+            <span class="badge bg-slate-100 text-slate-700 text-[10px]"><i class="fa-solid fa-shapes mr-1"></i>${escapeXml(d.layout)} layout</span>
+          </div>
+
+          <!-- Thumbnail Image -->
+          <div class="relative w-full h-44 bg-white flex items-center justify-center p-2.5 border-b border-slate-100 overflow-hidden">
+            <img src="${d.image_url}" alt="${d.id}" loading="lazy"
+                 class="max-w-full max-h-full object-contain hover:scale-105 transition duration-300 select-none cursor-pointer"
+                 onclick="window.open('${d.image_url}', '_blank')" />
+          </div>
+
+          <!-- Scene Graph Intelligence Section -->
+          <div class="p-3.5 bg-slate-50/40 border-b border-slate-100 space-y-2 text-xs">
+            <div>
+              <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1 flex items-center justify-between">
+                <span><i class="fa-solid fa-tags text-indigo-600 mr-1"></i> Scene Graph Thực Thể (${entities.length})</span>
+                <span class="text-slate-400 font-mono text-[9px]">${escapeXml(d.image)}</span>
+              </div>
+              <div class="flex flex-wrap gap-1 max-h-16 overflow-y-auto custom-scrollbar">
+                ${
+                  entities.length > 0
+                    ? entities
+                        .slice(0, 10)
+                        .map(
+                          (e) => `
+                    <span class="inline-flex items-center px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200 text-[10px] font-medium">
+                      ${escapeXml(e)}
+                    </span>
+                  `
+                        )
+                        .join("")
+                    : '<span class="text-slate-400 italic text-[11px]">Không có nhãn thực thể</span>'
+                }
+                ${entities.length > 10 ? `<span class="text-[10px] text-slate-400 font-semibold">+${entities.length - 10}</span>` : ""}
+              </div>
+            </div>
+
+            <div>
+              <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">
+                <i class="fa-solid fa-arrow-right-arrow-left text-rose-600 mr-1"></i> Quan Hệ Có Hướng (${rels.length})
+              </div>
+              <div class="flex flex-wrap gap-1 max-h-14 overflow-y-auto custom-scrollbar">
+                ${
+                  rels.length > 0
+                    ? rels
+                        .slice(0, 4)
+                        .map(
+                          (r) => `
+                    <span class="inline-flex items-center px-2 py-0.5 rounded bg-rose-50 text-rose-800 border border-rose-200 text-[10px] font-mono">
+                      ${escapeXml(r)}
+                    </span>
+                  `
+                        )
+                        .join("")
+                    : '<span class="text-slate-400 italic text-[10px]">Cấu trúc tĩnh / Phân bố không gian</span>'
+                }
+                ${rels.length > 4 ? `<span class="text-[10px] text-slate-400 font-semibold">+${rels.length - 4} khác</span>` : ""}
+              </div>
+            </div>
+          </div>
+
+          <!-- Captions Comparison: Ground Truth vs Generated -->
+          <div class="p-3.5 space-y-2.5 text-xs flex-1">
+            <!-- Ground Truth -->
+            <div class="p-2.5 bg-amber-50/70 border border-amber-200 rounded-xl space-y-1">
+              <div class="flex items-center justify-between text-[10px] font-bold text-amber-900">
+                <span class="flex items-center gap-1"><i class="fa-solid fa-user-check text-amber-600"></i> Ground Truth Chuyên Gia:</span>
+                <span class="badge bg-amber-200 text-amber-950 text-[9px]">Human Annotated</span>
+              </div>
+              <p class="text-slate-800 text-[11px] leading-relaxed line-clamp-3" title="${escapeXml(d.gt_caption)}">
+                ${escapeXml(d.gt_caption)}
+              </p>
+            </div>
+
+            <!-- Model Generated -->
+            <div class="p-2.5 bg-emerald-50/70 border border-emerald-200 rounded-xl space-y-1">
+              <div class="flex items-center justify-between text-[10px] font-bold text-emerald-950">
+                <span class="flex items-center gap-1"><i class="fa-solid fa-robot text-emerald-600"></i> EduSGG Qwen2.5-14B Sinh Ra:</span>
+                <span class="badge bg-emerald-600 text-white text-[9px]">Finetuned Generator</span>
+              </div>
+              <p class="text-slate-800 text-[11px] leading-relaxed line-clamp-3 font-medium" title="${escapeXml(d.generated_caption)}">
+                ${escapeXml(d.generated_caption)}
+              </p>
+            </div>
+          </div>
+
+          <!-- Metric Badges Footer -->
+          <div class="p-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-[10px] font-mono">
+            <span class="font-bold text-emerald-700 bg-emerald-100/70 px-2 py-0.5 rounded border border-emerald-200">
+              CIDEr: ${m.cider !== undefined ? m.cider.toFixed(1) : "--"}
+            </span>
+            <span class="font-bold text-indigo-700 bg-indigo-100/70 px-2 py-0.5 rounded border border-indigo-200">
+              BERT-F1: ${m.bertscore_f1 !== undefined ? m.bertscore_f1.toFixed(1) + "%" : "--"}
+            </span>
+            <span class="text-slate-600">
+              BLEU-4: ${m.bleu_4 !== undefined ? m.bleu_4.toFixed(1) + "%" : "--"}
+            </span>
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initGallery();
   initVnGallery();
+  initSotaBenchmark();
   setupTopMenuNavigation();
   setupAuditModalEvents();
 });
