@@ -1,0 +1,131 @@
+[
+  {
+    "id": "69afe8996dbb7075b958b557",
+    "methodName": "Keye-VL",
+    "primaryMetricValue": 86.7,
+    "metricValues": {
+      "Score": 86.7
+    },
+    "inferenceConfig": {
+      "Openness": "semi-open",
+      "Model Size": "8B"
+    },
+    "methodOriginPaperId": "68fa79c51e209131cea7f424",
+    "methodOriginGithubRepo": null,
+    "methodOriginImplementationUrl": null,
+    "methodOriginPaperPublishedAt": "2025-07-02T17:57:28.000Z",
+    "reportPaperId": "68fa7c691e209131cea8df07",
+    "reportPaperPublishedAt": "2025-10-15T17:52:59.000Z"
+  },
+  {
+    "id": "69afe8996dbb7075b958b55a",
+    "methodName": "Bee-8B",
+    "primaryMetricValue": 85.3,
+    "metricValues": {
+      "Score": 85.3
+    },
+    "inferenceConfig": {
+      "Openness": "fully open",
+      "Model Size": "8B",
+      "Training Strategy": "RL"
+    },
+    "methodOriginPaperId": "68fa7c691e209131cea8df07",
+    "methodOriginGithubRepo": null,
+    "methodOriginImplementationUrl": null,
+    "methodOriginPaperPublishedAt": "2025-10-15T17:52:59.000Z",
+    "reportPaperId": "68fa7c691e209131cea8df07",
+    "reportPaperPublishedAt": "2025-10-15T17:52:59.000Z"
+  },
+  {
+    "id": "69afe8996dbb7075b958b556",
+    "methodName": "Qwen2.5-VL",
+    "primaryMetricValue": 84.3,
+    "metricValues": {
+      "Score": 84.3
+    },
+    "inferenceConfig": {
+      "Openness": "semi-open",
+      "Model Size": "7B"
+    },
+    "methodOriginPaperId": "68fa773a1e209131cea71d3c",
+    "methodOriginGithubRepo": null,
+    "methodOriginImplementationUrl": null,
+    "methodOriginPaperPublishedAt": "2025-02-19T18:00:14.000Z",
+    "reportPaperId": "68fa7c691e209131cea8df07",
+    "reportPaperPublishedAt": "2025-10-15T17:52:59.000Z"
+  },
+  {
+    "id": "69afe8996dbb7075b958b558",
+    "methodName": "InternVL3.5",
+    "primaryMetricValue": 84,
+    "metricValues": {
+      "Score": 84
+    },
+    "inferenceConfig": {
+      "Openness": "semi-open",
+      "Model Size": "8B"
+    },
+    "methodOriginPaperId": "68fa7af01e209131cea85dc9",
+    "methodOriginGithubRepo": null,
+    "methodOriginImplementationUrl": null,
+    "methodOriginPaperPublishedAt": "2025-08-25T17:58:17.000Z",
+    "reportPaperId": "68fa7c691e209131cea8df07",
+    "reportPaperPublishedAt": "2025-10-15T17:52:59.000Z"
+  },
+  {
+    "id": "69afe8996dbb7075b958b559",
+    "methodName": "Bee-8B",
+    "primaryMetricValue": 83.8,
+    "metricValues": {
+      "Score": 83.8
+    },
+    "inferenceConfig": {
+      "Openness": "fully open",
+      "Model Size": "8B",
+      "Training Strategy": "SFT"
+    },
+    "methodOriginPaperId": "68fa7c691e209131cea8df07",
+    "methodOriginGithubRepo": null,
+    "methodOriginImplementationUrl": null,
+    "methodOriginPaperPublishedAt": "2025-10-15T17:52:59.000Z",
+    "reportPaperId": "68fa7c691e209131cea8df07",
+    "reportPaperPublishedAt": "2025-10-15T17:52:59.000Z"
+  },
+  {
+    "id": "69afe8996dbb7075b958b554",
+    "methodName": "LLaVA OneVision",
+    "primaryMetricValue": 81.4,
+    "metricValues": {
+      "Score": 81.4
+    },
+    "inferenceConfig": {
+      "Openness": "fully open",
+      "Model Size": "7B"
+    },
+    "methodOriginPaperId": "68fa756f1e209131cea67e58",
+    "methodOriginGithubRepo": null,
+    "methodOriginImplementationUrl": "https://llava-vl.github.io/blog/llava-onevision",
+    "methodOriginPaperPublishedAt": "2024-08-06T17:59:44.000Z",
+    "reportPaperId": "68fa7c691e209131cea8df07",
+    "reportPaperPublishedAt": "2025-10-15T17:52:59.000Z"
+  },
+  {
+    "id": "69afe8996dbb7075b958b555",
+    "methodName": "Molmo",
+    "primaryMetricValue": 81,
+    "metricValues": {
+      "Score": 81
+    },
+    "inferenceConfig": {
+      "Openness": "fully open",
+      "Model Size": "7B",
+      "Training Strategy": "Distilled (-D)"
+    },
+    "methodOriginPaperId": "68fa76101e209131cea6b37c",
+    "methodOriginGithubRepo": null,
+    "methodOriginImplementationUrl": "https://molmo.allenai.org",
+    "methodOriginPaperPublishedAt": "2024-09-25T17:59:51.000Z",
+    "reportPaperId": "68fa7c691e209131cea8df07",
+    "reportPaperPublishedAt": "2025-10-15T17:52:59.000Z"
+  }
+]

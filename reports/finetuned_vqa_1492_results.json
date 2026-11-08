@@ -1,0 +1,385 @@
+{
+  "benchmark": "AI2D Official Test Split Diagram VQA (N=491 Diagrams, 1,492 Questions)",
+  "model": "Qwen2.5-VL-7B-Instruct + EduSGG Knowledge Graph",
+  "total_questions": 1492,
+  "overall_accuracy": 88.74,
+  "correct_count": 1324,
+  "elapsed_seconds": 508.9,
+  "breakdown": {
+    "label_identification": {
+      "count": 149,
+      "correct": 135,
+      "accuracy": 90.6
+    },
+    "structural_query": {
+      "count": 987,
+      "correct": 869,
+      "accuracy": 88.04
+    },
+    "process_sequence": {
+      "count": 201,
+      "correct": 187,
+      "accuracy": 93.03
+    },
+    "counting": {
+      "count": 37,
+      "correct": 30,
+      "accuracy": 81.08
+    },
+    "directional_flow": {
+      "count": 118,
+      "correct": 103,
+      "accuracy": 87.29
+    }
+  },
+  "literature_baselines": {
+    "random_guess": 25.0,
+    "resnet101_bert_vqa": 32.8,
+    "dpg_kembhavi_2016": 38.4,
+    "llava_1.5_13b_zeroshot": 46.2,
+    "edusgg_method1_deterministic": 24.8,
+    "edusgg_method2_graph_qwen_vl": 88.74
+  },
+  "sample_predictions": [
+    {
+      "image_id": "ai2d:1004",
+      "question_id": "1004.png-0",
+      "question": "Which label in the diagram is indicative of a flat foot?",
+      "type": "label_identification",
+      "options": [
+        "Neutral pronation",
+        "Supination",
+        "None",
+        "Over pronation"
+      ],
+      "gt_choice": "D",
+      "gt_answer": "Over pronation",
+      "pred_choice": "D",
+      "raw_gen": "D",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:1004",
+      "question_id": "1004.png-1",
+      "question": "Which type is Supination",
+      "type": "structural_query",
+      "options": [
+        "B",
+        "None of above",
+        "A",
+        "C"
+      ],
+      "gt_choice": "D",
+      "gt_answer": "C",
+      "pred_choice": "D",
+      "raw_gen": "D",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:1025",
+      "question_id": "1025.png-1",
+      "question": "Which of the above leaf has a  heart-shaped outline?",
+      "type": "structural_query",
+      "options": [
+        "obtuse",
+        "cuneate",
+        "cordate",
+        "truncate"
+      ],
+      "gt_choice": "C",
+      "gt_answer": "cordate",
+      "pred_choice": "C",
+      "raw_gen": "C",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:1025",
+      "question_id": "1025.png-0",
+      "question": "Which of the leaves terminate abruptly??",
+      "type": "structural_query",
+      "options": [
+        "cordate",
+        "obtuse",
+        "truncate",
+        "cuneate"
+      ],
+      "gt_choice": "C",
+      "gt_answer": "truncate",
+      "pred_choice": "C",
+      "raw_gen": "C",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:103",
+      "question_id": "103.png-3",
+      "question": "In what stage can the dragonfly fly?",
+      "type": "process_sequence",
+      "options": [
+        "Adult",
+        "Eggs",
+        "Pupa",
+        "Nymph"
+      ],
+      "gt_choice": "A",
+      "gt_answer": "Adult",
+      "pred_choice": "A",
+      "raw_gen": "A",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:103",
+      "question_id": "103.png-1",
+      "question": "What letter corresponds to the water reed?",
+      "type": "structural_query",
+      "options": [
+        "b",
+        "d",
+        "a",
+        "c"
+      ],
+      "gt_choice": "D",
+      "gt_answer": "c",
+      "pred_choice": "D",
+      "raw_gen": "D",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:103",
+      "question_id": "103.png-0",
+      "question": "What letter represents the adult dragonfly?",
+      "type": "structural_query",
+      "options": [
+        "a",
+        "d",
+        "c",
+        "b"
+      ],
+      "gt_choice": "B",
+      "gt_answer": "d",
+      "pred_choice": "B",
+      "raw_gen": "B",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:103",
+      "question_id": "103.png-2",
+      "question": "Which of the following terms best describes D?",
+      "type": "structural_query",
+      "options": [
+        "A dragonfly adult",
+        "Reproduction",
+        "A nymph",
+        "An Egg"
+      ],
+      "gt_choice": "A",
+      "gt_answer": "A dragonfly adult",
+      "pred_choice": "A",
+      "raw_gen": "A",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:1039",
+      "question_id": "1039.png-1",
+      "question": "The picture shows the Earth's location at various points during its orbit. When the Earth is in the position represented by letter C, which season is occurring in the Northern Hemisphere?",
+      "type": "structural_query",
+      "options": [
+        "Summer",
+        "Winter",
+        "Fall",
+        "Spring"
+      ],
+      "gt_choice": "A",
+      "gt_answer": "Summer",
+      "pred_choice": "A",
+      "raw_gen": "A",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:1039",
+      "question_id": "1039.png-2",
+      "question": "What does this diagram show?",
+      "type": "structural_query",
+      "options": [
+        "How the sun and Earth interact to cause phases of the moon",
+        "How the earth changes its tilt",
+        "How the sun rotates on its axis",
+        "How the position of Earth relative to the sun causes season of the year"
+      ],
+      "gt_choice": "D",
+      "gt_answer": "How the position of Earth relative to the sun causes season of the year",
+      "pred_choice": "D",
+      "raw_gen": "D",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:1039",
+      "question_id": "1039.png-0",
+      "question": "What happens at stage B?",
+      "type": "process_sequence",
+      "options": [
+        "Summer - Northern Hemisphere",
+        "Fall - Northern Hemisphere",
+        "Fall",
+        "Spring"
+      ],
+      "gt_choice": "B",
+      "gt_answer": "Fall - Northern Hemisphere",
+      "pred_choice": "B",
+      "raw_gen": "B",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:1043",
+      "question_id": "1043.png-4",
+      "question": "How many processes are shown?",
+      "type": "counting",
+      "options": [
+        "6",
+        "3",
+        "1",
+        "2"
+      ],
+      "gt_choice": "A",
+      "gt_answer": "6",
+      "pred_choice": "A",
+      "raw_gen": "A",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:1043",
+      "question_id": "1043.png-2",
+      "question": "In the diagram shown, letters A, B, D, and E show the cycle of the seasons. Which season is represented by the letter D?",
+      "type": "process_sequence",
+      "options": [
+        "fall equinox",
+        "spring equinox",
+        "summer solstice",
+        "winter solstice"
+      ],
+      "gt_choice": "D",
+      "gt_answer": "winter solstice",
+      "pred_choice": "D",
+      "raw_gen": "D",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:1043",
+      "question_id": "1043.png-0",
+      "question": "What does this diagram show Aphelion falling upon?",
+      "type": "structural_query",
+      "options": [
+        "It shows Aphelion falling upon January 3rd.",
+        "It shows Aphelion falling upon July 3rd.",
+        "It shows Aphelion falling upon December 21st.",
+        "It shows Aphelion falling upon March 21st."
+      ],
+      "gt_choice": "B",
+      "gt_answer": "It shows Aphelion falling upon July 3rd.",
+      "pred_choice": "B",
+      "raw_gen": "B",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:1043",
+      "question_id": "1043.png-3",
+      "question": "What does this diagram show happening on September 21st?",
+      "type": "structural_query",
+      "options": [
+        "The Fall Equinox.",
+        "The Winter Solistice.",
+        "The Summer Solistice.",
+        "The Spring Equinox."
+      ],
+      "gt_choice": "A",
+      "gt_answer": "The Fall Equinox.",
+      "pred_choice": "A",
+      "raw_gen": "A",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:1043",
+      "question_id": "1043.png-1",
+      "question": "What marks the start of the winter solstice?",
+      "type": "structural_query",
+      "options": [
+        "July 3",
+        "March 21",
+        "June 21",
+        "Dec 21"
+      ],
+      "gt_choice": "D",
+      "gt_answer": "Dec 21",
+      "pred_choice": "D",
+      "raw_gen": "D",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:1043",
+      "question_id": "1043.png-5",
+      "question": "Which letter corresponds to the season that is usually considered the warmest of the year?",
+      "type": "label_identification",
+      "options": [
+        "D",
+        "B",
+        "A",
+        "E"
+      ],
+      "gt_choice": "B",
+      "gt_answer": "B",
+      "pred_choice": "B",
+      "raw_gen": "B",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:106",
+      "question_id": "106.png-0",
+      "question": "What is represented at stage H?",
+      "type": "process_sequence",
+      "options": [
+        "adult",
+        "none of the above",
+        "juvenile",
+        "eggs"
+      ],
+      "gt_choice": "C",
+      "gt_answer": "juvenile",
+      "pred_choice": "C",
+      "raw_gen": "C",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:106",
+      "question_id": "106.png-2",
+      "question": "What is the process shown in the diagram?",
+      "type": "structural_query",
+      "options": [
+        "respiration",
+        "none of the above",
+        "life cycle",
+        "food tree"
+      ],
+      "gt_choice": "C",
+      "gt_answer": "life cycle",
+      "pred_choice": "C",
+      "raw_gen": "C",
+      "is_correct": true
+    },
+    {
+      "image_id": "ai2d:106",
+      "question_id": "106.png-1",
+      "question": "Which stage represents the adult stage of the life of a crab?",
+      "type": "process_sequence",
+      "options": [
+        "F",
+        "B",
+        "J",
+        "G"
+      ],
+      "gt_choice": "A",
+      "gt_answer": "F",
+      "pred_choice": "A",
+      "raw_gen": "A",
+      "is_correct": true
+    }
+  ]
+}
