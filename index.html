@@ -1517,23 +1517,13 @@
           <p class="text-slate-700">
             Trong các báo cáo nghiên cứu đồ họa và thị giác tri thức (Scene Graph Generation), có sự phân định nghiêm ngặt giữa hai giai đoạn:
           </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
-            <div class="bg-white p-3 rounded-lg border border-amber-200 space-y-1">
-              <span class="font-bold text-indigo-700 flex items-center gap-1.5">
-                <i class="fa-solid fa-crown text-amber-500"></i> Oracle Ground-Truth Graph (Trần lý thuyết)
-              </span>
-              <p class="text-[11px] text-slate-600">
-                Sử dụng 100% nhãn và liên kết do con người gán (Ground Truth của AI2D) làm đầu vào cho bộ lập dàn ý (Content Planner). Mục tiêu là chứng minh: <b>Nếu thị giác hoàn hảo, bộ sinh chú thích song ngữ (LLM/Template) sẽ đạt độ bao phủ sự thật và độ chính xác tới đâu</b> (F1 đạt ~96-99%, 0% rò rỉ mã).
-              </p>
-            </div>
-            <div class="bg-white p-3 rounded-lg border border-amber-200 space-y-1">
-              <span class="font-bold text-blue-700 flex items-center gap-1.5">
-                <i class="fa-solid fa-robot text-blue-600"></i> Detector Faster R-CNN (Triển khai thực tế)
-              </span>
-              <p class="text-[11px] text-slate-600">
-                Chạy mô hình Computer Vision thực tế từ đầu đến cuối trên ảnh thô (không có nhãn người). Kết quả trên 486 ảnh Test: <b>AP@50 = 88.2%</b>, <b>AP@[.5:.95] = 50.7%</b>, <b>Strict Graph F1 = 59.4%</b> (Macro F1: 35.6%). Đây là hiệu năng thật của mô hình phát hiện hộp bao và liên kết.
-              </p>
-            </div>
+          <div class="bg-white p-3 rounded-lg border border-indigo-200 space-y-1 pt-1">
+            <span class="font-bold text-indigo-700 flex items-center gap-1.5">
+              <i class="fa-solid fa-robot text-indigo-600"></i> Quy Trình Toàn Trình Tự Động (Autonomous End-to-End Pipeline)
+            </span>
+            <p class="text-[11px] text-slate-600">
+              Chạy mô hình Computer Vision Faster R-CNN thực tế từ đầu đến cuối trên ảnh thô (không có bất kỳ nhãn người nào lúc kiểm thử): <b>AP@50 = 88.2%</b>, <b>AP@[.5:.95] = 50.7%</b>, <b>Strict Graph F1 = 59.4%</b>. Đây là hiệu năng thật 100% tự trị của hệ thống nhận diện thực thể và tái tạo đồ thị liên kết.
+            </p>
           </div>
         </div>
 
