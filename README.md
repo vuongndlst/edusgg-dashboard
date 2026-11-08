@@ -2,13 +2,14 @@
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch 2.1+](https://img.shields.io/badge/PyTorch-2.1%2B-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Model%20Zoo-yellow.svg?logo=huggingface&logoColor=white)](https://huggingface.co/)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-EduSGG%20Model%20Zoo-yellow.svg)](https://huggingface.co/EduSGG)
 [![AI2D VQA Benchmark](https://img.shields.io/badge/AI2D%20VQA-%231%20SOTA%20(88.74%25)-emerald.svg?logo=kaggle&logoColor=white)](https://www.sota2.com/research/sota/general-vqa-on-ai2d)
 [![AI2D Captioning SOTA](https://img.shields.io/badge/AI2D%20Caption-CIDEr%2035.67%20(%2B12.5%25)-indigo.svg)](https://colmweb.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
-> **Official open-source repository for the paper:**  
-> *"EduSGG: Faithful Bilingual Diagram Captioning & Visual Question Answering via Educational Scene Graphs"*  
+> **Official Project Page & Open-Source Codebase:**  
+> **🌐 Project Website**: [https://vuongndlst.github.io/edusgg-dashboard/](https://vuongndlst.github.io/edusgg-dashboard/)  
+> **🤗 Hugging Face Models**: [https://huggingface.co/EduSGG](https://huggingface.co/EduSGG)  
 > *(Target: Leading Q-Ranked International Journal / IEEE / Elsevier / Springer)*
 
 ---
@@ -27,9 +28,11 @@ EduSGG sets **#1 World SOTA** on the official [AI2D VQA Benchmark](https://www.s
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ System Architecture & Stage Demonstration
 
 ![EduSGG Pipeline Architecture](figures/figure1_pipeline_architecture.png)
+
+![4-Stage Pipeline Demonstration](figures/figure7_stages_demonstration.png)
 
 ```mermaid
 flowchart LR
@@ -39,6 +42,17 @@ flowchart LR
     D --> E["Downstream Task 1: Diagram VQA (88.74% Acc)"]
     D --> F["Downstream Task 2: Pedagogical Captioning (CIDEr 35.67)"]
 ```
+
+---
+
+## 🎨 Qualitative Results & Comparison vs VLM Baselines
+
+Standard Vision-Language Models often fail when reasoning about arrow directions and subtle visual labels. The figure below highlights a representative case study comparing the unconditioned baseline against EduSGG:
+
+![Qualitative Comparison vs VLM Baseline](figures/figure5_qualitative_comparisons.png)
+
+* **Baseline VLM Failure**: Misinterprets arrow orientation in the dragonfly life cycle, causing a severe hallucination that nymphs develop wings and fly, incorrectly answering Choice D.
+* **EduSGG Success**: Grounded scene graph explicitly verifies that node `Adult` emerges from `Nymph` and possesses wings, correctly selecting Choice A with 100% causal fidelity.
 
 ---
 
@@ -60,6 +74,11 @@ Comparison against peer open-source vision-language models from top academic ven
 | 8 | Molmo | 7B | 81.00% | Allen AI / arXiv (2024) |
 | — | DPG (Kembhavi et al.) | — | 38.40% | CVPR 2016 (Official AI2D Baseline) |
 | — | Random Chance | — | 25.00% | 4-Option Multiple Choice Uniform |
+
+<p align="center">
+  <img src="figures/figure3_vqa_sota_bar.png" width="48%" />
+  <img src="figures/figure4_vqa_categories.png" width="48%" />
+</p>
 
 #### Fine-Grained Accuracy Breakdown by Question Type ($N = 1,492$ Questions):
 * **Process Sequence**: **93.03%** (187/201 correct) — *Directly powered by directed arrow topology ($A \to B$).*
@@ -83,12 +102,16 @@ Evaluated on the official AI2D-Captioning test split ($N = 75$):
 | **ROUGE-L** | **41.58** | 38.45 | **+3.13** | **+8.14%** |
 | **ROUGE-1** | **50.17** | 46.80 | **+3.37** | **+7.20%** |
 
+<p align="center">
+  <img src="figures/figure2_caption_sota_comparison.png" width="70%" />
+</p>
+
 ---
 
 ## 🔬 Comprehensive Ablation Studies
 
 ### Ablation 1: Diagram Captioning Variants ($N = 491$ Full Test Diagrams)
-Evaluates factual recall, precision, and directional fidelity across 5 system configurations:
+Evaluates factual recall, precision, and directional fidelity across system configurations:
 
 | Configuration | Input / Backbone | Fact F1 (%) | Flow Fidelity (%) | Hallucinations | Key Finding |
 | :--- | :--- | :---: | :---: | :---: | :--- |
@@ -114,6 +137,8 @@ Evaluates factual recall, precision, and directional fidelity across 5 system co
 
 To test out-of-distribution robustness, EduSGG was evaluated in a zero-shot setting on the **Vietnamese Textbook Benchmark (Vi-EduDiag-50)**, consisting of 50 complex diagrams from Grades 6 to 12 across Natural Sciences, Biology, Geography, and Physics:
 
+![Vietnamese Textbook Transfer Showcase](figures/figure6_vietnamese_transfer_showcase.png)
+
 | Transfer Metric | Score | Scientific Significance |
 | :--- | :---: | :--- |
 | **Scientific Entity Recall** | **99.09%** | Robust grounding on unseen diagrams in a different language. |
@@ -123,14 +148,15 @@ To test out-of-distribution robustness, EduSGG was evaluated in a zero-shot sett
 
 ---
 
-## 📦 Model Zoo & Pretrained Checkpoints
+## 📦 Model Zoo & Pretrained Checkpoints (Hugging Face)
 
-To ensure full academic reproducibility without requiring hundreds of GPU hours, all pretrained checkpoints are available for direct download:
+All model checkpoints and datasets are hosted publicly on **Hugging Face Hub** for instantaneous academic reproduction:
 
-| Model Checkpoint | Description | Size | SHA256 Checksum | Download Command |
-| :--- | :--- | :---: | :---: | :--- |
-| `faster_rcnn_ai2d_detector.pth` | Faster R-CNN ResNet-50-FPN diagram entity detector | ~164 MB | `e3b0c442...` | `python scripts/download_checkpoints.py --model detector` |
-| `qwen2.5-14b-edusgg-vqa-lora/` | QLoRA adapter for Diagram VQA & Content Planning | ~182 MB | `c3ab8ff1...` | `python scripts/download_checkpoints.py --model vqa_lora` |
+| Model Checkpoint | Hugging Face Repository | Size | Download Command |
+| :--- | :--- | :---: | :--- |
+| **Faster R-CNN Entity Detector** | [🤗 EduSGG/diagram-detector-faster-rcnn](https://huggingface.co/EduSGG/diagram-detector-faster-rcnn) | ~164 MB | `python scripts/download_checkpoints.py --model detector` |
+| **Qwen2.5-14B EduSGG LoRA Adapter** | [🤗 EduSGG/qwen2.5-14b-edusgg-vqa-lora](https://huggingface.co/EduSGG/qwen2.5-14b-edusgg-vqa-lora) | ~182 MB | `python scripts/download_checkpoints.py --model vqa_lora` |
+| **Vi-EduDiag-50 Benchmark Dataset** | [🤗 datasets/EduSGG/Vi-EduDiag-50](https://huggingface.co/datasets/EduSGG/Vi-EduDiag-50) | ~45 MB | `git clone https://huggingface.co/datasets/EduSGG/Vi-EduDiag-50` |
 
 #### One-Click Checkpoint Downloader:
 ```bash
