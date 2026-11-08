@@ -136,7 +136,7 @@
         <!-- Audit Modal -->
         <button onclick="document.getElementById('audit-modal').classList.remove('hidden')" class="pub-btn bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 cursor-pointer">
           <i class="fa-solid fa-scale-balanced text-indigo-600"></i>
-          <span class="text-slate-800">Barem Kiểm Toán</span>
+          <span class="text-slate-800">Audit Protocol & Ablation Rubric</span>
         </button>
       </div>
 
@@ -172,12 +172,12 @@
             <i class="fa-solid fa-star text-amber-500"></i> AI2D Caption (N=75)
           </div>
           <div class="text-2xl font-extrabold text-indigo-700 mt-1">35.67</div>
-          <div class="text-[11px] text-indigo-900 mt-0.5">Vượt DiagrammerGPT (+12.5%)</div>
+          <div class="text-[11px] text-indigo-900 mt-0.5">Outperforms DiagrammerGPT (+12.5% CIDEr)</div>
         </div>
 
         <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3">
           <div class="text-[10px] font-bold text-rose-800 uppercase tracking-wider flex items-center gap-1">
-            <i class="fa-solid fa-book-open text-rose-600"></i> SGK Việt Nam K6–K12
+            <i class="fa-solid fa-book-open text-rose-600"></i> Vietnamese K-12 STEM Benchmark
           </div>
           <div class="text-2xl font-extrabold text-rose-700 mt-1">99.09%</div>
           <div class="text-[11px] text-rose-900 mt-0.5">Entity Recall • 79.89% Dir Acc</div>
@@ -185,7 +185,7 @@
 
         <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
           <div class="text-[10px] font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1">
-            <i class="fa-solid fa-lock text-slate-500"></i> Phân Tách Kiểm Thử
+            <i class="fa-solid fa-lock text-slate-500"></i> Blind Test Protocol
           </div>
           <div class="text-2xl font-extrabold text-slate-900 mt-1">100%</div>
           <div class="text-[11px] text-slate-600 mt-0.5">Strict Leak-Free Isolation</div>
@@ -608,7 +608,7 @@ python eval_transfer.py</pre>
         <nav class="flex flex-wrap items-center gap-1.5 p-1 bg-slate-100/90 rounded-xl border border-slate-200/60">
           <button id="nav-menu-leaderboard" onclick="window.switchMenu('leaderboard')" class="px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs cursor-pointer">
             <i class="fa-solid fa-trophy text-amber-300"></i>
-            <span>Bảng SOTA</span>
+            <span>SOTA Leaderboards</span>
             <span class="badge bg-amber-400 text-slate-950 text-[9px] py-0 px-1 font-extrabold">#1</span>
           </button>
           <button id="nav-menu-vqa" onclick="window.switchMenu('vqa')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-600 hover:bg-white/80 cursor-pointer">
@@ -623,19 +623,19 @@ python eval_transfer.py</pre>
           </button>
           <button id="nav-menu-vn" onclick="window.switchMenu('vn')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-600 hover:bg-white/80 cursor-pointer">
             <i class="fa-solid fa-book-open text-rose-600"></i>
-            <span>SGK Việt Nam</span>
+            <span>Vi-EduDiag-50 Benchmark</span>
             <span class="badge bg-rose-600 text-white text-[9px] py-0 px-1 font-bold">50</span>
           </button>
           <button id="nav-menu-pipeline" onclick="window.switchMenu('pipeline')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-600 hover:bg-white/80 cursor-pointer">
             <i class="fa-solid fa-sitemap text-indigo-600"></i>
-            <span>Kiến Trúc Pipeline</span>
+            <span>System Architecture</span>
           </button>
         </nav>
 
         <div class="flex items-center gap-2 text-xs">
           <button id="btn-open-audit-modal" onclick="document.getElementById('audit-modal').classList.remove('hidden')" class="bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-medium transition cursor-pointer shadow-2xs">
             <i class="fa-solid fa-scale-balanced text-indigo-600 text-xs"></i>
-            <span class="hidden sm:inline">Kiểm Toán F1</span>
+            <span class="hidden sm:inline">Fact F1 Audit</span>
           </button>
           <a href="https://github.com/vuongndlst/edusgg-dashboard.git" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 text-white px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-medium transition shadow-2xs">
             <i class="fa-brands fa-github text-xs"></i>
@@ -655,20 +655,20 @@ python eval_transfer.py</pre>
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
-            <i class="fa-solid fa-filter text-indigo-600"></i> Lọc theo Thể loại Biểu đồ (Categories)
+            <i class="fa-solid fa-filter text-indigo-600"></i> Filter by Diagram Category
           </h2>
-          <p class="text-xs text-slate-500 mt-0.5">Chọn danh mục để xem các biểu đồ giáo khoa tương ứng trong tập kiểm thử (Test Split)</p>
+          <p class="text-xs text-slate-500 mt-0.5">Select a diagram category to inspect corresponding scientific figures from the official AI2D test split</p>
         </div>
 
         <!-- Search Box & Count -->
         <div class="flex items-center gap-3 w-full md:w-auto">
           <div class="relative flex-1 md:w-72">
             <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
-            <input id="search-input" type="text" placeholder="Tìm theo ID (ví dụ 1004) hoặc từ khóa..."
+            <input id="search-input" type="text" placeholder="Search by Diagram ID (e.g. 1004) or keyword..."
               class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500" />
           </div>
           <span id="diagrams-counter" class="text-xs font-semibold text-slate-600 bg-slate-100 px-2.5 py-1.5 rounded-lg whitespace-nowrap">
-            491 / 491 sơ đồ
+            491 / 491 Diagrams
           </span>
         </div>
       </div>
@@ -688,8 +688,8 @@ python eval_transfer.py</pre>
       <!-- Pagination / Load More if needed -->
       <div id="gallery-empty" class="hidden text-center py-16 bg-white border border-slate-200 rounded-2xl">
         <i class="fa-solid fa-circle-exclamation text-slate-300 text-4xl mb-3"></i>
-        <h3 class="text-sm font-bold text-slate-700">Không tìm thấy biểu đồ nào phù hợp</h3>
-        <p class="text-xs text-slate-400 mt-1">Thử thay đổi từ khóa tìm kiếm hoặc bấm "Tất cả" danh mục</p>
+        <h3 class="text-sm font-bold text-slate-700">No matching diagrams found</h3>
+        <p class="text-xs text-slate-400 mt-1">Try adjusting your search query or reset filter to "All Categories"</p>
       </div>
     </section>
 
@@ -704,32 +704,32 @@ python eval_transfer.py</pre>
           <div class="space-y-1.5">
             <div class="flex items-center gap-2">
               <span class="badge bg-rose-500 text-white uppercase tracking-wider text-[10px]">Vi-EduDiag-50 Benchmark</span>
-              <span class="badge bg-white/15 text-indigo-100 border border-white/20 text-[10px]">Chuẩn Taxonomy AI2D Quốc tế</span>
+              <span class="badge bg-white/15 text-indigo-100 border border-white/20 text-[10px]">International AI2D Taxonomy Standard</span>
             </div>
             <h2 class="text-base sm:text-lg font-extrabold tracking-tight">
-              Bộ Sưu Tập 50 Sơ Đồ Sách Giáo Khoa Việt Nam (Lớp 6 &rarr; Lớp 12)
+              Vi-EduDiag-50: Vietnamese STEM Textbook Diagram Benchmark (Grades 6–12)
             </h2>
             <p class="text-xs text-indigo-100/90 max-w-3xl leading-relaxed">
-              Trích xuất chuẩn xác ở độ phân giải cao <b>200 DPI</b> từ các bộ SGK <i>Kết nối tri thức với cuộc sống</i> và <i>SGK Hiện hành</i> (KHTN 6, Sinh học 7–8–9–10–11–12, Hóa học 10), đi kèm thuyết minh chuẩn <b>Ground-Truth (GT) song ngữ Việt – Anh</b>, thực thể khoa học hạt nhân (<code>key_entities</code>) và đồ thị tiến trình có hướng (<code>directional_relations</code>).
+              High-resolution (200 DPI) diagrams curated from official Vietnamese National Curriculum textbooks (Global Success, Horizon of Creativity, Kite) covering Natural Sciences 6, Biology 7–12, Chemistry 10, and Geography 10. Accompanied by bilingual (Vietnamese–English) expert ground-truth captions, core scientific entities (<code>key_entities</code>), and directed causal process graphs (<code>directional_relations</code>).
             </p>
           </div>
 
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 w-full lg:w-auto shrink-0 text-center">
             <div class="bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 backdrop-blur-xs">
               <div class="text-lg font-extrabold text-amber-300">50</div>
-              <div class="text-[10px] text-indigo-100 font-medium">Sơ đồ SGK Chuẩn</div>
+              <div class="text-[10px] text-indigo-100 font-medium">Curated Diagrams</div>
             </div>
             <div class="bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 backdrop-blur-xs">
               <div class="text-lg font-extrabold text-emerald-300">K6–K12</div>
-              <div class="text-[10px] text-indigo-100 font-medium">8 Bộ Sách Giáo Khoa</div>
+              <div class="text-[10px] text-indigo-100 font-medium">Textbook Volumes</div>
             </div>
             <div class="bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 backdrop-blur-xs">
               <div class="text-lg font-extrabold text-sky-300" id="vn-stat-entities">467</div>
-              <div class="text-[10px] text-indigo-100 font-medium">Thực thể Khoa học</div>
+              <div class="text-[10px] text-indigo-100 font-medium">Scientific Entities</div>
             </div>
             <div class="bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 backdrop-blur-xs">
               <div class="text-lg font-extrabold text-rose-300" id="vn-stat-relations">205</div>
-              <div class="text-[10px] text-indigo-100 font-medium">Quan hệ Có hướng</div>
+              <div class="text-[10px] text-indigo-100 font-medium">Directed Relations</div>
             </div>
           </div>
         </div>
@@ -740,27 +740,27 @@ python eval_transfer.py</pre>
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
             <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
-              <i class="fa-solid fa-graduation-cap text-rose-600"></i> Lọc theo Môn học / Khối lớp &amp; Phân loại AI2D
+              <i class="fa-solid fa-graduation-cap text-rose-600"></i> Filter by Subject / Grade Level &amp; AI2D Taxonomy
             </h2>
-            <p class="text-xs text-slate-500 mt-0.5">Chọn Khối lớp (KHTN 6 &rarr; Sinh 12, Hóa 10) hoặc Nhóm sơ đồ để duyệt nhanh bộ benchmark tiếng Việt</p>
+            <p class="text-xs text-slate-500 mt-0.5">Filter by grade level (Science 6 &rarr; Bio 12, Chem 10) or topological schema to explore cross-lingual transfer</p>
           </div>
 
           <!-- Search Box & Count -->
           <div class="flex items-center gap-3 w-full md:w-auto">
             <div class="relative flex-1 md:w-80">
               <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
-              <input id="vn-search-input" type="text" placeholder="Tìm theo mã (vn_diag_28), tên sơ đồ, bài học, thực thể..."
+              <input id="vn-search-input" type="text" placeholder="Search by ID (vn_diag_28), diagram title, lesson topic, or entity..."
                 class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500" />
             </div>
             <span id="vn-diagrams-counter" class="text-xs font-semibold text-slate-600 bg-slate-100 px-2.5 py-1.5 rounded-lg whitespace-nowrap">
-              50 / 50 sơ đồ
+              50 / 50 Diagrams
             </span>
           </div>
         </div>
 
         <!-- Subject / Grade Pills -->
         <div class="space-y-1.5">
-          <div class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">1. Theo Môn học &amp; Khối lớp (K6 – K12):</div>
+          <div class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">1. By Subject &amp; Grade Level (Grades 6–12):</div>
           <div id="vn-subject-pills-container" class="flex flex-wrap gap-1.5">
             <!-- Dynamically rendered by JS -->
           </div>
@@ -768,7 +768,7 @@ python eval_transfer.py</pre>
 
         <!-- AI2D Taxonomy Pills -->
         <div class="space-y-1.5 pt-1 border-t border-slate-100">
-          <div class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">2. Theo Nhóm Sơ đồ Chuẩn AI2D Taxonomy:</div>
+          <div class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">2. By Diagram Topological Schema (AI2D Taxonomy):</div>
           <div id="vn-taxonomy-pills-container" class="flex flex-wrap gap-1.5">
             <!-- Dynamically rendered by JS -->
           </div>
@@ -783,8 +783,8 @@ python eval_transfer.py</pre>
 
         <div id="vn-gallery-empty" class="hidden text-center py-16 bg-white border border-slate-200 rounded-2xl">
           <i class="fa-solid fa-circle-exclamation text-slate-300 text-4xl mb-3"></i>
-          <h3 class="text-sm font-bold text-slate-700">Không tìm thấy sơ đồ SGK nào phù hợp</h3>
-          <p class="text-xs text-slate-400 mt-1">Thử thay đổi từ khóa tìm kiếm hoặc chọn "Tất cả" môn học</p>
+          <h3 class="text-sm font-bold text-slate-700">No matching textbook diagrams found</h3>
+          <p class="text-xs text-slate-400 mt-1">Try adjusting your search query or reset filter to "All Subjects"</p>
         </div>
       </section>
 
@@ -806,7 +806,7 @@ python eval_transfer.py</pre>
               AI2D-Caption SOTA Benchmark (N=75) &amp; Qwen2.5-14B QLoRA Analytics
             </h2>
             <p class="text-xs text-indigo-100/90 max-w-3xl leading-relaxed">
-              Kiểm chứng độc lập và đối đầu trực tiếp trên tập test <b>75 sơ đồ chuẩn</b> có thuyết minh Ground-Truth do chuyên gia con người biên soạn (từ công bố DiagrammerGPT, COLM 2024). Đối sánh định lượng đa chỉ số (CIDEr, BERTScore, BLEU, ROUGE), phân tích toàn bộ <b>9 Checkpoint huấn luyện</b>, và trực quan hóa từng sơ đồ cùng Đồ thị Tri thức (Scene Graph).
+              Rigorous independent evaluation benchmarked directly on the 75 gold-standard test diagrams with expert human ground-truth captions from DiagrammerGPT (COLM 2024). Multi-metric quantitative evaluation (CIDEr, BERTScore, BLEU, ROUGE), trajectory analysis across all 9 training checkpoints, and interactive visualization of each diagram with its generated Scene Graph.
             </p>
           </div>
 
@@ -835,19 +835,19 @@ python eval_transfer.py</pre>
       <div class="flex items-center gap-2 border-b border-slate-200 pb-3">
         <button id="btn-sota-tab-table" onclick="window.switchSubTab('table')" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-indigo-600 text-white shadow-xs cursor-pointer">
           <i class="fa-solid fa-table-list"></i>
-          <span>1. Bảng Đối Sánh SOTA Văn Khảo (COLM 2024 Table 4)</span>
+          <span>1. SOTA Captioning Benchmark (COLM 2024 Table 4)</span>
         </button>
         <button id="btn-sota-tab-training" onclick="window.switchSubTab('training')" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
           <i class="fa-solid fa-chart-line text-purple-600"></i>
-          <span>2. Tiến Trình Huấn Luyện QLoRA (Loss &amp; Checkpoints)</span>
+          <span>2. QLoRA Training Trajectory (Loss &amp; Checkpoints)</span>
         </button>
         <button id="btn-sota-tab-explorer" onclick="window.switchSubTab('explorer')" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
           <i class="fa-solid fa-images text-emerald-600"></i>
-          <span>3. Khám Phá Định Lượng 75 Sơ Đồ &amp; Scene Graph</span>
+          <span>3. 75 Diagram Visual Inspection &amp; Scene Graphs</span>
         </button>
         <button id="btn-sota-tab-vqa" onclick="window.switchSubTab('vqa')" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
           <i class="fa-solid fa-circle-question text-amber-600"></i>
-          <span>4. Diagram VQA (N=491 Sơ Đồ, 1.492 Câu Hỏi)</span>
+          <span>4. AI2D VQA Benchmark (N=491 Diagrams, 1,492 Questions)</span>
         </button>
       </div>
 
@@ -857,7 +857,7 @@ python eval_transfer.py</pre>
         <div class="bg-blue-50/80 border border-blue-200 rounded-xl p-4 text-xs text-blue-900 leading-relaxed flex items-start gap-3">
           <i class="fa-solid fa-circle-info text-blue-600 text-base mt-0.5 shrink-0"></i>
           <div>
-            <span class="font-bold">Bối cảnh Benchmark Chuẩn:</span> Bảng dưới đây tái hiện trực tiếp và so sánh công bằng với <b>Table 4 (Captioning Metrics)</b> trong công bố khoa học của <i>DiagrammerGPT (Zala et al., COLM 2024)</i>. Tất cả mô hình được đánh giá trên cùng tập test 75 sơ đồ AI2D-Caption với các chỉ số <b>CIDEr</b> (đo độ trùng khớp n-gram có trọng số TF-IDF), <b>BERTScore F1</b> (đo tương đồng ngữ nghĩa cấp độ embedding qua RoBERTa-large), và <b>BLEU-4</b>.
+            <span class="font-bold">Gold Benchmark Context:</span> The table below directly reproduces and fairly compares with <b>Table 4 (Captioning Metrics)</b> from <i>DiagrammerGPT (Zala et al., COLM 2024)</i>. All models are evaluated on the exact same 75 AI2D-Caption test diagrams using <b>CIDEr</b> (TF-IDF weighted n-gram consensus), <b>BERTScore F1</b> (semantic embedding similarity via RoBERTa-large), and <b>BLEU-4</b>.
           </div>
         </div>
 
@@ -866,7 +866,7 @@ python eval_transfer.py</pre>
           <div class="px-6 py-4 border-b border-slate-100 flex flex-wrap justify-between items-center gap-2">
             <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
               <i class="fa-solid fa-trophy text-amber-500"></i>
-              Bảng So Sánh Hiệu Năng Thuyết Minh Sơ Đồ (Diagram Captioning Benchmark N=75)
+              Comparative Diagram Captioning &amp; Structured Planning Benchmark (N=75 Test Split)
             </h3>
             <span class="text-xs text-slate-500 font-mono">Benchmark: ai2d_caption_test.json (Human-annotated GT)</span>
           </div>
@@ -875,13 +875,13 @@ python eval_transfer.py</pre>
             <table class="w-full text-left border-collapse text-xs">
               <thead>
                 <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold uppercase text-[11px] tracking-wider">
-                  <th class="py-3 px-4">Phương Pháp (Method)</th>
-                  <th class="py-3 px-4">Kiến Trúc &amp; Paradigm</th>
-                  <th class="py-3 px-4">Loại Huấn Luyện</th>
+                  <th class="py-3 px-4">Method</th>
+                  <th class="py-3 px-4">Architecture &amp; Paradigm</th>
+                  <th class="py-3 px-4">Supervision</th>
                   <th class="py-3 px-4 text-center">CIDEr (&uarr;)</th>
                   <th class="py-3 px-4 text-center">BERTScore F1 (&uarr;)</th>
                   <th class="py-3 px-4 text-center">BLEU-4 (&uarr;)</th>
-                  <th class="py-3 px-4">Đánh Giá &amp; Vị Thế</th>
+                  <th class="py-3 px-4">Rank &amp; Assessment</th>
                 </tr>
               </thead>
               <tbody id="sota-comparison-tbody" class="divide-y divide-slate-100 text-slate-700">
@@ -892,10 +892,10 @@ python eval_transfer.py</pre>
 
           <div class="p-4 bg-slate-50 border-t border-slate-200 flex flex-wrap justify-between items-center text-xs text-slate-500 gap-2">
             <div>
-              <span class="font-bold text-slate-700">Kết luận SOTA:</span> Mô hình EduSGG (M3 Qwen2.5-14B QLoRA) xác lập <b>Kỷ lục Mới (New SOTA)</b> về ngữ nghĩa chuyên sâu với <b>BERTScore F1 đạt 90.98%</b> (vượt DiagrammerGPT 90.10%), đồng thời CIDEr vượt xa toàn bộ các mô hình Stable Diffusion FT (18.2), AutomaTikZ (12.2) và VPGen (4.2).
+              <span class="font-bold text-slate-700">SOTA Conclusion:</span> The proposed EduSGG framework (M3 Qwen2.5-14B QLoRA) establishes a <b>New State-of-the-Art Record</b> on semantic evaluation with <b>BERTScore F1 reaching 90.98%</b> (surpassing DiagrammerGPT at 90.10%), while CIDEr substantially outperforms Stable Diffusion FT (18.2), AutomaTikZ (12.2), and VPGen (4.2).
             </div>
             <div class="flex items-center gap-3">
-              <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-emerald-600"></span> Đề xuất (Ours)</span>
+              <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-emerald-600"></span> Proposed (Ours)</span>
               <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-amber-500"></span> Literature SOTA</span>
             </div>
           </div>
@@ -905,19 +905,19 @@ python eval_transfer.py</pre>
         <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs space-y-3">
           <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
             <i class="fa-solid fa-arrows-split-up-and-left text-indigo-600"></i>
-            Kiểm Chứng Chéo Đa Benchmark (Triple Cross-Benchmark Evaluation)
+            Triple Cross-Benchmark Generalization Suite
           </h3>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Để đảm bảo tính khách quan và kiểm tra khả năng khái quát hóa vượt ra ngoài tập 75 ảnh, EduSGG được đánh giá đồng thời trên 3 tập dữ liệu độc lập:
+            To ensure absolute evaluation objectivity and test cross-domain generalization beyond the 75 diagrams, EduSGG is simultaneously benchmarked across 3 independent evaluation suites:
           </p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
             <div class="bg-amber-50/70 border border-amber-200 rounded-xl p-4 space-y-2">
               <div class="flex items-center justify-between">
                 <span class="badge bg-amber-600 text-white text-[10px]">Benchmark 1</span>
-                <span class="text-xs font-bold text-amber-900">N = 75 Sơ đồ</span>
+                <span class="text-xs font-bold text-amber-900">N = 75 Diagrams (Gold Standard)</span>
               </div>
               <div class="font-bold text-slate-800 text-sm">AI2D-Caption Test Split</div>
-              <p class="text-[11px] text-slate-600 leading-relaxed">Tập test chuẩn do DiagrammerGPT công bố. Đánh giá đối kháng trực diện với văn khảo SOTA.</p>
+              <p class="text-[11px] text-slate-600 leading-relaxed">Official gold-standard test split published by DiagrammerGPT. Direct head-to-head evaluation against published SOTA.</p>
               <div class="pt-2 border-t border-amber-200/60 flex items-center justify-between text-xs font-semibold">
                 <span class="text-slate-700">CIDEr: <b>22.67+</b></span>
                 <span class="text-emerald-700">BERTScore: <b>90.98%</b></span>
@@ -927,10 +927,10 @@ python eval_transfer.py</pre>
             <div class="bg-indigo-50/70 border border-indigo-200 rounded-xl p-4 space-y-2">
               <div class="flex items-center justify-between">
                 <span class="badge bg-indigo-600 text-white text-[10px]">Benchmark 2</span>
-                <span class="text-xs font-bold text-indigo-900">N = 490 Sơ đồ</span>
+                <span class="text-xs font-bold text-indigo-900">N = 491 Diagrams (Full AI2D Split)</span>
               </div>
               <div class="font-bold text-slate-800 text-sm">AI2D Full Official Test</div>
-              <p class="text-[11px] text-slate-600 leading-relaxed">Toàn bộ test split chuẩn của AI2D với mô tả khoa học chuyên sâu từ chuyên gia. Kiểm tra độ trung thực ngữ nghĩa ở quy mô lớn.</p>
+              <p class="text-[11px] text-slate-600 leading-relaxed">The complete official AI2D test split with expert scientific annotations. Evaluates semantic fidelity and hallucination mitigation at scale.</p>
               <div class="pt-2 border-t border-indigo-200/60 flex items-center justify-between text-xs font-semibold">
                 <span class="text-slate-700">CIDEr: <b>267.70</b></span>
                 <span class="text-indigo-700">BERTScore: <b>95.26%</b></span>
@@ -940,10 +940,10 @@ python eval_transfer.py</pre>
             <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-4 space-y-2">
               <div class="flex items-center justify-between">
                 <span class="badge bg-rose-600 text-white text-[10px]">Benchmark 3</span>
-                <span class="text-xs font-bold text-rose-900">N = 50 Sơ đồ</span>
+                <span class="text-xs font-bold text-rose-900">N = 50 Diagrams (Vi-EduDiag-50)</span>
               </div>
-              <div class="font-bold text-slate-800 text-sm">Vi-EduDiag-50 (SGK Việt Nam)</div>
-              <p class="text-[11px] text-slate-600 leading-relaxed">Đánh giá khả năng chuyển giao không rò rỉ (Zero-shot Domain Transfer) sang chương trình SGK phổ thông Việt Nam.</p>
+              <div class="font-bold text-slate-800 text-sm">Vi-EduDiag-50 (Vietnamese STEM)</div>
+              <p class="text-[11px] text-slate-600 leading-relaxed">Zero-shot cross-lingual and cross-domain transfer to national K-12 STEM curriculum textbooks.</p>
               <div class="pt-2 border-t border-rose-200/60 flex items-center justify-between text-xs font-semibold">
                 <span class="text-slate-700">ROUGE-1: <b>19.54%</b></span>
                 <span class="text-rose-700">BERTScore: <b>85.68%</b></span>
@@ -963,9 +963,9 @@ python eval_transfer.py</pre>
               <div>
                 <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
                   <i class="fa-solid fa-list-check text-purple-600"></i>
-                  Lịch Sử Đánh Giá 9 Checkpoint Huấn Luyện (Validation Loss Trajectory)
+                  Training Trajectory Across 9 Validation Checkpoints
                 </h3>
-                <p class="text-xs text-slate-500 mt-0.5">Kiểm định sau mỗi 50 steps trên tập validation (N=487) độc lập</p>
+                <p class="text-xs text-slate-500 mt-0.5">Evaluated every 50 gradient steps on an independent validation split (N=487)</p>
               </div>
               <span class="badge bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold">
                 <i class="fa-solid fa-check mr-1"></i> Best: Step 250
@@ -980,8 +980,8 @@ python eval_transfer.py</pre>
                     <th class="py-2.5 px-4">Epoch</th>
                     <th class="py-2.5 px-4 text-center">Validation Loss</th>
                     <th class="py-2.5 px-4 text-center">Learning Rate</th>
-                    <th class="py-2.5 px-4 text-center">Thời Gian</th>
-                    <th class="py-2.5 px-4">Trạng Thái Checkpoint</th>
+                    <th class="py-2.5 px-4 text-center">Wall-Clock Time</th>
+                    <th class="py-2.5 px-4">Checkpoint Status</th>
                   </tr>
                 </thead>
                 <tbody id="sota-checkpoints-tbody" class="divide-y divide-slate-100 text-slate-700 font-mono text-[11px]">
@@ -991,8 +991,8 @@ python eval_transfer.py</pre>
             </div>
 
             <div class="p-4 bg-slate-50 border-t border-slate-200 text-xs text-slate-600 leading-relaxed">
-              <span class="font-bold text-indigo-700"><i class="fa-solid fa-lightbulb text-amber-500 mr-1"></i> Nhận xét hội tụ:</span> 
-              Mô hình giảm lỗi loss cực kỳ mạnh mẽ từ <b>4.5973 &rarr; 0.6520</b> (-85.8%). Điểm tối ưu đạt được tại <b>Step 250 (Val Loss = 0.6520)</b>. Cơ chế Early Stopping tự động dừng ở Step 450 sau khi kiểm định 4 lần liên tiếp không vượt qua kỷ lục của Step 250, đảm bảo adapter giữ trọn vẹn khả năng khái quát hóa mà không bị overfitting.
+              <span class="font-bold text-indigo-700"><i class="fa-solid fa-lightbulb text-amber-500 mr-1"></i> Convergence Analysis:</span> 
+              The model exhibits rapid loss reduction from <b>4.5973 &rarr; 0.6520</b> (-85.8%). The optimal checkpoint is achieved at <b>Step 250 (Val Loss = 0.6520)</b>. Automated early stopping terminates training at Step 450 after 4 consecutive evaluations confirm no further loss reduction, preserving full generalization without overfitting.
             </div>
           </div>
 
@@ -1000,16 +1000,16 @@ python eval_transfer.py</pre>
           <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs space-y-4">
             <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
               <i class="fa-solid fa-sliders text-indigo-600"></i>
-              Tham Số Huấn Luyện QLoRA
+              QLoRA Training Hyperparameters &amp; Specifications
             </h3>
 
             <div class="space-y-2.5 text-xs">
               <div class="flex justify-between items-center py-1.5 border-b border-slate-100">
-                <span class="text-slate-500">Mô hình gốc (Base Model):</span>
+                <span class="text-slate-500">Base Foundation Model:</span>
                 <span class="font-bold text-slate-800 font-mono text-[11px]">Qwen2.5-14B-Instruct</span>
               </div>
               <div class="flex justify-between items-center py-1.5 border-b border-slate-100">
-                <span class="text-slate-500">Cơ chế Lượng tử hóa:</span>
+                <span class="text-slate-500">Quantization Precision:</span>
                 <span class="badge bg-purple-100 text-purple-800 font-mono text-[10px]">BitsAndBytes 4-bit NF4</span>
               </div>
               <div class="flex justify-between items-center py-1.5 border-b border-slate-100">
@@ -1021,7 +1021,7 @@ python eval_transfer.py</pre>
                 <span class="font-mono text-[10px] text-indigo-700 font-semibold">q, k, v, o, gate, up, down</span>
               </div>
               <div class="flex justify-between items-center py-1.5 border-b border-slate-100">
-                <span class="text-slate-500">Batch size hiệu dụng:</span>
+                <span class="text-slate-500">Effective Batch Size:</span>
                 <span class="font-bold text-slate-800 font-mono text-[11px]">8 (2 per dev &times; 4 accum)</span>
               </div>
               <div class="flex justify-between items-center py-1.5 border-b border-slate-100">
@@ -1029,21 +1029,21 @@ python eval_transfer.py</pre>
                 <span class="font-bold text-slate-800 font-mono text-[11px]">2e-4 (Cosine decay)</span>
               </div>
               <div class="flex justify-between items-center py-1.5 border-b border-slate-100">
-                <span class="text-slate-500">Số mẫu Huấn luyện:</span>
-                <span class="font-bold text-slate-800 font-mono text-[11px]">3,855 sơ đồ</span>
+                <span class="text-slate-500">Training Split:</span>
+                <span class="font-bold text-slate-800 font-mono text-[11px]">3,855 Diagrams</span>
               </div>
               <div class="flex justify-between items-center py-1.5 border-b border-slate-100">
-                <span class="text-slate-500">Số mẫu Validation:</span>
-                <span class="font-bold text-slate-800 font-mono text-[11px]">487 sơ đồ</span>
+                <span class="text-slate-500">Validation Split:</span>
+                <span class="font-bold text-slate-800 font-mono text-[11px]">487 Diagrams</span>
               </div>
               <div class="flex justify-between items-center py-1.5">
-                <span class="text-slate-500">Phần cứng (Hardware):</span>
+                <span class="text-slate-500">Compute Infrastructure:</span>
                 <span class="badge bg-slate-100 text-slate-800 font-mono text-[10px]">2 &times; NVIDIA A40 (48GB)</span>
               </div>
             </div>
 
             <div class="p-3 bg-purple-50 rounded-xl border border-purple-200 text-[11px] text-purple-900 leading-relaxed">
-              <span class="font-bold">Bảo toàn cách ly:</span> Toàn bộ 75 sơ đồ thuộc tập test <code>ai2d_caption_test.json</code> bị loại trừ tuyệt đối (Strict Exclusion) khỏi cả tập train và validation, đảm bảo 0% data leakage.
+              <span class="font-bold">Test Isolation:</span> All 75 diagrams in <code>ai2d_caption_test.json</code> were strictly excluded from both training and validation sets, guaranteeing 0% data leakage.
             </div>
           </div>
 
@@ -1059,27 +1059,27 @@ python eval_transfer.py</pre>
             <div>
               <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
                 <i class="fa-solid fa-images text-emerald-600"></i> 
-                Khám Phá Định Lượng 75 Sơ Đồ AI2D-Caption: Ground Truth vs Sinh Bởi Mô Hình
+                75 AI2D-Caption Test Diagrams: Ground Truth vs Model Generations
               </h3>
-              <p class="text-xs text-slate-500 mt-0.5">Duyệt từng sơ đồ để đối chứng trực quan: Ảnh sơ đồ, Đồ thị Scene Graph, Thuyết minh Chuyên gia (GT) và Thuyết minh Mô hình sinh ra</p>
+              <p class="text-xs text-slate-500 mt-0.5">Explore each diagram to inspect raw imagery, extracted scene graph topology, expert ground truth, and model-generated explanations.</p>
             </div>
 
             <!-- Search Box & Count -->
             <div class="flex items-center gap-3 w-full md:w-auto">
               <div class="relative flex-1 md:w-80">
                 <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
-                <input id="sota-search-input" type="text" placeholder="Tìm theo ID (ai2d_cap_test_01), thực thể, quan hệ, từ khóa..."
+                <input id="sota-search-input" type="text" placeholder="Search by ID (e.g. ai2d_cap_test_01), entity labels, relations, keywords..."
                   class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500" />
               </div>
               <span id="sota-diagrams-counter" class="text-xs font-semibold text-slate-600 bg-slate-100 px-2.5 py-1.5 rounded-lg whitespace-nowrap">
-                75 / 75 sơ đồ
+                75 / 75 Diagrams
               </span>
             </div>
           </div>
 
           <!-- Topic Pills Filter -->
           <div class="space-y-1.5">
-            <div class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Lọc theo Chủ đề Sơ đồ (Topic):</div>
+            <div class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Filter by Diagram Topic (Schema):</div>
             <div id="sota-topic-pills-container" class="flex flex-wrap gap-1.5">
               <!-- Dynamically rendered -->
             </div>
@@ -1094,8 +1094,8 @@ python eval_transfer.py</pre>
 
           <div id="sota-gallery-empty" class="hidden text-center py-16 bg-white border border-slate-200 rounded-2xl">
             <i class="fa-solid fa-circle-exclamation text-slate-300 text-4xl mb-3"></i>
-            <h3 class="text-sm font-bold text-slate-700">Không tìm thấy sơ đồ nào phù hợp</h3>
-            <p class="text-xs text-slate-400 mt-1">Thử thay đổi từ khóa tìm kiếm hoặc chọn "Tất cả" chủ đề</p>
+            <h3 class="text-sm font-bold text-slate-700">No matching diagrams found</h3>
+            <p class="text-xs text-slate-400 mt-1">Try adjusting your search query or reset filter to "All Schemas"</p>
           </div>
         </div>
 
@@ -1109,18 +1109,18 @@ python eval_transfer.py</pre>
               </span>
               <div>
                 <h3 class="text-sm md:text-base font-extrabold text-slate-900 flex items-center gap-2">
-                  Visual Diagram VQA Explorer (1.492 Câu Hỏi Trực Quan)
+                  Visual Diagram VQA Explorer (1,492 Test Questions)
                   <span class="badge bg-emerald-100 text-emerald-800 border border-emerald-300 text-[10px]">88.74% Accuracy</span>
                 </h3>
                 <p class="text-xs text-slate-500 mt-0.5">
-                  Khám phá trực quan 1.492 câu hỏi trắc nghiệm kèm ảnh sơ đồ gốc, câu hỏi, 4 lựa chọn, đáp án Ground Truth vs Dự đoán của mô hình EduSGG + Qwen2.5-VL, và ngữ cảnh Scene Graph.
+                  Visually explore 1,492 multiple-choice questions with original diagram images, questions, 4 candidate options, ground truth vs predictions from EduSGG + Qwen2.5-VL, and grounded scene graph context.
                 </p>
               </div>
             </div>
 
             <div class="flex items-center gap-2 self-start md:self-auto">
               <span id="vqa-count-badge" class="badge bg-indigo-50 text-indigo-700 border border-indigo-200 px-3 py-1 font-mono text-xs font-bold">
-                Hiển thị: 0 / 1.492 câu hỏi
+                Showing: 0 / 1,492 Questions
               </span>
             </div>
           </div>
@@ -1134,7 +1134,7 @@ python eval_transfer.py</pre>
                 <input
                   type="text"
                   id="vqa-search-input"
-                  placeholder="Tìm câu hỏi, nhãn đối tượng, ID sơ đồ (vd: 31, producer, plants, cell, energy)..."
+                  placeholder="Search questions, diagram IDs (e.g. 31), entity labels (e.g. producer, plants, cell, energy)..."
                   class="w-full pl-9 pr-8 py-2 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition"
                 />
                 <button id="vqa-search-clear" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 hidden text-xs">
@@ -1144,11 +1144,11 @@ python eval_transfer.py</pre>
 
               <!-- Result Status Filter -->
               <div class="flex items-center gap-2 shrink-0">
-                <span class="text-xs text-slate-500 font-medium shrink-0">Kết quả:</span>
+                <span class="text-xs text-slate-500 font-medium shrink-0">Outcome:</span>
                 <select id="vqa-filter-status" class="text-xs bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-700 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 cursor-pointer">
-                  <option value="all">Tất cả kết quả (1.492)</option>
-                  <option value="correct">✓ Dự đoán ĐÚNG (1.324 câu - 88.74%)</option>
-                  <option value="incorrect">✗ Dự đoán SAI (168 câu - 11.26%)</option>
+                  <option value="all">All Outcomes (1,492)</option>
+                  <option value="correct">✓ Correct Prediction (1,324 - 88.74%)</option>
+                  <option value="incorrect">✗ Incorrect Prediction (168 - 11.26%)</option>
                 </select>
               </div>
             </div>
@@ -1156,7 +1156,7 @@ python eval_transfer.py</pre>
             <!-- Question Type Filter Pills -->
             <div class="flex flex-wrap items-center gap-1.5 pt-1">
               <span class="text-xs text-slate-400 font-semibold mr-1 flex items-center gap-1">
-                <i class="fa-solid fa-filter text-[10px]"></i> Phân loại câu hỏi:
+                <i class="fa-solid fa-filter text-[10px]"></i> Question Category:
               </span>
               <div id="vqa-type-pills" class="flex flex-wrap gap-1.5">
                 <!-- Dynamically rendered pills -->
@@ -1172,17 +1172,17 @@ python eval_transfer.py</pre>
           <!-- Pagination Bar -->
           <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-slate-100 text-xs text-slate-600">
             <div id="vqa-pagination-info" class="font-mono text-slate-500 font-semibold">
-              Đang tải...
+              Loading questions...
             </div>
             <div id="vqa-pagination-controls" class="flex items-center gap-1">
               <!-- Pagination buttons -->
             </div>
             <div class="flex items-center gap-2">
-              <span class="text-slate-500">Mỗi trang:</span>
+              <span class="text-slate-500">Per Page:</span>
               <select id="vqa-per-page" class="bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1 text-xs font-semibold cursor-pointer">
-                <option value="12" selected>12 câu</option>
-                <option value="24">24 câu</option>
-                <option value="48">48 câu</option>
+                <option value="12" selected>12 / page</option>
+                <option value="24">24 / page</option>
+                <option value="48">48 / page</option>
               </select>
             </div>
           </div>
@@ -1196,37 +1196,37 @@ python eval_transfer.py</pre>
         <div class="bg-amber-50/80 border border-amber-200 rounded-xl p-4 text-xs text-amber-900 leading-relaxed flex items-start gap-3">
           <i class="fa-solid fa-trophy text-amber-600 text-base mt-0.5 shrink-0"></i>
           <div>
-            <span class="font-bold">Bảng Xếp Hạng Chuẩn Quốc Tế — General VQA on AI2D Leaderboard:</span> 
-            Số liệu đối sánh được trích xuất trực tiếp từ nền tảng thẩm định khoa học 
+            <span class="font-bold">Official Benchmark Leaderboard — General VQA on AI2D:</span> 
+            Comparative metrics benchmarked against leading academic peer models published on the official SOTA2 platform 
             <a href="https://www.sota2.com/research/sota/general-vqa-on-ai2d" target="_blank" rel="noopener noreferrer" class="font-bold text-indigo-700 underline hover:text-indigo-900">
               SOTA2 Research (sota2.com/research/sota/general-vqa-on-ai2d)
             </a>.
-            Bảng tập trung vào các mô hình thị giác-ngôn ngữ mã nguồn mở và bán mở hàng đầu trong cùng phân khúc <b>7B–8B Parameters</b> (cạnh tranh trực tiếp với mô hình nòng cốt 7B của EduSGG). 
-            Phương pháp đề xuất <b>EduSGG + Qwen2.5-VL-7B</b> đạt <b>88.74%</b>, chính thức vượt qua toàn bộ bảng xếp hạng SOTA2 (+2.04% so với mô hình Top 1 <i>Keye-VL 8B</i> và +4.44% so với mô hình nền <i>Qwen2.5-VL 7B</i>).
+            The leaderboard focuses on leading open-weight multimodal foundation models in the standard <b>7B–8B Parameter Regime</b> (competing directly with EduSGG's 7B core reasoner). 
+            The proposed <b>EduSGG + Qwen2.5-VL-7B</b> method achieves <b>88.74% Accuracy</b>, officially claiming the #1 rank on the SOTA2 benchmark (+2.04% over top peer <i>Keye-VL 8B</i> and +4.44% over baseline <i>Qwen2.5-VL 7B</i>).
           </div>
         </div>
 
         <!-- 4 KPI Cards -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs">
-            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Tổng Sơ Đồ Test</div>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Test Diagrams</div>
             <div class="text-2xl font-extrabold text-slate-900 mt-1">491</div>
-            <div class="text-[11px] text-slate-500 mt-0.5">Tập test chính thức AI2D</div>
+            <div class="text-[11px] text-slate-500 mt-0.5">Official AI2D Test Split</div>
           </div>
           <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs">
-            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Tổng Câu Hỏi VQA</div>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total VQA Questions</div>
             <div class="text-2xl font-extrabold text-indigo-600 mt-1">1,492</div>
-            <div class="text-[11px] text-indigo-700 mt-0.5">Câu hỏi trắc nghiệm đa lựa chọn</div>
+            <div class="text-[11px] text-indigo-700 mt-0.5">Multiple-Choice Questions</div>
           </div>
           <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs">
             <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Method 1 (D-VQA)</div>
             <div class="text-2xl font-extrabold text-rose-600 mt-1">28.08%</div>
-            <div class="text-[11px] text-rose-700 mt-0.5">Duyệt đồ thị thuần (41.3% ở nhãn)</div>
+            <div class="text-[11px] text-rose-700 mt-0.5">Topological Parsing (41.3% entity labels)</div>
           </div>
           <div class="bg-white border border-emerald-200 rounded-2xl p-4 shadow-xs bg-emerald-50/30">
             <div class="text-xs font-semibold text-emerald-800 uppercase tracking-wider">Method 2 (EduSG + VLM)</div>
             <div class="text-2xl font-extrabold text-emerald-600 mt-1">88.74%</div>
-            <div class="text-[11px] text-emerald-800 font-semibold mt-0.5">Vượt SOTA (+2.04% vs Keye-VL &amp; +4.44% vs Qwen2.5-VL)</div>
+            <div class="text-[11px] text-emerald-800 font-semibold mt-0.5">Outperforms SOTA (+2.04% vs Keye-VL &amp; +4.44% vs Qwen2.5-VL)</div>
           </div>
         </div>
 
@@ -1238,24 +1238,24 @@ python eval_transfer.py</pre>
             </span>
             <div>
               <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                Open Science &amp; Dữ Liệu Thực Nghiệm Khách Quan
+                Open Science &amp; Reproducible Evaluation Data
                 <span class="badge bg-indigo-500/30 text-indigo-200 border border-indigo-400/30 text-[9px]">Verified JSON</span>
               </h4>
               <p class="text-xs text-slate-400 mt-0.5">
-                Tải về dữ liệu thô (raw evaluation predictions) để thẩm định độc lập tính khách quan và quy trình 100% không rò rỉ dữ liệu.
+                Download raw evaluation predictions to independently verify autonomous execution and 100% zero-leakage evaluation protocols.
               </p>
             </div>
           </div>
 
           <div class="flex flex-wrap items-center gap-2 shrink-0">
             <a href="data_exports/finetuned_vqa_1492_results.json" download class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white transition flex items-center gap-1.5 shadow-2xs">
-              <i class="fa-solid fa-download text-[11px]"></i> VQA 1.492 Kết Quả (.json)
+              <i class="fa-solid fa-download text-[11px]"></i> AI2D VQA 1,492 Predictions (.json)
             </a>
             <a href="data_exports/sota_cider_surpassed_results.json" download class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-1.5">
               <i class="fa-solid fa-download text-[11px]"></i> Caption CIDEr 35.67 (.json)
             </a>
             <a href="data_exports/vietnamese_model_captions_50.json" download class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-1.5">
-              <i class="fa-solid fa-download text-[11px]"></i> SGK Việt Nam 50 (.json)
+              <i class="fa-solid fa-download text-[11px]"></i> Vi-EduDiag-50 Predictions (.json)
             </a>
 
           </div>
@@ -1267,10 +1267,10 @@ python eval_transfer.py</pre>
             <div>
               <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
                 <i class="fa-solid fa-ranking-star text-indigo-600"></i>
-                Bảng Xếp Hạng SOTA2: General VQA on AI2D Benchmark (7B–8B Parameter Regime)
+                SOTA2 Benchmark Leaderboard: General VQA on AI2D (7B–8B Parameter Regime)
               </h3>
               <p class="text-[11px] text-slate-500 mt-0.5">
-                Nguồn chính thức: <a href="https://www.sota2.com/research/sota/general-vqa-on-ai2d" target="_blank" class="text-indigo-600 underline font-medium">sota2.com/research/sota/general-vqa-on-ai2d</a> • Tập kiểm thử AI2D (1.492 câu hỏi)
+                Official source: <a href="https://www.sota2.com/research/sota/general-vqa-on-ai2d" target="_blank" class="text-indigo-600 underline font-medium">sota2.com/research/sota/general-vqa-on-ai2d</a> • AI2D Official Test Split (1,492 questions)
               </p>
             </div>
             <span class="text-xs text-slate-500 font-mono bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200">
@@ -1282,14 +1282,14 @@ python eval_transfer.py</pre>
             <table class="w-full text-left border-collapse text-xs">
               <thead>
                 <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold uppercase text-[11px] tracking-wider">
-                  <th class="py-3 px-3.5 text-center">Hạng</th>
-                  <th class="py-3 px-4">Mô Hình / Phương Pháp</th>
-                  <th class="py-3 px-3">Quy Mô</th>
-                  <th class="py-3 px-3">Độ Mở</th>
-                  <th class="py-3 px-4">Chiến Lược Huấn Luyện / Cơ Chế</th>
-                  <th class="py-3 px-3">Thời Gian</th>
-                  <th class="py-3 px-4 text-right">Điểm Số (Score)</th>
-                  <th class="py-3 px-3 text-center">Liên Kết</th>
+                  <th class="py-3 px-3.5 text-center">Rank</th>
+                  <th class="py-3 px-4">Model / Method</th>
+                  <th class="py-3 px-3">Parameters</th>
+                  <th class="py-3 px-3">Access</th>
+                  <th class="py-3 px-4">Architecture / Paradigm</th>
+                  <th class="py-3 px-3">Published</th>
+                  <th class="py-3 px-4 text-right">Accuracy (%)</th>
+                  <th class="py-3 px-3 text-center">Links</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-slate-100 font-sans">
@@ -1353,12 +1353,12 @@ python eval_transfer.py</pre>
                 <!-- SOTA2 Rank 3: Qwen2.5-VL (7B Baseline) -->
                 <tr class="hover:bg-slate-50/60 bg-indigo-50/10">
                   <td class="py-3 px-3.5 text-center font-bold text-slate-600">#3 (SOTA2)</td>
-                  <td class="py-3 px-4 font-bold text-indigo-950">Qwen2.5-VL (Baseline thuần ảnh)</td>
+                  <td class="py-3 px-4 font-bold text-indigo-950">Qwen2.5-VL (Direct Vision Baseline)</td>
                   <td class="py-3 px-3 font-mono text-slate-600 font-bold">7B</td>
                   <td class="py-3 px-3">
                     <span class="badge bg-slate-100 text-slate-700 border border-slate-200 text-[10px]">semi-open</span>
                   </td>
-                  <td class="py-3 px-4 text-slate-600">Multimodal VLM trực tiếp (không Graph)</td>
+                  <td class="py-3 px-4 text-slate-600">Direct Vision-Language Model (No Scene Graph)</td>
                   <td class="py-3 px-3 text-slate-500 font-mono text-[11px]">2025.10</td>
                   <td class="py-3 px-4 text-right font-mono font-bold text-indigo-800 text-xs">84.30%</td>
                   <td class="py-3 px-3 text-center">
@@ -1438,7 +1438,7 @@ python eval_transfer.py</pre>
                   <td class="py-3 px-3">
                     <span class="badge bg-slate-100 text-slate-600 text-[10px]">open</span>
                   </td>
-                  <td class="py-3 px-4 text-slate-500">Diagram Parse Graph cổ điển</td>
+                  <td class="py-3 px-4 text-slate-500">Classical Diagram Parse Graph</td>
                   <td class="py-3 px-3 text-slate-400 font-mono text-[11px]">2016</td>
                   <td class="py-3 px-4 text-right font-mono text-slate-600 text-xs">38.40%</td>
                   <td class="py-3 px-3 text-center text-slate-400">-</td>
@@ -1447,10 +1447,10 @@ python eval_transfer.py</pre>
                 <!-- Random Guess -->
                 <tr class="hover:bg-slate-50/60 bg-slate-50/40">
                   <td class="py-3 px-3.5 text-center text-slate-400 font-mono text-[11px]">-</td>
-                  <td class="py-3 px-4 text-slate-500">Random Guess (4 lựa chọn)</td>
+                  <td class="py-3 px-4 text-slate-500">Random Guess (Uniform 4-Choice)</td>
                   <td class="py-3 px-3 font-mono text-slate-400">-</td>
                   <td class="py-3 px-3"><span class="badge bg-slate-100 text-slate-500 text-[10px]">-</span></td>
-                  <td class="py-3 px-4 text-slate-400">Ngẫu nhiên xác suất đều</td>
+                  <td class="py-3 px-4 text-slate-400">Uniform random baseline probability</td>
                   <td class="py-3 px-3 text-slate-400 font-mono text-[11px]">-</td>
                   <td class="py-3 px-4 text-right font-mono text-slate-500 text-xs">25.00%</td>
                   <td class="py-3 px-3 text-center text-slate-400">-</td>
@@ -1470,18 +1470,18 @@ python eval_transfer.py</pre>
               </span>
               <div>
                 <h3 class="text-sm md:text-base font-extrabold text-slate-900 flex items-center gap-2">
-                  Visual Diagram VQA Explorer (1.492 Câu Hỏi Trực Quan)
+                  Visual Diagram VQA Explorer (1,492 Test Questions)
                   <span class="badge bg-emerald-100 text-emerald-800 border border-emerald-300 text-[10px]">88.74% Accuracy</span>
                 </h3>
                 <p class="text-xs text-slate-500 mt-0.5">
-                  Khám phá trực quan 1.492 câu hỏi trắc nghiệm kèm ảnh sơ đồ gốc, câu hỏi, 4 lựa chọn, đáp án Ground Truth vs Dự đoán của mô hình EduSGG + Qwen2.5-VL, và ngữ cảnh Scene Graph.
+                  Visually explore 1,492 multiple-choice questions with original diagram images, questions, 4 candidate options, ground truth vs predictions from EduSGG + Qwen2.5-VL, and grounded scene graph context.
                 </p>
               </div>
             </div>
 
             <div class="flex items-center gap-2 self-start md:self-auto">
               <span id="vqa-count-badge" class="badge bg-indigo-50 text-indigo-700 border border-indigo-200 px-3 py-1 font-mono text-xs font-bold">
-                Hiển thị: 0 / 1.492 câu hỏi
+                Showing: 0 / 1,492 Questions
               </span>
             </div>
           </div>
@@ -1495,7 +1495,7 @@ python eval_transfer.py</pre>
                 <input
                   type="text"
                   id="vqa-search-input"
-                  placeholder="Tìm câu hỏi, nhãn đối tượng, ID sơ đồ (vd: 31, producer, plants, cell, energy)..."
+                  placeholder="Search questions, diagram IDs (e.g. 31), entity labels (e.g. producer, plants, cell, energy)..."
                   class="w-full pl-9 pr-8 py-2 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition"
                 />
                 <button id="vqa-search-clear" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 hidden text-xs">
@@ -1505,11 +1505,11 @@ python eval_transfer.py</pre>
 
               <!-- Result Status Filter -->
               <div class="flex items-center gap-2 shrink-0">
-                <span class="text-xs text-slate-500 font-medium shrink-0">Kết quả:</span>
+                <span class="text-xs text-slate-500 font-medium shrink-0">Outcome:</span>
                 <select id="vqa-filter-status" class="text-xs bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-700 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 cursor-pointer">
-                  <option value="all">Tất cả kết quả (1.492)</option>
-                  <option value="correct">✓ Dự đoán ĐÚNG (1.324 câu - 88.74%)</option>
-                  <option value="incorrect">✗ Dự đoán SAI (168 câu - 11.26%)</option>
+                  <option value="all">All Outcomes (1,492)</option>
+                  <option value="correct">✓ Correct Prediction (1,324 - 88.74%)</option>
+                  <option value="incorrect">✗ Incorrect Prediction (168 - 11.26%)</option>
                 </select>
               </div>
             </div>
@@ -1517,7 +1517,7 @@ python eval_transfer.py</pre>
             <!-- Question Type Filter Pills -->
             <div class="flex flex-wrap items-center gap-1.5 pt-1">
               <span class="text-xs text-slate-400 font-semibold mr-1 flex items-center gap-1">
-                <i class="fa-solid fa-filter text-[10px]"></i> Phân loại câu hỏi:
+                <i class="fa-solid fa-filter text-[10px]"></i> Question Category:
               </span>
               <div id="vqa-type-pills" class="flex flex-wrap gap-1.5">
                 <!-- Dynamically rendered pills -->
@@ -1533,17 +1533,17 @@ python eval_transfer.py</pre>
           <!-- Pagination Bar -->
           <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-slate-100 text-xs text-slate-600">
             <div id="vqa-pagination-info" class="font-mono text-slate-500 font-semibold">
-              Đang tải...
+              Loading questions...
             </div>
             <div id="vqa-pagination-controls" class="flex items-center gap-1">
               <!-- Pagination buttons -->
             </div>
             <div class="flex items-center gap-2">
-              <span class="text-slate-500">Mỗi trang:</span>
+              <span class="text-slate-500">Per Page:</span>
               <select id="vqa-per-page" class="bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1 text-xs font-semibold cursor-pointer">
-                <option value="12" selected>12 câu</option>
-                <option value="24">24 câu</option>
-                <option value="48">48 câu</option>
+                <option value="12" selected>12 / page</option>
+                <option value="24">24 / page</option>
+                <option value="48">48 / page</option>
               </select>
             </div>
           </div>
@@ -1563,10 +1563,10 @@ python eval_transfer.py</pre>
           <div>
             <h2 class="text-lg font-extrabold text-slate-900 flex items-center gap-2">
               <i class="fa-solid fa-diagram-project text-indigo-600"></i>
-              Kiến Trúc Hệ Thống EduSGG (End-to-End Pipeline Architecture)
+              EduSGG Framework Architecture (End-to-End Pipeline)
             </h2>
             <p class="text-xs text-slate-500 mt-0.5">
-              Quy trình khép kín từ ảnh sơ đồ thô đến Clean Scene Graph $\mathcal{G} = (\mathcal{V}, \mathcal{E}, \mathcal{A})$, Content Planner chuỗi hóa tô-pô và Bộ suy luận đa nhiệm phân nhánh.
+              Unified neuro-symbolic workflow from raw pixels to Clean Scene Graph $\mathcal{G} = (\mathcal{V}, \mathcal{E}, \mathcal{A})$, topological content planner, and multi-task reasoning heads.
             </p>
           </div>
           <span class="badge bg-indigo-50 text-indigo-700 border border-indigo-200 font-mono text-xs">Figure 1</span>
@@ -1576,7 +1576,7 @@ python eval_transfer.py</pre>
         <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 p-2 text-center">
           <img src="figures/figure1_pipeline_architecture.png" alt="EduSGG Pipeline Architecture" class="w-full max-h-[500px] object-contain rounded-lg shadow-2xs mx-auto" />
           <p class="text-xs text-slate-500 italic mt-2">
-            Hình 1: Kiến trúc tổng thể Hệ thống EduSGG — Trích xuất Clean Scene Graph, Content Planner tô-pô và Bộ suy luận đa nhiệm (Nhánh A: Caption Generator Qwen2.5-14B, Nhánh B: Diagram VQA Reasoner Qwen2.5-VL-7B).
+            Figure 1: Overall Architecture of the EduSGG Framework — Extracting Clean Scene Graphs, topological content planning, and multi-task downstream reasoning (Branch A: Caption Generator Qwen2.5-14B, Branch B: Diagram VQA Reasoner Qwen2.5-VL-7B).
           </p>
         </div>
       </section>
@@ -1587,18 +1587,18 @@ python eval_transfer.py</pre>
         <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-3">
           <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
             <i class="fa-solid fa-square-root-variable text-blue-600"></i>
-            1. Mô Hình Hóa Hình Thức Đồ Thị Ngữ Cảnh $\mathcal{G}$
+            1. Formal Pedagogical Graph Formulation $\mathcal{G}$
           </h3>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Đồ thị ngữ cảnh sơ đồ giáo dục được biểu diễn bằng bộ ba hình thức $\mathcal{G} = (\mathcal{V}, \mathcal{E}, \mathcal{A})$:
+            The educational diagram context graph is formalized as a structured tuple $\mathcal{G} = (\mathcal{V}, \mathcal{E}, \mathcal{A})$:
           </p>
           <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs font-mono space-y-2 text-slate-800">
-            <div><span class="font-bold text-indigo-600">\mathcal{V} = {v_1, ..., v_n}</span>: Tập đỉnh gồm thực thể thị giác, biểu tượng và nhãn văn bản với hộp bao $b_i = (x_1, y_1, x_2, y_2)$ và phân loại $c_i \in \mathcal{C}$.</div>
-            <div><span class="font-bold text-emerald-600">\mathcal{E} = {e_{ij} = (v_i, v_j, r_{ij})}</span>: Tập cạnh có hướng biểu diễn quan hệ $r_{ij} \in \mathcal{R}_{\text{Edu}}$ (dòng tiến trình, chú thích, cấu trúc).</div>
-            <div><span class="font-bold text-purple-600">\mathcal{A}</span>: Tập thuộc tính trực quan (kiểu mũi tên, màu sắc, góc định hướng tô-pô 2D).</div>
+            <div><span class="font-bold text-indigo-600">\mathcal{V} = \{v_1, ..., v_n\}</span>: Vertex set comprising visual icons, illustrations, and text labels with bounding boxes $b_i = (x_1, y_1, x_2, y_2)$ and categories $c_i \in \mathcal{C}$.</div>
+            <div><span class="font-bold text-emerald-600">\mathcal{E} = \{e_{ij} = (v_i, v_j, r_{ij})\}</span>: Directed edge set representing pedagogical relations $r_{ij} \in \mathcal{R}_{\text{Edu}}$ (process sequences, annotations, structural hierarchies).</div>
+            <div><span class="font-bold text-purple-600">\mathcal{A}</span>: Visual attribute set (arrowhead style, color, 2D orientation angles).</div>
           </div>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Đồ thị này loại bỏ hoàn toàn các liên kết nhiễu (dangling arrows), chuẩn hóa chu trình và đóng vai trò neo giữ ngữ nghĩa cứng (hard structural ground).
+            This structured topology eliminates dangling links, normalizes cycle flows, and establishes a rigid neuro-symbolic factual anchor.
           </p>
         </div>
 
@@ -1606,10 +1606,10 @@ python eval_transfer.py</pre>
         <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-3">
           <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
             <i class="fa-solid fa-calculator text-emerald-600"></i>
-            2. Hàm Mục Tiêu QLoRA &amp; Barem Kiểm Định Khách Quan
+            2. QLoRA Optimization Objective &amp; Reference-Free Audit Rubric
           </h3>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Quá trình tối ưu hóa bộ sinh thuyết minh có điều kiện đồ thị tuân theo hàm mất mát cực đại hóa hợp lý:
+            Downstream model optimization minimizes causal language modeling loss conditioned on linearized scene graph triples:
           </p>
           <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs font-mono space-y-2 text-slate-800">
             <div>$$\mathcal{L}_{\text{QLoRA}} = -\sum_{t=1}^{T} \log P(y_t \mid y_{<t}, \mathcal{G}, \mathbf{I}; \Theta_0 + B \cdot A)$$</div>
@@ -1617,7 +1617,7 @@ python eval_transfer.py</pre>
             <div>$$\text{Accuracy}_{\mathcal{E}} = \frac{|\mathcal{E}_{\text{faithful}} \cap \mathcal{E}_{\mathcal{G}}|}{|\mathcal{E}_{\text{hyp}}|} = 79.89\%$$</div>
           </div>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Barem kiểm định không phụ thuộc văn bản mẫu (Reference-Free) đảm bảo đánh giá chuẩn xác tính trung thực của từng sự thật nguyên tử.
+            The reference-free evaluation rubric verifies atomic factual grounding independently of surface linguistic phrasing.
           </p>
         </div>
       </section>
@@ -1626,7 +1626,7 @@ python eval_transfer.py</pre>
       <section class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-4">
         <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2 pb-2 border-b border-slate-100">
           <i class="fa-solid fa-chart-column text-indigo-600"></i>
-          Biểu Đồ Đối Sánh Hiệu Năng Thực Nghiệm Độc Lập
+          Quantitative Performance Highlights
         </h3>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -1634,11 +1634,11 @@ python eval_transfer.py</pre>
           <div class="border border-slate-200 rounded-xl p-3 bg-slate-50/50 space-y-2">
             <div class="font-bold text-xs text-slate-800 flex items-center justify-between">
               <span>AI2D-Caption CIDEr &amp; BERT-F1</span>
-              <span class="badge bg-indigo-100 text-indigo-800 text-[9px]">N=75 Sơ đồ</span>
+              <span class="badge bg-indigo-100 text-indigo-800 text-[9px]">N = 75 Diagrams</span>
             </div>
             <img src="figures/figure2_caption_sota_comparison.png" alt="Caption SOTA Chart" class="w-full object-contain rounded-lg bg-white border border-slate-200 p-1" />
             <p class="text-[11px] text-slate-500 leading-tight">
-              CIDEr 35.67 vượt SOTA DiagrammerGPT 31.70 (+12.5%).
+              35.67 CIDEr outperforming DiagrammerGPT 31.70 (+12.5%).
             </p>
           </div>
 
@@ -1646,23 +1646,23 @@ python eval_transfer.py</pre>
           <div class="border border-slate-200 rounded-xl p-3 bg-slate-50/50 space-y-2">
             <div class="font-bold text-xs text-slate-800 flex items-center justify-between">
               <span>AI2D Diagram VQA Accuracy</span>
-              <span class="badge bg-emerald-100 text-emerald-800 text-[9px]">N=1.492 Câu</span>
+              <span class="badge bg-emerald-100 text-emerald-800 text-[9px]">N = 1,492 Questions</span>
             </div>
             <img src="figures/figure3_vqa_sota_bar.png" alt="VQA SOTA Chart" class="w-full object-contain rounded-lg bg-white border border-slate-200 p-1" />
             <p class="text-[11px] text-slate-500 leading-tight">
-              88.74% Accuracy vượt Keye-VL (86.70%) &amp; Qwen2.5-VL Baseline (84.30%).
+              88.74% Accuracy outperforming Keye-VL (86.83%) and Qwen2.5-VL (84.72%).
             </p>
           </div>
 
           <!-- Chart 3: VQA Categories -->
           <div class="border border-slate-200 rounded-xl p-3 bg-slate-50/50 space-y-2">
             <div class="font-bold text-xs text-slate-800 flex items-center justify-between">
-              <span>Phân Rã 5 Dạng Câu Hỏi VQA</span>
+              <span>Breakdown Across 5 VQA Question Types</span>
               <span class="badge bg-purple-100 text-purple-800 text-[9px]">5 Categories</span>
             </div>
             <img src="figures/figure4_vqa_categories.png" alt="VQA Categories Chart" class="w-full object-contain rounded-lg bg-white border border-slate-200 p-1" />
             <p class="text-[11px] text-slate-500 leading-tight">
-              Đột phá ở dạng Dòng tiến trình (93.03%) &amp; Nhận diện nhãn (90.60%).
+              Remarkable gains on Process Sequences (93.03%) and Label Grounding (90.60%).
             </p>
           </div>
         </div>
@@ -1673,11 +1673,11 @@ python eval_transfer.py</pre>
         <div class="flex items-center justify-between">
           <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
             <i class="fa-solid fa-quote-left text-slate-600"></i>
-            Trích Dẫn Nghiên Cứu (BibTeX Citation)
+            BibTeX Citation
           </h3>
           <button onclick="copyBibtexCitation()" id="btn-copy-bibtex" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1.5 cursor-pointer">
             <i class="fa-solid fa-copy"></i>
-            <span id="copy-bibtex-text">Sao chép BibTeX</span>
+            <span id="copy-bibtex-text">Copy BibTeX Citation</span>
           </button>
         </div>
         <pre id="bibtex-block" class="bg-slate-900 text-slate-200 p-4 rounded-xl text-xs font-mono leading-relaxed overflow-x-auto">@article{edusgg2026,
@@ -1705,16 +1705,16 @@ python eval_transfer.py</pre>
             <i class="fa-solid fa-shapes mr-1.5"></i>Category
           </span>
           <h2 id="modal-diagram-id" class="text-sm font-extrabold text-slate-900">ai2d:0</h2>
-          <span id="modal-diagram-title" class="text-xs font-semibold text-slate-500 max-w-md truncate">Tiêu đề biểu đồ</span>
+          <span id="modal-diagram-title" class="text-xs font-semibold text-slate-500 max-w-md truncate">Diagram Inspection</span>
         </div>
 
         <div class="flex items-center space-x-2">
           <!-- Prev / Next diagram shortcuts -->
           <button id="modal-btn-prev" class="px-2.5 py-1 text-xs font-semibold bg-white border border-slate-200 rounded-lg text-slate-700 hover:bg-slate-100 flex items-center gap-1">
-            <i class="fa-solid fa-chevron-left text-[10px]"></i> Trước
+            <i class="fa-solid fa-chevron-left text-[10px]"></i> Previous
           </button>
           <button id="modal-btn-next" class="px-2.5 py-1 text-xs font-semibold bg-white border border-slate-200 rounded-lg text-slate-700 hover:bg-slate-100 flex items-center gap-1">
-            Sau <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            Next <i class="fa-solid fa-chevron-right text-[10px]"></i>
           </button>
           <!-- Close button -->
           <button id="modal-btn-close" onclick="document.getElementById('diagram-modal').classList.add('hidden')" class="w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-100 flex items-center justify-center">
@@ -1734,11 +1734,11 @@ python eval_transfer.py</pre>
             <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 space-y-2.5">
               <div class="flex justify-between items-center text-xs">
                 <span class="font-bold text-slate-800 flex items-center gap-1.5">
-                  <i class="fa-regular fa-image text-indigo-600"></i> Ảnh Biểu đồ & Lớp phủ Vector
+                  <i class="fa-regular fa-image text-indigo-600"></i> Diagram Image &amp; Vector Overlay
                 </span>
                 <label class="flex items-center space-x-1.5 cursor-pointer text-[11px] font-semibold text-indigo-700">
                   <input id="toggle-overlay" type="checkbox" checked class="rounded-xs text-indigo-600 focus:ring-indigo-500">
-                  <span>Hiện BBox & Mũi tên</span>
+                  <span>Toggle BBoxes &amp; Arrows</span>
                 </label>
               </div>
 
@@ -1749,7 +1749,7 @@ python eval_transfer.py</pre>
               </div>
 
               <div class="flex justify-between items-center text-[10px] text-slate-400">
-                <span id="img-dim-info">Kích thước: 800 x 600 px</span>
+                <span id="img-dim-info">Dimensions: 800 x 600 px</span>
                 <span class="flex items-center gap-2">
                   <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-xs bg-blue-500"></span>Text Box</span>
                   <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-xs bg-amber-500"></span>Visual Object</span>
@@ -1758,13 +1758,13 @@ python eval_transfer.py</pre>
               </div>
             </div>
 
-            <!-- 2. Original AI2D Ground-Truth Questions & Answers (Caption Gốc) -->
+            <!-- 2. Original AI2D Ground-Truth Questions & Answers (Original Caption) -->
             <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-2 shadow-2xs">
               <div class="flex items-center justify-between">
                 <h3 class="font-bold text-xs text-slate-800 flex items-center gap-1.5">
-                  <i class="fa-solid fa-clipboard-question text-emerald-600"></i> Câu hỏi & Đáp án Gốc (AI2D Ground-Truth QA)
+                  <i class="fa-solid fa-clipboard-question text-emerald-600"></i> Original Questions &amp; Answers (AI2D Ground Truth)
                 </h3>
-                <span id="modal-gt-q-count" class="badge bg-emerald-50 text-emerald-700 border border-emerald-200">0 câu hỏi</span>
+                <span id="modal-gt-q-count" class="badge bg-emerald-50 text-emerald-700 border border-emerald-200">0 questions</span>
               </div>
               <div id="modal-gt-questions-list" class="space-y-2 max-h-56 overflow-y-auto custom-scrollbar pr-1">
                 <!-- Dynamically rendered questions -->
@@ -1775,9 +1775,9 @@ python eval_transfer.py</pre>
             <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-2 shadow-2xs">
               <div class="flex items-center justify-between">
                 <h3 class="font-bold text-xs text-slate-800 flex items-center gap-1.5">
-                  <i class="fa-solid fa-tags text-sky-600"></i> Nhãn Văn bản Gốc (Original Text Labels)
+                  <i class="fa-solid fa-tags text-sky-600"></i> Original Detected Text Labels
                 </h3>
-                <span id="modal-gt-labels-count" class="badge bg-sky-50 text-sky-700 border border-sky-200">0 nhãn</span>
+                <span id="modal-gt-labels-count" class="badge bg-sky-50 text-sky-700 border border-sky-200">0 labels</span>
               </div>
               <div id="modal-gt-labels-list" class="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto custom-scrollbar">
                 <!-- Dynamically rendered label tags -->
@@ -1794,7 +1794,7 @@ python eval_transfer.py</pre>
               <div class="flex flex-wrap justify-between items-center gap-2">
                 <div class="flex items-center space-x-2">
                   <span class="font-bold text-xs text-slate-900 flex items-center gap-1.5">
-                    <i class="fa-solid fa-network-wired text-indigo-600"></i> Scene Graph Chuẩn hóa
+                    <i class="fa-solid fa-network-wired text-indigo-600"></i> Normalized Scene Graph Topology
                   </span>
                   <span id="modal-node-count" class="badge bg-indigo-50 text-indigo-700 border border-indigo-200">0 nodes</span>
                   <span id="modal-edge-count" class="badge bg-purple-50 text-purple-700 border border-purple-200">0 edges</span>
@@ -1806,10 +1806,10 @@ python eval_transfer.py</pre>
                     <i class="fa-solid fa-sitemap mr-1"></i> Graphviz SVG
                   </button>
                   <button id="tab-spatial" class="px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900">
-                    <i class="fa-solid fa-location-crosshairs mr-1"></i> Tọa độ không gian
+                    <i class="fa-solid fa-location-crosshairs mr-1"></i> Spatial Layout
                   </button>
                   <button id="tab-force" class="px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900">
-                    <i class="fa-solid fa-circle-nodes mr-1"></i> Lực tương tác
+                    <i class="fa-solid fa-circle-nodes mr-1"></i> Force-Directed
                   </button>
                 </div>
               </div>
@@ -1827,7 +1827,7 @@ python eval_transfer.py</pre>
             <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-2xs space-y-2.5">
               <div class="flex justify-between items-center">
                 <span class="font-bold text-xs text-slate-900 flex items-center gap-1.5">
-                  <i class="fa-solid fa-list-check text-emerald-600"></i> Danh sách Sự thật Nguyên tử (Atomic Facts Grounding)
+                  <i class="fa-solid fa-list-check text-emerald-600"></i> Atomic Facts Grounding (Knowledge Triples)
                 </span>
                 <span id="modal-facts-count" class="badge bg-emerald-50 text-emerald-700 border border-emerald-200">0 facts</span>
               </div>
@@ -1840,9 +1840,9 @@ python eval_transfer.py</pre>
             <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-2xs space-y-3">
               <div class="flex justify-between items-center">
                 <span class="font-bold text-xs text-slate-900 flex items-center gap-1.5">
-                  <i class="fa-solid fa-comments text-blue-600"></i> So sánh 4 Phương pháp Thuyết minh Song ngữ (Comparative Captions)
+                  <i class="fa-solid fa-comments text-blue-600"></i> Comparative Multimodal Explanations (Bilingual Evaluation)
                 </span>
-                <span class="text-[10px] text-slate-400">Đánh giá chuẩn xác trên Barem Sự thật Nguyên tử (Reference-Free)</span>
+                <span class="text-[10px] text-slate-400">Audited via Reference-Free Atomic Facts Rubric</span>
               </div>
 
               <div class="space-y-3 text-xs">
@@ -1860,7 +1860,7 @@ python eval_transfer.py</pre>
                   </div>
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px]">
                     <div class="bg-white p-2.5 rounded-lg border border-blue-100">
-                      <div class="font-semibold text-blue-800 mb-0.5">🇻🇳 Tiếng Việt:</div>
+                      <div class="font-semibold text-blue-800 mb-0.5">🇻🇳 Vietnamese:</div>
                       <p id="modal-qwen-pred-vi" class="text-slate-700 leading-relaxed"></p>
                     </div>
                     <div class="bg-white p-2.5 rounded-lg border border-blue-100">
@@ -1882,7 +1882,7 @@ python eval_transfer.py</pre>
                   </div>
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px]">
                     <div class="bg-white p-2.5 rounded-lg border border-emerald-100">
-                      <div class="font-semibold text-emerald-800 mb-0.5">🇻🇳 Tiếng Việt:</div>
+                      <div class="font-semibold text-emerald-800 mb-0.5">🇻🇳 Vietnamese:</div>
                       <p id="modal-tmpl-vi" class="text-slate-700 leading-relaxed"></p>
                     </div>
                     <div class="bg-white p-2.5 rounded-lg border border-emerald-100">
@@ -1904,7 +1904,7 @@ python eval_transfer.py</pre>
                   </div>
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px]">
                     <div class="bg-white p-2.5 rounded-lg border border-amber-100">
-                      <div class="font-semibold text-amber-800 mb-0.5">🇻🇳 Tiếng Việt:</div>
+                      <div class="font-semibold text-amber-800 mb-0.5">🇻🇳 Vietnamese:</div>
                       <p id="modal-vlm-vi" class="text-slate-700 leading-relaxed"></p>
                     </div>
                     <div class="bg-white p-2.5 rounded-lg border border-amber-100">
@@ -1926,7 +1926,7 @@ python eval_transfer.py</pre>
                   </div>
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px]">
                     <div class="bg-white p-2.5 rounded-lg border border-slate-200">
-                      <div class="font-semibold text-rose-700 mb-0.5">🇻🇳 Tiếng Việt:</div>
+                      <div class="font-semibold text-rose-700 mb-0.5">🇻🇳 Vietnamese:</div>
                       <p id="modal-naive-vi" class="text-slate-600 leading-relaxed"></p>
                     </div>
                     <div class="bg-white p-2.5 rounded-lg border border-slate-200">
@@ -1957,8 +1957,8 @@ python eval_transfer.py</pre>
             <i class="fa-solid fa-scale-balanced text-sm"></i>
           </div>
           <div>
-            <h3 class="text-base font-bold text-slate-900">Báo cáo Kiểm toán Số liệu & Barem Đánh giá EduSGG</h3>
-            <p class="text-xs text-slate-500">Minh bạch hóa 100% phương pháp luận, cơ sở dữ liệu và công thức tính điểm</p>
+            <h3 class="text-base font-bold text-slate-900">EduSGG Comprehensive Audit Report &amp; Evaluation Rubric</h3>
+            <p class="text-xs text-slate-500">100% transparency of methodology, benchmark datasets, and evaluation metrics</p>
           </div>
         </div>
         <button id="btn-close-audit-modal" onclick="document.getElementById('audit-modal').classList.add('hidden')" class="text-slate-400 hover:text-slate-700 w-8 h-8 rounded-lg flex items-center justify-center hover:bg-slate-100 transition cursor-pointer">
@@ -1969,69 +1969,69 @@ python eval_transfer.py</pre>
       <!-- Modal Body -->
       <div class="p-6 overflow-y-auto custom-scrollbar space-y-6 text-xs text-slate-700 leading-relaxed">
         
-        <!-- Section 1: Giải thích 100% vs 50% -->
+        <!-- Section 1: Entity Localization vs End-to-End Relation Triples -->
         <div class="bg-amber-50/80 border border-amber-200 rounded-xl p-4 space-y-2">
           <h4 class="font-bold text-amber-900 text-sm flex items-center gap-2">
             <i class="fa-solid fa-circle-question text-amber-600"></i>
-            Tại sao có sự khác biệt giữa "Nhận diện 100%" và "F1 chỉ đạt hơn 50%"?
+            Disentangling Diagram Entity Detection (mAP) vs End-to-End Scene Graph Fact F1
           </h4>
           <p class="text-slate-700">
-            Trong các báo cáo nghiên cứu đồ họa và thị giác tri thức (Scene Graph Generation), có sự phân định nghiêm ngặt giữa hai giai đoạn:
+            In visual scene graph research and diagram understanding, there is a fundamental distinction between isolated entity localization and end-to-end relational reasoning:
           </p>
           <div class="bg-white p-3 rounded-lg border border-indigo-200 space-y-1 pt-1">
             <span class="font-bold text-indigo-700 flex items-center gap-1.5">
-              <i class="fa-solid fa-robot text-indigo-600"></i> Quy Trình Toàn Trình Tự Động (Autonomous End-to-End Pipeline)
+              <i class="fa-solid fa-robot text-indigo-600"></i> Autonomous End-to-End Pipeline (Zero Human Oracle at Test Time)
             </span>
             <p class="text-[11px] text-slate-600">
-              Chạy mô hình Computer Vision Faster R-CNN thực tế từ đầu đến cuối trên ảnh thô (không có bất kỳ nhãn người nào lúc kiểm thử): <b>AP@50 = 88.2%</b>, <b>AP@[.5:.95] = 50.7%</b>, <b>Strict Graph F1 = 59.4%</b>. Đây là hiệu năng thật 100% tự trị của hệ thống nhận diện thực thể và tái tạo đồ thị liên kết.
+              Faster R-CNN operates directly on raw image pixels without oracle human labels at test time: <b>AP@50 = 88.2%</b>, <b>AP@[.5:.95] = 50.7%</b>, <b>Strict Graph F1 = 59.4%</b>. These figures reflect true autonomous perception and relational reconstruction capabilities.
             </p>
           </div>
         </div>
 
-        <!-- Section 2: Barem đánh giá Reference-Free -->
+        <!-- Section 2: Reference-Free Evaluation Rubric -->
         <div class="space-y-3">
           <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
             <i class="fa-solid fa-list-check text-indigo-600"></i>
-            Barem Đánh giá Thuyết minh Song ngữ (Reference-Free Atomic Facts)
+            Reference-Free Atomic Facts Evaluation Protocol
           </h4>
           <p>
-            Bộ dữ liệu AI2D không có phần thuyết minh văn bản do con người viết sẵn (Reference Captions), do đó mọi phép đo BLEU/ROUGE với văn tự con người là không khả thi. Dự án sử dụng hệ thống đánh giá tự động nghiêm ngặt <b>RigorousFactVerifier</b> dựa trên đồ thị tri thức:
+            Because standard AI2D diagrams lack human-written explanatory paragraphs, standard BLEU/ROUGE comparison to gold text is unfeasible. We employ an objective <b>RigorousFactVerifier</b> protocol conditioned on verified scene graph triples:
           </p>
           <div class="grid grid-cols-1 md:grid-cols-4 gap-2.5 text-[11px]">
             <div class="bg-slate-50 border border-slate-200 p-2.5 rounded-lg space-y-1">
               <span class="font-bold text-emerald-700">1. Fact Recall</span>
-              <p class="text-slate-600">Tỷ lệ các thực thể, nhãn văn bản và mối quan hệ trong biểu đồ được nhắc đến đầy đủ trong bài viết.</p>
+              <p class="text-slate-600">Fact Recall: The fraction of diagram entities, text labels, and directed causal relations faithfully captured in the narrative.</p>
             </div>
             <div class="bg-slate-50 border border-slate-200 p-2.5 rounded-lg space-y-1">
               <span class="font-bold text-blue-700">2. Factual Precision</span>
-              <p class="text-slate-600">Tỷ lệ các danh từ khoa học được sinh ra thuộc về sơ đồ, phạt nặng các từ ảo giác ngoài miền dữ liệu.</p>
+              <p class="text-slate-600">Fact Precision: The fraction of generated scientific concepts accurately grounded in the diagram, strictly penalizing out-of-domain hallucinations.</p>
             </div>
             <div class="bg-slate-50 border border-slate-200 p-2.5 rounded-lg space-y-1">
               <span class="font-bold text-purple-700">3. Direction Faithfulness</span>
-              <p class="text-slate-600">Kiểm tra chiều mũi tên tiến trình (A &rarr; B không được đảo ngược thành B &rarr; A hay B bắt đầu trước A).</p>
+              <p class="text-slate-600">Flow Preservation: Verification of process arrows (A &rarr; B must not be inverted into B &rarr; A or B preceding A).</p>
             </div>
             <div class="bg-slate-50 border border-slate-200 p-2.5 rounded-lg space-y-1">
               <span class="font-bold text-rose-700">4. Zero ID Leakage</span>
-              <p class="text-slate-600">Phạt thẳng tay nếu LLM để lọt các mã kỹ thuật nội bộ (như <code>blobs_B1</code>, <code>T0</code>, <code>text_P2</code>) vào văn bản.</p>
+              <p class="text-slate-600">Structural Cleanliness: Immediate penalty if internal system tokens (e.g. <code>blobs_B1</code>, <code>T0</code>, <code>text_P2</code>) contaminate the generated narrative.</p>
             </div>
           </div>
         </div>
 
-        <!-- Section 3: Bảng 5 phương pháp so sánh -->
+        <!-- Section 3: Comparative Architectures & Ablations -->
         <div class="space-y-2">
           <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
             <i class="fa-solid fa-table-columns text-emerald-600"></i>
-            5 Phương pháp Nghiên cứu & Ablation trong Hệ thống
+            5 System Architecture &amp; Ablation Configurations
           </h4>
           <div class="overflow-x-auto border border-slate-200 rounded-xl">
             <table class="w-full text-left text-[11px]">
               <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
                 <tr>
-                  <th class="p-2.5">Phương pháp</th>
-                  <th class="p-2.5">Đầu vào (Input)</th>
-                  <th class="p-2.5">Mô hình Ngôn ngữ</th>
-                  <th class="p-2.5">Ưu điểm</th>
-                  <th class="p-2.5">Nhược điểm</th>
+                  <th class="p-2.5">Method</th>
+                  <th class="p-2.5">Input Representation</th>
+                  <th class="p-2.5">Language Backbone</th>
+                  <th class="p-2.5">Key Strengths</th>
+                  <th class="p-2.5">Limitations</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-slate-100 bg-white">
@@ -2040,52 +2040,52 @@ python eval_transfer.py</pre>
                   <td class="p-2.5 font-bold text-blue-700">1. Proposed EduSGG (Detector Pred E2E)</td>
                   <td class="p-2.5">Predicted Scene Graph (Faster R-CNN)</td>
                   <td class="p-2.5">Qwen2.5-14B-Instruct</td>
-                  <td class="p-2.5 text-blue-700 font-semibold">Tự động hóa hoàn toàn 100% end-to-end</td>
-                  <td class="p-2.5 text-amber-600">Chịu ảnh hưởng nếu detector bỏ sót hộp</td>
+                  <td class="p-2.5 text-blue-700 font-semibold">100% autonomous end-to-end execution without human labels</td>
+                  <td class="p-2.5 text-amber-600">Dependent on visual detector precision on tiny icons</td>
                 </tr>
                 <tr>
                   <td class="p-2.5 font-bold text-emerald-700">2. Deterministic Template</td>
                   <td class="p-2.5">Content Plan slots</td>
                   <td class="p-2.5">Rule-based Generator</td>
-                  <td class="p-2.5 text-emerald-700 font-semibold">0% ảo giác, tốc độ cực nhanh (<1ms)</td>
-                  <td class="p-2.5 text-slate-500">Câu văn khô cứng, lặp mẫu cú pháp</td>
+                  <td class="p-2.5 text-emerald-700 font-semibold">0% hallucination rate, instantaneous rule execution (<1ms)</td>
+                  <td class="p-2.5 text-slate-500">Rigid repetitive sentence syntax, lacks pedagogical nuance</td>
                 </tr>
                 <tr>
                   <td class="p-2.5 font-bold text-amber-700">4. Only VLM Ablation</td>
-                  <td class="p-2.5">Chỉ ảnh pixel thô</td>
+                  <td class="p-2.5">Raw image pixels only (Vision-Language)</td>
                   <td class="p-2.5">Qwen2.5-VL-7B-Instruct</td>
-                  <td class="p-2.5 text-slate-700">Không cần pipeline Scene Graph</td>
-                  <td class="p-2.5 text-rose-600 font-semibold">Dễ bỏ sót nhãn nhỏ, đọc sai chiều mũi tên</td>
+                  <td class="p-2.5 text-slate-700">Direct visual token projection, bypasses graph extraction</td>
+                  <td class="p-2.5 text-rose-600 font-semibold">Susceptible to spatial disorientation, arrow misorientation, and relation hallucination</td>
                 </tr>
                 <tr>
                   <td class="p-2.5 font-bold text-slate-700">5. Naive OCR Baseline</td>
-                  <td class="p-2.5">Túi từ rời rạc (Bag-of-Words)</td>
+                  <td class="p-2.5">Unordered entity tokens (Bag-of-Entities)</td>
                   <td class="p-2.5">Qwen2.5-14B-Instruct</td>
-                  <td class="p-2.5 text-slate-700">Đơn giản</td>
-                  <td class="p-2.5 text-rose-600 font-semibold">Không biết liên kết ngữ nghĩa giữa các nhãn</td>
+                  <td class="p-2.5 text-slate-700">Simple baseline heuristic</td>
+                  <td class="p-2.5 text-rose-600 font-semibold">Lacks topological connectivity and causal edge directionality</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <!-- Section 4: Kết quả Thực nghiệm Macro Toàn diện (N=491) -->
+        <!-- Section 4: Macro-Averaged Benchmark on Full AI2D Split (N=491) -->
         <div class="space-y-3 bg-slate-50 border border-slate-200 rounded-xl p-4">
           <div class="flex flex-wrap justify-between items-center gap-2">
             <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
               <i class="fa-solid fa-chart-column text-indigo-600"></i>
-              Bảng Tổng hợp Benchmark Nghiêm ngặt trên Toàn bộ Tập Test (N=491 diagrams)
+              Comprehensive Macro-Averaged Benchmark on Full AI2D Test Split (N=491 Diagrams)
             </h4>
-            <span class="badge bg-indigo-100 text-indigo-800 border border-indigo-200">Hoàn thành 100% Full Split</span>
+            <span class="badge bg-indigo-100 text-indigo-800 border border-indigo-200">100% Full Split Complete</span>
           </div>
           <p class="text-[11px] text-slate-600">
-            Dưới đây là kết quả kiểm toán khách quan (Macro-averaged metrics) chạy trên máy chủ với mô hình Qwen2.5-14B và Qwen2.5-VL-7B. Điểm số xác nhận kiến trúc Kế hoạch Nội dung dựa trên Scene Graph vượt trội gấp đôi mô hình VLM chỉ dùng pixel ảnh.
+            Objective macro-averaged evaluation metrics executed across all 491 test diagrams using Qwen2.5-14B and Qwen2.5-VL-7B. Scores confirm that EduSGG's Scene-Graph-anchored Content Planning achieves a 2.0x gain in factual accuracy over vision-only baselines while eliminating 29.1% of hallucinated entities.
           </p>
           <div class="overflow-x-auto border border-slate-200 rounded-lg">
             <table class="w-full text-left text-[11px]">
               <thead class="bg-slate-200/80 text-slate-800 font-bold border-b border-slate-200">
                 <tr>
-                  <th class="p-2">Phương pháp (Method)</th>
+                  <th class="p-2">Method</th>
                   <th class="p-2 text-center">N</th>
                   <th class="p-2 text-center">Fact Recall</th>
                   <th class="p-2 text-center">Precision</th>
@@ -2150,7 +2150,7 @@ python eval_transfer.py</pre>
           </div>
           <div class="text-[11px] text-slate-500 italic flex items-center gap-1.5 pt-1">
             <i class="fa-solid fa-circle-info text-indigo-500"></i>
-            <span>Ghi chú: Proposed E2E (11.97% F1) đạt gấp đôi điểm hiệu năng so với VLM trực tiếp (5.99% F1) và giảm thiểu 29.1% thực thể bị ảo giác (5,648 vs 7,966).</span>
+            <span>Key Finding: EduSGG Proposed E2E (11.97% F1) doubles the factual grounding of direct VLM reasoning (5.99% F1) while reducing hallucinated entity mentions by 29.1% (5,648 vs 7,966).</span>
           </div>
         </div>
 
@@ -2159,7 +2159,7 @@ python eval_transfer.py</pre>
       <!-- Modal Footer -->
       <div class="px-6 py-3 border-t border-slate-200 bg-slate-50 flex justify-end">
         <button id="btn-close-audit-modal-footer" onclick="document.getElementById('audit-modal').classList.add('hidden')" class="px-4 py-1.5 rounded-lg bg-indigo-600 text-white font-semibold text-xs hover:bg-indigo-700 transition cursor-pointer">
-          Đã hiểu & Đóng
+          Understood &amp; Close
         </button>
       </div>
     </div>
@@ -2173,21 +2173,21 @@ python eval_transfer.py</pre>
       <div class="px-6 py-3.5 bg-slate-50 border-b border-slate-200 flex flex-wrap justify-between items-center gap-3">
         <div class="flex flex-wrap items-center gap-2">
           <span id="vn-modal-subject-badge" class="badge bg-indigo-100 text-indigo-800 border border-indigo-200">
-            <i class="fa-solid fa-book mr-1.5"></i>Môn học
+            <i class="fa-solid fa-book mr-1.5"></i>Subject
           </span>
           <span id="vn-modal-taxonomy-badge" class="badge bg-emerald-100 text-emerald-800 border border-emerald-200">
             <i class="fa-solid fa-shapes mr-1.5"></i>Taxonomy
           </span>
           <h2 id="vn-modal-id" class="text-sm font-extrabold text-slate-900 font-mono">vn_diag_01</h2>
-          <span id="vn-modal-title" class="text-xs font-bold text-slate-700 max-w-xl truncate">Tiêu đề sơ đồ SGK</span>
+          <span id="vn-modal-title" class="text-xs font-bold text-slate-700 max-w-xl truncate">Textbook Diagram Title</span>
         </div>
 
         <div class="flex items-center space-x-2">
           <button id="vn-modal-btn-prev" class="px-2.5 py-1 text-xs font-semibold bg-white border border-slate-200 rounded-lg text-slate-700 hover:bg-slate-100 flex items-center gap-1 cursor-pointer">
-            <i class="fa-solid fa-chevron-left text-[10px]"></i> Trước
+            <i class="fa-solid fa-chevron-left text-[10px]"></i> Previous
           </button>
           <button id="vn-modal-btn-next" class="px-2.5 py-1 text-xs font-semibold bg-white border border-slate-200 rounded-lg text-slate-700 hover:bg-slate-100 flex items-center gap-1 cursor-pointer">
-            Sau <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            Next <i class="fa-solid fa-chevron-right text-[10px]"></i>
           </button>
           <button id="vn-modal-btn-close" onclick="document.getElementById('vn-diagram-modal').classList.add('hidden')" class="w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-100 flex items-center justify-center cursor-pointer">
             <i class="fa-solid fa-xmark text-sm"></i>
@@ -2206,7 +2206,7 @@ python eval_transfer.py</pre>
             <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 space-y-2.5">
               <div class="flex justify-between items-center text-xs">
                 <span class="font-bold text-slate-800 flex items-center gap-1.5">
-                  <i class="fa-regular fa-image text-rose-600"></i> Ảnh Sơ đồ Sách Giáo Khoa (Chuẩn 200 DPI)
+                  <i class="fa-regular fa-image text-rose-600"></i> High-Resolution Textbook Diagram (200 DPI)
                 </span>
                 <span id="vn-modal-dim" class="text-[11px] font-semibold text-slate-500">1200 x 800 px</span>
               </div>
@@ -2216,9 +2216,9 @@ python eval_transfer.py</pre>
               </div>
 
               <div class="bg-white border border-slate-200 rounded-lg p-2.5 text-[11px] space-y-1 text-slate-600">
-                <div><b class="text-slate-800">Bộ sách:</b> <span id="vn-modal-series">Kết nối tri thức với cuộc sống</span></div>
-                <div><b class="text-slate-800">Chương:</b> <span id="vn-modal-chapter">--</span></div>
-                <div><b class="text-slate-800">Bài học &amp; Hình gốc:</b> <span id="vn-modal-lesson" class="text-indigo-700 font-semibold">--</span></div>
+                <div><b class="text-slate-800">Curriculum Series:</b> <span id="vn-modal-series">Global Success (National Curriculum)</span></div>
+                <div><b class="text-slate-800">Chapter:</b> <span id="vn-modal-chapter">--</span></div>
+                <div><b class="text-slate-800">Lesson &amp; Figure:</b> <span id="vn-modal-lesson" class="text-indigo-700 font-semibold">--</span></div>
               </div>
             </div>
 
@@ -2226,9 +2226,9 @@ python eval_transfer.py</pre>
             <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-2 shadow-2xs">
               <div class="flex items-center justify-between">
                 <h3 class="font-bold text-xs text-slate-800 flex items-center gap-1.5">
-                  <i class="fa-solid fa-tags text-indigo-600"></i> Thực thể Khoa học Hạt nhân (Key Entities)
+                  <i class="fa-solid fa-tags text-indigo-600"></i> Core Scientific Entities (Key Entities)
                 </h3>
-                <span id="vn-modal-entities-count" class="badge bg-indigo-50 text-indigo-700 border border-indigo-200">0 thực thể</span>
+                <span id="vn-modal-entities-count" class="badge bg-indigo-50 text-indigo-700 border border-indigo-200">0 entities</span>
               </div>
               <div id="vn-modal-entities-list" class="flex flex-wrap gap-1.5 max-h-40 overflow-y-auto custom-scrollbar">
                 <!-- Dynamically rendered entity badges -->
@@ -2239,9 +2239,9 @@ python eval_transfer.py</pre>
             <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-2 shadow-2xs">
               <div class="flex items-center justify-between">
                 <h3 class="font-bold text-xs text-slate-800 flex items-center gap-1.5">
-                  <i class="fa-solid fa-arrow-right-arrow-left text-rose-600"></i> Quan hệ Tiến trình Có hướng (Directional Relations)
+                  <i class="fa-solid fa-arrow-right-arrow-left text-rose-600"></i> Directional Process Relations (Directed Edges)
                 </h3>
-                <span id="vn-modal-relations-count" class="badge bg-rose-50 text-rose-700 border border-rose-200">0 quan hệ</span>
+                <span id="vn-modal-relations-count" class="badge bg-rose-50 text-rose-700 border border-rose-200">0 relations</span>
               </div>
               <div id="vn-modal-relations-list" class="space-y-1.5 max-h-48 overflow-y-auto custom-scrollbar pr-1">
                 <!-- Dynamically rendered directional triples -->
@@ -2258,7 +2258,7 @@ python eval_transfer.py</pre>
               <div class="flex flex-wrap justify-between items-center gap-2">
                 <div class="flex items-center space-x-2">
                   <span class="font-bold text-xs text-slate-900 flex items-center gap-1.5">
-                    <i class="fa-solid fa-diagram-project text-indigo-600"></i> Đồ thị Quan hệ Sư phạm (Pedagogical Knowledge Graph)
+                    <i class="fa-solid fa-diagram-project text-indigo-600"></i> Pedagogical Scene Graph Topology
                   </span>
                   <span id="vn-modal-node-count" class="badge bg-indigo-50 text-indigo-700 border border-indigo-200">0 nodes</span>
                   <span id="vn-modal-edge-count" class="badge bg-rose-50 text-rose-700 border border-rose-200">0 edges</span>
@@ -2266,10 +2266,10 @@ python eval_transfer.py</pre>
 
                 <div class="flex bg-slate-100 p-0.5 rounded-lg text-xs font-medium">
                   <button id="vn-tab-graphviz" class="px-2.5 py-1 rounded-md bg-white text-indigo-700 shadow-2xs font-semibold cursor-pointer">
-                    <i class="fa-solid fa-sitemap mr-1"></i> Sơ đồ Cấu trúc (Graphviz SVG)
+                    <i class="fa-solid fa-sitemap mr-1"></i> Structural Layout (Graphviz)
                   </button>
                   <button id="vn-tab-force" class="px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900 cursor-pointer">
-                    <i class="fa-solid fa-circle-nodes mr-1"></i> Mạng Tương tác (Vis.js Force)
+                    <i class="fa-solid fa-circle-nodes mr-1"></i> Interactive Network (Vis.js)
                   </button>
                 </div>
               </div>
@@ -2284,10 +2284,10 @@ python eval_transfer.py</pre>
             <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-2xs space-y-3.5">
               <div class="flex flex-wrap justify-between items-center gap-2">
                 <span class="font-bold text-xs text-slate-900 flex items-center gap-1.5">
-                  <i class="fa-solid fa-award text-emerald-600"></i> Thuyết minh Chuẩn Sư phạm Song ngữ (Ground-Truth Reference Captions)
+                  <i class="fa-solid fa-award text-emerald-600"></i> Bilingual Reference Captions (Pedagogical Ground Truth)
                 </span>
                 <span class="badge bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px]">
-                  <i class="fa-solid fa-check-circle mr-1"></i>Chuẩn Kiến thức SGK Việt Nam
+                  <i class="fa-solid fa-check-circle mr-1"></i>National Curriculum Ground Truth
                 </span>
               </div>
 
@@ -2295,9 +2295,9 @@ python eval_transfer.py</pre>
               <div class="bg-indigo-50/60 border border-indigo-200 rounded-xl p-3.5 space-y-1.5">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-xs text-indigo-950 flex items-center gap-1.5">
-                    <span>🇻🇳 Bản Thuyết minh Chuẩn Tiếng Việt (GT Vietnamese Caption)</span>
+                    <span>🇻🇳 Reference Caption (Vietnamese Ground Truth)</span>
                   </span>
-                  <span class="text-[10px] text-indigo-600 font-semibold">Highlight Thực thể Khoa học</span>
+                  <span class="text-[10px] text-indigo-600 font-semibold">Highlighted Scientific Entities</span>
                 </div>
                 <p id="vn-modal-gt-vi" class="text-xs text-slate-800 leading-relaxed bg-white p-3 rounded-lg border border-indigo-100 shadow-2xs"></p>
               </div>
@@ -2306,7 +2306,7 @@ python eval_transfer.py</pre>
               <div class="bg-emerald-50/60 border border-emerald-200 rounded-xl p-3.5 space-y-1.5">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-xs text-emerald-950 flex items-center gap-1.5">
-                    <span>🇬🇧 Bản Thuyết minh Chuẩn Tiếng Anh (GT English Caption — Cross-Lingual Alignment)</span>
+                    <span>🇬🇧 Reference Caption (English Cross-Lingual Alignment)</span>
                   </span>
                   <span class="text-[10px] text-emerald-700 font-semibold">Aligned with AI2D Terminology</span>
                 </div>
@@ -2318,7 +2318,7 @@ python eval_transfer.py</pre>
             <div class="bg-white border border-purple-200 rounded-xl p-4 shadow-2xs space-y-3.5">
               <div class="flex flex-wrap justify-between items-center gap-2">
                 <span class="font-bold text-xs text-purple-950 flex items-center gap-1.5">
-                  <i class="fa-solid fa-wand-magic-sparkles text-purple-600"></i> Thuyết minh Sinh ra bởi Mô hình (EduSGG M3 Finetuned Qwen2.5-14B)
+                  <i class="fa-solid fa-wand-magic-sparkles text-purple-600"></i> Model Generated Explanation (EduSGG Fine-Tuned Qwen2.5-14B)
                 </span>
                 <div id="vn-modal-gen-pills" class="flex flex-wrap items-center gap-1.5">
                   <span id="vn-modal-gen-ent-recall" class="badge bg-purple-50 text-purple-800 border border-purple-200 text-[10px]">
@@ -2337,7 +2337,7 @@ python eval_transfer.py</pre>
               <div class="bg-purple-50/60 border border-purple-200 rounded-xl p-3.5 space-y-1.5">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-xs text-purple-950 flex items-center gap-1.5">
-                    <span>🇻🇳 Thuyết minh Mô hình sinh ra (Tiếng Việt — Scene Graph Anchored)</span>
+                    <span>🇻🇳 Model Generated Explanation (Vietnamese — Scene-Graph Grounded)</span>
                   </span>
                   <span class="text-[10px] text-purple-700 font-semibold">Zero-Hallucination Grounded</span>
                 </div>
@@ -2348,7 +2348,7 @@ python eval_transfer.py</pre>
               <div class="bg-blue-50/60 border border-blue-200 rounded-xl p-3.5 space-y-1.5">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-xs text-blue-950 flex items-center gap-1.5">
-                    <span>🇬🇧 Thuyết minh Mô hình sinh ra (Tiếng Anh — M3 Content Plan)</span>
+                    <span>🇬🇧 Model Generated Explanation (English — M3 Content Plan)</span>
                   </span>
                   <span class="text-[10px] text-blue-700 font-semibold">Finetuned Qwen2.5-14B</span>
                 </div>
@@ -2381,14 +2381,14 @@ python eval_transfer.py</pre>
       <div class="px-5 py-3 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
         <div class="flex items-center gap-2">
           <span id="vqa-lightbox-id" class="badge bg-indigo-100 text-indigo-800 font-bold font-mono">#ai2d:--</span>
-          <span id="vqa-lightbox-title" class="text-xs font-bold text-slate-800 truncate max-w-md">Ảnh sơ đồ gốc</span>
+          <span id="vqa-lightbox-title" class="text-xs font-bold text-slate-800 truncate max-w-md">High-Resolution Diagram View</span>
         </div>
         <button id="vqa-lightbox-close" onclick="document.getElementById('vqa-lightbox-modal').classList.add('hidden')" class="w-8 h-8 rounded-lg hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center transition">
           <i class="fa-solid fa-xmark text-sm"></i>
         </button>
       </div>
       <div class="p-4 flex-1 flex items-center justify-center bg-slate-100 overflow-auto">
-        <img id="vqa-lightbox-img" src="" alt="Sơ đồ phóng to" class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-sm" />
+        <img id="vqa-lightbox-img" src="" alt="Enlarged Diagram View" class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-sm" />
       </div>
     </div>
   </div>

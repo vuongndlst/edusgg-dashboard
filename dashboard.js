@@ -113,7 +113,7 @@ function renderCategoryPills() {
         ? "bg-indigo-600 text-white border-indigo-600 shadow-2xs"
         : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
     }">
-      <i class="fa-solid fa-border-all mr-1.5"></i>Tất cả (${counts.all})
+      <i class="fa-solid fa-border-all mr-1.5"></i>All Categories (${counts.all})
     </button>
   `;
 
@@ -176,7 +176,7 @@ function applyFilters() {
   // Update counter
   const counter = document.getElementById("diagrams-counter");
   if (counter) {
-    counter.innerText = `${filteredDiagrams.length} / ${allDiagrams.length} sơ đồ`;
+    counter.innerText = `${filteredDiagrams.length} / ${allDiagrams.length} Diagrams`;
   }
 
   renderGalleryGrid();
@@ -227,13 +227,13 @@ function renderGalleryGrid() {
             </div>
 
             <div class="flex items-center justify-between text-[10px] text-slate-500 pt-2 border-t border-slate-100">
-              <span class="flex items-center gap-1" title="Số nút thực thể">
+              <span class="flex items-center gap-1" title="Entity Nodes Count">
                 <i class="fa-solid fa-circle-nodes text-indigo-500"></i> ${nodeCount}
               </span>
-              <span class="flex items-center gap-1" title="Số liên kết có hướng">
+              <span class="flex items-center gap-1" title="Directed Edges Count">
                 <i class="fa-solid fa-arrow-right text-rose-500"></i> ${edgeCount}
               </span>
-              <span class="flex items-center gap-1 font-semibold text-emerald-700" title="Số sự thật trích xuất">
+              <span class="flex items-center gap-1 font-semibold text-emerald-700" title="Extracted Ground-Truth Facts">
                 <i class="fa-solid fa-list-check"></i> ${factCount} facts
               </span>
             </div>
@@ -355,7 +355,7 @@ function openModal(index) {
 
   if (idElem) idElem.innerText = d.image_id;
   if (titleElem) titleElem.innerText = d.title || d.image_id;
-  if (dimInfo) dimInfo.innerText = `Kích thước gốc: ${d.image_width} x ${d.image_height} px`;
+  if (dimInfo) dimInfo.innerText = `Original Dimensions: ${d.image_width} x ${d.image_height} px`;
 
   if (catBadge) {
     const colorCls = COLOR_CLASSES[d.category_color] || COLOR_CLASSES.slate;
@@ -378,7 +378,7 @@ function openModal(index) {
     img.src = d.image_url;
   }
 
-  // 3. Ground Truth Questions (Caption Gốc)
+  // 3. Ground Truth Questions (Original Caption)
   renderGroundTruthQuestions(d.original_questions || []);
 
   // 4. Ground Truth Labels
@@ -436,7 +436,7 @@ function updateModalGraph() {
       gContainer.innerHTML = `
         <div class="text-center text-slate-400 p-6">
           <i class="fa-solid fa-sitemap text-2xl mb-2 text-slate-300"></i>
-          <p class="text-xs">Đang chuyển sang chế độ Tọa độ không gian (Spatial View)...</p>
+          <p class="text-xs">Switching to Spatial Coordinate View...</p>
         </div>
       `;
       // Automatically fallback to spatial view if SVG is missing
@@ -631,10 +631,10 @@ function renderGroundTruthQuestions(questions) {
   const countBadge = document.getElementById("modal-gt-q-count");
   if (!container) return;
 
-  if (countBadge) countBadge.innerText = `${questions.length} câu hỏi`;
+  if (countBadge) countBadge.innerText = `${questions.length} Questions`;
 
   if (!questions || questions.length === 0) {
-    container.innerHTML = `<div class="p-2 text-slate-400 italic text-xs">Không có câu hỏi kiểm thử nào cho sơ đồ này.</div>`;
+    container.innerHTML = `<div class="p-2 text-slate-400 italic text-xs">No evaluation questions available for this diagram.</div>`;
     return;
   }
 
@@ -672,10 +672,10 @@ function renderGroundTruthLabels(labels) {
   const countBadge = document.getElementById("modal-gt-labels-count");
   if (!container) return;
 
-  if (countBadge) countBadge.innerText = `${labels.length} nhãn`;
+  if (countBadge) countBadge.innerText = `${labels.length} Labels`;
 
   if (!labels || labels.length === 0) {
-    container.innerHTML = `<div class="p-2 text-slate-400 italic text-xs">Không có nhãn văn bản.</div>`;
+    container.innerHTML = `<div class="p-2 text-slate-400 italic text-xs">No text labels detected.</div>`;
     return;
   }
 
@@ -767,7 +767,7 @@ function renderMethodBadge(containerId, evalObj) {
   if (!container) return;
 
   if (!evalObj) {
-    container.innerHTML = `<span class="badge bg-slate-100 text-slate-500 text-[10px]">Chưa đánh giá</span>`;
+    container.innerHTML = `<span class="badge bg-slate-100 text-slate-500 text-[10px]">Unassessed</span>`;
     return;
   }
 
@@ -784,8 +784,8 @@ function renderMethodBadge(containerId, evalObj) {
 
   let html = `
     <span class="badge ${badgeColor} text-white text-[10px]">F1: ${f1.toFixed(1)}%</span>
-    <span class="badge bg-slate-100 text-slate-700 text-[10px]" title="Độ bao phủ thực tế">R: ${rec.toFixed(0)}%</span>
-    <span class="badge bg-slate-100 text-slate-700 text-[10px]" title="Độ chính xác xác thực">P: ${prec.toFixed(0)}%</span>
+    <span class="badge bg-slate-100 text-slate-700 text-[10px]" title="Fact Recall">R: ${rec.toFixed(0)}%</span>
+    <span class="badge bg-slate-100 text-slate-700 text-[10px]" title="Fact Precision">P: ${prec.toFixed(0)}%</span>
   `;
 
   if (leaks > 0) {
@@ -916,7 +916,7 @@ function renderVnSubjectPills() {
         ? "bg-rose-600 text-white border-rose-600 shadow-2xs"
         : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
     }">
-      <i class="fa-solid fa-layer-group mr-1.5"></i>Tất cả K6–K12 (${counts.all})
+      <i class="fa-solid fa-layer-group mr-1.5"></i>All Grades 6–12 (${counts.all})
     </button>
   `;
 
@@ -963,7 +963,7 @@ function renderVnTaxonomyPills() {
         ? "bg-indigo-600 text-white border-indigo-600 shadow-2xs"
         : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
     }">
-      <i class="fa-solid fa-border-all mr-1.5"></i>Tất cả Nhóm (${counts.all})
+      <i class="fa-solid fa-border-all mr-1.5"></i>All Schemas (${counts.all})
     </button>
   `;
 
@@ -1012,7 +1012,7 @@ function applyVnFilters() {
 
   const counter = document.getElementById("vn-diagrams-counter");
   if (counter) {
-    counter.innerText = `${vnFilteredDiagrams.length} / ${vnAllDiagrams.length} sơ đồ`;
+    counter.innerText = `${vnFilteredDiagrams.length} / ${vnAllDiagrams.length} Diagrams`;
   }
 
   renderVnGalleryGrid();
@@ -1066,11 +1066,11 @@ function renderVnGalleryGrid() {
 
             <div class="space-y-2 pt-1.5 border-t border-slate-100">
               <div class="flex items-center justify-between text-[10px] text-slate-600">
-                <span class="flex items-center gap-1 font-semibold text-indigo-700" title="Số thực thể khoa học hạt nhân">
-                  <i class="fa-solid fa-tags"></i> ${entCount} thực thể
+                <span class="flex items-center gap-1 font-semibold text-indigo-700" title="Scientific Entity Nodes">
+                  <i class="fa-solid fa-tags"></i> ${entCount} entities
                 </span>
-                <span class="flex items-center gap-1 font-semibold text-rose-700" title="Số quan hệ tiến trình có hướng">
-                  <i class="fa-solid fa-arrow-right-arrow-left"></i> ${relCount} quan hệ
+                <span class="flex items-center gap-1 font-semibold text-rose-700" title="Directed Process Edges">
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i> ${relCount} relations
                 </span>
               </div>
               <div>
@@ -1208,7 +1208,7 @@ function openVnModal(index) {
   const entCountEl = document.getElementById("vn-modal-entities-count");
   const entListEl = document.getElementById("vn-modal-entities-list");
   const entities = d.key_entities || [];
-  if (entCountEl) entCountEl.innerText = `${entities.length} thực thể`;
+  if (entCountEl) entCountEl.innerText = `${entities.length} entities`;
   if (entListEl) {
     entListEl.innerHTML = entities
       .map(
@@ -1225,7 +1225,7 @@ function openVnModal(index) {
   const relCountEl = document.getElementById("vn-modal-relations-count");
   const relListEl = document.getElementById("vn-modal-relations-list");
   const relations = d.directional_relations || [];
-  if (relCountEl) relCountEl.innerText = `${relations.length} quan hệ`;
+  if (relCountEl) relCountEl.innerText = `${relations.length} relations`;
   if (relListEl) {
     if (relations.length === 0) {
       relListEl.innerHTML = `<div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 italic">Sơ đồ giải phẫu / cấu trúc tĩnh (liên kết phân cấp từ chủ đề trung tâm đến từng bộ phận cấu tạo).</div>`;
@@ -1475,8 +1475,8 @@ function renderSotaComparisonTable() {
               isOurs
                 ? '<span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md"><i class="fa-solid fa-check-double"></i> Vượt SOTA Ngữ Nghĩa (+0.88% BERTScore)</span>'
                 : isSota
-                ? '<span class="text-[11px] font-semibold text-amber-800">Chuẩn Văn Khảo COLM 2024</span>'
-                : '<span class="text-[11px] text-slate-500">Mô hình Cơ sở (Baseline)</span>'
+                ? '<span class="text-[11px] font-semibold text-amber-800">Gold Benchmark (COLM 2024)</span>'
+                : '<span class="text-[11px] text-slate-500">Baseline Architecture</span>'
             }
           </td>
         </tr>
@@ -1512,7 +1512,7 @@ function renderSotaCheckpointsTable() {
             ${h.lr ? h.lr.toExponential(3) : "--"}
           </td>
           <td class="py-2.5 px-4 text-center text-slate-600 font-sans text-[11px]">
-            ${h.elapsed_minutes ? h.elapsed_minutes.toFixed(1) + " phút" : "--"}
+            ${h.elapsed_minutes ? h.elapsed_minutes.toFixed(1) + " mins" : "--"}
           </td>
           <td class="py-2.5 px-4 font-sans">
             ${
@@ -1546,7 +1546,7 @@ function renderSotaTopicPills() {
         ? "bg-indigo-600 text-white border-indigo-600 shadow-2xs"
         : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
     }">
-      <i class="fa-solid fa-border-all mr-1.5"></i>Tất cả (${counts.all})
+      <i class="fa-solid fa-border-all mr-1.5"></i>All Categories (${counts.all})
     </button>
   `;
 
@@ -1602,7 +1602,7 @@ function applySotaFilters() {
 
   const counter = document.getElementById("sota-diagrams-counter");
   if (counter) {
-    counter.innerText = `${sotaFilteredDiagrams.length} / ${sotaAllDiagrams.length} sơ đồ`;
+    counter.innerText = `${sotaFilteredDiagrams.length} / ${sotaAllDiagrams.length} Diagrams`;
   }
 
   renderSotaGalleryGrid();
@@ -1649,7 +1649,7 @@ function renderSotaGalleryGrid() {
           <div class="p-3.5 bg-slate-50/40 border-b border-slate-100 space-y-2 text-xs">
             <div>
               <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1 flex items-center justify-between">
-                <span><i class="fa-solid fa-tags text-indigo-600 mr-1"></i> Scene Graph Thực Thể (${entities.length})</span>
+                <span><i class="fa-solid fa-tags text-indigo-600 mr-1"></i> Scene Graph Entities (${entities.length})</span>
                 <span class="text-slate-400 font-mono text-[9px]">${escapeXml(d.image)}</span>
               </div>
               <div class="flex flex-wrap gap-1 max-h-16 overflow-y-auto custom-scrollbar">
@@ -1665,7 +1665,7 @@ function renderSotaGalleryGrid() {
                   `
                         )
                         .join("")
-                    : '<span class="text-slate-400 italic text-[11px]">Không có nhãn thực thể</span>'
+                    : '<span class="text-slate-400 italic text-[11px]">No entity labels detected</span>'
                 }
                 ${entities.length > 10 ? `<span class="text-[10px] text-slate-400 font-semibold">+${entities.length - 10}</span>` : ""}
               </div>
@@ -1673,7 +1673,7 @@ function renderSotaGalleryGrid() {
 
             <div>
               <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">
-                <i class="fa-solid fa-arrow-right-arrow-left text-rose-600 mr-1"></i> Quan Hệ Có Hướng (${rels.length})
+                <i class="fa-solid fa-arrow-right-arrow-left text-rose-600 mr-1"></i> Directed Relations (${rels.length})
               </div>
               <div class="flex flex-wrap gap-1 max-h-14 overflow-y-auto custom-scrollbar">
                 ${
@@ -1688,7 +1688,7 @@ function renderSotaGalleryGrid() {
                   `
                         )
                         .join("")
-                    : '<span class="text-slate-400 italic text-[10px]">Cấu trúc tĩnh / Phân bố không gian</span>'
+                    : '<span class="text-slate-400 italic text-[10px]">Static Structure / Spatial Distribution</span>'
                 }
                 ${rels.length > 4 ? `<span class="text-[10px] text-slate-400 font-semibold">+${rels.length - 4} khác</span>` : ""}
               </div>
@@ -1818,12 +1818,12 @@ function renderVqaTypePills() {
   if (!container) return;
 
   const typeConfig = [
-    { key: "all", label: "Tất cả", icon: "fa-border-all", count: 1492 },
-    { key: "process_sequence", label: "Tiến trình", icon: "fa-arrow-right-arrow-left", count: 201 },
-    { key: "label_identification", label: "Nhãn", icon: "fa-tag", count: 149 },
-    { key: "structural_query", label: "Cấu trúc", icon: "fa-sitemap", count: 987 },
-    { key: "directional_flow", label: "Dòng chảy", icon: "fa-compass", count: 118 },
-    { key: "counting", label: "Đếm", icon: "fa-calculator", count: 37 }
+    { key: "all", label: "All Types", icon: "fa-border-all", count: 1492 },
+    { key: "process_sequence", label: "Process Sequence", icon: "fa-arrow-right-arrow-left", count: 201 },
+    { key: "label_identification", label: "Label Identification", icon: "fa-tag", count: 149 },
+    { key: "structural_query", label: "Structural Query", icon: "fa-sitemap", count: 987 },
+    { key: "directional_flow", label: "Directional Flow", icon: "fa-compass", count: 118 },
+    { key: "counting", label: "Counting", icon: "fa-calculator", count: 37 }
   ];
 
   container.innerHTML = typeConfig
@@ -1886,7 +1886,7 @@ function applyVqaFilters() {
   // Update badge count
   const badge = document.getElementById("vqa-count-badge");
   if (badge) {
-    badge.textContent = `Hiển thị: ${vqaFilteredQuestions.length.toLocaleString()} / ${vqaAllQuestions.length.toLocaleString()} câu hỏi`;
+    badge.textContent = `Showing: ${vqaFilteredQuestions.length.toLocaleString()} / ${vqaAllQuestions.length.toLocaleString()} Questions`;
   }
 
   renderVqaCards();
@@ -1901,8 +1901,8 @@ function renderVqaCards() {
     container.innerHTML = `
       <div class="col-span-full py-16 text-center text-slate-400">
         <i class="fa-solid fa-magnifying-glass text-3xl mb-3 text-slate-300"></i>
-        <p class="text-sm font-semibold">Không tìm thấy câu hỏi VQA nào phù hợp bộ lọc.</p>
-        <p class="text-xs text-slate-400 mt-1">Hãy thử xóa bộ lọc tìm kiếm hoặc chọn danh mục khác.</p>
+        <p class="text-sm font-semibold">No VQA questions match the current filter.</p>
+        <p class="text-xs text-slate-400 mt-1">Try adjusting your search query or reset filter to All Types.</p>
       </div>
     `;
     return;
@@ -1970,7 +1970,7 @@ function renderVqaCards() {
                 onerror="this.onerror=null; this.src='https://placehold.co/400x250?text=S%C6%A1+%C4%90%E1%BB%93+AI2D+#' + '${q.raw_id}';"
               />
               <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-2 text-white text-xs font-semibold">
-                <i class="fa-solid fa-magnifying-glass-plus text-base"></i> Phóng to sơ đồ
+                <i class="fa-solid fa-magnifying-glass-plus text-base"></i> Enlarge Diagram
               </div>
               <span class="absolute top-2 left-2 badge bg-slate-900/80 text-white font-mono text-[10px] backdrop-blur-xs">
                 #${q.raw_id}
@@ -1987,7 +1987,7 @@ function renderVqaCards() {
 
             <!-- Question Text -->
             <div class="pt-0.5">
-              <div class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Câu hỏi:</div>
+              <div class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Question:</div>
               <h4 class="font-bold text-slate-900 text-xs mt-0.5 leading-snug line-clamp-2" title="${escapeXml(q.question)}">
                 ${escapeXml(q.question)}
               </h4>
@@ -2004,7 +2004,7 @@ function renderVqaCards() {
             <details class="group text-[11px] bg-slate-50 rounded-xl border border-slate-200 p-2.5">
               <summary class="cursor-pointer font-semibold text-slate-700 hover:text-indigo-600 flex items-center justify-between select-none">
                 <span class="flex items-center gap-1.5">
-                  <i class="fa-solid fa-network-wired text-indigo-500"></i> Ngữ cảnh EduSG Scene Graph
+                  <i class="fa-solid fa-network-wired text-indigo-500"></i> EduSGG Serialized Graph Context
                 </span>
                 <i class="fa-solid fa-chevron-down text-slate-400 text-[10px] group-open:rotate-180 transition"></i>
               </summary>
@@ -2014,7 +2014,7 @@ function renderVqaCards() {
             </details>
 
             <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-              <span title="Thời gian sinh suy luận"><i class="fa-regular fa-clock mr-1"></i>${q.latency_s ? q.latency_s + 's' : '0.34s'}</span>
+              <span title="Inference Latency"><i class="fa-regular fa-clock mr-1"></i>${q.latency_s ? q.latency_s + 's' : '0.34s'}</span>
               <span class="text-indigo-600 font-bold">Qwen2.5-VL-7B + EduSG</span>
             </div>
           </div>
@@ -2050,7 +2050,7 @@ function renderVqaPagination() {
       onclick="goVqaPage(1)"
       ${vqaCurrentPage === 1 ? "disabled" : ""}
       class="px-2 py-1 rounded-lg border border-slate-200 text-xs font-semibold ${vqaCurrentPage === 1 ? "opacity-40 cursor-not-allowed bg-slate-50 text-slate-400" : "bg-white text-slate-700 hover:bg-slate-100"}"
-      title="Trang đầu"
+      title="First Page"
     >
       <i class="fa-solid fa-angles-left"></i>
     </button>
@@ -2059,7 +2059,7 @@ function renderVqaPagination() {
       ${vqaCurrentPage === 1 ? "disabled" : ""}
       class="px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-semibold ${vqaCurrentPage === 1 ? "opacity-40 cursor-not-allowed bg-slate-50 text-slate-400" : "bg-white text-slate-700 hover:bg-slate-100"}"
     >
-      <i class="fa-solid fa-chevron-left mr-1"></i> Trước
+      <i class="fa-solid fa-chevron-left mr-1"></i> Previous
     </button>
   `;
 
@@ -2095,13 +2095,13 @@ function renderVqaPagination() {
       ${vqaCurrentPage === totalPages ? "disabled" : ""}
       class="px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-semibold ${vqaCurrentPage === totalPages ? "opacity-40 cursor-not-allowed bg-slate-50 text-slate-400" : "bg-white text-slate-700 hover:bg-slate-100"}"
     >
-      Sau <i class="fa-solid fa-chevron-right ml-1"></i>
+      Next <i class="fa-solid fa-chevron-right ml-1"></i>
     </button>
     <button
       onclick="goVqaPage(${totalPages})"
       ${vqaCurrentPage === totalPages ? "disabled" : ""}
       class="px-2 py-1 rounded-lg border border-slate-200 text-xs font-semibold ${vqaCurrentPage === totalPages ? "opacity-40 cursor-not-allowed bg-slate-50 text-slate-400" : "bg-white text-slate-700 hover:bg-slate-100"}"
-      title="Trang cuối"
+      title="Last Page"
     >
       <i class="fa-solid fa-angles-right"></i>
     </button>
@@ -2150,7 +2150,7 @@ function openVqaLightbox(imgUrl, title, rawId) {
   if (!modal || !img) return;
 
   img.src = imgUrl;
-  if (titleEl) titleEl.textContent = title || "Ảnh sơ đồ AI2D";
+  if (titleEl) titleEl.textContent = title || "AI2D Diagram Image";
   if (idEl) idEl.textContent = `#ai2d:${rawId}`;
 
   modal.classList.remove("hidden");
@@ -2266,12 +2266,12 @@ function copyBibtexCitation() {
   const textToCopy = bibBlock.textContent || bibBlock.innerText;
   navigator.clipboard.writeText(textToCopy).then(() => {
     if (btnText) {
-      btnText.textContent = "Đã sao chép! ✓";
+      btnText.textContent = "Copied to Clipboard! ✓";
       setTimeout(() => {
-        btnText.textContent = "Sao chép BibTeX";
+        btnText.textContent = "Copy BibTeX Citation";
       }, 2000);
     }
   }).catch(() => {
-    alert("Không thể sao chép tự động. Hãy bôi đen và nhấn Ctrl+C.");
+    alert("Unable to copy automatically. Please select the text and press Ctrl+C.");
   });
 }
