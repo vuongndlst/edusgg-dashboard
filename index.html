@@ -73,31 +73,20 @@
         Hệ thống tiên phong sử dụng <span class="font-semibold text-indigo-700">Clean Diagram Scene Graph</span> làm cầu nối cấu trúc, giải quyết triệt để hiện tượng ảo giác quan hệ của VLM, thiết lập kỷ lục SOTA thế giới trên <b>AI2D Diagram VQA (88.74%)</b>, <b>AI2D-Captioning (CIDEr 35.67)</b> và bộ kiểm thử Sách Giáo Khoa Việt Nam <b>Vi-EduDiag-50</b>.
       </p>
 
-      <!-- Action Buttons Row (Academic Standard) -->
-      <div class="flex flex-wrap justify-center items-center gap-2.5 pt-2">
-        <a href="Bao_Cao_Nghien_Cuu_EduSGG_Toan_Dien.docx" download class="px-4 py-2 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition flex items-center gap-2 cursor-pointer">
-          <i class="fa-solid fa-file-word text-sm"></i>
-          <span>Tải Báo Cáo Khoa Học (.docx)</span>
+      <!-- Paper Meta Row (Clean & Focused) -->
+      <div class="flex flex-wrap justify-center items-center gap-2.5 pt-1 text-xs">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 font-medium">
+          <i class="fa-solid fa-scroll text-indigo-600"></i> Research Paper (Target Q3 Journal)
+        </span>
+        <a href="https://github.com/vuongndlst/edusgg-dashboard.git" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-semibold shadow-2xs transition">
+          <i class="fa-brands fa-github text-xs"></i>
+          <span>GitHub Repository</span>
         </a>
-        <a href="EduSGG_Paper_Package_Q3.zip" download class="px-4 py-2 rounded-xl text-xs font-bold bg-amber-600 hover:bg-amber-700 text-white shadow-xs transition flex items-center gap-2 cursor-pointer">
-          <i class="fa-solid fa-box-archive text-sm"></i>
-          <span>Tải Trọn Bộ Hồ Sơ Paper Q3 (.zip)</span>
-        </a>
-        <a href="https://github.com/vuongndlst/edusgg-dashboard.git" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white shadow-xs transition flex items-center gap-2 cursor-pointer">
-          <i class="fa-brands fa-github text-sm"></i>
-          <span>GitHub Source Code</span>
-        </a>
-        <button onclick="window.switchMenu('leaderboard')" class="px-4 py-2 rounded-xl text-xs font-bold bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 transition flex items-center gap-2 cursor-pointer">
-          <i class="fa-solid fa-ranking-star text-amber-600"></i>
-          <span>SOTA Leaderboard</span>
-        </button>
-        <button onclick="window.switchMenu('vqa')" class="px-4 py-2 rounded-xl text-xs font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300 transition flex items-center gap-2 cursor-pointer">
-          <i class="fa-solid fa-circle-question text-emerald-600"></i>
-          <span>Visual VQA Explorer (1.492 câu)</span>
-        </button>
-        <button onclick="window.switchMenu('pipeline')" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 transition flex items-center gap-2 cursor-pointer">
-          <i class="fa-solid fa-sitemap text-indigo-600"></i>
-          <span>Kiến Trúc &amp; Lý Thuyết</span>
+        <button onclick="document.getElementById('audit-modal').classList.remove('hidden')" 
+           class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-medium shadow-2xs transition cursor-pointer">
+          <i class="fa-solid fa-scale-balanced text-indigo-600"></i>
+          <span>Barem Kiểm Toán &amp; F1</span>
         </button>
       </div>
 
@@ -150,41 +139,44 @@
 
     </div>
 
-    <!-- Sticky Academic Navigation Menu -->
-    <div class="border-t border-slate-200 bg-slate-100/95 backdrop-blur-md sticky top-0 z-30 shadow-xs">
+    <!-- Sticky Sleek Navigation Bar -->
+    <div class="border-t border-slate-200/80 bg-white/95 backdrop-blur-md sticky top-0 z-30 shadow-xs">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap justify-between items-center gap-2">
-        <nav class="flex flex-wrap items-center gap-1.5">
-          <button id="nav-menu-leaderboard" onclick="window.switchMenu('leaderboard')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs cursor-pointer">
-            <i class="fa-solid fa-ranking-star"></i>
-            <span>Bảng Xếp Hạng SOTA</span>
+        <nav class="flex flex-wrap items-center gap-1.5 p-1 bg-slate-100/90 rounded-xl border border-slate-200/60">
+          <button id="nav-menu-leaderboard" onclick="window.switchMenu('leaderboard')" class="px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs cursor-pointer">
+            <i class="fa-solid fa-trophy text-amber-300"></i>
+            <span>Bảng SOTA</span>
+            <span class="badge bg-amber-400 text-slate-950 text-[9px] py-0 px-1 font-extrabold">#1</span>
           </button>
-          <button id="nav-menu-vqa" onclick="window.switchMenu('vqa')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 cursor-pointer">
-            <i class="fa-solid fa-images text-indigo-600"></i>
-            <span>Visual VQA Explorer (N=1.492)</span>
-            <span class="badge bg-emerald-600 text-white text-[9px]">88.74%</span>
+          <button id="nav-menu-vqa" onclick="window.switchMenu('vqa')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-600 hover:bg-white/80 cursor-pointer">
+            <i class="fa-solid fa-circle-question text-emerald-600"></i>
+            <span>Visual VQA</span>
+            <span class="badge bg-emerald-600 text-white text-[9px] py-0 px-1 font-bold">88.74%</span>
           </button>
-          <button id="nav-menu-caption" onclick="window.switchMenu('caption')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 cursor-pointer">
-            <i class="fa-solid fa-comments text-blue-600"></i>
-            <span>AI2D Caption Gallery (N=75 SOTA &amp; N=491)</span>
+          <button id="nav-menu-caption" onclick="window.switchMenu('caption')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-600 hover:bg-white/80 cursor-pointer">
+            <i class="fa-solid fa-closed-captioning text-blue-600"></i>
+            <span>Caption Gallery</span>
+            <span class="badge bg-slate-200 text-slate-700 text-[9px] py-0 px-1 font-semibold">491</span>
           </button>
-          <button id="nav-menu-vn" onclick="window.switchMenu('vn')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 cursor-pointer">
-            <i class="fa-solid fa-book-bookmark text-rose-600"></i>
-            <span>SGK Việt Nam K6–K12 (N=50)</span>
-            <span class="badge bg-rose-600 text-white text-[9px]">MỚI</span>
+          <button id="nav-menu-vn" onclick="window.switchMenu('vn')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-600 hover:bg-white/80 cursor-pointer">
+            <i class="fa-solid fa-book-open text-rose-600"></i>
+            <span>SGK Việt Nam</span>
+            <span class="badge bg-rose-600 text-white text-[9px] py-0 px-1 font-bold">50</span>
           </button>
-          <button id="nav-menu-pipeline" onclick="window.switchMenu('pipeline')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 cursor-pointer">
-            <i class="fa-solid fa-sitemap text-purple-600"></i>
-            <span>Kiến Trúc &amp; Lý Thuyết</span>
+          <button id="nav-menu-pipeline" onclick="window.switchMenu('pipeline')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-600 hover:bg-white/80 cursor-pointer">
+            <i class="fa-solid fa-sitemap text-indigo-600"></i>
+            <span>Kiến Trúc Pipeline</span>
           </button>
         </nav>
 
         <div class="flex items-center gap-2 text-xs">
-          <button id="btn-open-audit-modal" onclick="document.getElementById('audit-modal').classList.remove('hidden')" class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-semibold transition cursor-pointer shadow-2xs">
-            <i class="fa-solid fa-scale-balanced text-indigo-600"></i>
-            <span>Kiểm toán Số liệu</span>
+          <button id="btn-open-audit-modal" onclick="document.getElementById('audit-modal').classList.remove('hidden')" class="bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-medium transition cursor-pointer shadow-2xs">
+            <i class="fa-solid fa-scale-balanced text-indigo-600 text-xs"></i>
+            <span class="hidden sm:inline">Kiểm Toán F1</span>
           </button>
-          <a href="https://github.com/vuongndlst/edusgg-dashboard.git" target="_blank" class="text-slate-500 hover:text-slate-900 transition text-sm px-2">
-            <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/vuongndlst/edusgg-dashboard.git" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 text-white px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-medium transition shadow-2xs">
+            <i class="fa-brands fa-github text-xs"></i>
+            <span class="hidden sm:inline">GitHub</span>
           </a>
         </div>
       </div>
@@ -804,9 +796,7 @@
             <a href="data_exports/vietnamese_model_captions_50.json" download class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-1.5">
               <i class="fa-solid fa-download text-[11px]"></i> SGK Việt Nam 50 (.json)
             </a>
-            <a href="EduSGG_Paper_Package_Q3.zip" download class="px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 transition flex items-center gap-1.5 shadow-2xs">
-              <i class="fa-solid fa-file-zipper text-[11px]"></i> Trọn Bộ Paper Package Q3 (.zip)
-            </a>
+
           </div>
         </div>
 

@@ -1,7 +1,6 @@
 # EduSGG — Interactive Educational Diagram & Scene Graph Gallery
 
 [![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-indigo?style=for-the-badge&logo=github)](https://vuongndlst.github.io/edusgg-dashboard/)
-[![Báo Cáo Tiến Độ](https://img.shields.io/badge/B%C3%A1o%20C%C3%A1o%20Ti%E1%BA%BFng%20Vi%E1%BB%87t-Download%20DOCX-blue?style=for-the-badge&logo=microsoftword)](https://github.com/vuongndlst/edusgg-dashboard/raw/main/Bao_Cao_Tien_Do_EduSGG_Gui_Thay.docx)
 [![Test Set Size](https://img.shields.io/badge/Test%20Split-491%20Diagrams-blue?style=for-the-badge)](https://vuongndlst.github.io/edusgg-dashboard/)
 [![Proposed E2E F1](https://img.shields.io/badge/Proposed%20E2E%20F1-11.97%25%20(%2B100%25%20vs%20VLM)-emerald?style=for-the-badge)](https://vuongndlst.github.io/edusgg-dashboard/)
 [![Detector AP@50](https://img.shields.io/badge/Detector%20AP%4050-88.2%25-amber?style=for-the-badge)](https://vuongndlst.github.io/edusgg-dashboard/)
@@ -9,8 +8,6 @@
 > **Interactive Web Dashboard for Educational Diagram Scene Graph Grounding and 5-Way Comparative Bilingual Captioning across the complete AI2D Test Split ($N = 491$).**
 
 🌐 **Trải nghiệm trực tiếp Web**: [https://vuongndlst.github.io/edusgg-dashboard/](https://vuongndlst.github.io/edusgg-dashboard/)  
-📄 **Tải Báo Cáo Tiến Độ Tiếng Việt gửi Thầy**: [`Bao_Cao_Tien_Do_EduSGG_Gui_Thay.docx`](https://github.com/vuongndlst/edusgg-dashboard/raw/main/Bao_Cao_Tien_Do_EduSGG_Gui_Thay.docx)  
-📑 **Tải Bản Thảo Paper Tiếng Anh (IEEE format)**: [`EduSGG_IEEE_Paper_Report.docx`](https://github.com/vuongndlst/edusgg-dashboard/raw/main/EduSGG_IEEE_Paper_Report.docx)
 
 ---
 

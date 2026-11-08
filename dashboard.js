@@ -2182,8 +2182,8 @@ function setupTopMenuNavigation() {
   const viewVn = document.getElementById("view-vn");
   const viewPipeline = document.getElementById("view-pipeline");
 
-  const activeBtnClass = "px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs cursor-pointer";
-  const inactiveBtnClass = "px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 cursor-pointer";
+  const activeBtnClass = "px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs cursor-pointer";
+  const inactiveBtnClass = "px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-700 hover:text-indigo-600 hover:bg-white/80 cursor-pointer";
 
   window.switchMenu = function(menu) {
     // Hide all views first
