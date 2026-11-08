@@ -186,7 +186,7 @@ const SOTA_BENCHMARK_DATA = {
       "bleu_1": 32.94,
       "bleu_4": 11.51,
       "rouge_1": 46.85,
-      "rouge_2": 29.80,
+      "rouge_2": 29.8,
       "rouge_l": 41.58
     },
     "ai2d_full_test_split": {
@@ -331,6 +331,93 @@ const SOTA_BENCHMARK_DATA = {
       "claude_3.5_sonnet": 84.5,
       "edusgg_method1_deterministic": 24.8,
       "edusgg_method2_graph_qwen_vl": 88.74
+    },
+    "sota2_official_leaderboard": {
+      "source_url": "https://www.sota2.com/research/sota/general-vqa-on-ai2d",
+      "description": "General VQA on AI2D benchmark leaderboard · SOTA2 Research",
+      "regime": "7B-8B parameter models",
+      "entries": [
+        {
+          "rank": 1,
+          "method": "EduSGG + Qwen2.5-VL-7B (Ours Proposed)",
+          "size": "7B",
+          "openness": "open weights",
+          "strategy": "EduSG Scene Graph Context + Multimodal Reasoner",
+          "date": "2026.02",
+          "score": 88.74,
+          "is_ours": true
+        },
+        {
+          "rank": 2,
+          "method": "Keye-VL",
+          "size": "8B",
+          "openness": "semi-open",
+          "strategy": "Standard Multimodal LMM",
+          "date": "2025.10",
+          "score": 86.7,
+          "paper_url": "https://www.sota2.com/research/paper/68fa79c51e209131cea7f424"
+        },
+        {
+          "rank": 3,
+          "method": "Bee-8B (RL)",
+          "size": "8B",
+          "openness": "fully open",
+          "strategy": "Reinforcement Learning (RL)",
+          "date": "2025.10",
+          "score": 85.3,
+          "paper_url": "https://www.sota2.com/research/paper/68fa7c691e209131cea8df07"
+        },
+        {
+          "rank": 4,
+          "method": "Qwen2.5-VL (Baseline)",
+          "size": "7B",
+          "openness": "semi-open",
+          "strategy": "Multimodal VLM Baseline",
+          "date": "2025.10",
+          "score": 84.3,
+          "paper_url": "https://www.sota2.com/research/paper/68fa773a1e209131cea71d3c"
+        },
+        {
+          "rank": 5,
+          "method": "InternVL3.5",
+          "size": "8B",
+          "openness": "semi-open",
+          "strategy": "Multimodal ViT + LLM",
+          "date": "2025.10",
+          "score": 84.0,
+          "paper_url": "https://www.sota2.com/research/paper/68fa7af01e209131cea85dc9"
+        },
+        {
+          "rank": 6,
+          "method": "Bee-8B (SFT)",
+          "size": "8B",
+          "openness": "fully open",
+          "strategy": "Supervised Fine-Tuning (SFT)",
+          "date": "2025.10",
+          "score": 83.8,
+          "paper_url": "https://www.sota2.com/research/paper/68fa7c691e209131cea8df07"
+        },
+        {
+          "rank": 7,
+          "method": "LLaVA OneVision",
+          "size": "7B",
+          "openness": "fully open",
+          "strategy": "Any-Res Multi-image VLM",
+          "date": "2024.08",
+          "score": 81.4,
+          "paper_url": "https://llava-vl.github.io/blog/llava-onevision"
+        },
+        {
+          "rank": 8,
+          "method": "Molmo",
+          "size": "7B",
+          "openness": "fully open",
+          "strategy": "Distilled (-D) Vision-Language",
+          "date": "2024.09",
+          "score": 81.0,
+          "paper_url": "https://molmo.allenai.org"
+        }
+      ]
     }
   },
   "diagrams": [
